@@ -58,14 +58,14 @@ outputs:
     - JSON
 
 params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
-  author: Theme PaperMod
+  env: production 
+  description: "Turtlecute.org - Guide su bitcoin, sicurezza e privacy"
+  author: Turtlecute
   # author: ["Me", "You"] # multiple authors
 
   defaultTheme: dark
   disableThemeToggle: false
-  ShowShareButtons: true
+  ShowShareButtons: false
   ShowReadingTime: true
   # disableSpecial1stPost: true
   displayFullLangName: true
