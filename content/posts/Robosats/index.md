@@ -28,7 +28,7 @@ Questa guida è stata tradotta dal sito ufficiale di RoboSats. Se desideri visua
 
 ## Introduzione {#introduzione}
 
-RoboSats è una piattaforma P2P focalizzata sulla facilità d'uso e sulla privacy degli utenti. È completamente intuitiva, quindi potresti pensare che un tutorial non sia necessario. Tuttavia, è utile sentirsi a proprio agio durante l'acquisto dei nostri amati satoshi per evitare possibili errori. Dopo tutto, gli scambi P2P di Bitcoin possono essere intimidatori! Non temere, RoboSats rende tutto molto semplice! :D
+RoboSats è una piattaforma di acquisto e vendita di bitcoin P2P, focalizzata sulla facilità d'uso e sulla privacy degli utenti. È molto facile da utilizzare, quindi potresti pensare che un tutorial non sia necessario. Tuttavia, è utile sentirsi a proprio agio durante l'acquisto dei nostri amati satoshi per evitare possibili errori. Dopo tutto, gli scambi P2P di Bitcoin possono essere intimidatori! Non temere, RoboSats rende tutto molto semplice e questa guida ti accompagnerá passo passo in questa avventura! :D
 
 Questo documento presenta due guide complete:
 
