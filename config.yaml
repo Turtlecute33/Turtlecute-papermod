@@ -62,7 +62,7 @@ params:
   description: "Turtlecute.org - Guide su bitcoin, sicurezza e privacy"
   author: Turtlecute
   # author: ["Me", "You"] # multiple authors
-
+  images: ["/turtlecute.png"]
   defaultTheme: dark
   disableThemeToggle: false
   ShowShareButtons: false
