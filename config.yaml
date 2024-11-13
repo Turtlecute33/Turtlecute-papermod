@@ -130,7 +130,7 @@ params:
     safari_pinned_tab: "/safari-pinned-tab.svg"
 
   cover:
-    images: ["/turtlecute.png"]
+    images: ["https://github.com/Turtlecute33/Turtlecute-papermod/blob/main/static/turtlecute.png"]
 
 markup:
     highlight:
