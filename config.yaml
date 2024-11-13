@@ -124,11 +124,11 @@ params:
 
   assets:
     disableHLJS: true
-    favicon: "https://github.com/Turtlecute33/Turtlecute-papermod/blob/main/static/favicon.ico"
-    favicon16x16: "https://github.com/Turtlecute33/Turtlecute-papermod/blob/main/static/favicon-16x16.png"
-    favicon32x32: "https://github.com/Turtlecute33/Turtlecute-papermod/blob/main/static/favicon-32x32.png>"
-    apple_touch_icon: "https://github.com/Turtlecute33/Turtlecute-papermod/blob/main/static/apple-touch-icon.png"
-    safari_pinned_tab: "https://github.com/Turtlecute33/Turtlecute-papermod/blob/main/static/safari-pinned-tab.svg"
+    favicon: "/static/favicon.ico"
+    favicon16x16: "/static/favicon-16x16.png"
+    favicon32x32: "/static/favicon-32x32.png>"
+    apple_touch_icon: "/static/apple-touch-icon.png"
+    safari_pinned_tab: "/static/safari-pinned-tab.svg"
 
   # cover:
   #     hidden: true # hide everywhere but not in structured data
