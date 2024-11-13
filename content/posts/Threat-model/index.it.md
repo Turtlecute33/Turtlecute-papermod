@@ -1,12 +1,12 @@
 ---
 
 title: "Come creare un threat model"
-description: "Guida completa per creare un modello di minaccia per proteggere la tua privacy e sicurezza"
+description: "Guida completa per creare un threat model per proteggere la tua privacy e sicurezza"
 keywords: ["modello di minaccia", "privacy", "sicurezza", "protezione dati", "threat modeling"]
 author: "Turtlecute"
 date: 2024-10-28
 url: /threat-model
-images: ["img/minacce.webp"]
+images: ["/posts/Threat-model/minaccia.png"]
 ---
 
 ![](/posts/Threat-model/minaccia.png)

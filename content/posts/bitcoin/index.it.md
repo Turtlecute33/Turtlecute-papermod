@@ -1,7 +1,7 @@
             
 ---
 title: "Tutorial all'utilizzo di bitcoin tutelando la propria privacy"
-description: "una guida dalla A alla Z su come usare bitcoin in maniera privacy oriented"
+description: "una guida dalla A alla Z su come usare bitcoin in maniera privata"
 keywords: ["bitcoin privacy", "privacy ita", "bitcoin privacy italiano", "bitcoin wallet", "nodo bitcoin"]
 author: "Turtlecute"
 date: 2024-05-13
