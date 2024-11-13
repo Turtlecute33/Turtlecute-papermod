@@ -5,10 +5,10 @@ keywords: ["RoboSats", "Bitcoin", "P2P", "no KYC", "guida RoboSats", "Bitcoin an
 author: "Turtlecute"
 date: 2024-09-12
 url: /robosats
-images: ["img/robosats1.png"]
+images: ["img/robosats1.webp"]
 ---
 
-![](img/robosats1.png)
+![](img/robosats1.webp)
 
 Questa guida ti accompagnerà passo dopo passo nell'utilizzo di RoboSats per acquistare e vendere Bitcoin in modo anonimo e sicuro. Imparerai come generare il tuo account, esplorare i vari ordini, acquistare, vendere e gestire possibili controversie.
 
@@ -41,7 +41,7 @@ Dato che la piattaforma spiega all'utente esattamente tutto nei menu, dedicherem
 
 RoboSats aiuta gli utenti a preservare la loro privacy utilizzando avatar generati al momento per ogni trade, che sono super facili da creare! In pratica, si tratta di identità generabili che ti permettono di avere un account diverso ogni volta che acquisti o vendi satoshi.
 
-![](img/robosats_avatar.png)
+![](img/robosats_avatar.webp)
 
 RoboSats ti dà il benvenuto con un avatar robot unico. Il robot è generato deterministicamente in base al token che vedi sotto di esso. Questo token è tutto ciò di cui hai bisogno per recuperare l'account in futuro, quindi assicurati di salvarlo in modo sicuro!
 
@@ -49,11 +49,11 @@ I token sono generati nel tuo browser. Tuttavia, se non ti fidi della casualità
 
 Clicca su "Genera" per creare il tuo primo account su RoboSats!
 
-![](img/robosats_generate_avatar.png)
+![](img/robosats_generate_avatar.webp)
 
 Il token rimarrà nella memoria del tuo browser per un certo periodo, quindi potresti ancora avere la possibilità di copiarlo più tardi toccando l'icona del profilo nell'angolo in basso a sinistra. Tuttavia, il tuo browser dimenticherà il token se aggiorni o chiudi la pagina!
 
-![](img/robosats_profile_icon.png)
+![](img/robosats_profile_icon.webp)
 
 Sarebbe meglio scriverlo su carta... ma è un sacco di lavoro! Molto spesso è sufficiente copiarlo negli appunti e salvarlo da qualche altra parte. Se il tuo browser si blocca, la batteria del telefono si esaurisce o perdi la connessione durante l'acquisto, avrai bisogno del token per accedere nuovamente e continuare lo scambio!
 
@@ -67,15 +67,15 @@ In RoboSats puoi creare nuovi ordini o accettare ordini creati da altri. Per ess
 
 Clicchiamo su "Visualizza ordini" e diamo un'occhiata agli ordini.
 
-![](img/robosats_order_book.png)
+![](img/robosats_order_book.webp)
 
 In un browser desktop, puoi vedere a colpo d'occhio tutte le informazioni rilevanti sugli ordini, così puoi decidere quale accettare. Per impostazione predefinita, il book mostrerà ordini di "QUALSIASI" tipo (acquisto e vendita) e qualsiasi tipo di metodo di pagamento. Usa i menu a discesa in alto per selezionare le tue preferenze.
 
-![](img/robosats_filters.png)
+![](img/robosats_filters.webp)
 
 Su uno smartphone, tuttavia, non tutte le colonne si adattano allo schermo. I soprannomi, il tipo di ordine, il metodo di pagamento e il tasso di cambio sono nascosti per impostazione predefinita. Puoi toccare qualsiasi colonna e premere "Mostra colonne" per selezionare quali rendere visibili.
 
-![](img/robosats_show_columns.png)
+![](img/robosats_show_columns.webp)
 
 Un altro trucco è fare un tocco lungo o uno swipe:
 
@@ -86,15 +86,15 @@ Un altro trucco è fare un tocco lungo o uno swipe:
 
 Esempio di tocco lungo/scorrimento sopra la valuta:
 
-![](img/robosats_currency_long_tap.png)
+![](img/robosats_currency_long_tap.webp)
 
 Esempio di tocco lungo/scorrimento sopra il premio:
 
-![](img/robosats_premium_long_tap.png)
+![](img/robosats_premium_long_tap.webp)
 
 Puoi anche toccare qualsiasi ordine per vedere la pagina completa dell'ordine:
 
-![](img/robosats_order_details.png)
+![](img/robosats_order_details.webp)
 
 Ogni ordine ha un contatore di scadenza. Per impostazione predefinita, in RoboSats v0.1.0 i nuovi ordini rimarranno pubblici nel libro per 24 ore.
 
@@ -104,31 +104,31 @@ Quando hai deciso quale ordine accettare, basta premere il pulsante "Accetta Ord
 
 La prima cosa da fare è bloccare una piccola cauzione di fedeltà (solo il 3% dell'importo dello scambio per impostazione predefinita), così il venditore saprà che sei affidabile. I satoshi in questa cauzione rimarranno bloccati nel tuo portafoglio. Se cerchi di barare o annulli unilateralmente, perderai i satoshi bloccati nella cauzione.
 
-![](img/robosats_fidelity_bond.png)
+![](img/robosats_fidelity_bond.webp)
 
 Scansiona o copia la fattura nel tuo portafoglio Lightning. Potrebbe apparire come un pagamento in sospeso, bloccarsi o persino sembrare che il tuo portafoglio si sia bloccato. Dovresti sempre controllare sul sito di RoboSats se la cauzione è stata bloccata (il tuo portafoglio probabilmente non te lo dirà! Controlla la lista di compatibilità dei portafogli).
 
-![](img/robosats_wallet_payment.png)
+![](img/robosats_wallet_payment.webp)
 
 Non appena la tua cauzione è bloccata, RoboSats ti chiederà di fornire una fattura Lightning per ricevere i satoshi al termine dello scambio. Genera una fattura con l'importo esatto nel tuo portafoglio Lightning e inviala.
 
-![](img/robosats_payout_invoice.png)
+![](img/robosats_payout_invoice.webp)
 
 Mentre stai inviando la tua fattura di pagamento, al venditore viene chiesto di bloccare la cauzione del trade (hold invoice). Se sei più veloce di lui, dovrai aspettare. Altrimenti, potresti già essere in grado di chattare con lui.
 
 C'è un limite di tempo di 3 ore per inviare la fattura (da parte dell'acquirente) e bloccare la cauzione del trade (da parte del venditore). Se il tempo scade, l'ordine scadrà e il robot che non ha seguito gli obblighi contrattuali perderà la cauzione. Questo è un meccanismo che aiuta a prevenire lo spam di ordini falsi, la perdita di tempo delle controparti e gli attacchi DDoS al libro degli ordini.
 
-![](img/robosats_time_limit.png)
+![](img/robosats_time_limit.webp)
 
 Non appena il venditore blocca i satoshi, è sicuro inviare la valuta fiat! Come acquirente, dovrai chiedere al venditore i dettagli per effettuare il pagamento fiat. Condividi solo le informazioni strettamente necessarie su di te per non compromettere la tua privacy. Ricorda, in RoboSats v0.1.0 questa chat non ha memoria, quindi la conversazione andrà persa se aggiorni il browser.
 
-![](img/robosats_chat.png)
+![](img/robosats_chat.webp)
 
 C'è un limite di tempo di 24 ore per completare lo scambio fiat. Se il tempo scade, l'ordine scadrà e verrà aperta automaticamente una controversia. Per evitare la scadenza dell'ordine, usa sempre metodi di pagamento fiat istantanei. Ad esempio, inviare contanti per posta ordinaria è lento e attiverà sempre una controversia in v0.1.0. In futuro saranno possibili tempi di scadenza più lunghi.
 
 Non appena hai inviato la fiat, dovresti premere il pulsante "Conferma fiat inviata". Dopo di ciò, il venditore dovrà confermare di aver ricevuto la fiat. Non appena conferma, lo scambio è terminato e verrai pagato sul tuo portafoglio Lightning. Potresti vedere che sta "inviando satoshi all'acquirente", ma di solito è così veloce che vedrai semplicemente questa schermata. Goditi i tuoi sat!
 
-![](img/robosats_trade_complete.png)
+![](img/robosats_trade_complete.webp)
 
 Valutare la piattaforma e lasciare suggerimenti per miglioramenti nel nostro gruppo Telegram o su GitHub Issues è molto apprezzato!
 
@@ -136,21 +136,21 @@ Valutare la piattaforma e lasciare suggerimenti per miglioramenti nel nostro gru
 
 Potrebbe capitare che non ci siano ordini attivi per la posizione e la valuta che desideri. In questo caso, non ci sono ordini per VENDERE Bitcoin per GBP.
 
-![](img/robosats_no_orders.png)
+![](img/robosats_no_orders.webp)
 
 Possiamo creare l'ordine esattamente come lo desideriamo. Ma ricorda che devi pubblicare un ordine che altri siano interessati ad accettare!
 
-![](img/robosats_create_order.png)
+![](img/robosats_create_order.webp)
 
 Nella pagina del creatore di ordini è richiesto solo di inserire la valuta, il tipo di ordine (acquisto/vendita) e l'importo. Tuttavia, è buona pratica specificare i metodi di pagamento che accetti. Potrebbe essere anche utile impostare un premio/sconto per far accettare il tuo ordine più velocemente. Ricorda che come venditore puoi incentivare gli acquirenti ad accettare il tuo ordine abbassando il premio. Se ci sono troppi acquirenti, tuttavia, puoi aumentare il premio per ottenere un profitto di trading. In alternativa, puoi impostare un importo fisso di satoshi.
 
 **Limiti**: in RoboSats v0.1.0 un ordine non può essere inferiore a 20.000 satoshi. Non può essere superiore a 4.000.000 di satoshi per evitare fallimenti di routing Lightning. Questo limite sarà aumentato in futuro.
 
-![](img/robosats_order_limits.png)
+![](img/robosats_order_limits.webp)
 
 Devi copiare o scansionare la fattura con il tuo portafoglio Lightning per bloccare la tua cauzione di fedeltà come creatore (solo l'1% dell'importo dello scambio). Bloccando questa cauzione, i prenditori sanno che sei affidabile e sei impegnato a seguire questo scambio. Nel tuo portafoglio potrebbe apparire come un pagamento in sospeso, bloccarsi o persino sembrare che il tuo portafoglio si sia bloccato. Dovresti sempre controllare sul sito di RoboSats se la cauzione è stata bloccata (il tuo portafoglio probabilmente non te lo dirà! Controlla la lista di compatibilità dei portafogli).
 
-![](img/robosats_maker_bond.png)
+![](img/robosats_maker_bond.webp)
 
 Il tuo ordine sarà pubblico per 24 ore. Puoi controllare il tempo rimasto alla scadenza nella scheda "Ordine". Può essere cancellato in qualsiasi momento senza penalità prima che venga accettato da un altro robot. Tieni aperta la scheda del contratto per essere notificato con un suono. Potrebbe essere meglio farlo su un computer desktop e alzare il volume, così non ti perderai quando il tuo ordine viene accettato. Potrebbe volerci tempo! Forse te ne dimenticherai anche! Puoi anche abilitare le notifiche Telegram premendo "Abilita Notifiche Telegram" e poi premendo "Start" nella chat. Riceverai un messaggio di benvenuto come conferma delle notifiche abilitate. Un altro messaggio verrà inviato una volta che un prenditore per il tuo ordine viene trovato.
 
@@ -158,27 +158,27 @@ Il tuo ordine sarà pubblico per 24 ore. Puoi controllare il tempo rimasto alla 
 
 Nella scheda del contratto puoi anche vedere quanti altri ordini sono pubblici per la stessa valuta. Puoi anche vedere come si posiziona il tuo premio rispetto a tutti gli altri ordini per la stessa valuta.
 
-![](img/robosats_order_stats.png)
+![](img/robosats_order_stats.webp)
 
 Evviva, qualcuno ha accettato l'ordine! Ha 4 minuti per bloccare una cauzione di fedeltà come prenditore; se non procede, il tuo ordine sarà reso pubblico di nuovo automaticamente.
 
-![](img/robosats_order_taken.png)
+![](img/robosats_order_taken.webp)
 
 Non appena il prenditore blocca la cauzione, dovrai bloccare la cauzione del trade. Questa è una hold invoice Lightning e rimarrà bloccata nel tuo portafoglio. Sarà rilasciata solo quando confermi di aver ricevuto il pagamento fiat o se c'è una controversia tra te e il prenditore.
 
-![](img/robosats_escrow.png)
+![](img/robosats_escrow.webp)
 
 Una volta che hai bloccato la cauzione del trade e l'acquirente ha inviato la fattura di pagamento, è sicuro ricevere la fiat! Condividi con l'acquirente le informazioni minime necessarie per ricevere la fiat. Ricorda, in RoboSats v0.1.0 questa chat non ha memoria, quindi la conversazione andrà persa se aggiorni il browser.
 
-![](img/robosats_send_fiat.png)
+![](img/robosats_send_fiat.webp)
 
 L'acquirente ha appena confermato di aver inviato il pagamento! Ora controlla fino a quando la fiat non è nel tuo conto.
 
-![](img/robosats_waiting_fiat.png)
+![](img/robosats_waiting_fiat.webp)
 
 Confermando di aver ricevuto la fiat, la cauzione verrà addebitata e inviata all'acquirente. Quindi fallo solo quando sei sicuro al 100% che la fiat sia con te!
 
-![](img/robosats_confirm_fiat_received.png)
+![](img/robosats_confirm_fiat_received.webp)
 
 Tutto fatto!! :D
 
@@ -186,7 +186,7 @@ Tutto fatto!! :D
 
 Dopo che la cauzione del trade è stata bloccata e prima che l'acquirente confermi di aver inviato la fiat, è possibile annullare l'ordine. Potrebbe semplicemente accadere che entrambi non abbiate un modo comune per inviare e ricevere fiat dopotutto. Potete concordare di premere il pulsante "Annullamento Collaborativo". Dopo che il pulsante "Fiat inviata" è stato premuto dall'acquirente, l'unico modo per annullare un ordine è aprire una controversia e coinvolgere lo staff.
 
-![](img/closing.png)
+![](img/closing.webp)
 
 Questo non è assolutamente consigliato, poiché uno dei due trader perderebbe la sua cauzione di fedeltà, eccetto in casi eccezionali (a discrezione dello staff).
 
@@ -194,19 +194,17 @@ Questo non è assolutamente consigliato, poiché uno dei due trader perderebbe l
 
 Gli equivoci accadono. Ma ci possono essere anche persone disposte a cercare di truffare gli altri. In questo caso, MakeshiftSource875 pensava di farla franca non confermando di aver ricevuto la fiat, come se potesse tenere i satoshi.
 
-![](img/robosats_dispute.png)
+![](img/robosats_dispute.webp)
 
 Questo in realtà non è possibile, poiché una controversia verrà aperta automaticamente alla scadenza. Tuttavia, se sai che qualcosa di sospetto sta accadendo, dovresti aprire una controversia.
 
-![](img/robosats_open_dispute.png)
+![](img/robosats_open_dispute.webp)
 
 In RoboSats v0.1.0 il processo di gestione delle controversie non è completamente implementato nel web. Pertanto, la maggior parte dei contatti e delle risoluzioni deve avvenire tramite metodi alternativi. Assicurati di fornire un metodo di contatto allo staff. Dovrai scrivere una dichiarazione completa dei fatti; ricorda che lo staff non può leggere la tua chat privata per giudicare cosa è successo. È utile inviare immagini/screenshot. Per la massima privacy, questi possono essere crittografati tramite chiave PGP e caricati su qualsiasi sistema di condivisione file anonimo.
 
-![](img/robosats_dispute_resolution.png)
+![](img/robosats_dispute_resolution.webp)
 
 Una volta che lo staff ha risolto la controversia, lo stato finale dell'ordine mostrerà la risoluzione. Assicurati di controllare il metodo di contatto fornito allo staff. Se sei il vincitore della controversia, lo staff ti chiederà nuovamente una fattura Lightning Network per inviarti il pagamento più la cauzione (la tua vecchia fattura è probabilmente scaduta!).
-
-![](img/png.png)
 
 ## Conclusioni {#conclusioni}
 
