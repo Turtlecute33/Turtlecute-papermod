@@ -62,7 +62,6 @@ params:
   description: "Guide su bitcoin, sicurezza e privacy in lingua italiana"
   author: Turtlecute
   # author: ["Me", "You"] # multiple authors
-  images: ["/turtlecute.png"]
   defaultTheme: dark
   disableThemeToggle: false
   ShowShareButtons: false
@@ -130,10 +129,8 @@ params:
     apple_touch_icon: "/apple-touch-icon.png"
     safari_pinned_tab: "/safari-pinned-tab.svg"
 
-  # cover:
-  #     hidden: true # hide everywhere but not in structured data
-  #     hiddenInList: true # hide on list pages and home
-  #     hiddenInSingle: true # hide on single page
+  cover:
+    images: ["/turtlecute.png"]
 
 markup:
     highlight:
