@@ -63,7 +63,7 @@ params:
   author: Theme PaperMod
   # author: ["Me", "You"] # multiple authors
 
-  defaultTheme: auto
+  defaultTheme: dark
   disableThemeToggle: false
   ShowShareButtons: true
   ShowReadingTime: true
