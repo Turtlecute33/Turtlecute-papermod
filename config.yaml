@@ -76,7 +76,7 @@ params:
   ShowPageNums: true
   ShowToc: true
   # comments: false
-  images: ["images/papermod-cover.png"]
+  images: ["/turtlecute.png"]
 
   profileMode:
     enabled: false
