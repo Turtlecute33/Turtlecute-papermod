@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Template on Turtlecute.org</title>
+    <link>http://localhost:1313/tags/template/</link>
+    <description>Recent content in Template on Turtlecute.org</description>
+    <image>
+      <title>Turtlecute.org</title>
+      <url>http://localhost:1313/images/papermod-cover.png</url>
+      <link>http://localhost:1313/images/papermod-cover.png</link>
+    </image>
+    <generator>Hugo -- 0.126.2</generator>
+    <language>en</language>
+    <copyright>PaperMod Contributors</copyright>
+    <lastBuildDate>Tue, 22 Dec 1987 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/template/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Recipe Template</title>
+      <link>http://localhost:1313/posts/joinmarket/</link>
+      <pubDate>Tue, 22 Dec 1987 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/joinmarket/</guid>
+      <description>Template for creating a recipe for Blowfish theme</description>
+    </item>
+    <item>
+      <title>Recipe Template</title>
+      <link>http://localhost:1313/posts/seed/</link>
+      <pubDate>Tue, 22 Dec 1987 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/seed/</guid>
+      <description>Template for creating a recipe for Blowfish theme</description>
+    </item>
+    <item>
+      <title>Recipe Template</title>
+      <link>http://localhost:1313/posts/vpn/</link>
+      <pubDate>Tue, 22 Dec 1987 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vpn/</guid>
+      <description>Template for creating a recipe for Blowfish theme</description>
+    </item>
+  </channel>
+</rss>

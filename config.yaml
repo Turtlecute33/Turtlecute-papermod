@@ -1,0 +1,167 @@
+# If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
+# contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
+baseURL: "https://turtlecute.org"
+title: Turtlecute.org
+copyright: "© [Non sono comunista, non ci sono copyright](LICENSE)"
+theme: [WonderMod]
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableEmoji: true
+pygmentsUseClasses: true
+mainsections: ["posts", "papermod"]
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+languages:
+  en:
+    languageName: "italian"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Tags
+          url: tags/
+          weight: 10
+        - name: Search
+          url: search/
+          weight: 10
+
+    # custom params for each language should be under [langcode].parms - hugo v0.120.0
+    params:
+      languageAltTitle: italian
+      profileMode:
+        enabled: true
+        title: Turtlecute
+        imageUrl: "https://priorato.org/img/coin.gif"
+        imageTitle: ProfileMode image
+        # imageWidth: 120
+        # imageHeight: 120
+        subtitle: "🔒 Privacy | ⚡ Bitcoin | 🛡️ Sicurezza | 💼 Consulenze"
+        buttons:
+          - name: Guide
+            url: posts
+          - name: Podcast
+            url: https://priorato.org
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+  author: Theme PaperMod
+  # author: ["Me", "You"] # multiple authors
+
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowShareButtons: true
+  ShowReadingTime: true
+  # disableSpecial1stPost: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowAllPagesInArchive: true
+  ShowPageNums: true
+  ShowToc: true
+  # comments: false
+  images: ["images/papermod-cover.png"]
+
+  profileMode:
+    enabled: false
+    title: PaperMod
+    imageUrl: "#"
+    imageTitle: my image
+    # imageWidth: 120
+    # imageHeight: 120
+    buttons:
+      - name: Archives
+        url: archives
+      - name: Tags
+        url: tags
+
+  socialIcons:
+    - name: github
+      title: View Source on Github
+      url: "https://github.com/adityatelange/hugo-PaperMod"
+    - name: telegram
+      title: Contact me
+      url: "https://t.me/turtlecute33"
+    - name: X
+      title: Share PaperMod on X/Twitter
+      url: "https://x.com/turtlecute33"
+    - name: email
+      title: Email
+      url: "mailto: turtlecute@proton.me"
+    - name: instagram
+      title: Instagram account
+      url: "https://instagram.com/prioratodelbitcoin"
+    - name: bitcoin
+      title: Donations
+      url: "https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&checkoutDesc=Donazione+priorato+%3A3&browserRedirect=https%3A%2F%2Fpriorato.org&currency=EUR&defaultPaymentMethod=BTC_LNURLPAY"
+ 
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.1
+    minMatchCharLength: 1
+    limit: 5  # Refer to https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "content"]
+
+  assets:
+    disableHLJS: true
+  #     favicon: "<link / abs url>"
+  #     favicon16x16: "<link / abs url>"
+  #     favicon32x32: "<link / abs url>"
+  #     apple_touch_icon: "<link / abs url>"
+  #     safari_pinned_tab: "<link / abs url>"
+
+  # cover:
+  #     hidden: true # hide everywhere but not in structured data
+  #     hiddenInList: true # hide on list pages and home
+  #     hiddenInSingle: true # hide on single page
+
+markup:
+    highlight:
+        style: dracula
+        lineNos: false
+        noClasses: false
+        guessSyntax: true
+
+# privacy:
+#   vimeo:
+#     disabled: false
+#     simple: true
+
+#   twitter:
+#     disabled: false
+#     enableDNT: true
+#     simple: true
+
+#   instagram:
+#     disabled: false
+#     simple: true
+
+#   youtube:
+#     disabled: false
+#     privacyEnhanced: true
+
+services:
+  instagram:
+    disableInlineCSS: true
+  twitter:
+    disableInlineCSS: true

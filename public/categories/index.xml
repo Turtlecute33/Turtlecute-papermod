@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Categories on Turtlecute.org</title>
+  <link rel="alternate" href="http://localhost:1313/categories/" />
+  <link rel="self" href="http://localhost:1313/categories/index.xml" />
+  <subtitle>Recent content in Categories on Turtlecute.org</subtitle>
+  <id>http://localhost:1313/categories/</id>
+  <generator uri="http://gohugo.io" version="0.126.2">Hugo</generator>
+  <language>en</language>
+  <updated>0001-01-01T00:00:00Z</updated>
+  <author>
+    <name>Theme PaperMod</name>
+    
+  </author>
+  <rights>© [Non sono comunista, non ci sono copyright](LICENSE)</rights>
+
+</feed>
+
+
