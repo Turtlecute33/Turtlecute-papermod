@@ -7,12 +7,20 @@
   <id>http://localhost:1313/</id>
   <generator uri="http://gohugo.io" version="0.126.2">Hugo</generator>
   <language>en</language>
-  <updated>2024-10-28T00:00:00Z</updated>
+  <updated>2025-01-05T00:00:00Z</updated>
   <author>
     <name>Turtlecute</name>
     
   </author>
   <rights>© [Non sono comunista, non ci sono copyright](LICENSE)</rights>
+      <entry>
+        <title>La guida definita su GrapheneOS</title>
+        <link rel="alternate" href="http://localhost:1313/graphene/" />
+        <id>http://localhost:1313/graphene/</id>
+        <published>2025-01-05T00:00:00Z</published>
+        <updated>2025-01-05T00:00:00Z</updated>
+        <summary type="html">Impara ad usare e conoscere GrapheneOS, il miglior sistema operativo privacy oriented per dispositivi android</summary>
+      </entry>
       <entry>
         <title>Come creare un threat model</title>
         <link rel="alternate" href="http://localhost:1313/threat-model/" />
@@ -60,14 +68,6 @@
         <published>2024-05-12T00:00:00Z</published>
         <updated>2024-05-12T00:00:00Z</updated>
         <summary type="html">Guida per creare un seed Bitcoin usando dadi, carta e penna.</summary>
-      </entry>
-      <entry>
-        <title>La guida definita su GrapheneOS</title>
-        <link rel="alternate" href="http://localhost:1313/graphene/" />
-        <id>http://localhost:1313/graphene/</id>
-        <published>2024-05-11T00:00:00Z</published>
-        <updated>2024-05-11T00:00:00Z</updated>
-        <summary type="html">Impara ad usare e conoscere GrapheneOS, il miglior sistema operativo privacy oriented per dispositivi android</summary>
       </entry>
       <entry>
         <title>Tutorial per il setup di un nodo Tor</title>

@@ -167,12 +167,16 @@ migrare a un dispositivo pienamente supportato. Ad esempio, non ci sono più pat
 Pixel 5a, e c'è persino una vulnerabilità nota di esecuzione di codice remoto non risolta che potrebbe essere
 sfruttata per prendere il controllo del dispositivo.
 
-| Pixel 9 Pro Fold | Pixel 9 Pro XL | Pixel 9 Pro | Pixel 9 | Pixel 8 Pro | Pixel 8 | Pixel 8a |
-| --------------------------- | -------------- | ----------- | ------- | ----------- | ------- | -------- |
-| 16 GB RAM | 16 | 16 | 12 | 12 | 8 | 8 |
-| 256-512 GB Storage | 128-1024 | 128-1024 | 128-256 | 128-1024 | 128-256 | 128-256 |
-| Google Tensor G4 Processor | G4 | G4 | G4 | G3 | G3 | G3 |
-| 14 Concurrent User Profiles | 14 | 14 | 10 | 10 | 6 | 6 |
+| Modello            | RAM     | Storage (GB)     | Processore   | Profili utente contemporanei |
+|--------------------|---------|------------------|--------------|------------------------------|
+| Pixel 9 Pro Fold   | 16 GB   | 256-512          |  Tensor G4   |    14                           |
+| Pixel 9 Pro XL     | 16 GB   | 128-1024         |  Tensor G4   |    14                           |
+| Pixel 9 Pro        | 16 GB   | 128-1024         |  Tensor G4   |    14                           |
+| Pixel 9            | 12 GB   | 128-256          |  Tensor G4   |    10                           |
+| Pixel 8 Pro        | 12 GB   | 128-1024         |  Tensor G3   |    10                           |
+| Pixel 8            | 8 GB    | 128-256          |  Tensor G3   |    6                            |
+| Pixel 8a           | 8 GB    | 128-256          |  Tensor G3   |    6                            |
+
 
 ## Installazione
 
