@@ -1,78 +1,86 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Turtlecute.org</title>
-  <link rel="alternate" href="https://turtlecute.org/" />
-  <link rel="self" href="https://turtlecute.org/index.xml" />
+  <link rel="alternate" href="http://localhost:1313/" />
+  <link rel="self" href="http://localhost:1313/index.xml" />
   <subtitle>Recent content on Turtlecute.org</subtitle>
-  <id>https://turtlecute.org/</id>
+  <id>http://localhost:1313/</id>
   <generator uri="http://gohugo.io" version="0.126.2">Hugo</generator>
   <language>en</language>
   <updated>2024-10-28T00:00:00Z</updated>
   <author>
-    <name>Theme PaperMod</name>
+    <name>Turtlecute</name>
     
   </author>
   <rights>© [Non sono comunista, non ci sono copyright](LICENSE)</rights>
       <entry>
         <title>Come creare un threat model</title>
-        <link rel="alternate" href="https://turtlecute.org/threat-model/" />
-        <id>https://turtlecute.org/threat-model/</id>
+        <link rel="alternate" href="http://localhost:1313/threat-model/" />
+        <id>http://localhost:1313/threat-model/</id>
         <published>2024-10-28T00:00:00Z</published>
         <updated>2024-10-28T00:00:00Z</updated>
-        <summary type="html">Guida completa per creare un modello di minaccia per proteggere la tua privacy e sicurezza</summary>
+        <summary type="html">Guida completa per creare un threat model per proteggere la tua privacy e sicurezza</summary>
       </entry>
       <entry>
         <title>Come utilizzare RoboSats</title>
-        <link rel="alternate" href="https://turtlecute.org/robosats/" />
-        <id>https://turtlecute.org/robosats/</id>
+        <link rel="alternate" href="http://localhost:1313/robosats/" />
+        <id>http://localhost:1313/robosats/</id>
         <published>2024-09-12T00:00:00Z</published>
         <updated>2024-09-12T00:00:00Z</updated>
         <summary type="html">Guida veloce per usare RoboSats, scambio P2P di Bitcoin senza KYC</summary>
       </entry>
       <entry>
         <title>Come usare joinmarket per fare coinjoin</title>
-        <link rel="alternate" href="https://turtlecute.org/joinmarket/" />
-        <id>https://turtlecute.org/joinmarket/</id>
+        <link rel="alternate" href="http://localhost:1313/joinmarket/" />
+        <id>http://localhost:1313/joinmarket/</id>
         <published>2024-05-15T00:00:00Z</published>
         <updated>2024-05-15T00:00:00Z</updated>
         <summary type="html">Guida e tutorial su come usare joinmarket per fare coinjoin su bitcoin in lingua italiana</summary>
       </entry>
       <entry>
         <title>Guida al De-Google e privacy su android</title>
-        <link rel="alternate" href="https://turtlecute.org/android/" />
-        <id>https://turtlecute.org/android/</id>
+        <link rel="alternate" href="http://localhost:1313/android/" />
+        <id>http://localhost:1313/android/</id>
         <published>2024-05-15T00:00:00Z</published>
         <updated>2024-05-15T00:00:00Z</updated>
         <summary type="html">Guida e tutorial su come usare joinmarket per fare coinjoin su bitcoin in lingua italiana</summary>
       </entry>
       <entry>
         <title>Tutorial all&#39;utilizzo di bitcoin tutelando la propria privacy</title>
-        <link rel="alternate" href="https://turtlecute.org/bitcoin/" />
-        <id>https://turtlecute.org/bitcoin/</id>
+        <link rel="alternate" href="http://localhost:1313/bitcoin/" />
+        <id>http://localhost:1313/bitcoin/</id>
         <published>2024-05-13T00:00:00Z</published>
         <updated>2024-05-13T00:00:00Z</updated>
-        <summary type="html">una guida dalla A alla Z su come usare bitcoin in maniera privacy oriented</summary>
+        <summary type="html">una guida dalla A alla Z su come usare bitcoin in maniera privata</summary>
       </entry>
       <entry>
         <title>Come generare un seed Bitcoin con i dadi</title>
-        <link rel="alternate" href="https://turtlecute.org/seed/" />
-        <id>https://turtlecute.org/seed/</id>
+        <link rel="alternate" href="http://localhost:1313/seed/" />
+        <id>http://localhost:1313/seed/</id>
         <published>2024-05-12T00:00:00Z</published>
         <updated>2024-05-12T00:00:00Z</updated>
         <summary type="html">Guida per creare un seed Bitcoin usando dadi, carta e penna.</summary>
       </entry>
       <entry>
+        <title>La guida definita su GrapheneOS</title>
+        <link rel="alternate" href="http://localhost:1313/graphene/" />
+        <id>http://localhost:1313/graphene/</id>
+        <published>2024-05-11T00:00:00Z</published>
+        <updated>2024-05-11T00:00:00Z</updated>
+        <summary type="html">Impara ad usare e conoscere GrapheneOS, il miglior sistema operativo privacy oriented per dispositivi android</summary>
+      </entry>
+      <entry>
         <title>Tutorial per il setup di un nodo Tor</title>
-        <link rel="alternate" href="https://turtlecute.org/tor/" />
-        <id>https://turtlecute.org/tor/</id>
+        <link rel="alternate" href="http://localhost:1313/tor/" />
+        <id>http://localhost:1313/tor/</id>
         <published>2024-05-11T00:00:00Z</published>
         <updated>2024-05-11T00:00:00Z</updated>
         <summary type="html">Guida veloce per creare in autonomia il tuo nodo Tor</summary>
       </entry>
       <entry>
         <title>Tutorial per il setup di una VPN self-hosted con filtro AdBlock</title>
-        <link rel="alternate" href="https://turtlecute.org/vpn/" />
-        <id>https://turtlecute.org/vpn/</id>
+        <link rel="alternate" href="http://localhost:1313/vpn/" />
+        <id>http://localhost:1313/vpn/</id>
         <published>2024-05-11T00:00:00Z</published>
         <updated>2024-05-11T00:00:00Z</updated>
         <summary type="html">Guida per creare una VPN self-hostata con wireguard, pi-hole e unbound.</summary>

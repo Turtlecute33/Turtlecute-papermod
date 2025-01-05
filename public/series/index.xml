@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Series on Turtlecute.org</title>
-  <link rel="alternate" href="https://turtlecute.org/series/" />
-  <link rel="self" href="https://turtlecute.org/series/index.xml" />
+  <link rel="alternate" href="http://localhost:1313/series/" />
+  <link rel="self" href="http://localhost:1313/series/index.xml" />
   <subtitle>Recent content in Series on Turtlecute.org</subtitle>
-  <id>https://turtlecute.org/series/</id>
+  <id>http://localhost:1313/series/</id>
   <generator uri="http://gohugo.io" version="0.126.2">Hugo</generator>
   <language>en</language>
   <updated>0001-01-01T00:00:00Z</updated>
   <author>
-    <name>Theme PaperMod</name>
+    <name>Turtlecute</name>
     
   </author>
   <rights>© [Non sono comunista, non ci sono copyright](LICENSE)</rights>

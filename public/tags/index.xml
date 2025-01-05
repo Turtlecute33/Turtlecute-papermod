@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Tags on Turtlecute.org</title>
-  <link rel="alternate" href="https://turtlecute.org/tags/" />
-  <link rel="self" href="https://turtlecute.org/tags/index.xml" />
+  <link rel="alternate" href="http://localhost:1313/tags/" />
+  <link rel="self" href="http://localhost:1313/tags/index.xml" />
   <subtitle>Recent content in Tags on Turtlecute.org</subtitle>
-  <id>https://turtlecute.org/tags/</id>
+  <id>http://localhost:1313/tags/</id>
   <generator uri="http://gohugo.io" version="0.126.2">Hugo</generator>
   <language>en</language>
   <updated>0001-01-01T00:00:00Z</updated>
   <author>
-    <name>Theme PaperMod</name>
+    <name>Turtlecute</name>
     
   </author>
   <rights>© [Non sono comunista, non ci sono copyright](LICENSE)</rights>

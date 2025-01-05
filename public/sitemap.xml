@@ -2,42 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://turtlecute.org/threat-model/</loc>
+    <loc>http://localhost:1313/threat-model/</loc>
     <lastmod>2024-10-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://turtlecute.org/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2024-10-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://turtlecute.org/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-10-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://turtlecute.org/robosats/</loc>
+    <loc>http://localhost:1313/robosats/</loc>
     <lastmod>2024-09-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://turtlecute.org/joinmarket/</loc>
+    <loc>http://localhost:1313/joinmarket/</loc>
     <lastmod>2024-05-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://turtlecute.org/android/</loc>
+    <loc>http://localhost:1313/android/</loc>
     <lastmod>2024-05-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://turtlecute.org/bitcoin/</loc>
+    <loc>http://localhost:1313/bitcoin/</loc>
     <lastmod>2024-05-13T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://turtlecute.org/seed/</loc>
+    <loc>http://localhost:1313/seed/</loc>
     <lastmod>2024-05-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://turtlecute.org/tor/</loc>
+    <loc>http://localhost:1313/graphene/</loc>
     <lastmod>2024-05-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://turtlecute.org/vpn/</loc>
+    <loc>http://localhost:1313/tor/</loc>
     <lastmod>2024-05-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://turtlecute.org/categories/</loc>
+    <loc>http://localhost:1313/vpn/</loc>
+    <lastmod>2024-05-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://turtlecute.org/search/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://turtlecute.org/series/</loc>
+    <loc>http://localhost:1313/search/</loc>
   </url><url>
-    <loc>https://turtlecute.org/tags/</loc>
+    <loc>http://localhost:1313/series/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>

@@ -162,3 +162,9 @@ services:
     disableInlineCSS: true
   twitter:
     disableInlineCSS: true
+
+markup:
+ goldmark:
+  renderer:
+   unsafe: true
+
