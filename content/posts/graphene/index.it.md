@@ -18,13 +18,13 @@ della sicurezza.
 Al momento GrapheneOS Rappresenta il Gold Standard dei sistemi operativi android, questa guida andrá ad
 analizzare tutti i vari punti e features del sistema operativo. Se siete interessati ad acquistare dispositivi con
 GrapheneOS e set-up di privacy fatti su misura sulle vostre esigenze potete mandarmi un messaggio su
-[telegram](t.me/turtlecute33) oppure guardare la [lista di servzi](t.me/privacyphoneitalia) che offro.
+[telegram](https://t.me/turtlecute33) oppure guardare la [lista di servzi](https://t.me/privacyphoneitalia) che offro.
 
 Questo articolo è un tentativo di raccogliere informazioni e conoscenze sulla sicurezza e la privacy mobile, legate al
 progetto GrapheneOS, un grazie a [PatrickD](https://x.com/patrickd_de) per aver scritto un articolo su graphene os da
 cui questa guida é ispirata.
 
-La scrittura di questa guida é stata lunga e ha portato via tantissimo tempo, la piú grande donazione che potete fare é condividerla su **gruppi** e **canali telegram**, **twitter** e social network vari in modo che piú gente possibile la veda. Un **grazie di cuore** a chiunque lo fará. Un bottone donazioni é presente a fine guida ma é del tutto secondario in quanto questi contenuti non sono a fini di lucro. Grazie per il supporto questo sito non richiede nessun vostro dato, non ha analytics, non vi chiede email o registrazioni, condividete la parola per mantenere vivo questo progetto.
+La scrittura di questa guida é stata lunga e ha portato via tantissimo tempo, la piú grande donazione che potete fare é condividerla su **gruppi** e **canali telegram**, **twitter** e social network vari in modo che piú gente possibile la veda. Un **grazie di cuore** a chiunque lo fará. Un bottone donazioni é presente a fine guida ma é del tutto secondario in quanto questi contenuti non sono a fini di lucro. Grazie per il supporto, questo sito non richiede nessun vostro dato, non ha analytics, non vi chiede email o registrazioni, condividete la parola per mantenere vivo questo progetto.
 
 ## Scelta del Dispositivo
 
@@ -1165,6 +1165,6 @@ Discord](https://discord.com/invite/grapheneos). GrapheneOS ha anche comunità s
 
 Se questa guida ti é stata utile puoi farmi una donazione cliccando il tasto qua sotto. Come detto ad inizio guida se puoi condividi questo articolo con amici, parenti, social media e gruppi telegram, questa rimane una donazione sempre apprezzatissima <3
 
-Se hai domande puoi contattarmi al mio profilo telegram [@Turtlecute33](t.me/turtlecute33) o tramite email a turtlecute@proton.me, offro anche servizi di consulenza per chi interessato. Grazie della lettura!
+Se hai domande puoi contattarmi al mio profilo telegram [@Turtlecute33](https://t.me/turtlecute33) o tramite email a turtlecute@proton.me, offro anche servizi di consulenza per chi interessato. Grazie della lettura!
 [![Vai alla
 pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)
