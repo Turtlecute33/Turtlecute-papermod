@@ -1,5 +1,5 @@
 ---
-title: "La guida definita su GrapheneOS"
+title: "La guida definitiva su GrapheneOS"
 description: "Impara ad usare e conoscere GrapheneOS, il miglior sistema operativo privacy oriented per dispositivi
 android"
 keywords: ["Grapheneos","grapheneos ita","graphene os","graphene os italiano","privacy android","degoogle","telefoni anonimi"]
