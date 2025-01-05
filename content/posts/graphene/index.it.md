@@ -24,7 +24,7 @@ Questo articolo è un tentativo di raccogliere informazioni e conoscenze sulla s
 progetto GrapheneOS, un grazie a [PatrickD](https://x.com/patrickd_de) per aver scritto un articolo su graphene os da
 cui questa guida é ispirata.
 
-La scrittura di questa guida é stata lunga e ha portato via tantissimo tempo, la piú grande donazione che potete fare é condividerla su **gruppi** e **canali telegram**, **twitter** e social network vari in modo che piú gente possibile la veda. Un **grazie di cuore** a chiunque lo fará. Un bottone donazioni é presente a fine guida ma é del tutto secondario in quanto questi contenuti non sono a fini di lucro. Grazie.
+La scrittura di questa guida é stata lunga e ha portato via tantissimo tempo, la piú grande donazione che potete fare é condividerla su **gruppi** e **canali telegram**, **twitter** e social network vari in modo che piú gente possibile la veda. Un **grazie di cuore** a chiunque lo fará. Un bottone donazioni é presente a fine guida ma é del tutto secondario in quanto questi contenuti non sono a fini di lucro. Grazie per il supporto questo sito non richiede nessun vostro dato, non ha analytics, non vi chiede email o registrazioni, condividete la parola per mantenere vivo questo progetto.
 
 ## Scelta del Dispositivo
 
