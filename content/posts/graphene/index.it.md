@@ -472,7 +472,7 @@ in equivalenti solo dati.
 **Che dire dell'uso di una VPN?**
 
 L'uso di una VPN non ha alcuna influenza su chiamate o messaggi basati sull'operatore. Queste funzioni non passeranno
-attraverso la VPN, nemmeno se utilizzate una connessione Wi-Fi invece della rete cellulare. Sono invece strumenti utili per difendersi da altri tipi di attacchi e per aggiungere layer di protezione di privacy tra voi ed eventuali attaccanti esterni. Scegliete sempre fornitori VPN di cui vi fidate o valutate di usare una VPN self-hosted (ho scritto [una guida](turtlecute.org/vpn) su come crearsela da soli ma volendo offro anche [un servizio](https://t.me/privacyphoneitalia/12) in cui le creo io per voi).
+attraverso la VPN, nemmeno se utilizzate una connessione Wi-Fi invece della rete cellulare. Sono invece strumenti utili per difendersi da altri tipi di attacchi e per aggiungere layer di protezione di privacy tra voi ed eventuali attaccanti esterni. Scegliete sempre fornitori VPN di cui vi fidate o valutate di usare una VPN self-hosted (ho scritto [una guida](https://turtlecute.org/vpn) su come crearsela da soli ma volendo offro anche [un servizio](https://t.me/privacyphoneitalia/12) in cui le creo io per voi).
 
 **Che dire della modalità risparmio dati?**
 
@@ -782,7 +782,7 @@ Come menzionato, i file system dei profili sono completamente isolati, il che si
 per, ad esempio, condividere un meme visto sui social media in un profilo tramite un messenger in un altro profilo.
 Soluzioni comuni includono la sincronizzazione di file basata su cloud, come [Cryptomator](https://cryptomator.org/),
 o avere un app di messaggistica con cui scambiarvi i file anche se potrebbe non essere ideale lato privacy. Potreste configurare una sincronizzazione locale dei file utilizzando app come
-[Syncthing](https://github.com/syncthing/syncthing-android) o un'app server+client FTP, ma solitamente sono fastidiose
+[Syncthing](https://github.com/Catfriend1/syncthing-android) o un'app server+client FTP, ma solitamente sono fastidiose
 da configurare. 
 
 Se state installando app in profili secondari che richiedono la verifica tramite SMS, potreste dover temporaneamente
@@ -1007,17 +1007,6 @@ provenga effettivamente dallo sviluppatore reale dell'applicazione. Questo rende
 decentralizzata senza sacrificare una caratteristica importante di sicurezza offerta dagli store di app. Tuttavia, il
 progetto GrapheneOS sostiene che la soluzione più decentralizzata sarebbe sostituire Obtainium con app che si
 aggiornano autonomamente.
-
-<ScreenshotCards num={2}>
-  <ScreenshotCard
-    description="Screenshot: In Obtainium è possibile cercare pacchetti di app da varie fonti come GitHub e GitLab. Dopo averli scaricati, Obtainium ci chiederà di condividere il pacchetto con AppVerifier prima di procedere con l'installazione effettiva. Da notare che, prima di installare Obtainium stesso, è possibile scaricare il suo pacchetto e verificarlo con AppVerifier, che può essere ottenuto da Accrescent.">
-    <>![Thumbnail](./obtainium.jpg)</>
-  </ScreenshotCard>
-  <ScreenshotCard
-    description="Screenshot: È possibile che la chiave di firma non sia ancora stata aggiunta al database interno di AppVerifier. In tal caso, cercatela sulla pagina del progetto e copiatela negli appunti. Una volta ottenuta, tornate su AppVerifier per verificare se il firmatario/certificato della pagina corrisponde a quello con cui il progetto è stato firmato.">
-    <>![Thumbnail](./appverifier.jpg)</>
-  </ScreenshotCard>
-</ScreenshotCards>
 
 <div style="display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap;">
   <figure style="width: 48%; margin: 0;">
