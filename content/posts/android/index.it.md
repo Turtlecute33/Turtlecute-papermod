@@ -1,7 +1,7 @@
             
 ---
 title: "Guida al De-Google e privacy su android"
-description: "Guida e tutorial su come usare joinmarket per fare coinjoin su bitcoin in lingua italiana"
+description: "Questa vuole essere una guida completa per ottenere un telefono Android completamente de-googled con la massima privacy e sicurezza possibile, pur mantenendo l'usabilità e comodità del dispositivo."
 keywords: ["android privacy", "privacy ita", "android privacy italiano", "degoogle", "privacy phone", "graphene os", "graphene os italiano", "graphene os ita", "degoogle italiano"]
 author: "Turtlecute"
 date: 2025-03-29
