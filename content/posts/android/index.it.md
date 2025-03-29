@@ -1,7 +1,7 @@
             
 ---
 title: "Guida al De-Google e privacy su android"
-description: "Questa vuole essere una guida completa per ottenere un telefono Android completamente de-googled con la massima privacy e sicurezza possibile, pur mantenendo l'usabilità e comodità del dispositivo."
+description: "Guida completa alla configurazione di un telefono Android de-googled con la massima privacy e sicurezza, pur mantenendo usabilità e comodità del dispositivo."
 keywords: ["android privacy", "privacy ita", "android privacy italiano", "degoogle", "privacy phone", "graphene os", "graphene os italiano", "graphene os ita", "degoogle italiano"]
 author: "Turtlecute"
 date: 2025-03-29
@@ -10,8 +10,6 @@ images: ["/posts/android/1.webp"]
 ---
 
 ![](/posts/android/1.webp)
-
-Questa vuole essere una guida completa per ottenere un telefono Android completamente de-googled con la massima privacy e sicurezza possibile, pur mantenendo l'usabilità e comodità del dispositivo.
 
 La guida è aperta a miglioramenti e consigli, descriverò la configurazione che trovo con il miglior rapporto usabilità/privacy, nel tempo ampierò le varie sezioni introducendo anche varie alternative per chi magari non si trova bene con una determinata applicazione o servizio, Se volete darmi consigli, contribuire alla guida o effettuare donazioni, potete dare un occhiata alla pagina [Donazioni](https://btcpay.priorato.org/i/CXG1ouF8eHjdCV73Th4Ujb) o effettuare una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute-papermod).  
 
