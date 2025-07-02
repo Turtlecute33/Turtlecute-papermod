@@ -10,7 +10,7 @@ images: ["img/robosats1.webp"]
 
 ![](img/robosats1.webp)
 
-Questa guida ti accompagnerà passo dopo passo nell'utilizzo di RoboSats per acquistare e vendere Bitcoin in modo anonimo e sicuro. Imparerai come generare il tuo account, esplorare i vari ordini, acquistare, vendere e gestire possibili controversie.
+Questa guida ti accompagnerà passo dopo passo nell'utilizzo di RoboSats per acquistare e vendere Bitcoin in modo anonimo e sicuro. Imparerai come generare il tuo account, esplorare i vari ordini, acquistare, vendere e gestire eventuali controversie.
 
 Questa guida è stata tradotta dal sito ufficiale di RoboSats. Se desideri visualizzarla in altre lingue, puoi dare un'occhiata [qui](https://learn.robosats.com/read/en/). Se sei un utente Android, esiste anche un'app di RoboSats scaricabile da [GitHub](https://github.com/RoboSats/robosats/releases) o [F-Droid](https://apt.izzysoft.de/fdroid/index/apk/com.robosats) aggiungendo il repository di IzzyOnDroid.
 
@@ -28,18 +28,18 @@ Questa guida è stata tradotta dal sito ufficiale di RoboSats. Se desideri visua
 
 ## Introduzione {#introduzione}
 
-RoboSats è una piattaforma di acquisto e vendita di bitcoin P2P, focalizzata sulla facilità d'uso e sulla privacy degli utenti. È molto facile da utilizzare, quindi potresti pensare che un tutorial non sia necessario. Tuttavia, è utile sentirsi a proprio agio durante l'acquisto dei nostri amati satoshi per evitare possibili errori. Dopo tutto, gli scambi P2P di Bitcoin possono essere intimidatori! Non temere, RoboSats rende tutto molto semplice e questa guida ti accompagnerá passo passo in questa avventura! :D
+RoboSats è una piattaforma di acquisto e vendita di Bitcoin P2P, incentrata sulla facilità d'uso e sulla privacy degli utenti. È così semplice da utilizzare che potresti pensare che un tutorial non sia necessario. Tuttavia, è utile sentirsi a proprio agio durante l'acquisto dei nostri amati satoshi per evitare possibili errori. Dopotutto, gli scambi P2P di Bitcoin possono essere intimidatori! Non temere, RoboSats rende tutto molto semplice e questa guida ti accompagnerà passo dopo passo in questa avventura! :D
 
 Questo documento presenta due guide complete:
 
 1. Come acquirente che accetta un ordine.
 2. Come venditore che crea un ordine.
 
-Dato che la piattaforma spiega all'utente esattamente tutto nei menu, dedicheremo alcune righe a trucchi e consigli per un acquisto sicuro.
+Dato che la piattaforma spiega all'utente ogni passaggio nei menu, dedicheremo alcune righe a trucchi e consigli per un acquisto sicuro.
 
 ## Generazione dell'Avatar {#generazione-dellavatar}
 
-RoboSats aiuta gli utenti a preservare la loro privacy utilizzando avatar generati al momento per ogni trade, che sono super facili da creare! In pratica, si tratta di identità generabili che ti permettono di avere un account diverso ogni volta che acquisti o vendi satoshi.
+RoboSats aiuta gli utenti a preservare la propria privacy utilizzando avatar generati al momento per ogni trade, che sono semplicissimi da creare! In pratica, si tratta di identità generabili che ti permettono di avere un account diverso ogni volta che acquisti o vendi satoshi.
 
 ![](img/robosats_avatar.webp)
 
@@ -55,7 +55,7 @@ Il token rimarrà nella memoria del tuo browser per un certo periodo, quindi pot
 
 ![](img/robosats_profile_icon.webp)
 
-Sarebbe meglio scriverlo su carta... ma è un sacco di lavoro! Molto spesso è sufficiente copiarlo negli appunti e salvarlo da qualche altra parte. Se il tuo browser si blocca, la batteria del telefono si esaurisce o perdi la connessione durante l'acquisto, avrai bisogno del token per accedere nuovamente e continuare lo scambio!
+Sarebbe meglio scriverlo su carta... ma è un sacco di lavoro! Molto spesso è sufficiente copiarlo negli appunti e salvarlo altrove. Se il tuo browser si blocca, la batteria del telefono si esaurisce o perdi la connessione durante l'acquisto, avrai bisogno del token per accedere nuovamente e continuare lo scambio!
 
 ## Recupero di un Robot {#recupero-di-un-robot}
 
@@ -102,7 +102,7 @@ Ogni ordine ha un contatore di scadenza. Per impostazione predefinita, in RoboSa
 
 Quando hai deciso quale ordine accettare, basta premere il pulsante "Accetta Ordine". Vedrai la casella del contratto. Segui le indicazioni della casella del contratto fino a completare lo scambio! :)
 
-La prima cosa da fare è bloccare una piccola cauzione di fedeltà (solo il 3% dell'importo dello scambio per impostazione predefinita), così il venditore saprà che sei affidabile. I satoshi in questa cauzione rimarranno bloccati nel tuo portafoglio. Se cerchi di barare o annulli unilateralmente, perderai i satoshi bloccati nella cauzione.
+La prima cosa da fare è bloccare una piccola cauzione di fedeltà (solo il 3% dell'importo dello scambio per impostazione predefinita), così il venditore saprà che sei affidabile. I satoshi di questa cauzione rimarranno bloccati nel tuo portafoglio. Se cerchi di barare o annulli unilateralmente, perderai i satoshi bloccati nella cauzione.
 
 ![](img/robosats_fidelity_bond.webp)
 
@@ -116,7 +116,7 @@ Non appena la tua cauzione è bloccata, RoboSats ti chiederà di fornire una fat
 
 Mentre stai inviando la tua fattura di pagamento, al venditore viene chiesto di bloccare la cauzione del trade (hold invoice). Se sei più veloce di lui, dovrai aspettare. Altrimenti, potresti già essere in grado di chattare con lui.
 
-C'è un limite di tempo di 3 ore per inviare la fattura (da parte dell'acquirente) e bloccare la cauzione del trade (da parte del venditore). Se il tempo scade, l'ordine scadrà e il robot che non ha seguito gli obblighi contrattuali perderà la cauzione. Questo è un meccanismo che aiuta a prevenire lo spam di ordini falsi, la perdita di tempo delle controparti e gli attacchi DDoS al libro degli ordini.
+C'è un limite di tempo di 3 ore per inviare la fattura (da parte dell'acquirente) e bloccare la cauzione del trade (da parte del venditore). Se il tempo scade, l'ordine scadrà e il robot che non ha rispettato gli obblighi contrattuali perderà la cauzione. Questo è un meccanismo che aiuta a prevenire lo spam di ordini falsi, la perdita di tempo delle controparti e gli attacchi DDoS al libro degli ordini.
 
 ![](img/robosats_time_limit.webp)
 
@@ -126,7 +126,7 @@ Non appena il venditore blocca i satoshi, è sicuro inviare la valuta fiat! Come
 
 C'è un limite di tempo di 24 ore per completare lo scambio fiat. Se il tempo scade, l'ordine scadrà e verrà aperta automaticamente una controversia. Per evitare la scadenza dell'ordine, usa sempre metodi di pagamento fiat istantanei. Ad esempio, inviare contanti per posta ordinaria è lento e attiverà sempre una controversia in v0.1.0. In futuro saranno possibili tempi di scadenza più lunghi.
 
-Non appena hai inviato la fiat, dovresti premere il pulsante "Conferma fiat inviata". Dopo di ciò, il venditore dovrà confermare di aver ricevuto la fiat. Non appena conferma, lo scambio è terminato e verrai pagato sul tuo portafoglio Lightning. Potresti vedere che sta "inviando satoshi all'acquirente", ma di solito è così veloce che vedrai semplicemente questa schermata. Goditi i tuoi sat!
+Non appena hai inviato la fiat, dovresti premere il pulsante "Conferma fiat inviata". Dopodiché, il venditore dovrà confermare di aver ricevuto la fiat. Non appena conferma, lo scambio è terminato e verrai pagato sul tuo portafoglio Lightning. Potresti vedere che sta "inviando satoshi all'acquirente", ma di solito è così veloce che vedrai semplicemente questa schermata. Goditi i tuoi sat!
 
 ![](img/robosats_trade_complete.webp)
 
@@ -152,7 +152,7 @@ Devi copiare o scansionare la fattura con il tuo portafoglio Lightning per blocc
 
 ![](img/robosats_maker_bond.webp)
 
-Il tuo ordine sarà pubblico per 24 ore. Puoi controllare il tempo rimasto alla scadenza nella scheda "Ordine". Può essere cancellato in qualsiasi momento senza penalità prima che venga accettato da un altro robot. Tieni aperta la scheda del contratto per essere notificato con un suono. Potrebbe essere meglio farlo su un computer desktop e alzare il volume, così non ti perderai quando il tuo ordine viene accettato. Potrebbe volerci tempo! Forse te ne dimenticherai anche! Puoi anche abilitare le notifiche Telegram premendo "Abilita Notifiche Telegram" e poi premendo "Start" nella chat. Riceverai un messaggio di benvenuto come conferma delle notifiche abilitate. Un altro messaggio verrà inviato una volta che un prenditore per il tuo ordine viene trovato.
+Il tuo ordine sarà pubblico per 24 ore. Puoi controllare il tempo rimanente alla scadenza nella scheda "Ordine". Può essere cancellato in qualsiasi momento senza penalità prima che venga accettato da un altro robot. Tieni aperta la scheda del contratto per essere notificato con un suono. Potrebbe essere meglio farlo su un computer desktop e alzare il volume, così non ti perderai quando il tuo ordine viene accettato. Potrebbe volerci tempo! Forse te ne dimenticherai anche! Puoi anche abilitare le notifiche Telegram premendo "Abilita Notifiche Telegram" e poi premendo "Start" nella chat. Riceverai un messaggio di benvenuto come conferma delle notifiche abilitate. Un altro messaggio verrà inviato una volta che un prenditore per il tuo ordine viene trovato.
 
 **Nota**: se dimentichi il tuo ordine e un robot lo accetta e blocca la sua cauzione di fedeltà, rischi di perdere la tua cauzione di fedeltà non adempiendo ai passaggi contrattuali successivi.
 
@@ -192,7 +192,7 @@ Questo non è assolutamente consigliato, poiché uno dei due trader perderebbe l
 
 ## Controversie {#controversie}
 
-Gli equivoci accadono. Ma ci possono essere anche persone disposte a cercare di truffare gli altri. In questo caso, MakeshiftSource875 pensava di farla franca non confermando di aver ricevuto la fiat, come se potesse tenere i satoshi.
+Gli equivoci capitano. Ma ci possono essere anche persone disposte a cercare di truffare gli altri. In questo caso, MakeshiftSource875 pensava di farla franca non confermando di aver ricevuto la fiat, come se potesse tenere i satoshi.
 
 ![](img/robosats_dispute.webp)
 
@@ -213,6 +213,3 @@ Congratulazioni! Ora sai come utilizzare RoboSats per acquistare e vendere Bitco
 Se questa guida ti è piaciuta, condividila con i tuoi amici e sui social network. Se hai suggerimenti o domande, non esitare a contattarmi!
 
 [![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)
-
-
----
