@@ -14,6 +14,8 @@ Questa guida ti accompagnerà passo dopo passo nell'utilizzo di RoboSats per acq
 
 Questa guida è stata tradotta dal sito ufficiale di RoboSats. Se desideri visualizzarla in altre lingue, puoi dare un'occhiata [qui](https://learn.robosats.com/read/en/). Se sei un utente Android, esiste anche un'app di RoboSats scaricabile da [GitHub](https://github.com/RoboSats/robosats/releases) o [F-Droid](https://apt.izzysoft.de/fdroid/index/apk/com.robosats) aggiungendo il repository di IzzyOnDroid.
 
+Per accedere al sito web e' necessario usare [Tor browser](https://www.torproject.org/download/), una volta scaricato, installato e aperto potete visitare [questo link](http://robosatsy56bwqn56qyadmcxkx767hnabg4mihxlmgyt6if5gnuxvzad.onion/) per accedere all'home page.
+
 ## Indice
 
 - [Introduzione](#introduzione)
