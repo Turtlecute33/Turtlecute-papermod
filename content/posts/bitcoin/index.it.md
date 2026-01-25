@@ -9,7 +9,7 @@ url: /bitcoin
 images: ["/posts/bitcoin/bitcoin.jpg"]
 ---
 
-![Copertina guida Bitcoin privacy](/posts/bitcoin/bitcoin.jpg)
+![Copertina guida Bitcoin privacy](bitcoin.jpg)
   
 Questa sarà una guida completa sull'utilizzo privacy oriented di Bitcoin partendo dalle basi fino ad arrivare a livelli avanzati.  
 Partiamo quindi con una breve introduzione a Bitcoin, se siete utenti avanzati potete saltare questa prefazione andando direttamente al primo punto della guida.  
@@ -179,7 +179,7 @@ Le transazioni bitcoin sono basate sugli **UTXO** (Unspent Transaction Output), 
 I wallet non sono dei contenitori che hanno all' interno semplicemente i vostri bitcoin (come un normale portafoglio con le banconote), ma contengono le vostre monete divise per ogni singola transazione ricevuta (UTXO) ovvero separa metaforicamente il portafoglio in piccole tasche ed ognuna di queste contiene una transazione che avete ricevuto in passato; quando andremo ad inviare i nostri bitcoin, il wallet, o noi manualmente, potremo spendere una (o più in caso non bastino) vecchia transazione ricevuta ed in caso questa sia maggiore dell' importo che vogliamo inviare riceveremo un resto, spieghiamo meglio questa meccanica attraverso questa immagine:  
   
 
- ![Schema UTXO e transazioni](/posts/bitcoin/tx.webp)
+ ![Schema UTXO e transazioni](tx.webp)
 
 Alice vorrebbe inviare 4 btc a bob e possiede 3 UTXO: 1 btc, 2 btc e 5 btc; il miglior modo che ha alice per pagare bob è usare il suo UTXO da 5 btc, che però eccede la quantità che alice vorrebbe inviare, automaticamente il wallet e il protocollo Bitcoin gestiscono la cosa inviando i 5 btc a bob, ma immediatamente 1 btc torna indietro come resto, in modo che bob riceva la quantità corretta di btc e alice ottenga indietro la parte in eccesso.  
   
@@ -220,7 +220,7 @@ La transazione funziona come una sorta di scatola nera per mischiare monete. Ric
   
   
 
-![Schema coinjoin](/posts/bitcoin/coinjoin1-2.webp)
+![Schema coinjoin](coinjoin1-2.webp)
 
 > Come appare un coinjoin visto da un block explorer (blockstream)
 

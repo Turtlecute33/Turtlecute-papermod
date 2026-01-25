@@ -9,7 +9,7 @@ url: /graphene
 images: ["/posts/graphene/graffy.jpg"]
 ---
 
-![Copertina guida GrapheneOS](/posts/graphene/graffy.jpg)
+![Copertina guida GrapheneOS](graffy.jpg)
 
 [GrapheneOS](https://grapheneos.org/) è un sistema operativo FOSS (Free and Open Source Software) basato sul [Android
 Open Source Project (AOSP)](https://www.android.com/), che si concentra sul miglioramento della privacy e
@@ -34,7 +34,7 @@ Google?
 
 ### Perché solo dispositivi Pixel?
 
-![Collage di dispositivi Pixel attuali](/posts/graphene/pixels.jpg)
+![Collage di dispositivi Pixel attuali](pixels.jpg)
 
 Secondo GrapheneOS, al momento semplicemente non ci sono altre scelte ragionevoli. GrapheneOS non ha alcuna esclusiva
 contrattuale per i dispositivi Google, e non perché i Pixel siano incredibilmente sicuri, ma piuttosto perché tutte le
@@ -228,7 +228,7 @@ sul Play Store di Google](https://play.google.com/store/apps/details?id=app.atte
 
 <div style="display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap;">
   <figure style="width: 48%; margin: 0;">
-    <img src="/posts/graphene/auditorapp.jpg" alt="Auditor App" style="width: 100%; height: auto;">
+    <img src="auditorapp.jpg" alt="Auditor App" style="width: 100%; height: auto;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
       Screenshot: Menu dell'app Auditor. Seleziona "Auditee" sul dispositivo GrapheneOS che desideri verificare e
       "Auditor" sul dispositivo secondario con cui stai eseguendo la verifica. Segui semplicemente le istruzioni
@@ -237,7 +237,7 @@ sul Play Store di Google](https://play.google.com/store/apps/details?id=app.atte
   </figure>
 
   <figure style="width: 48%; margin: 0;">
-    <img src="/posts/graphene/auditorapp-results.jpg" alt="Auditor App Results" style="width: 100%; height: auto;">
+    <img src="auditorapp-results.jpg" alt="Auditor App Results" style="width: 100%; height: auto;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
       Risultati dell'audit visualizzati sul dispositivo secondario. Lo sfondo è rosso a causa della verifica
       dell'auditee per la prima volta. Nel prossimo audit sarà verde, dimostrando che il nostro dispositivo non è stato
@@ -252,7 +252,7 @@ di avviso se il dispositivo non riesce a fornire attestazioni valide in tempo.
 
 <div style="display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap;">
   <figure style="width: 48%; margin: 0;">
-    <img src="/posts/graphene/attestationapp.jpg" alt="Auditor App" style="width: 100%; height: auto;">
+    <img src="attestationapp.jpg" alt="Auditor App" style="width: 100%; height: auto;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
       Dopo aver impostato la configurazione desiderata, seleziona "Abilita verifica remota" sul dispositivo GrapheneOS
       che desideri verificare e scansiona il codice QR mostrato dal sito web di attestazione.
@@ -260,7 +260,7 @@ di avviso se il dispositivo non riesce a fornire attestazioni valide in tempo.
   </figure>
 
   <figure style="width: 48%; margin: 0;">
-    <img src="/posts/graphene/attestationapp-results.jpg" alt="Auditor App Results" style="width: 100%; height: auto;">
+    <img src="attestationapp-results.jpg" alt="Auditor App Results" style="width: 100%; height: auto;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
       Se il dispositivo in fase di audit ha una connessione Internet, i risultati dell'audit saranno visualizzati sul
       sito web di attestazione dopo un ricaricamento.
@@ -303,14 +303,14 @@ diverso da quello usato per lo sblocco.
 
 <div style="display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap;">
   <figure style="width: 48%; margin: 0;">
-    <img src="/posts/graphene/settings-deviceunlock.jpg" alt="Device unlock settings" style="width: 100%; height: auto;">
+    <img src="settings-deviceunlock.jpg" alt="Device unlock settings" style="width: 100%; height: auto;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
       Pagina delle impostazioni per configurare lo sblocco del dispositivo. Si trova in Impostazioni &raquo; Sicurezza e Privacy &raquo; Sblocco dispositivo.
     </figcaption>
   </figure>
 
   <figure style="width: 48%; margin: 0;">
-    <img src="/posts/graphene/a.jpg" alt="Screenlock settings" style="width: 100%; height: auto;">
+    <img src="a.jpg" alt="Screenlock settings" style="width: 100%; height: auto;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
       Impostazioni della schermata di blocco. Potreste considerare di disabilitare l'accesso alla fotocamera mentre il dispositivo è bloccato per ridurre ulteriormente la superficie d'attacco.
     </figcaption>
@@ -360,14 +360,14 @@ che è un aspetto fondamentale per il progetto GrapheneOS.
 
 <div style="display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap;">
   <figure style="width: 48%; margin: 0;">
-    <img src="/posts/graphene/exploitprotection.jpg" alt="Device unlock settings" style="width: 100%; height: auto;">
+    <img src="exploitprotection.jpg" alt="Device unlock settings" style="width: 100%; height: auto;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
       Molte di queste opzioni per ridurre la superficie d'attacco si trovano in Impostazioni &raquo; Sicurezza e Privacy &raquo; Protezione contro exploit.
     </figcaption>
   </figure>
 
   <figure style="width: 48%; margin: 0;">
-    <img src="/posts/graphene/exploitprotection-usbc.jpg" alt="Screenlock settings" style="width: 100%; height: auto;">
+    <img src="exploitprotection-usbc.jpg" alt="Screenlock settings" style="width: 100%; height: auto;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
       Le varie opzioni disponibili per controllare la porta USB-C saranno applicate sia a livello software che hardware.
     </figcaption>
@@ -516,14 +516,14 @@ richiedono molto più tempo rispetto ad Android stock.
 
 <div style="display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap;">
   <figure style="width: 48%; margin: 0;">
-    <img src="/posts/graphene/appexploitprotection.jpg" alt="Device unlock settings" style="width: 100%; height: auto;">
+    <img src="appexploitprotection.jpg" alt="Device unlock settings" style="width: 100%; height: auto;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
       Screenshot della sezione 'Protezione contro exploit delle app' in Impostazioni &raquo; Sicurezza e Privacy &raquo; Protezione contro exploit. Tutte le impostazioni predefinite sono state impostate al livello più restrittivo.
     </figcaption>
   </figure>
 
   <figure style="width: 48%; margin: 0;">
-    <img src="/posts/graphene/moresecurityandprivacy.jpg" alt="Screenlock settings" style="width: 100%; height: auto;">
+    <img src="moresecurityandprivacy.jpg" alt="Screenlock settings" style="width: 100%; height: auto;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
       Screenshot di Impostazioni &raquo; Sicurezza e Privacy &raquo; Maggiore sicurezza e privacy. Con 'Mostra media sulla schermata di blocco' e 'Consenti l'autorizzazione ai sensori per le app per impostazione predefinita' disabilitati.
     </figcaption>
@@ -601,14 +601,14 @@ evitare tali situazioni.
 
 <div style="display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap;">
   <figure style="width: 48%; margin: 0;">
-    <img src="/posts/graphene/system-updates-settings.jpg" alt="Device unlock settings" style="width: 100%; height: auto;">
+    <img src="system-updates-settings.jpg" alt="Device unlock settings" style="width: 100%; height: auto;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
 Screenshot: Impostazioni &raquo; Sistema &raquo; Aggiornamenti di sistema.
     </figcaption>
   </figure>
 
   <figure style="width: 48%; margin: 0;">
-    <img src="/posts/graphene/systemupdater-app.jpg" alt="Screenlock settings" style="width: 100%; height: auto;">
+    <img src="systemupdater-app.jpg" alt="Screenlock settings" style="width: 100%; height: auto;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
 Se lo desiderate, potete disabilitare completamente gli aggiornamenti automatici del sistema andando su Impostazioni &raquo; App &raquo; Tutte le app, selezionando i 3 puntini per mostrare le app di sistema, e cercando l'app 'System Updater'. Disabilitatela per impedire al dispositivo di controllare nuovi aggiornamenti di sistema.
     </figcaption>
@@ -669,14 +669,14 @@ profili.
 
 <div style="display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap;">
   <figure style="width: 48%; margin: 0;">
-    <img src="/posts/graphene/system-users.jpg" alt="Device unlock settings" style="width: 100%; height: auto;">
+    <img src="system-users.jpg" alt="Device unlock settings" style="width: 100%; height: auto;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
 Screenshot: Impostazioni &raquo; Sistema &raquo; Utenti.
     </figcaption>
   </figure>
 
   <figure style="width: 48%; margin: 0;">
-    <img src="/posts/graphene/userswitch.jpg" alt="Screenlock settings" style="width: 100%; height: auto;">
+    <img src="userswitch.jpg" alt="Screenlock settings" style="width: 100%; height: auto;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
 Screenshot: Interfaccia rapida per cambiare utente, accessibile scorrendo verso il basso dalla barra di stato e toccando l'icona utente in basso a destra.
     </figcaption>
@@ -747,14 +747,14 @@ passando a un altro profilo, quello precedente sarà messo a riposo, riasparmian
 
 <div style="display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap;">
   <figure style="width: 48%; margin: 0;">
-    <img src="/posts/graphene/user-edit.jpg" alt="Device unlock settings" style="width: 100%; height: auto;">
+    <img src="user-edit.jpg" alt="Device unlock settings" style="width: 100%; height: auto;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
 Toccare un utente in Impostazioni &raquo; Sistema &raquo; Utenti per modificarlo.
     </figcaption>
   </figure>
 
   <figure style="width: 48%; margin: 0;">
-    <img src="/posts/graphene/user-installappviaowner.jpg" alt="Screenlock settings" style="width: 100%; height: auto;">
+    <img src="user-installappviaowner.jpg" alt="Screenlock settings" style="width: 100%; height: auto;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
 Il profilo Proprietario può installare le sue app in altri profili utente.
     </figcaption>
@@ -1010,14 +1010,14 @@ aggiornano autonomamente.
 
 <div style="display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap;">
   <figure style="width: 48%; margin: 0;">
-    <img src="/posts/graphene/obtainium.jpg" alt="Device unlock settings" style="width: 100%; height: auto;">
+    <img src="obtainium.jpg" alt="Device unlock settings" style="width: 100%; height: auto;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
 In Obtainium è possibile cercare pacchetti di app da varie fonti come GitHub e GitLab. Dopo averli scaricati, Obtainium ci chiederà di condividere il pacchetto con AppVerifier prima di procedere con l'installazione effettiva. Da notare che, prima di installare Obtainium stesso, è possibile scaricare il suo pacchetto e verificarlo con AppVerifier, che può essere ottenuto da Accrescent.
     </figcaption>
   </figure>
 
   <figure style="width: 48%; margin: 0;">
-    <img src="/posts/graphene/appverifier.jpg" alt="Screenlock settings" style="width: 100%; height: auto;">
+    <img src="appverifier.jpg" alt="Screenlock settings" style="width: 100%; height: auto;">
     <figcaption style="font-size: 0.9em; color: #666; margin-top: 8px;">
 È possibile che la chiave di firma non sia ancora stata aggiunta al database interno di AppVerifier. In tal caso, cercatela sulla pagina del progetto e copiatela negli appunti. Una volta ottenuta, tornate su AppVerifier per verificare se il firmatario/certificato della pagina corrisponde a quello con cui il progetto è stato firmato.
     </figcaption>

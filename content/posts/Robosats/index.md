@@ -5,7 +5,7 @@ keywords: ["RoboSats", "Bitcoin", "P2P", "no KYC", "guida RoboSats", "Bitcoin an
 author: "Turtlecute"
 date: 2024-09-12
 url: /robosats
-images: ["img/robosats1.webp"]
+images: ["/posts/Robosats/img/robosats1.webp"]
 ---
 
 ![Schermata iniziale RoboSats](img/robosats1.webp)

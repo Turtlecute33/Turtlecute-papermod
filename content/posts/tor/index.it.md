@@ -8,7 +8,7 @@ url: /tor
 images: ["/posts/tor/torino.webp"]
 ---
 
-![Immagine di copertina Tor](/posts/tor/torino.webp)
+![Immagine di copertina Tor](torino.webp)
 
 Questa vuole essere una guida completa per lanciare un nodo a supporto
 della rete tor. Prima di iniziare spieghiamo in breve cos\'è questo
@@ -37,8 +37,8 @@ preservare la loro privacy online.
 
 Per ulteriori informazioni consiglio caldamente l'ascolto di questa
 puntata:
-[![spotify](/posts/tor/spotify.png)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)
-[![Apple podcast](/posts/tor/apple.png)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)
+[![spotify](spotify.png)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)
+[![Apple podcast](apple.png)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)
 
 
 
@@ -459,7 +459,7 @@ interfaccia simile ad htop potete installare nyx con il comando:\
 lanciandolo con il comando nyx potrete monitorare le statistiche con una
 grafica simile a questa:
 
-![Schermata di Nyx per monitoraggio Tor](/posts/tor/nyx.webp)
+![Schermata di Nyx per monitoraggio Tor](nyx.webp)
 
 ## Test di funzionamento {#cloud style="color: greenyellow;"}
 
@@ -469,7 +469,7 @@ con tuti i relay potete trovare **dopo qualche ora** anche il vostro
 nodo inserendo nella ricerca il nome o una parte di esso del vostro
 relay.
 
-![Schermata dei relay Tor su metrics.torproject.org](/posts/tor/screen.webp)
+![Schermata dei relay Tor su metrics.torproject.org](screen.webp)
 
 Se viene mostrato correttamente avete ufficialmente un nodo tor attivo!
 

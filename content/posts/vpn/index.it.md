@@ -8,7 +8,7 @@ url: /vpn
 images: ["/posts/vpn/vpn.webp"]
 ---
 
-![Copertina guida VPN](/posts/vpn/vpn.webp)
+![Copertina guida VPN](vpn.webp)
 
 Questa vuole essere una guida completa per effettuare il setup di una propria VPN utilizzando Wireguard e che filtra link pubblicitari e tracker grazie ad un filtro di AdBlocking fatto con Pi-Hole.
 
@@ -179,7 +179,7 @@ esempio: http://84.177.121.221/admin
   
 A questo punto dovreste vedere la pagina di login di Pi-Hole (il nostro sistema di filtro pubblicitá, tracker e analytics). Come password dovete usare quella che ci eravamo salvati precedentemente (e che ci venive generata in fase di installazione). Una volta effettuato l'accesso avrete davanti questa schermata:  
   
-![Dashboard AdLists Pi-hole](/posts/vpn/dashboard.webp) Andiamo ora nella sezione "AdLists" ed aggiungiamo delle liste di vari domain da bloccare (o meglio, il link ad alcune di queste liste). Di questo argomento si puó discorrere ore, il concetto di base é che se aggiungiamo decine di di fonti a caso bloccheremo tantissimo...troppo, andando quindi a far smettere di funzionare molti siti web o funzioni di applicazioni su nostri dispositivi. Conviene usare poche liste e tendenzialmente fatte da persone di cui ci fidiamo almeno parzialmente. Vi lascio qua sotto alcune delle principali e più famose, in caso vogliate ampliare la sezione vi lascio l'onere di farlo in autonomia in quanto in base alle configurazioni ci potrebbero essere diversi pro o contro.  
+![Dashboard AdLists Pi-hole](dashboard.webp) Andiamo ora nella sezione "AdLists" ed aggiungiamo delle liste di vari domain da bloccare (o meglio, il link ad alcune di queste liste). Di questo argomento si puó discorrere ore, il concetto di base é che se aggiungiamo decine di di fonti a caso bloccheremo tantissimo...troppo, andando quindi a far smettere di funzionare molti siti web o funzioni di applicazioni su nostri dispositivi. Conviene usare poche liste e tendenzialmente fatte da persone di cui ci fidiamo almeno parzialmente. Vi lascio qua sotto alcune delle principali e più famose, in caso vogliate ampliare la sezione vi lascio l'onere di farlo in autonomia in quanto in base alle configurazioni ci potrebbero essere diversi pro o contro.  
 
 ```
 
@@ -203,7 +203,7 @@ Installiamo sul nostro dispositivo l'applicazione [Wireguard](https://www.wiregu
   
 selezioniamo "add new client", diamo un nome a scelta, selezioniamo come DNS "current system resolver". Ora ci verrá mostrato un QRcode, con la nosta app mobile di wireguard andiamo a scannerizzarlo, dopo averlo fatto ci dovrebbe mostrare una schermata del genere:  
 
-![Schermata configurazione WireGuard](/posts/vpn/wireguard.webp)
+![Schermata configurazione WireGuard](wireguard.webp)
 
   
 Nella sezione "DNS servers" andiamo ad inserire l'indirizzo ip della nostra VPS, verifichiamo che nella sezione "Endpoint" sia presente lo stesso indirizzo IP più la scritta ":51820" che indica la porta, fatto questo ci basterá salvare e attivare la VPN!  

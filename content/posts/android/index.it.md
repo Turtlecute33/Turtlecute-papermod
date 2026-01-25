@@ -9,7 +9,7 @@ url: /android
 images: ["/posts/android/1.webp"]
 ---
 
-![Guida Android e privacy](/posts/android/1.webp)
+![Guida Android e privacy](1.webp)
 
 La guida è aperta a miglioramenti e consigli, descriverò la configurazione che trovo con il miglior rapporto usabilità/privacy, nel tempo ampierò le varie sezioni introducendo anche varie alternative per chi magari non si trova bene con una determinata applicazione o servizio, Se volete darmi consigli, contribuire alla guida o effettuare donazioni, potete dare un occhiata alla pagina [Donazioni](https://btcpay.priorato.org/i/CXG1ouF8eHjdCV73Th4Ujb) o effettuare una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute-papermod).  
 
@@ -61,7 +61,7 @@ Essendo ora separati dal mondo Google dovremo trovare altri store da cui scarica
 
 ## Shelter
 
-![Schermata dell'app Shelter](/posts/android/shelter.webp)
+![Schermata dell'app Shelter](shelter.webp)
 
 ⚠️ Questo passaggio é opzionale, serve principalmente se siete interessati a creare diversi "contenitori" sul vostro telefono isolati tra di loro. Utilizzare Shelter ha ventaggi e svantaggi e fa fatto solo in caso siate interessati alle funzioni che offre. Se pensate di voler isolare alcune app (per esempio messaggistica privata sotto Tor) da altre (Per esempio app invasive lato privacy come quelle bancarie) procedete, se non necessario saltate questa sezione.
 

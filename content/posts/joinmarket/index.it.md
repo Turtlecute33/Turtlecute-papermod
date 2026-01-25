@@ -10,7 +10,7 @@ images: ["/posts/joinmarket/jm.webp"]
 
 # JOINMARKET
 
-![Copertina guida JoinMarket](/posts/joinmarket/jm.webp)
+![Copertina guida JoinMarket](jm.webp)
   
 Se avete trovato questa pagina cercando online "Join**T**market" avete tutta la mia sincera stima. Siete capitati, però, in una guida che tratta un argomento completamente differente, ma estremamente interessante! 🚬🍁  
   
