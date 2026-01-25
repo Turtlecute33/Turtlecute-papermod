@@ -23,7 +23,7 @@ Bitcoin non è facile da spiegare. Non esiste un paragrafo in grado di trasmette
 Questo in parte perché nulla come Bitcoin è mai esistito prima, quindi non c’è nulla con cui le persone lo paragonino. I confronti vengono effettuati automaticamente per aiutare a comprendere i concetti, ma sono imprecisi e portano a conclusioni errate.  
   
 Quindi come semplificare bitcoin?  
-Possiamo provare a spiegarlo identificandolo in un protocollo informatico che ognuno di noi puo' installare sul proprio computer a casa, come un qualsiasi programma, partecipando cosi alla rete che e' decentralizzata (non cé un server centrale che controlla bitcoin ma ognuno di noi partecipa attivamente alla rete come in una sorta di democrazia diretta). 
+Possiamo provare a spiegarlo identificandolo in un protocollo informatico che ognuno di noi puo' installare sul proprio computer a casa, come un qualsiasi programma, partecipando cosi alla rete che e' decentralizzata (non c'è un server centrale che controlla bitcoin ma ognuno di noi partecipa attivamente alla rete come in una sorta di democrazia diretta). 
 
 Utilizzando questo software possiamo inviare, ricevere e conservare bitcoin, che sono la moneta che si sposta su questo protocollo, ogni volta che effettuiamo una transazione ogni persona che partecipa al protocollo se la annota e la salva in un file chiamato blockchain, una sorta di 'libro mastro' uguale per ogni persona al quale tutti aggiungono le proprie transazioni quando effettuate.  
   

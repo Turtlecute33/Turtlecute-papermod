@@ -13,12 +13,12 @@ images: ["/posts/android/1.webp"]
 
 La guida è aperta a miglioramenti e consigli, descriverò la configurazione che trovo con il miglior rapporto usabilità/privacy, nel tempo ampierò le varie sezioni introducendo anche varie alternative per chi magari non si trova bene con una determinata applicazione o servizio, Se volete darmi consigli, contribuire alla guida o effettuare donazioni, potete dare un occhiata alla pagina [Donazioni](https://btcpay.priorato.org/i/CXG1ouF8eHjdCV73Th4Ujb) o effettuare una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute-papermod).  
 
-Questa guida parla di android in generale, ne ho scritta anche una specifica per GrapheneOS, potete trovarla [qui](https://turtlecute.org/graphene), se siete interessati ad acquitare dispositivi con set-up di privacy su misura contattatemi su [Telegram](https://turtlecute.org/android)
+Questa guida parla di android in generale, ne ho scritta anche una specifica per GrapheneOS, potete trovarla [qui](https://turtlecute.org/graphene), se siete interessati ad acquistare dispositivi con set-up di privacy su misura contattatemi su [Telegram](https://turtlecute.org/android)
   
 
 ## Sistema operativo
 
-Esistono vari sistemi operativi Android privacy-oriented (GrapheneOS, CalixOS, etc). In questa guida tratteremo l’approccio usando come base LineageOS, ma è comunque compatibile con ogni altro sistema operativo AOSP. Se possibile consiglio vivamente di usare GrapheneOS in quanto ha funzioni decisamente piu avanzate e complete di qualasiasi altro sistema operativo sul mercato.
+Esistono vari sistemi operativi Android privacy-oriented (GrapheneOS, CalixOS, etc). In questa guida tratteremo l’approccio usando come base LineageOS, ma è comunque compatibile con ogni altro sistema operativo AOSP. Se possibile consiglio vivamente di usare GrapheneOS in quanto ha funzioni decisamente piu avanzate e complete di qualsiasi altro sistema operativo sul mercato.
 
 Questa guida è stata pensata e studiata per offrire un ottimo bilanciamento tra sicurezza e privacy nell'utilizzo del proprio telefono, procedure come il rooting e lo sblocco del bootloader riducono notevolmente la sicurezza del dispositivo e sono per questo fortemente sconsigliate.
 
@@ -39,7 +39,7 @@ A questo punto ci troveremo con un sistema operativo fresco e appena installato!
 Per avere un dispositivo privacy-oriented cominceremo con il modificare i vari settings del sistema operativo, elenchiamo le principali impostazioni ed accorgimenti, anche se questi possono cambiare da dispositivo a dispositivo:
 
 *   Disabilitare bluetooth e posizione ogni volta che non vengono utilizzati
-*   Attivare la privacy nel blocco schermo e un metodo di protezione del dispotivo (pin e notifiche nascoste con telefono bloccato)
+*   Attivare la privacy nel blocco schermo e un metodo di protezione del dispositivo (pin e notifiche nascoste con telefono bloccato)
 *   Disabilitare tutti i dati telemetrici
 *   Abilitare se disattivata la criptazione del dispositivo
 *   Disabilitare i backup
@@ -114,7 +114,7 @@ Tutte le opzioni sono valide, la decisione dipende principalmente dalla vostra v
 Ora che abbiamo gli store e le reti ben configurate passiamo a scaricare alcune app fortemente consigliate:
 
 *   [HeliBoard](https://github.com/Helium314/HeliBoard): tastiera Android open source esattamente uguale alla Gboard, usare una tastiera offline e che non comunica ció che scrivete a server online é fondamentale per una buona sicurezza e privacy.
-*   [Cromite](https://github.com/uazo/cromite): Un ottimo browser per la navigazione di tutti i giorni, altre alternative sono Brave o Vanadium (quest'ultimo é presente solo su graphene al momento). Se cercatr alti livelli di sicurezza EVITATE i browser firefox, su mobile hanno varie funzioni mancati e una superficie di attacco molto maggiore.
+*   [Cromite](https://github.com/uazo/cromite): Un ottimo browser per la navigazione di tutti i giorni, altre alternative sono Brave o Vanadium (quest'ultimo é presente solo su graphene al momento). Se cercate alti livelli di sicurezza EVITATE i browser firefox, su mobile hanno varie funzioni mancati e una superficie di attacco molto maggiore.
   
 
 A questo punto possiamo procedere al download delle applicazioni facendo attenzione al profilo nel quale le installiamo:
@@ -173,7 +173,7 @@ Se vogliamo invece una sicurezza aggiuntiva possiamo usare un cloud in combinazi
 ## VPN
 Il discorso VPN invece è particolare, una VPN cripta il nostro traffico e lo fa passare attraverso un suo nodo mettendosi tra noi e il nostro ISP, dandoci maggiore privacy verso di esso ma obbligandoci a fidarci del servizio VPN stesso.  
 
-Tutte le aziende in questo settore promettono privacy e politiche di no-logging, ma non é possibile verificare queste affermazioni. I servizi a mio parere piú interessanti sonoL
+Tutte le aziende in questo settore promettono privacy e politiche di no-logging, ma non é possibile verificare queste affermazioni. I servizi a mio parere piú interessanti sono:
 
 * Mullvad
 * Proton

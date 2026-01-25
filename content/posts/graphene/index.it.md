@@ -6,7 +6,7 @@ keywords: ["Grapheneos","grapheneos ita","graphene os","graphene os italiano","p
 author: "Turtlecute"
 date: 2025-01-05
 url: /graphene
-images: ["/posts/tor/graffy.jpg"]
+images: ["/posts/graphene/graffy.jpg"]
 ---
 
 ![](/posts/graphene/graffy.jpg)

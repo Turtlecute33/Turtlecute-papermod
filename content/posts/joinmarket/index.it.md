@@ -14,7 +14,7 @@ images: ["/posts/joinmarket/jm.webp"]
   
 Se avete trovato questa pagina cercando online "Join**T**market" avete tutta la mia sincera stima. Siete capitati, però, in una guida che tratta un argomento completamente differente, ma estremamente interessante! 🚬🍁  
   
-L'obbiettivo di questo tutorial é quello di illustrare il funzionamento teorico e pratico di JoinMarket.  
+L'obiettivo di questo tutorial é quello di illustrare il funzionamento teorico e pratico di JoinMarket.  
   
 Questa guida ha richiesto tantissimo lavoro, tempo e impegno per essere completata ed é a disposizione in modo completamente gratuito. Se hai trovato i contenuti qui presenti interessanti e utili ti invito ad effettuare una donazione di un qualsiasi importo a sostegno del mio progetto di divulgazione. Questo sito non contiene analytics, pubblicità o elementi traccianti grazie a tutti coloro che supportano la mia divulgazione sostenendomi. 🐢 💚
   
@@ -306,7 +306,7 @@ Una volta che i vostri satoshi faranno dei coinjoin, si muoveranno da un mixdept
 
 ## Tumbler
 Eccoci finalmente alla parte piú succosa di JoinMarket, il tumbler!  
-se avete ascoltato il podcast sapete giá di cosa si tratta. Una raccomandazione prima di inziare: ATTENTI ALLE FEE! Ricordatevi di settare i limiti nel file joinmarket.cfg (come spiegato all'inzio) e valutate di far girare il programma solo quando le fee onchain sono relativamente basse (sotto i 10 sats/vB).  
+se avete ascoltato il podcast sapete giá di cosa si tratta. Una raccomandazione prima di iniziare: ATTENTI ALLE FEE! Ricordatevi di settare i limiti nel file joinmarket.cfg (come spiegato all'inizio) e valutate di far girare il programma solo quando le fee onchain sono relativamente basse (sotto i 10 sats/vB).  
 Per lanciare il tumbler é necessario aver fermato lo script da maker (se era attivo), dopo potremo far partire il comando:  
   
 ```
@@ -322,7 +322,7 @@ pyhton tumbler.py TestWallet.jmdat -N 7 2 -c 3 1 bc1qz3f80rtv0ux85d7rc06ldtvmpqy
 
 In questo caso abbiamo lanciato uno script di tumbling che non userà il numero di controparti di default (il parametro -N indica che richiediamo 7 controparti con una varianza massima di 2, quindi un numero di maker random da 5 a 9) e con un numero maggiore di coinjoin per mixdepth (di default questo script effettua un numero random di coinjoin per sezione del wallet che va da 1 a 3, usando il comando -c 3 1 invece sará da 2 A 4).In questo modo spenderemo piú sats in fee ma avremo un anonimity set maggiore.  
   
-É possibile anche aggiungere quanti indirizzi di output si vogliono (minimo 3, non cé un massimo se non il buon senso). Non é invece possibile, per questioni di privacy, decidere come saranno distribuiti i satoshi tra gli indirizzi specificati come output.  
+É possibile anche aggiungere quanti indirizzi di output si vogliono (minimo 3, non c'è un massimo se non il buon senso). Non é invece possibile, per questioni di privacy, decidere come saranno distribuiti i satoshi tra gli indirizzi specificati come output.  
   
 Il tumbler é un processo volutamente lungo, occasionalmente potrebbe capitare che qualcosa smetta di funzionare, nella maggior parte dei casi questo si risolverà in autonomia nel giro di poche ore. In caso di crash totale potremo tentare di riavviarlo con il comando:  
   
@@ -336,7 +336,7 @@ In caso chiudendo il terminale SSH al vostro nodo si interrompa anche lo script 
 Lanciandolo da shell digitando 'tmux' vi si aprirá un terminale che rimarrá attivo in background anche chiudendo la connessione remota. Quando vi ri-connetterete al vostro nodo con il comando: 'tmux attach' ri-aprirete la shell lasciata aperta.
 
 ## Conclusioni
-JoinMarket é un software sconfinato e personalizzabile. In questa guida abbiamo scoperto le funzioni principali in modo da rendere possibile per chiunque (o almeno ci ho provato, mi rendo conto che usare questo software non é una passeggiata) l'utilizzo di questo programma. Uno dei maggiori problemi di JM é proprio questo: il numero di persone che lo usano e che fanno da maker. Se pochi utenti sfruttano questo software, la privacy generale (anon-set) si abbassa. Ecco perché spero che questa guida possa incentivare l'uso e vi convinca a scaricare e installare il mio software preferito per fare coinjoin. In caso vogliate approfondire ancora di piú alcuni aspetti vi consiglio di dare una lettura ai vari docs di approfondimento presenti su github, sono vermanete ben fatti e li potete reperire [qui](https://github.com/JoinMarket-Org/joinmarket-clientserver/tree/master/docs).  
+JoinMarket é un software sconfinato e personalizzabile. In questa guida abbiamo scoperto le funzioni principali in modo da rendere possibile per chiunque (o almeno ci ho provato, mi rendo conto che usare questo software non é una passeggiata) l'utilizzo di questo programma. Uno dei maggiori problemi di JM é proprio questo: il numero di persone che lo usano e che fanno da maker. Se pochi utenti sfruttano questo software, la privacy generale (anon-set) si abbassa. Ecco perché spero che questa guida possa incentivare l'uso e vi convinca a scaricare e installare il mio software preferito per fare coinjoin. In caso vogliate approfondire ancora di piú alcuni aspetti vi consiglio di dare una lettura ai vari docs di approfondimento presenti su github, sono veramente ben fatti e li potete reperire [qui](https://github.com/JoinMarket-Org/joinmarket-clientserver/tree/master/docs).  
   
 Buon mixing tartarughe!🐢 💚
 

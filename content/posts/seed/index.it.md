@@ -86,7 +86,7 @@ Nel mio hash, la prima cifra "b" corrisponde a 11; "1" equivale a 1.
 
 Ora convertiamo questi due numeri nelle loro rappresentazioni binarie a quattro cifre. Puoi farlo facendo riferimento alla tabella qui sotto:
 
-![](i/posts/seed/image2.webp)
+![](/posts/seed/image2.webp)
 
 > '11' in binario è '1011', '1' è '0001'. Siamo passati da "b" e "1", a 11 e 1, e infine a 1011 e 0001.
 

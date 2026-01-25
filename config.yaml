@@ -49,8 +49,8 @@ languages:
         buttons:
           - name: Guide
             url: posts
-          - name: Podcast
-            url: https://priorato.org
+          - name: Servizi
+            url: https://guida.priorato.org
 outputs:
   home:
     - HTML
@@ -128,7 +128,7 @@ params:
     disableHLJS: true
     favicon: "/favicon.ico"
     favicon16x16: "/favicon-16x16.png"
-    favicon32x32: "/favicon-32x32.png>"
+    favicon32x32: "/favicon-32x32.png"
     apple_touch_icon: "/apple-touch-icon.png"
     safari_pinned_tab: "/safari-pinned-tab.svg"
 
@@ -141,6 +141,9 @@ markup:
         lineNos: false
         noClasses: false
         guessSyntax: true
+    goldmark:
+        renderer:
+            unsafe: true
 
 # privacy:
 #   vimeo:
@@ -163,11 +166,5 @@ markup:
 services:
   instagram:
     disableInlineCSS: true
-  twitter:
+  x:
     disableInlineCSS: true
-
-markup:
- goldmark:
-  renderer:
-   unsafe: true
-

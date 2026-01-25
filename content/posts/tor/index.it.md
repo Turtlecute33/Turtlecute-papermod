@@ -74,9 +74,9 @@ banda, influenzando la velocità complessiva del nodo Tor. Inoltre, la
 connessione a Internet potrebbe non garantire sempre un livello di
 affidabilità ottimale, e l\'assegnazione di indirizzi IP dinamici da
 parte dei provider potrebbe rendere il nodo meno stabile nel tempo. Un
-ultimo sventaggio da notare è che lanciando un nodo nella propria rete
+ultimo svantaggio da notare è che lanciando un nodo nella propria rete
 domestica si ammette pubblicamente di avere un nodo tor in casa, cosa
-che per alcuni amanti della privacy può comoportare un noioso problema
+che per alcuni amanti della privacy può comportare un noioso problema
 da affrontare.\
 \
 D\'altra parte, l\'utilizzo di un server a noleggio online offre
@@ -96,7 +96,7 @@ locali.\
 Per riassumere: un nodo casalingo fornisce una maggiore sicurezza e
 decentralizzazione al network, i principali svantaggi sono che si leaka
 il fatto che si sta runnando un nodo tor presso il proprio domicilio e
-si potrebbe avere qualche difficoltà in più a gestrire i vari permessi
+si potrebbe avere qualche difficoltà in più a gestire i vari permessi
 della rete locale. Quando invece si parla di server a noleggio online
 (più avanti nella guida ve ne consiglierò alcuni) la configurazione sarà
 piu facile e veloce a fronte però di costi piu alti e un minor controllo
@@ -436,7 +436,7 @@ Fatto, il nostro caro nodino Tor è pronto!
 
 Bravissimo eroe!\
 Che tu abbia fatto tutto a manina o che tu abbia usato il mio script
-automatzzato hai ufficialmente creato un nodo Tor! Prima di eseguire
+automatizzato hai ufficialmente creato un nodo Tor! Prima di eseguire
 tutti i controlli del caso iniziamo riavviando il servizio Tor sul
 nostro pc (ogni volta che modifichiamo il file /etc/tor/torrc dobbiamo
 riavviare il servizio per applicare le modifiche):\
@@ -449,7 +449,7 @@ usare il comando:\
 ` journalctl -xeu tor@default `\
 \
 per andare ad analizzare i log, cosa non proprio facile, ma utile per
-identificare il problema: (nel 90%) dei casi é un errrore dentro al file
+identificare il problema: (nel 90%) dei casi é un errore dentro al file
 etc/tor/torrc .\
 Ultimo ma non per importanza se volete monitorare il vostro nodo con un
 interfaccia simile ad htop potete installare nyx con il comando:\

@@ -120,7 +120,7 @@ Ricorda che l'enumerazione delle minacce—cioè stilare una lista di attori con
 
 Un'altra considerazione importante è che il **software open-source** non è automaticamente privato o sicuro. Codice maligno può essere introdotto da sviluppatori del progetto, contributori, sviluppatori di librerie o da chi compila il codice. Inoltre, a volte un software open-source può avere proprietà di sicurezza inferiori rispetto alla sua controparte proprietaria.
 
-Ad esempio, la maggior parte dei desktop Linux tradizionali mancano di default di secure boot, protezione dell'integrità del sistema o controllo completo degli accessi per le app rispetto a macOS. Quando crei un modello di minaccia, è fondamentale valutare le proprietà di privacy e sicurezza di ogni software utilizzato e creare un treat model correlato ai propri bisogni di sicurezza e privacy, invece di fidarsi ciecamente solo perché è open-source.
+Ad esempio, la maggior parte dei desktop Linux tradizionali mancano di default di secure boot, protezione dell'integrità del sistema o controllo completo degli accessi per le app rispetto a macOS. Quando crei un modello di minaccia, è fondamentale valutare le proprietà di privacy e sicurezza di ogni software utilizzato e creare un threat model correlato ai propri bisogni di sicurezza e privacy, invece di fidarsi ciecamente solo perché è open-source.
 
 ## Conclusioni {#conclusioni}
 
