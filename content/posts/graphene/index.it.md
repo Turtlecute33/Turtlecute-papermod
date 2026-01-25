@@ -9,7 +9,7 @@ url: /graphene
 images: ["/posts/graphene/graffy.jpg"]
 ---
 
-![](/posts/graphene/graffy.jpg)
+![Copertina guida GrapheneOS](/posts/graphene/graffy.jpg)
 
 [GrapheneOS](https://grapheneos.org/) è un sistema operativo FOSS (Free and Open Source Software) basato sul [Android
 Open Source Project (AOSP)](https://www.android.com/), che si concentra sul miglioramento della privacy e
@@ -24,7 +24,7 @@ Questo articolo è un tentativo di raccogliere informazioni e conoscenze sulla s
 progetto GrapheneOS, un grazie a [PatrickD](https://x.com/patrickd_de) per aver scritto un articolo su graphene os da
 cui questa guida é ispirata.
 
-La scrittura di questa guida é stata lunga e ha portato via tantissimo tempo, la piú grande donazione che potete fare é condividerla su **gruppi** e **canali telegram**, **twitter** e social network vari in modo che piú gente possibile la veda. Un **grazie di cuore** a chiunque lo fará. Un bottone donazioni é presente a fine guida ma é del tutto secondario in quanto questi contenuti non sono a fini di lucro. Grazie per il supporto, questo sito non richiede nessun vostro dato, non ha analytics, non vi chiede email o registrazioni, condividete la parola per mantenere vivo questo progetto.
+La scrittura di questa guida é stata lunga e ha portato via tantissimo tempo, la più grande donazione che potete fare é condividerla su **gruppi** e **canali telegram**, **twitter** e social network vari in modo che più gente possibile la veda. Un **grazie di cuore** a chiunque lo fará. Un bottone donazioni é presente a fine guida ma é del tutto secondario in quanto questi contenuti non sono a fini di lucro. Grazie per il supporto, questo sito non richiede nessun vostro dato, non ha analytics, non vi chiede email o registrazioni, condividete la parola per mantenere vivo questo progetto.
 
 ## Scelta del Dispositivo
 
@@ -190,7 +190,7 @@ disponibili sul sito ufficiale di GrapheneOS nella sezione "install".
 
 Supponendo che ora siate fieri possessori di un dispositivo Pixel con una nuova installazione di GrapheneOS, potreste
 rimanere sorpresi dall'avviso che appare all'avvio del dispositivo. Verrá mostrata una schermata nera che avvisa che il
-sistema operativo non é piu quello originale e in basso viene mostrata una stringa di
+sistema operativo non é più quello originale e in basso viene mostrata una stringa di
 caratteri, che é un hash
 crittografico che consente di verificare che la versione di GrapheneOS installata sia autentica:
 
@@ -278,7 +278,7 @@ GrapheneOS si difende dalle vulnerabilità di sicurezza con tre approcci fondame
 più difficile possibile e isola i componenti tra loro (sandbox) per ridurre l'impatto di eventuali exploit. Poiché
 tali misure influenzano la facilità d'uso e le prestazioni del dispositivo, GrapheneOS consente agli utenti di
 scegliere le proprie preferenze e personalizzare l'esperienza d'uso tramite tantissime impostazioni
-in modo da creare il set-up piú adatto alle proprie esigenze.
+in modo da creare il set-up più adatto alle proprie esigenze.
 
 ### La Schermata di Blocco
 
@@ -584,7 +584,7 @@ tanto tempo che chi sta chiamando potrebbe decidere di riagganciare. In alternat
 microfono e fotocamera abilitato a livello di sistema e negare questi permessi a livello di singola app: Lasciandoli
 abilitati per le app di telefono e fotocamera, impostando tutte le altre su 'Chiedi ogni volta'.
 
-Se siete certi che non avrete mai bisogno di questi sensori, potreste anche acquistare dispositivi con microfoni e telecamera rimossi anche se mediamente i prezzi sono ESTREMAMENTE piú alti in quanto il rischio di danneggiare parti durante la rimozione dei sensori é molto alta.
+Se siete certi che non avrete mai bisogno di questi sensori, potreste anche acquistare dispositivi con microfoni e telecamera rimossi anche se mediamente i prezzi sono ESTREMAMENTE più alti in quanto il rischio di danneggiare parti durante la rimozione dei sensori é molto alta.
 
 ### Aggiornamenti di Sistema
 
@@ -724,7 +724,7 @@ secondario invece del Proprietario per il vostro uso regolare, questo problema s
 mettere i dati del Proprietario a riposo richiede un riavvio, mettere a riposo i dati di un utente secondario richiede
 semplicemente di terminare la sua sessione.
 
-La funzione piú utile dei profili é comunque quella di creare ambienti compartimentalizzati con trade-offs di privacy e sicurezza differenti e con set-up di rete diversi. É possibile per esempio creare un profilo tutto sotto tor grazie ad applicazioni come [invizible pro](https://invizible.net/en/downloads/), uno sotto VPN con [Wireguard](https://download.wireguard.com/android-client/) e uno totalmente clearnet avendo 3 threat model differenti.
+La funzione più utile dei profili é comunque quella di creare ambienti compartimentalizzati con trade-offs di privacy e sicurezza differenti e con set-up di rete diversi. É possibile per esempio creare un profilo tutto sotto tor grazie ad applicazioni come [invizible pro](https://invizible.net/en/downloads/), uno sotto VPN con [Wireguard](https://download.wireguard.com/android-client/) e uno totalmente clearnet avendo 3 threat model differenti.
 
 ### Numero di Profili Utente
 
@@ -743,7 +743,7 @@ massimo di utenti concorrenti in base alla quantità di RAM integrata nel dispos
 Se avete profili utente per casi d'uso in cui non è mai necessario che quel profilo rimanga attivo in background,
 potete disattivare l'opzione _"Consenti esecuzione in background"_ modificando quel profilo tramite il profilo
 Proprietario. In questo modo, non dovrete esplicitamente terminare la sessione dell'utente, poiché semplicemente
-passando a un altro profilo, quello precedente sarà messo a riposo, riasparmiando cosi RAM, CPU e batteria.
+passando a un altro profilo, quello precedente sarà messo a riposo, riasparmiando così RAM, CPU e batteria.
 
 <div style="display: flex; gap: 10px; justify-content: space-between; flex-wrap: wrap;">
   <figure style="width: 48%; margin: 0;">
@@ -766,7 +766,7 @@ Il profilo Proprietario può installare le sue app in altri profili utente.
 Potreste rimanere sorpresi di scoprire che i profili utente possono aggiornare le app di altri profili e che il
 profilo Proprietario può installare le sue app in un altro profilo. Non avevamo detto che i file system di ciascun
 profilo sono completamente isolati? Beh, sì, ma non è come se ogni profilo funzionasse su un sistema operativo
-completamente indipendente, il codice delle applicazioni puó essere condiviso tra profili usando dei layer di comunicazione che rendono piú comode molte funzionalitá.
+completamente indipendente, il codice delle applicazioni puó essere condiviso tra profili usando dei layer di comunicazione che rendono più comode molte funzionalitá.
 
 Oltre a la clonazione delle app tra profili é anche possibile installare store di download applicazioni all'interno dei vari profili singolarmente.
 
@@ -884,7 +884,7 @@ GrapheneOS. Per ridurre la superficie d'attacco, l'accesso diretto all'hardware 
 controllato tramite un toggle aggiuntivo. Il toggle _'Accesso speciale agli acceleratori hardware per le app Google'_
 è abilitato di default ma non concede accessi aggiuntivi ai dati.
 
-In caso vogliate foto di qualitá piú alta potete installare la google cam e disattivare l'accesso ad internet per l'applicazione.
+In caso vogliate foto di qualitá più alta potete installare la google cam e disattivare l'accesso ad internet per l'applicazione.
 
 ### Galleria
 
@@ -1056,7 +1056,7 @@ cieca.
 
 Generalmente non cé uno store perfetto per scaricare le app, il client per F-Droid [Droidify](https://droidify.eu.org/) fixa alcune delle problematiche di questo store di applicativi ed é per questo raccomandato rispetto al client originale.
 
-Purtroppo non cé al momento una soluzione definitiva per scaricare le app su graphene, come leggerete dopo ogni scelta porta vantaggi di sicurezza, privacy o comoditá introducendo a sua volta altri problemi. Usate la soluzione che piú si addice ai vostri bisogni.
+Purtroppo non cé al momento una soluzione definitiva per scaricare le app su graphene, come leggerete dopo ogni scelta porta vantaggi di sicurezza, privacy o comoditá introducendo a sua volta altri problemi. Usate la soluzione che più si addice ai vostri bisogni.
 
 ### Play Store & Aurora Store
 
@@ -1084,9 +1084,9 @@ compatibilità o evitarlo è completamente vostra.
 ### Riflessione sui vari store
 Personalmente trovo obtanium un ottima app che peró purtroppo pecca sul fatto che non permette agli utenti di "scoprire" nuove app ma solo di scaricare app specifiche. 
 
-Parlando di droidify, aurora e google secondo me sono tutte scelte generalmente valide in base ai trade-off dell'utente. Il vantaggio di droidify é di non richiedere account ed essere distribuito su vari repositpory aggiungibili anche custom. Aurora é un ottima via di mezzo tra privacy e sicurezza anche se il modo piú stabile e sicuro di usarlo é collegandoci un account google creato con dati falsi (l'app é opensource e quindi non richiede di installare nulla collegato al nulla sul nostro dispositivo).
+Parlando di droidify, aurora e google secondo me sono tutte scelte generalmente valide in base ai trade-off dell'utente. Il vantaggio di droidify é di non richiedere account ed essere distribuito su vari repositpory aggiungibili anche custom. Aurora é un ottima via di mezzo tra privacy e sicurezza anche se il modo più stabile e sicuro di usarlo é collegandoci un account google creato con dati falsi (l'app é opensource e quindi non richiede di installare nulla collegato al nulla sul nostro dispositivo).
 
-Il play store di google é la soluzione piú sicura ma con i maggiori trade-offs di privacy richiesti (permessi, dipendenze, account e dati personali). Se cercate altissima sicurezza questo rimane il metodo piú restistente ad attacchi esdterni. A mio parere tutti gli store soddisfano richieste di mercato divcerse.
+Il play store di google é la soluzione più sicura ma con i maggiori trade-offs di privacy richiesti (permessi, dipendenze, account e dati personali). Se cercate altissima sicurezza questo rimane il metodo più restistente ad attacchi esdterni. A mio parere tutti gli store soddisfano richieste di mercato divcerse.
 
 ## Problemi e Risoluzioni
 

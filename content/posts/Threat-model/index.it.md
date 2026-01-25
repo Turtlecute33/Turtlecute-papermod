@@ -9,7 +9,7 @@ url: /threat-model
 images: ["/posts/Threat-model/minaccia.png"]
 ---
 
-![](/posts/Threat-model/minaccia.png)
+![Illustrazione threat model](/posts/Threat-model/minaccia.png)
 
 Il primo passo che una persona dovrebbe compiere per proteggere la propria privacy e sicurezza è creare un **Threat model**.
 

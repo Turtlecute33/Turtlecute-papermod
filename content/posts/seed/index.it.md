@@ -36,9 +36,9 @@ Questa è la procedura (una delle tante possibili):
 
 Esempio:
 
-![](/posts/seed/image8.webp)
+![Esempio righe binarie](/posts/seed/image8.webp)
 
-![](/posts/seed/image10.webp)
+![Righe binarie raggruppate](/posts/seed/image10.webp)
 
 > Ci sono 256 cifre binarie: 23 serie complete di 11 cifre con la 24ª riga che ne richiede solo tre.
 
@@ -50,7 +50,7 @@ Abbiamo bisogno di altre 8 cifre, ossia 8 bit, per creare la nostra 24ª parola.
 
 Possiamo creare questi 256 bit di dati casuali come preferiamo, purché siano effettivamente entropici. Se non sono casuali, qualcuno potrebbe essere in grado di riprodurre i dati, ricreare la tua chiave privata e prendere tutti i tuoi Bitcoin. Ad esempio, se crei 256 bit di tutti zeri (chiaramente non casuali), qualcuno sarà in grado di indovinare la tua chiave privata. Ecco la prova: ho generato una chiave privata da quella terribile casualità di tutti zeri e ho trovato il portafoglio esistente di qualcuno. Se non fosse già stato svuotato, avrei potuto rubare i fondi.
 
-![](/posts/seed/image9.webp)
+![Esempio chiave non casuale](/posts/seed/image9.webp)
 
 > Sapevano chiaramente cosa stavano facendo perché si trattava di una piccola somma che non è stata lasciata lì per molto tempo. Potrebbe essere stata una dimostrazione, chissà. Ma altre persone hanno creato chiavi private non casuali facilmente indovinabili e di conseguenza hanno perso i loro Bitcoin. Ma non preoccuparti, se crei una chiave privata veramente casuale, qualcuno dovrebbe ripetere esattamente i tuoi lanci di dadi binari o lanci di monete e, grazie alla matematica esponenziale, ciò non accadrà prima della fine dell'universo.
 
@@ -72,7 +72,7 @@ Ora che hai un terminale sul tuo computer Mac, Linux o Windows 10, digita il com
 
 Eseguendo questo comando, l'hash risultante viene visualizzato nella riga seguente, che inizierà con "b184":
 
-![](/posts/seed/image1.webp)
+![Output hash SHA256](/posts/seed/image1.webp)
 
 Ora possiamo iniziare a calcolare il checksum. Prendiamo le prime due cifre dell'output dell'hash, in questo caso "b" e "1". Questi sono numeri esadecimali. In esadecimale, invece di utilizzare le cifre da 0 a 9, contiamo fino a 15 utilizzando le lettere dell'alfabeto per rappresentare i numeri maggiori di nove:
 
@@ -86,7 +86,7 @@ Nel mio hash, la prima cifra "b" corrisponde a 11; "1" equivale a 1.
 
 Ora convertiamo questi due numeri nelle loro rappresentazioni binarie a quattro cifre. Puoi farlo facendo riferimento alla tabella qui sotto:
 
-![](/posts/seed/image2.webp)
+![Tabella conversione esadecimale-binario](/posts/seed/image2.webp)
 
 > '11' in binario è '1011', '1' è '0001'. Siamo passati da "b" e "1", a 11 e 1, e infine a 1011 e 0001.
 
@@ -116,21 +116,21 @@ Fare questa conversione esclusivamente a mano è più difficile, ma possibile.
 
 Nella parte superiore della pagina, scrivi questa sequenza esatta di numeri da sinistra a destra, sopra le cifre binarie sottostanti: "1024" sopra la prima colonna di cifre binarie, poi "512" sulla colonna successiva, poi "256", e così via, dimezzando il numero ogni volta finché non si finisce con "1" sopra l'ultima (undicesima) colonna delle cifre binarie.
 
-![](/posts/seed/image12.webp)
+![Schema pesi binari](/posts/seed/image12.webp)
 
 Ora, osserva la tua prima riga di cifre binarie. Ovunque ci sia un "1", aggiungi il numero decimale che si trova direttamente sopra di esso e registralo sotto la cifra binaria. Dove c'è uno "0" ignora il numero sopra. In questo modo:
 
-![](/posts/seed/image7.webp)
+![Somma colonne binarie](/posts/seed/image7.webp)
 
 > In questo esempio, c'è un "1" sotto la colonna 1024, la colonna 256, il 64, il 32, il 16, l'8 e l'1.
 
 Aggiungi i numeri decimali per ottenere il totale:
 
-![](/posts/seed/image11.webp)
+![Risultato somma decimale](/posts/seed/image11.webp)
 
 Ora ripeti questo processo per tutte le 24 righe:
 
-![](/posts/seed/image5.webp) ![](/posts/seed/image6.webp)
+![Esempio conversione riga binaria 1](/posts/seed/image5.webp) ![Esempio conversione riga binaria 2](/posts/seed/image6.webp)
 
 Ora avrai 24 numeri decimali che vanno da 0 a 2047.
 
@@ -146,11 +146,11 @@ C'è un aspetto da tenere presente: i computer contano gli elementi a partire da
 
 [La specifica ufficiale delle parole BIP 39 è su GitHub](https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt), ma l'elenco delle parole viene visualizzato con numeri di riga che iniziano con uno anziché zero. Quindi, mentre "abstract" è l'ottava parola ed è elencata nella riga numero 8, il suo effettivo equivalente numerico BIP 39 è 7.
 
-![](/posts/seed/image4.webp)
+![Lista parole BIP39](/posts/seed/image4.webp)
 
 La mia prima riga di 11 cifre binarie dà come risultato 1401 in decimale. Quindi nell'elenco GitHub, devo trovare la parola sulla riga 1402 (1401 + 1). Otterrò la parola "quality". Procedi a cercare ogni decimale, avendo cura di aggiungere 1 al risultato calcolato in modo che corrisponda alla numerazione delle righe di GitHub e trova la parola per ciascuna delle 24 righe.
 
-![](/posts/seed/image3.webp) ![](/posts/seed/image13.webp)
+![Esempio parola BIP39](/posts/seed/image3.webp) ![Esempio parola BIP39 alternativa](/posts/seed/image13.webp)
 
 Ben fatto! Se sei arrivato fin qui, ora hai una frase mnemonica Bitcoin valida di 24 parole. Ora puoi buttarla via. A meno che tu non abbia utilizzato l'approccio completamente manuale, non puoi usarla per i tuoi Bitcoin perché non è stata creata in un ambiente sicuro!
 

@@ -2,6 +2,8 @@
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
 baseURL: "https://turtlecute.org"
 title: Turtlecute.org
+defaultContentLanguage: it
+languageCode: it-IT
 copyright: "© [Non sono comunista, non ci sono copyright](LICENSE)"
 theme: [WonderMod]
 
@@ -19,8 +21,8 @@ minify:
   minifyOutput: true
 
 languages:
-  en:
-    languageName: "italian"
+  it:
+    languageName: "Italiano"
     weight: 1
     taxonomies:
       category: categories
@@ -37,7 +39,7 @@ languages:
 
     # custom params for each language should be under [langcode].parms - hugo v0.120.0
     params:
-      languageAltTitle: italian
+      languageAltTitle: Italiano
       profileMode:
         enabled: true
         title: Turtlecute
@@ -103,7 +105,7 @@ params:
       url: "https://x.com/turtlecute33"
     - name: email
       title: Email
-      url: "mailto: turtlecute@proton.me"
+      url: "mailto:turtlecute@proton.me"
     - name: instagram
       title: Instagram account
       url: "https://instagram.com/turtlecute33"
@@ -133,7 +135,7 @@ params:
     safari_pinned_tab: "/safari-pinned-tab.svg"
 
   cover:
-    images: ["https://github.com/Turtlecute33/Turtlecute-papermod/blob/main/static/turtlecute.png"]
+    images: ["/turtlecute.png"]
 
 markup:
     highlight:

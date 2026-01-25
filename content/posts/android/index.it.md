@@ -9,7 +9,7 @@ url: /android
 images: ["/posts/android/1.webp"]
 ---
 
-![](/posts/android/1.webp)
+![Guida Android e privacy](/posts/android/1.webp)
 
 La guida è aperta a miglioramenti e consigli, descriverò la configurazione che trovo con il miglior rapporto usabilità/privacy, nel tempo ampierò le varie sezioni introducendo anche varie alternative per chi magari non si trova bene con una determinata applicazione o servizio, Se volete darmi consigli, contribuire alla guida o effettuare donazioni, potete dare un occhiata alla pagina [Donazioni](https://btcpay.priorato.org/i/CXG1ouF8eHjdCV73Th4Ujb) o effettuare una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute-papermod).  
 
@@ -18,7 +18,7 @@ Questa guida parla di android in generale, ne ho scritta anche una specifica per
 
 ## Sistema operativo
 
-Esistono vari sistemi operativi Android privacy-oriented (GrapheneOS, CalixOS, etc). In questa guida tratteremo l’approccio usando come base LineageOS, ma è comunque compatibile con ogni altro sistema operativo AOSP. Se possibile consiglio vivamente di usare GrapheneOS in quanto ha funzioni decisamente piu avanzate e complete di qualsiasi altro sistema operativo sul mercato.
+Esistono vari sistemi operativi Android privacy-oriented (GrapheneOS, CalixOS, etc). In questa guida tratteremo l’approccio usando come base LineageOS, ma è comunque compatibile con ogni altro sistema operativo AOSP. Se possibile consiglio vivamente di usare GrapheneOS in quanto ha funzioni decisamente più avanzate e complete di qualsiasi altro sistema operativo sul mercato.
 
 Questa guida è stata pensata e studiata per offrire un ottimo bilanciamento tra sicurezza e privacy nell'utilizzo del proprio telefono, procedure come il rooting e lo sblocco del bootloader riducono notevolmente la sicurezza del dispositivo e sono per questo fortemente sconsigliate.
 
@@ -53,7 +53,7 @@ Gestiremo in seguito i permessi delle applicazioni.
 
 Essendo ora separati dal mondo Google dovremo trovare altri store da cui scaricare le applicazioni, le alternative principali sono:
 
-*   [Obtanium](https://obtainium.imranr.dev/): É un app updater piú che uno store, ha un comportamento simile ai packet manager di linux. Ottima sicurezza e privacy, permette di scaricare e aggiornare le app direttamente dalle varie release su github o repository F-droid.
+*   [Obtanium](https://obtainium.imranr.dev/): É un app updater più che uno store, ha un comportamento simile ai packet manager di linux. Ottima sicurezza e privacy, permette di scaricare e aggiornare le app direttamente dalle varie release su github o repository F-droid.
 *   [Droid-ify](https://www.f-droid.org/packages/com.looker.droidify/): fork di F-Droid con una grafica più curata e alcune funzioni aggiuntive. Uno store di applicazioni open-source e molto ben fatto anche se con qualche trade-off di sicurezza.
 *   [Aurora Store](https://files.auroraoss.com/AuroraStore/Stable/): vi permette di usare il vecchio store Google ma attraverso account fittizi e automaticamente generati all'avvio dell'app, estremamente utile in caso vogliate un esperienza simile al play store ma senza app propietarie.
 
@@ -61,7 +61,7 @@ Essendo ora separati dal mondo Google dovremo trovare altri store da cui scarica
 
 ## Shelter
 
-![](/posts/android/shelter.webp)
+![Schermata dell'app Shelter](/posts/android/shelter.webp)
 
 ⚠️ Questo passaggio é opzionale, serve principalmente se siete interessati a creare diversi "contenitori" sul vostro telefono isolati tra di loro. Utilizzare Shelter ha ventaggi e svantaggi e fa fatto solo in caso siate interessati alle funzioni che offre. Se pensate di voler isolare alcune app (per esempio messaggistica privata sotto Tor) da altre (Per esempio app invasive lato privacy come quelle bancarie) procedete, se non necessario saltate questa sezione.
 
@@ -81,7 +81,7 @@ I 2 profili sono perfettamente separati e vedremo le app installate in quello pr
 
 *   Dall'app Shelter clonare un'app da un profilo ad un altro (o dai settings usare la funzione installa APK).
 *   Scaricare le app da uno store installato in quel profilo (installate Droid-ify sul profilo principale e pulito mentre Aurora in quello sporco e con le app traccianti).
-*   Installare APK scaricati da internet (se possibile utilizzate sempre uno store di app, rende piú facile e sicuro scaricare e aggiornare i vari software).
+*   Installare APK scaricati da internet (se possibile utilizzate sempre uno store di app, rende più facile e sicuro scaricare e aggiornare i vari software).
 
 I due sistemi saranno isolati, cosa abbastanza scomoda per la gestione dei contatti, galleria, file, ecc.. in quanto ognuno avrà i suoi. Nelle impostazioni di Shelter è possibile attivare una funzione che permette di far parzialmente parlare i due sistemi per la condivisione dei file. Nonostante questo la gestione del tutto rimarrà un po' scomoda fino a quando non ci farete l'abitudine.
 
@@ -164,7 +164,7 @@ In caso vogliate essere ulteriormente certi del blocco di internet a queste app,
 
 ## Cloud
 
-La migliore soluzione cloud sarebbe il self hosting con Nextcloud (a mio parere la miglior scelta). In caso ciò non sia possibile, la soluzione a mio parere piu semplice e veloce è [Mega.nz](http://mega.nz/) (20 GB gratis e 5 GB di bandwith ed accetta pagamento in bitcoin per i pro plans). 
+La migliore soluzione cloud sarebbe il self hosting con Nextcloud (a mio parere la miglior scelta). In caso ciò non sia possibile, la soluzione a mio parere più semplice e veloce è [Mega.nz](https://mega.nz/) (20 GB gratis e 5 GB di bandwidth ed accetta pagamento in bitcoin per i pro plans). 
 
 Mega non offre particolari funzioni avanzate di privacy ma la user experience é ottima, servizi come proton drive possono essere interessanti anche se al momento un po' acerbi.
 
@@ -173,7 +173,7 @@ Se vogliamo invece una sicurezza aggiuntiva possiamo usare un cloud in combinazi
 ## VPN
 Il discorso VPN invece è particolare, una VPN cripta il nostro traffico e lo fa passare attraverso un suo nodo mettendosi tra noi e il nostro ISP, dandoci maggiore privacy verso di esso ma obbligandoci a fidarci del servizio VPN stesso.  
 
-Tutte le aziende in questo settore promettono privacy e politiche di no-logging, ma non é possibile verificare queste affermazioni. I servizi a mio parere piú interessanti sono:
+Tutte le aziende in questo settore promettono privacy e politiche di no-logging, ma non é possibile verificare queste affermazioni. I servizi a mio parere più interessanti sono:
 
 * Mullvad
 * Proton
@@ -191,9 +191,8 @@ Altri ottimi posti per rimanere aggiornati in ambito privacy e degoogle sono var
 *   [PRIVACYTOOLS](https://www.reddit.com/r/privacytools/)
 *   [PRIVACY](https://www.reddit.com/r/privacy/)
 
-> "Dire che la privacy e' inutile perché non si ha nulla da nascondere è come dire che la libertà di parola è inutile perché non si ha nulla da dire".
+> "Dire che la privacy è inutile perché non si ha nulla da nascondere è come dire che la libertà di parola è inutile perché non si ha nulla da dire".
 
 
 
 [![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)
-

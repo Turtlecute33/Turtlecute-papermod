@@ -8,7 +8,7 @@ url: /tor
 images: ["/posts/tor/torino.webp"]
 ---
 
-![](/posts/tor/torino.webp)
+![Immagine di copertina Tor](/posts/tor/torino.webp)
 
 Questa vuole essere una guida completa per lanciare un nodo a supporto
 della rete tor. Prima di iniziare spieghiamo in breve cos\'è questo
@@ -47,11 +47,11 @@ puntata:
 L\'obiettivo finale di questa guida sarà quello di hostare un nodo Tor
 (in locale o su una VPS) valutando i vari benefici e rischi. Alla fine
 di questa guida starai ufficialmente aiutando il network dando anche tu
-il tuo contributo rendendolo piu sicuro e resistente ad attacchi.\
+il tuo contributo rendendolo più sicuro e resistente ad attacchi.\
 Ci saranno 2 modi per seguire questa guida:
 
 -   Con script automatizzato creato da me (consigliato)
--   Compilando tutto da sorgente (piú complicato)
+-   Compilando tutto da sorgente (più complicato)
 
 Prima di procedere però con l\'installazione vera e propria, nella
 prossima sezione analizziamo i rischi e benefici di installare un nodo
@@ -99,7 +99,7 @@ il fatto che si sta runnando un nodo tor presso il proprio domicilio e
 si potrebbe avere qualche difficoltà in più a gestire i vari permessi
 della rete locale. Quando invece si parla di server a noleggio online
 (più avanti nella guida ve ne consiglierò alcuni) la configurazione sarà
-piu facile e veloce a fronte però di costi piu alti e un minor controllo
+più facile e veloce a fronte però di costi più alti e un minor controllo
 diretto sull\'hardware.
 
 ## Scelta dell\'hosting provider {#store style="color: greenyellow;"}
@@ -297,7 +297,7 @@ il comando: nano etc/tor/torrc ed in base a se volete fare un middle o
 exit relay andate a copiare una delle configurazioni sottostanti.\
 \
 **Attenzione!!** Dopo avere copia incollato la configurazione ci sono
-dei parametri da modificare, saranno elencati piu avanti dopo la sezione
+dei parametri da modificare, saranno elencati più avanti dopo la sezione
 con i due esempi qua sotto.
 
 
@@ -459,7 +459,7 @@ interfaccia simile ad htop potete installare nyx con il comando:\
 lanciandolo con il comando nyx potrete monitorare le statistiche con una
 grafica simile a questa:
 
-![](/posts/tor/nyx.webp)
+![Schermata di Nyx per monitoraggio Tor](/posts/tor/nyx.webp)
 
 ## Test di funzionamento {#cloud style="color: greenyellow;"}
 
@@ -469,7 +469,7 @@ con tuti i relay potete trovare **dopo qualche ora** anche il vostro
 nodo inserendo nella ricerca il nome o una parte di esso del vostro
 relay.
 
-![](/posts/tor/screen.webp)
+![Schermata dei relay Tor su metrics.torproject.org](/posts/tor/screen.webp)
 
 Se viene mostrato correttamente avete ufficialmente un nodo tor attivo!
 

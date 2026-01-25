@@ -8,7 +8,7 @@ url: /vpn
 images: ["/posts/vpn/vpn.webp"]
 ---
 
-![](/posts/vpn/vpn.webp)
+![Copertina guida VPN](/posts/vpn/vpn.webp)
 
 Questa vuole essere una guida completa per effettuare il setup di una propria VPN utilizzando Wireguard e che filtra link pubblicitari e tracker grazie ad un filtro di AdBlocking fatto con Pi-Hole.
 
@@ -26,12 +26,12 @@ L'obiettivo finale di questa guida sarà quello di self-hostarci una VPN con un 
 
 *   Non doversi fidare di un provider VPN il cui modello di business, purtroppo, spesso è vendere i nostri dati personali
 *   Possibilità di inserire filtri per pubblicità e trackers; alcune VPN offrono questo servizio, ma spesso di qualità molto precaria
-*   Personalizzazione dell'esperienza: volete una VPN piu veloce? Dei filtri pubblicitari specifici? Vorreste condividerla con tutta la famiglia? Con una vostra VPN potete gestirvi nel modo che preferite
+*   Personalizzazione dell'esperienza: volete una VPN più veloce? Dei filtri pubblicitari specifici? Vorreste condividerla con tutta la famiglia? Con una vostra VPN potete gestirvi nel modo che preferite
 *   Possibilità di scegliere la nazione e quindi anche la sede legale dei server da noleggiare (e sfruttare le migliori nazioni per privacy informatica)
 
 ### contro
 
-*   Meno anon set sull'indirizzo IP: a meno che voi non condividiate la vostra vpn con molti familiari e amici, sarete gli unici ad utilizzare l'indirizzo IP in uscita della VPN; questo è uno svantaggio in quanto anche se esso non è direttamente collegato a voi è comunque un codice univoco che solo voi sfruttate ed usate. È quindi non ottimo per la privacy in quanto rende piu facile tracciarvi
+*   Meno anon set sull'indirizzo IP: a meno che voi non condividiate la vostra vpn con molti familiari e amici, sarete gli unici ad utilizzare l'indirizzo IP in uscita della VPN; questo è uno svantaggio in quanto anche se esso non è direttamente collegato a voi è comunque un codice univoco che solo voi sfruttate ed usate. È quindi non ottimo per la privacy in quanto rende più facile tracciarvi
 *   Anche se non regalate dati ad un fornitore VPN, nella maggior parte dei casi farete il set-up di questo sistema su una VPS (server a noleggio), sposterete quindi il vostro trust da un fornitore commerciale di questo servizio ad uno che noleggia server (che vedrà il vostro indirizzo IP quando utilizzate la VPN). È quindi fondamentale scegliere correttamente il provider di server o eseguire questo setup su una macchina connessa ad una rete internet non instestata a voi
 
 ## Scelta dell'hosting provider
@@ -60,7 +60,7 @@ Una volta connessi in SSH possiamo dare il comando:
 `sudo apt update && apt upgrade -y`  
   
 in modo da aggiornare tutti i pacchetti del nostro sistema operativo.  
-In questa guida andremo a seguire un setup per la sicurezza del nostro server semplice e minimale (in modo che si adatti a tutti gli utenti), se volete usare setup piu avanzati vi consiglio di cercare online come effettuare login sul proprio server utilizzando una chiave pubblica ssh.  
+In questa guida andremo a seguire un setup per la sicurezza del nostro server semplice e minimale (in modo che si adatti a tutti gli utenti), se volete usare setup più avanzati vi consiglio di cercare online come effettuare login sul proprio server utilizzando una chiave pubblica ssh.  
   
 Andiamo infine a dare il comando:  
   
@@ -70,7 +70,7 @@ per andare ad installare questo leggerissimo software che permette di limitare l
 
 ## Setup della VPN
 
-Ora che abbiamo effettuato tutte le procedure preliminari per rendere piú sicura e aggiornata la nostra VPS possiamo procedere al vero setup, andiamo ad installare wireguard con i seguenti comandi:  
+Ora che abbiamo effettuato tutte le procedure preliminari per rendere più sicura e aggiornata la nostra VPS possiamo procedere al vero setup, andiamo ad installare wireguard con i seguenti comandi:  
 
 ```
 curl -O https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh
@@ -179,7 +179,7 @@ esempio: http://84.177.121.221/admin
   
 A questo punto dovreste vedere la pagina di login di Pi-Hole (il nostro sistema di filtro pubblicitá, tracker e analytics). Come password dovete usare quella che ci eravamo salvati precedentemente (e che ci venive generata in fase di installazione). Una volta effettuato l'accesso avrete davanti questa schermata:  
   
-![](/posts/vpn/dashboard.webp) Andiamo ora nella sezione "AdLists" ed aggiungiamo delle liste di vari domain da bloccare (o meglio, il link ad alcune di queste liste). Di questo argomento si puó discorrere ore, il concetto di base é che se aggiungiamo decine di di fonti a caso bloccheremo tantissimo...troppo, andando quindi a far smettere di funzionare molti siti web o funzioni di applicazioni su nostri dispositivi. Conviene usare poche liste e tendenzialmente fatte da persone di cui ci fidiamo almeno parzialmente. Vi lascio qua sotto alcune delle principali e piu famose, in caso vogliate ampliare la sezione vi lascio l'onere di farlo in autonomia in quanto in base alle configurazioni ci potrebbero essere diversi pro o contro.  
+![Dashboard AdLists Pi-hole](/posts/vpn/dashboard.webp) Andiamo ora nella sezione "AdLists" ed aggiungiamo delle liste di vari domain da bloccare (o meglio, il link ad alcune di queste liste). Di questo argomento si puó discorrere ore, il concetto di base é che se aggiungiamo decine di di fonti a caso bloccheremo tantissimo...troppo, andando quindi a far smettere di funzionare molti siti web o funzioni di applicazioni su nostri dispositivi. Conviene usare poche liste e tendenzialmente fatte da persone di cui ci fidiamo almeno parzialmente. Vi lascio qua sotto alcune delle principali e più famose, in caso vogliate ampliare la sezione vi lascio l'onere di farlo in autonomia in quanto in base alle configurazioni ci potrebbero essere diversi pro o contro.  
 
 ```
 
@@ -203,10 +203,10 @@ Installiamo sul nostro dispositivo l'applicazione [Wireguard](https://www.wiregu
   
 selezioniamo "add new client", diamo un nome a scelta, selezioniamo come DNS "current system resolver". Ora ci verrá mostrato un QRcode, con la nosta app mobile di wireguard andiamo a scannerizzarlo, dopo averlo fatto ci dovrebbe mostrare una schermata del genere:  
 
-![](/posts/vpn/wireguard.webp)
+![Schermata configurazione WireGuard](/posts/vpn/wireguard.webp)
 
   
-Nella sezione "DNS servers" andiamo ad inserire l'indirizzo ip della nostra VPS, verifichiamo che nella sezione "Endpoint" sia presente lo stesso indirizzo IP piú la scritta ":51820" che indica la porta, fatto questo ci basterá salvare e attivare la VPN!  
+Nella sezione "DNS servers" andiamo ad inserire l'indirizzo ip della nostra VPS, verifichiamo che nella sezione "Endpoint" sia presente lo stesso indirizzo IP più la scritta ":51820" che indica la porta, fatto questo ci basterá salvare e attivare la VPN!  
   
 Per i pc la procedura è simile, ci basterá installare Wireguard, generare la configurazione sulla VPS (usate il comando spiegato sopra, nella procedura android), per poi copiarla nel pc:
 
@@ -226,7 +226,7 @@ anche su pc, prestiamo attenzione ad avere modificato le sezioni 'DNS server' e 
 
 Ora che abbiamo pronta e attiva la nostra VPN andiamo a testare che funzioni tutto correttamente. Prima di tutto su un qualsiasi browser visitiamo il sito [VPN testing](https://vpntesting.com/) e avviamo un test. Verificate che tutti gli indirizzi IP e localizzazioni che vi vengono mostrate a schermo non siano quelle del vostro paese di origine ma del server VPN.  
   
-Se tutto é corretto procediamo al test, non della VPN stessa, ma dell' adblocker, visitando il sito [AdBlock test](https://d3ward.github.io/toolz/adblock.html). Se il risultato finale é maggiore del 70/80% vuol dire che tutto funziona correttamente (aggiungendo piu o meno blacklist a Pi-Hole i risultati di questo test potrebbero variare). Prestate attenzione a disattivare temporaneamente eventuali estensioni di AdBlock del vostro browser per non avere risultati falsati. Anche il browser che utilizzate potrebbe influire sui risultati del test.  
+Se tutto é corretto procediamo al test, non della VPN stessa, ma dell' adblocker, visitando il sito [AdBlock test](https://d3ward.github.io/toolz/adblock.html). Se il risultato finale é maggiore del 70/80% vuol dire che tutto funziona correttamente (aggiungendo più o meno blacklist a Pi-Hole i risultati di questo test potrebbero variare). Prestate attenzione a disattivare temporaneamente eventuali estensioni di AdBlock del vostro browser per non avere risultati falsati. Anche il browser che utilizzate potrebbe influire sui risultati del test.  
   
 Se entrambe le prove vengono passate correttamente sei un vero drago e sei riuscito a seguire perfettamente questa guida!! 🐉
 
