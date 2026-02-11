@@ -52,7 +52,7 @@ languages:
           - name: Guide
             url: posts
           - name: Servizi
-            url: https://guida.priorato.org
+            url: https://shop.priorato.org
 outputs:
   home:
     - HTML
@@ -112,9 +112,6 @@ params:
     - name: bitcoin
       title: Donations
       url: "https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&checkoutDesc=Donazione+priorato+%3A3&browserRedirect=https%3A%2F%2Fpriorato.org&currency=EUR&defaultPaymentMethod=BTC_LNURLPAY"
-    - name: cryptohack
-      title: Privacy Activist Kit
-      url: "https://privacyactivistkit.org"
  
   fuseOpts:
     isCaseSensitive: false
