@@ -1,0 +1,106 @@
+{{/* ============================================================
+     extend_head.html – SEO structured data
+     Injected into <head> via WonderMod's extension point.
+     Note: meta description, keywords, canonical, and robots are
+     already rendered by the theme's head.html — not duplicated here.
+     ============================================================ */}}
+
+{{/* JSON-LD: WebSite + Person — homepage only */}}
+{{ if .IsHome -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": {{ site.Title | jsonify }},
+      "url": {{ site.BaseURL | jsonify }},
+      "description": {{ site.Params.description | jsonify }},
+      "inLanguage": {{ site.LanguageCode | jsonify }},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": {{ (printf "%ssearch?q={search_term_string}" site.BaseURL) | jsonify }}
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Turtlecute",
+      "url": {{ site.BaseURL | jsonify }},
+      "sameAs": [
+        "https://github.com/Turtlecute33",
+        "https://x.com/turtlecute33",
+        "https://t.me/turtlecute33"
+      ]
+    }
+  ]
+}
+</script>
+{{- end }}
+
+{{/* JSON-LD: Article + BreadcrumbList — post pages only */}}
+{{ if and .IsPage (eq .Section "posts") -}}
+{{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
+{{- $image := "" -}}
+{{- if .Params.cover.image -}}
+  {{- if ne .Params.cover.relative true -}}
+    {{- $image = .Params.cover.image | absURL -}}
+  {{- else -}}
+    {{- $image = (path.Join .RelPermalink .Params.cover.image) | absURL -}}
+  {{- end -}}
+{{- else if .Params.images -}}
+  {{- $image = index .Params.images 0 | absURL -}}
+{{- else if site.Params.images -}}
+  {{- $image = index site.Params.images 0 | absURL -}}
+{{- end -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": {{ .Title | jsonify }},
+      "description": {{ with .Description }}{{ . | jsonify }}{{ else }}{{ .Summary | jsonify }}{{ end }},
+      "datePublished": {{ .PublishDate.Format $iso8601 | jsonify }},
+      "dateModified": {{ .Lastmod.Format $iso8601 | jsonify }},
+      "author": {
+        "@type": "Person",
+        "name": {{ with .Params.author }}{{ . | jsonify }}{{ else }}"Turtlecute"{{ end }},
+        "url": {{ site.BaseURL | jsonify }}
+      },
+      {{- if $image }}
+      "image": {{ $image | jsonify }},
+      {{- end }}
+      "url": {{ .Permalink | jsonify }},
+      "inLanguage": {{ site.LanguageCode | jsonify }}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": {{ site.BaseURL | jsonify }}
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Guide",
+          "item": {{ (printf "%sposts/" site.BaseURL) | jsonify }}
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": {{ .Title | jsonify }},
+          "item": {{ .Permalink | jsonify }}
+        }
+      ]
+    }
+  ]
+}
+</script>
+{{- end }}
