@@ -1,17 +1,27 @@
 ---
-title: "Come generare un seed Bitcoin con i dadi"
-description: "Guida per creare un seed Bitcoin usando dadi, carta e penna."
+title: "Seed Bitcoin con i Dadi: Genera le Tue Chiavi"
+description: "Genera una frase mnemonica Bitcoin di 24 parole usando solo dadi, carta e penna. Guida pratica passo-passo per la massima sicurezza."
+summary: "Genera una frase mnemonica Bitcoin di 24 parole usando solo dadi, carta e penna. Guida pratica passo-passo per la massima sicurezza."
 keywords: ["seed", "seed bitcoin", "seed con dadi", "dadi bitcoin", "seed bitcoin ita"]
 author: "Turtlecute"
 date: 2024-05-12
 url: /seed
 images: ["/posts/seed/seed.png"]
+series: ["Privacy Bitcoin"]
 ---
+
+> **TL;DR** - In questa guida imparerai:
+> - Come generare 256 bit di entropia reale usando dei semplici dadi
+> - Come calcolare il checksum per completare la 24a parola del seed
+> - Come convertire i numeri binari in parole BIP39 a mano
+> - Le precauzioni di sicurezza per generare chiavi su un computer air-gapped
+
+Quando crei un wallet Bitcoin, il software genera il tuo seed in modo automatico. Ma ti sei mai chiesto: quanto è davvero casuale quel processo? E se il software fosse compromesso? Generare il seed manualmente con i dadi ti dà la certezza matematica che nessun software, malware o backdoor possa mai conoscere le tue chiavi private. In questa guida imparerai a farlo passo dopo passo.
 
 Guida per calcolare una frase mnemonica di 24 parole usando dadi, carta e penna.
 
-[Tedesco](https://aprycot.media/blog/diy-private-schluessel-fuer-bitcoin-erstellen/) 🇩🇪  
-[Inglese](https://armantheparman.com/dicev2/) 🇺🇲
+[Tedesco](https://aprycot.media/blog/diy-private-schluessel-fuer-bitcoin-erstellen/)
+[Inglese](https://armantheparman.com/dicev2/)
 
 ## Introduzione
 
@@ -53,6 +63,8 @@ Possiamo creare questi 256 bit di dati casuali come preferiamo, purché siano ef
 ![Esempio chiave non casuale](image9.webp)
 
 > Sapevano chiaramente cosa stavano facendo perché si trattava di una piccola somma che non è stata lasciata lì per molto tempo. Potrebbe essere stata una dimostrazione, chissà. Ma altre persone hanno creato chiavi private non casuali facilmente indovinabili e di conseguenza hanno perso i loro Bitcoin. Ma non preoccuparti, se crei una chiave privata veramente casuale, qualcuno dovrebbe ripetere esattamente i tuoi lanci di dadi binari o lanci di monete e, grazie alla matematica esponenziale, ciò non accadrà prima della fine dell'universo.
+
+{{< cta type="inline" title="Vuoi proteggere i tuoi Bitcoin dalla A alla Z?" text="Generare il seed è solo il primo passo. La Guida Privacy Bitcoin copre tutto: nodo, wallet, transazioni private e coinjoin." url="https://shop.priorato.org" button="Scopri la Guida Privacy Bitcoin" icon="₿" >}}
 
 ## Passo 2 – Calcolare il Checksum
 
@@ -160,6 +172,15 @@ In realtà, prima di buttarla, potresti provare a inserire le parole in un porta
 
 Genera assolutamente le tue chiavi usando un procedimento il più possibile manuale e, nelle parti in cui ti appoggi a un dispositivo elettronico, sfrutta sistemi sicuri, sistemi operativi vergini e valuta di smontare la scheda wireless dal tuo PC. Un'opzione potrebbe essere installare TailsOS su un disco esterno, smontare la scheda wireless dal tuo PC, avviare il sistema operativo e mantenerlo disconnesso da Internet fino alla fine della procedura. Una volta calcolato il seed, spegni il PC e riavvialo con la scheda wireless rimontata. È possibile anche usare dei Raspberry Pi come PC air-gapped.
 
-[![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)
+{{< cta type="bottom" title="Il seed è pronto, ora ti serve un telefono sicuro" text="Custodisci il tuo seed su un dispositivo affidabile. Vendo Pixel con GrapheneOS pre-installato per la massima sicurezza." url="https://shop.priorato.org" button="Scopri i Privacy Phone" icon="📱" >}}
 
 ---
+
+## Guide Correlate
+
+- **[Usare Bitcoin in Modo Privato](/bitcoin)** - La guida completa alla privacy su Bitcoin: dove custodire il seed che hai appena generato
+- **[JoinMarket: Guida Completa ai CoinJoin](/joinmarket)** - Proteggi la privacy dei tuoi UTXO con il mixing decentralizzato
+- **[Come Utilizzare RoboSats](/robosats)** - Acquista Bitcoin senza KYC per riceverli sul wallet generato con il tuo seed
+- **[Come Creare un Threat Model](/threat-model)** - Valuta le minacce prima di decidere come custodire le tue chiavi
+
+[![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

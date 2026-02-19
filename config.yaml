@@ -17,6 +17,10 @@ enableEmoji: true
 pygmentsUseClasses: true
 mainsections: ["posts", "papermod"]
 
+sitemap:
+  changefreq: weekly
+  priority: 0.5
+
 minify:
   disableXML: true
   minifyOutput: true
@@ -37,6 +41,9 @@ languages:
         - name: Search
           url: search/
           weight: 10
+        - name: Chi Sono
+          url: about/
+          weight: 20
 
     # custom params for each language should be under [langcode].parms - hugo v0.120.0
     params:

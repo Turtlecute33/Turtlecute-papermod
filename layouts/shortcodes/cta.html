@@ -1,0 +1,28 @@
+{{- $type := .Get "type" | default "inline" -}}
+{{- $title := .Get "title" | default "" -}}
+{{- $text := .Get "text" | default "" -}}
+{{- $url := .Get "url" | default "https://shop.priorato.org" -}}
+{{- $button := .Get "button" | default "Scopri di più" -}}
+{{- $icon := .Get "icon" | default "" -}}
+
+<div class="cta cta-{{ $type }}" role="complementary">
+  <div class="cta-content">
+    {{- if $title }}
+    <div class="cta-header">
+      {{- if $icon }}<span class="cta-icon">{{ $icon }}</span>{{ end -}}
+      <h3 class="cta-title">{{ $title | markdownify }}</h3>
+    </div>
+    {{- end }}
+    {{- if $text }}
+    <p class="cta-text">{{ $text | markdownify }}</p>
+    {{- end }}
+    <a href="{{ $url }}" class="cta-button" target="_blank" rel="noopener noreferrer">
+      {{ $button }}
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="5" y1="12" x2="19" y2="12"></line>
+        <polyline points="12 5 19 12 12 19"></polyline>
+      </svg>
+    </a>
+  </div>
+</div>

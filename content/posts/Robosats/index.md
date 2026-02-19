@@ -1,14 +1,24 @@
 ---
-title: "Come utilizzare RoboSats"
-description: "Guida veloce per usare RoboSats, scambio P2P di Bitcoin senza KYC"
+title: "RoboSats: Comprare Bitcoin P2P Senza KYC"
+description: "Guida passo-passo a RoboSats: acquista e vendi Bitcoin in modo anonimo via Tor, senza documenti e senza KYC. Tutorial completo in italiano."
+summary: "Guida passo-passo a RoboSats: acquista e vendi Bitcoin in modo anonimo via Tor, senza documenti e senza KYC. Tutorial completo in italiano."
 keywords: ["RoboSats", "Bitcoin", "P2P", "no KYC", "guida RoboSats", "Bitcoin anonimo"]
 author: "Turtlecute"
 date: 2024-09-12
 url: /robosats
 images: ["/posts/Robosats/img/robosats1.webp"]
+series: ["Privacy Bitcoin"]
 ---
 
 ![Schermata iniziale RoboSats](img/robosats1.webp)
+
+> **TL;DR** - In questa guida imparerai:
+> - Come accedere a RoboSats tramite Tor Browser in modo anonimo
+> - Come creare un'identità robot usa e getta per ogni scambio
+> - Come acquistare Bitcoin come compratore e come creare ordini di vendita
+> - Come gestire controversie e annullamenti in sicurezza
+
+Comprare Bitcoin su exchange centralizzati significa consegnare documenti, selfie e dati bancari a piattaforme che possono essere hackerate o obbligate a condividere le tue informazioni. RoboSats offre un'alternativa radicale: scambi peer-to-peer via Tor, identità usa e getta e nessun documento richiesto. Questa guida ti mostra come usarlo in modo sicuro dall'inizio alla fine.
 
 Questa guida ti accompagnerà passo dopo passo nell'utilizzo di RoboSats per acquistare e vendere Bitcoin in modo anonimo e sicuro. Imparerai come generare il tuo account, esplorare i vari ordini, acquistare, vendere e gestire eventuali controversie.
 
@@ -99,6 +109,8 @@ Puoi anche toccare qualsiasi ordine per vedere la pagina completa dell'ordine:
 ![Dettagli ordine RoboSats](img/robosats_order_details.webp)
 
 Ogni ordine ha un contatore di scadenza. Per impostazione predefinita, in RoboSats v0.1.0 i nuovi ordini rimarranno pubblici nel libro per 24 ore.
+
+{{< cta type="inline" title="Proteggi la tua identità quando compri Bitcoin" text="Con una SIM senza KYC puoi registrarti ai servizi di pagamento senza fornire documenti. Numero anonimo, nessun dato personale." url="https://shop.priorato.org" button="Scopri le SIM no-KYC" icon="🔒" >}}
 
 ## Guida 1: Accettare un Ordine come Acquirente {#guida-1-accettare-un-ordine-come-acquirente}
 
@@ -213,5 +225,16 @@ Una volta che lo staff ha risolto la controversia, lo stato finale dell'ordine m
 Congratulazioni! Ora sai come utilizzare RoboSats per acquistare e vendere Bitcoin in modo anonimo e sicuro. Ricorda sempre di mantenere le tue chiavi private al sicuro e di seguire le buone pratiche per proteggere la tua privacy.
 
 Se questa guida ti è piaciuta, condividila con i tuoi amici e sui social network. Se hai suggerimenti o domande, non esitare a contattarmi!
+
+{{< cta type="bottom" title="Hai comprato Bitcoin senza KYC? Ora proteggili." text="La Guida Privacy Bitcoin ti spiega come custodire, spendere e mixare i tuoi satoshi senza compromettere la privacy." url="https://shop.priorato.org" button="Vai alla Guida Privacy Bitcoin" icon="₿" >}}
+
+---
+
+## Guide Correlate
+
+- **[Usare Bitcoin in Modo Privato](/bitcoin)** - La guida completa alla privacy su Bitcoin: nodo, wallet, transazioni e molto altro
+- **[JoinMarket: Guida Completa ai CoinJoin](/joinmarket)** - Dopo aver acquistato su RoboSats, mixa i tuoi bitcoin con JoinMarket
+- **[Generare un Seed Bitcoin con i Dadi](/seed)** - Crea le chiavi private del wallet dove ricevere i tuoi satoshi in modo sicuro
+- **[Tutorial Nodo Tor](/tor)** - RoboSats funziona su Tor: scopri come supportare la rete
 
 [![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

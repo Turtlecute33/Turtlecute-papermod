@@ -1,0 +1,57 @@
+{{- /*
+  render-image.html — Core Web Vitals optimized image renderer
+  Overrides the theme default to add:
+    - loading="lazy" + decoding="async" for below-fold images
+    - loading="eager" + fetchpriority="high" for the FIRST image (likely LCP)
+    - Proper alt text passthrough
+    - width/height when available from Hugo image processing
+*/ -}}
+
+{{- /* Track whether this is the first image in the page */ -}}
+{{- $isFirst := false -}}
+{{- if not (.Page.Scratch.Get "hasRenderedImage") -}}
+  {{- $isFirst = true -}}
+  {{- .Page.Scratch.Set "hasRenderedImage" true -}}
+{{- end -}}
+
+{{- /* Attempt to get the image resource for intrinsic dimensions */ -}}
+{{- $src := .Destination -}}
+{{- $alt := .Text -}}
+{{- $title := .Title -}}
+{{- $img := false -}}
+
+{{- /* Try page resource first, then global resource */ -}}
+{{- with .Page.Resources.GetMatch $src -}}
+  {{- $img = . -}}
+{{- else -}}
+  {{- with resources.Get $src -}}
+    {{- $img = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $isFirst -}}
+<img
+  src="{{ $src | safeURL }}"
+  alt="{{ $alt }}"
+  {{- with $title }} title="{{ . }}"{{ end }}
+  loading="eager"
+  fetchpriority="high"
+  decoding="async"
+  {{- if $img }}
+  width="{{ $img.Width }}"
+  height="{{ $img.Height }}"
+  {{- end }}
+/>
+{{- else -}}
+<img
+  src="{{ $src | safeURL }}"
+  alt="{{ $alt }}"
+  {{- with $title }} title="{{ . }}"{{ end }}
+  loading="lazy"
+  decoding="async"
+  {{- if $img }}
+  width="{{ $img.Width }}"
+  height="{{ $img.Height }}"
+  {{- end }}
+/>
+{{- end -}}

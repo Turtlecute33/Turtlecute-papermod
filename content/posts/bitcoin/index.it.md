@@ -1,17 +1,26 @@
             
 ---
-title: "Tutorial all'utilizzo di bitcoin tutelando la propria privacy"
-description: "una guida dalla A alla Z su come usare bitcoin in maniera privata"
+title: "Usare Bitcoin in Modo Privato: Guida Completa"
+description: "Scopri come usare Bitcoin proteggendo la tua privacy: dal nodo personale ai wallet, dall'acquisto no-KYC al coinjoin e Lightning Network."
+summary: "Scopri come usare Bitcoin proteggendo la tua privacy: dal nodo personale ai wallet, dall'acquisto no-KYC al coinjoin e Lightning Network."
 keywords: ["bitcoin privacy", "privacy ita", "bitcoin privacy italiano", "bitcoin wallet", "nodo bitcoin"]
 author: "Turtlecute"
 date: 2024-05-13
 url: /bitcoin
 images: ["/posts/bitcoin/bitcoin.jpg"]
+series: ["Privacy Bitcoin"]
 ---
 
 ![Copertina guida Bitcoin privacy](bitcoin.jpg)
-  
-Questa sarà una guida completa sull'utilizzo privacy oriented di Bitcoin partendo dalle basi fino ad arrivare a livelli avanzati.  
+
+> **TL;DR** - In questa guida imparerai:
+> - Come installare un nodo Bitcoin per non esporre i tuoi dati finanziari
+> - Dove acquistare Bitcoin senza KYC in modo peer-to-peer
+> - Come usare wallet privacy-oriented come Wasabi Wallet
+> - Come ripulire i tuoi UTXO con CoinJoin e Lightning Network
+
+Ogni transazione Bitcoin che fai potrebbe rivelare il tuo saldo, la tua posizione e la tua identità a chiunque analizzi la blockchain. Senza le giuste precauzioni, usare Bitcoin non è molto diverso dall'usare un conto corrente trasparente. Questa guida ti accompagna dalle basi fino alle tecniche avanzate per usare Bitcoin proteggendo realmente la tua privacy finanziaria.
+
 Partiamo quindi con una breve introduzione a Bitcoin, se siete utenti avanzati potete saltare questa prefazione andando direttamente al primo punto della guida.  
 
 Se vi piace il mio lavoro e/o lo trovate utile vi prego di valutare una [donazione](https://priorato.btcpayserver.it/i/299LtYQKdQpsgWcSUgnWhD) per sostenere questo progetto che mi occupa, anche se con mio grande piacere, una buona fetta del mio tempo, buona lettura!
@@ -137,6 +146,8 @@ ecco i quattro servizi che preferisco per l'acquisto di Bitcoin:
   
 Mi sento di consigliare tutti e 4 i servizi sopra citati, sono di ottima qualità, dovete solo trovare quale di questi si adatta meglio alle vostre esigenze di privacy e facilita d'uso.
 
+{{< cta type="inline" title="Vuoi una guida completa sulla privacy Bitcoin?" text="Ho scritto una guida approfondita che ti accompagna passo passo nella protezione della tua privacy finanziaria con Bitcoin." url="https://shop.priorato.org" button="Scopri la Guida Privacy Bitcoin" icon="₿" >}}
+
 ## I Wallet bitcoin
 
 Esistono diverse categorie di wallet, li divideremo per comodità nelle principali:
@@ -247,5 +258,16 @@ Riassumendo la guida possiamo ripassare i punti fondamentali:
 Se possibile facciamo girare un full node BTC e LN in casa nostra ed utilizziamo Wasabi come nostro wallet desktop, i mobile wallet se potete evitateli o per lo meno teneteli scollegati a livello di transazioni blockchain dal vostro portafoglio di HODL, usate sempre tor (wasabi lo integra automaticamente) e state attenti a come effettuate le transazioni, ogni indirizzo va usato una volta sola, effettuate transazioni diverse tra loro che non sembrino 'umane' ed inoltre fate il possibile per evitare resti, in caso non ci riusciate ripuliteli con coinjoin o LN.  
   
 Spero che la guida vi sia piaciuta e che vi abbia aiutato!
+
+{{< cta type="bottom" title="Proteggi privacy digitale e finanziaria insieme" text="Con il bundle scontato ottieni sia la Guida Privacy Digitale che la Guida Privacy Bitcoin ad un prezzo ridotto." url="https://shop.priorato.org" button="Scopri il Bundle Scontato" icon="🎯" >}}
+
+---
+
+## Guide Correlate
+
+- **[Come Usare JoinMarket per Fare CoinJoin](/joinmarket)** - Approfondisci il coinjoin con il software più potente e personalizzabile
+- **[Come Utilizzare RoboSats](/robosats)** - Acquista e vendi Bitcoin P2P senza KYC in modo anonimo
+- **[Generare un Seed Bitcoin con i Dadi](/seed)** - Crea le tue chiavi private in modo veramente casuale e sicuro
+- **[Come Creare un Threat Model](/threat-model)** - Definisci il tuo modello di minaccia prima di proteggere i tuoi bitcoin
 
 [![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

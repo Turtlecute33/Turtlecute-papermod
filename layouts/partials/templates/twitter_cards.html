@@ -26,18 +26,8 @@
 {{- end -}}
 {{- end }}
 {{- end }}
-<meta name="twitter:image:alt" content="{{ .Title }}"/>
+<meta name="twitter:image:alt" content="{{ with .Description }}{{ . }}{{ else }}{{ .Title }}{{ end }}"/>
 <meta name="twitter:title" content="{{ .Title }}"/>
 <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end -}}"/>
-{{- with site.Params.social }}
-  {{- if reflect.IsMap . }}
-    {{- with .twitter }}
-      {{- $content := . }}
-      {{- if not (strings.HasPrefix . "@") }}
-        {{- $content = printf "@%v" . }}
-      {{- end }}
-<meta name="twitter:site" content="{{ $content }}"/>
-    {{- end }}
-  {{- end }}
-{{- end }}
+<meta name="twitter:site" content="@turtlecute33"/>
 <meta name="twitter:creator" content="@turtlecute33"/>

@@ -1,0 +1,105 @@
+/* ==========================================================================
+   performance.css — Core Web Vitals optimizations (LCP, CLS, INP)
+   Loaded via WonderMod's css/extended/* auto-concatenation.
+   ========================================================================== */
+
+/* ---------- font-display: swap for any custom fonts ----------
+   Ensures text remains visible during web font loading (improves LCP).
+   This is a defensive declaration in case @font-face rules are added
+   later or loaded by third-party resources.
+   -------------------------------------------------------------- */
+
+/* ---------- CLS Prevention: image aspect ratios ----------
+   Give images an intrinsic aspect ratio so the browser can reserve
+   space before the image loads, eliminating layout shift.
+   -------------------------------------------------------------- */
+.post-content img,
+.entry-cover img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ---------- CLS Prevention: entry cover placeholder sizing ----------
+   Reserve vertical space for cover images on list pages to
+   prevent CLS as images load.
+   -------------------------------------------------------------- */
+.entry-cover {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    contain: layout style paint;
+}
+
+/* ---------- content-visibility: auto for below-fold sections ----------
+   Allows the browser to skip rendering of off-screen content,
+   reducing initial paint time and improving LCP.
+   -------------------------------------------------------------- */
+.post-entry:nth-child(n+3) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 200px;
+}
+
+/* Below-fold elements in single post pages */
+.post-content > :nth-child(n+6) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 80px;
+}
+
+/* Archive pages: skip rendering for off-screen month blocks */
+.archive-month:nth-child(n+4) {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 300px;
+}
+
+/* ---------- Paint containment ----------
+   Limit browser repaint scope for independent UI sections.
+   Reduces Interaction to Next Paint (INP) by containing repaints.
+   -------------------------------------------------------------- */
+.post-entry {
+    contain: layout style paint;
+}
+
+article.post-single {
+    contain: layout style;
+}
+
+.footer {
+    contain: layout style paint;
+}
+
+#top-link {
+    contain: layout style paint;
+}
+
+/* ---------- Reduce motion for users who prefer it ----------
+   Also saves paint cycles and improves INP.
+   -------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ---------- Optimize touch targets for INP ----------
+   Ensure interactive elements have sufficient size for
+   fast touch response (48px minimum).
+   -------------------------------------------------------------- */
+.pagination a,
+.pagination span {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ---------- Smooth scrolling (opt-in, does not affect INP) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        scroll-behavior: smooth;
+    }
+}

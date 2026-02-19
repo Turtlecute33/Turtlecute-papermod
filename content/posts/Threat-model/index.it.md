@@ -1,15 +1,24 @@
 ---
-
-title: "Come creare un threat model"
-description: "Guida completa per creare un threat model per proteggere la tua privacy e sicurezza"
+title: "Threat Model: Come Definire le Tue Minacce"
+description: "Impara a creare un threat model efficace per proteggere la tua privacy e sicurezza digitale. Evita gli errori comuni dei principianti."
+summary: "Impara a creare un threat model efficace per proteggere la tua privacy e sicurezza digitale. Evita gli errori comuni dei principianti."
 keywords: ["modello di minaccia", "privacy", "sicurezza", "protezione dati", "threat modeling"]
 author: "Turtlecute"
 date: 2024-10-28
 url: /threat-model
 images: ["/posts/Threat-model/minaccia.png"]
+series: ["Privacy Digitale", "Sicurezza"]
 ---
 
 ![Illustrazione threat model](minaccia.png)
+
+> **TL;DR** - In questa guida imparerai:
+> - Come definire correttamente una minaccia (non sono solo le "big tech")
+> - Le 4 categorie principali di minacce: fornitori di servizi, sorveglianza di massa, malware e hacker
+> - Come proteggerti con crittografia end-to-end, separazione delle identità e compartimentazione
+> - Le cattive pratiche da evitare quando costruisci il tuo modello di minaccia
+
+Installare una VPN o passare a Signal non serve a nulla se non sai da chi ti stai proteggendo. Troppi principianti spendono tempo e denaro in strumenti di privacy senza aver prima definito il proprio modello di minaccia, finendo per proteggersi dai rischi sbagliati. Creare un threat model è il primo passo fondamentale: ti permette di capire quali sono le tue reali vulnerabilità e scegliere le contromisure giuste.
 
 Il primo passo che una persona dovrebbe compiere per proteggere la propria privacy e sicurezza è creare un **Threat model**.
 
@@ -74,6 +83,8 @@ Invece di fare affidamento sulle politiche sulla privacy (promesse che verrebber
 
 Ricorda che le aziende possono nascondere la loro proprietà o condividere le tue informazioni con broker di dati, anche se non operano nel settore pubblicitario. Quindi, ha poco senso concentrarsi esclusivamente sull'industria "ad-tech" come minaccia nel tuo threat model. È più logico proteggersi dai **fornitori di servizi nel loro complesso**; così facendo, qualsiasi tipo di minaccia di sorveglianza aziendale di cui la maggior parte delle persone si preoccupa sarà affrontata insieme alle altre.
 
+{{< cta type="inline" title="Dalla teoria alla pratica" text="Hai definito le tue minacce? La Guida Privacy Digitale ti spiega come proteggerti concretamente: dispositivi, comunicazioni, dati e identità." url="https://shop.priorato.org" button="Scopri la Guida Privacy Digitale" icon="🛡️" >}}
+
 ## Limitare le Informazioni Pubbliche {#limitare-le-informazioni-pubbliche}
 
 Il modo migliore per garantire la privacy dei tuoi dati è semplicemente **non divulgarli**. Eliminare le informazioni personali che trovi online è uno dei primi passi migliori per recuperare la tua privacy.
@@ -133,4 +144,16 @@ Ricorda, la chiave è essere informati, critici e proattivi nelle tue scelte tec
 Grazie per aver letto questa guida! Se l'hai trovata utile, condividila con amici e colleghi interessati alla sicurezza informatica.
 
 Se desideri supportare il mio lavoro, puoi fare una donazione utilizzando il pulsante qui sotto.
+
+{{< cta type="bottom" title="Proteggi privacy digitale e finanziaria insieme" text="Con il bundle scontato ottieni sia la Guida Privacy Digitale che la Guida Privacy Bitcoin ad un prezzo ridotto." url="https://shop.priorato.org" button="Scopri il Bundle Scontato" icon="🎯" >}}
+
+---
+
+## Guide Correlate
+
+- **[De-Google Android: Guida Completa alla Privacy](/android)** - Applica il tuo threat model al telefono con una configurazione de-googled
+- **[GrapheneOS: Guida Completa al Miglior OS Privacy](/graphene)** - Il sistema operativo mobile con il miglior livello di sicurezza
+- **[VPN Self-Hosted con AdBlock](/vpn)** - Proteggi il tuo traffico di rete con una VPN personale
+- **[Usare Bitcoin in Modo Privato](/bitcoin)** - Estendi il tuo modello di minaccia alla privacy finanziaria
+
 [![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

@@ -1,22 +1,30 @@
 ---
-title: "Come usare joinmarket per fare coinjoin"
-description: "Guida e tutorial su come usare joinmarket per fare coinjoin su bitcoin in lingua italiana"
+title: "JoinMarket: Guida Completa ai CoinJoin su Bitcoin"
+description: "Impara a usare JoinMarket per fare coinjoin su Bitcoin: installazione, configurazione, tumbler e maker. Tutorial pratico in italiano."
+summary: "Impara a usare JoinMarket per fare coinjoin su Bitcoin: installazione, configurazione, tumbler e maker. Tutorial pratico in italiano."
 keywords: ["Bitcoin", "coinjoin", "joinmarket", "payjoin", "wasabi wallet", "samurai wallet", "joinmarket ita", "jam italiano", "jbitcoin ita"]
 author: "Turtlecute"
 date: 2024-05-15
 url: /joinmarket
 images: ["/posts/joinmarket/jm.webp"]
+series: ["Privacy Bitcoin"]
 ---
 
 # JOINMARKET
 
 ![Copertina guida JoinMarket](jm.webp)
-  
-Se avete trovato questa pagina cercando online "Join**T**market" avete tutta la mia sincera stima. Siete capitati, però, in una guida che tratta un argomento completamente differente, ma estremamente interessante! 🚬🍁  
-  
-L'obiettivo di questo tutorial é quello di illustrare il funzionamento teorico e pratico di JoinMarket.  
-  
-Questa guida ha richiesto tantissimo lavoro, tempo e impegno per essere completata ed é a disposizione in modo completamente gratuito. Se hai trovato i contenuti qui presenti interessanti e utili ti invito ad effettuare una donazione di un qualsiasi importo a sostegno del mio progetto di divulgazione. Questo sito non contiene analytics, pubblicità o elementi traccianti grazie a tutti coloro che supportano la mia divulgazione sostenendomi. 🐢 💚
+
+> **TL;DR** - In questa guida imparerai:
+> - Cos'è JoinMarket e come funziona il mixing trustless e decentralizzato
+> - Come installare e configurare JoinMarket sul tuo nodo Bitcoin
+> - Come inviare bitcoin con coinjoin, fare da maker e guadagnare satoshi
+> - Come usare il tumbler per ottenere il massimo livello di privacy sui tuoi UTXO
+
+Le tue transazioni Bitcoin sono pubbliche e tracciabili. Ogni volta che invii o ricevi satoshi, un analista della blockchain potrebbe collegare i tuoi movimenti alla tua identità. JoinMarket risolve questo problema permettendoti di fare coinjoin in modo totalmente trustless e decentralizzato, senza affidarti a nessun coordinatore centrale. In questa guida imparerai a usarlo dalla A alla Z.
+
+Se avete trovato questa pagina cercando online "Join**T**market" avete tutta la mia sincera stima. Siete capitati, però, in una guida che tratta un argomento completamente differente, ma estremamente interessante!
+
+Questa guida ha richiesto tantissimo lavoro, tempo e impegno per essere completata ed é a disposizione in modo completamente gratuito. Se hai trovato i contenuti qui presenti interessanti e utili ti invito ad effettuare una donazione di un qualsiasi importo a sostegno del mio progetto di divulgazione. Questo sito non contiene analytics, pubblicità o elementi traccianti grazie a tutti coloro che supportano la mia divulgazione sostenendomi.
   
 
 ## Definizione teorica Joinmarket
@@ -97,6 +105,8 @@ una volta aperto noteremo numerose righe con varie impostazioni e relativa spieg
 *   `minsize` se da maker non vogliamo avere UTXO troppo piccoli possiamo specificare il coinjoin minimo per partecipare. Questo campo é espresso in satoshi ed é totalmente soggettivo . Potremmo lasciare questo campo a 0 oppure aumentare fino a 500000 (sats), 1000000 (sats), ecc...
 
 Prestate molta attenzione a non modificare per sbaglio i campi errati, alcune delle varibili presenti nel file joinmarket.cfg se impostate erroneamente potrebbero compromettere la funzionalitá del software o annientare completamente la vostra privacy, occhi aperti e attenzione al massimo!
+
+{{< cta type="inline" title="Vuoi approfondire la privacy su Bitcoin?" text="Ho scritto una guida completa che copre nodi, wallet, transazioni e coinjoin per proteggere davvero la tua privacy finanziaria." url="https://shop.priorato.org" button="Scopri la Guida Privacy Bitcoin" icon="₿" >}}
 
 ## Setup dell'ambiente di lavoro
 
@@ -338,6 +348,17 @@ Lanciandolo da shell digitando 'tmux' vi si aprirá un terminale che rimarrá at
 ## Conclusioni
 JoinMarket é un software sconfinato e personalizzabile. In questa guida abbiamo scoperto le funzioni principali in modo da rendere possibile per chiunque (o almeno ci ho provato, mi rendo conto che usare questo software non é una passeggiata) l'utilizzo di questo programma. Uno dei maggiori problemi di JM é proprio questo: il numero di persone che lo usano e che fanno da maker. Se pochi utenti sfruttano questo software, la privacy generale (anon-set) si abbassa. Ecco perché spero che questa guida possa incentivare l'uso e vi convinca a scaricare e installare il mio software preferito per fare coinjoin. In caso vogliate approfondire ancora di più alcuni aspetti vi consiglio di dare una lettura ai vari docs di approfondimento presenti su github, sono veramente ben fatti e li potete reperire [qui](https://github.com/JoinMarket-Org/joinmarket-clientserver/tree/master/docs).  
   
-Buon mixing tartarughe!🐢 💚
+Buon mixing tartarughe!
+
+{{< cta type="bottom" title="Completa il tuo setup di privacy finanziaria" text="La Guida Privacy Bitcoin ti accompagna dalla A alla Z: nodo personale, wallet sicuro, acquisti no-KYC e coinjoin." url="https://shop.priorato.org" button="Vai alla Guida Privacy Bitcoin" icon="🔐" >}}
+
+---
+
+## Guide Correlate
+
+- **[Usare Bitcoin in Modo Privato](/bitcoin)** - La guida completa alla privacy su Bitcoin: nodo, wallet, transazioni e coinjoin
+- **[Come Utilizzare RoboSats](/robosats)** - Acquista Bitcoin P2P senza KYC per poi mixarli con JoinMarket
+- **[Generare un Seed Bitcoin con i Dadi](/seed)** - Crea le chiavi del tuo wallet JoinMarket in modo veramente sicuro
+- **[Tutorial Nodo Tor](/tor)** - JoinMarket usa Tor: scopri come contribuire alla rete
 
 [![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

@@ -41,6 +41,44 @@
 </script>
 {{- end }}
 
+{{/* JSON-LD: SiteNavigationElement — homepage only */}}
+{{ if .IsHome -}}
+{{- $navItems := slice -}}
+{{- range site.Menus.main -}}
+  {{- $navItems = $navItems | append (dict "name" .Name "url" (cond (strings.HasPrefix .URL "http") .URL (.URL | absURL))) -}}
+{{- end -}}
+{{- range .Site.Language.Params.profileMode.buttons -}}
+  {{- $navItems = $navItems | append (dict "name" .name "url" (cond (strings.HasPrefix .url "http") .url (.url | absURL))) -}}
+{{- end -}}
+{{- /* Deduplicate by name */ -}}
+{{- $seen := slice -}}
+{{- $uniqueNav := slice -}}
+{{- range $navItems -}}
+  {{- if not (in $seen .name) -}}
+    {{- $seen = $seen | append .name -}}
+    {{- $uniqueNav = $uniqueNav | append . -}}
+  {{- end -}}
+{{- end -}}
+{{ if gt (len $uniqueNav) 0 -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {{- range $i, $nav := $uniqueNav }}
+    {
+      "@type": "SiteNavigationElement",
+      "position": {{ add $i 1 }},
+      "name": {{ $nav.name | jsonify }},
+      "url": {{ $nav.url | jsonify }}
+    }{{ if lt (add $i 1) (len $uniqueNav) }},{{ end }}
+    {{- end }}
+  ]
+}
+</script>
+{{- end }}
+{{- end }}
+
 {{/* JSON-LD: Article + BreadcrumbList — post pages only */}}
 {{ if and .IsPage (eq .Section "posts") -}}
 {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
@@ -100,6 +138,28 @@
         }
       ]
     }
+  ]
+}
+</script>
+{{- end }}
+
+{{/* JSON-LD: FAQPage — posts with faq frontmatter */}}
+{{ if and .IsPage .Params.faq -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{- range $i, $item := .Params.faq }}
+    {
+      "@type": "Question",
+      "name": {{ $item.question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ $item.answer | jsonify }}
+      }
+    }{{ if lt (add $i 1) (len $.Params.faq) }},{{ end }}
+    {{- end }}
   ]
 }
 </script>

@@ -1,14 +1,24 @@
 ---
-title: "Tutorial per il setup di un nodo Tor"
-description: "Guida veloce per creare in autonomia il tuo nodo Tor"
+title: "Nodo Tor: Setup Completo per Supportare la Rete"
+description: "Impara a configurare un nodo Tor (middle relay o exit) su VPS o in locale. Script automatizzato incluso. Guida completa in italiano."
+summary: "Impara a configurare un nodo Tor (middle relay o exit) su VPS o in locale. Script automatizzato incluso. Guida completa in italiano."
 keywords: ["Tor", "tor browser", "tor ita", "tor relay", "nodo tor", "tor italiano", "guida tor"]
 author: "Turtlecute"
 date: 2024-05-11
 url: /tor
 images: ["/posts/tor/torino.webp"]
+series: ["Sicurezza"]
 ---
 
 ![Immagine di copertina Tor](torino.webp)
+
+> **TL;DR** - In questa guida imparerai:
+> - Cos'è la rete Tor e come funziona il routing a cipolla
+> - Come valutare i rischi tra nodo casalingo e VPS a noleggio
+> - Come installare un nodo Tor (middle o exit relay) con script automatizzato o da sorgente
+> - Come verificare il corretto funzionamento del tuo relay
+
+La rete Tor è uno dei pilastri fondamentali della privacy online, usata da giornalisti, attivisti e chiunque voglia proteggersi dalla sorveglianza. Ma Tor funziona solo grazie ai volontari che mettono a disposizione i propri nodi. Più nodi esistono, più la rete è veloce, sicura e resistente alla censura. Questa guida ti mostra come contribuire attivamente alla rete Tor installando il tuo nodo relay in pochi passi.
 
 Questa vuole essere una guida completa per lanciare un nodo a supporto
 della rete tor. Prima di iniziare spieghiamo in breve cos\'è questo
@@ -101,6 +111,8 @@ della rete locale. Quando invece si parla di server a noleggio online
 (più avanti nella guida ve ne consiglierò alcuni) la configurazione sarà
 più facile e veloce a fronte però di costi più alti e un minor controllo
 diretto sull\'hardware.
+
+{{< cta type="inline" title="Vuoi proteggere anche la tua identità digitale?" text="Tor è un pezzo del puzzle. La Guida Privacy Digitale ti spiega come mettere insieme tutti gli strumenti per una protezione completa." url="https://shop.priorato.org" button="Scopri la Guida Privacy Digitale" icon="🛡️" >}}
 
 ## Scelta dell\'hosting provider {#store style="color: greenyellow;"}
 
@@ -483,5 +495,16 @@ invece fare una donazione nel bottone qua sotto.
 
 
 se hai fatto un nodo tor sei una brava tartaruga 🐢
+
+{{< cta type="bottom" title="Completa il tuo setup di privacy" text="Hai un nodo Tor, ora ti serve un telefono sicuro. Vendo Pixel con GrapheneOS e SIM senza KYC per proteggere la tua identità." url="https://shop.priorato.org" button="Vai allo Shop" icon="🔒" >}}
+
+---
+
+## Guide Correlate
+
+- **[VPN Self-Hosted con Wireguard](/vpn)** - Crea la tua VPN privata con ad-blocking integrato
+- **[Come Creare un Threat Model](/threat-model)** - Il primo passo per proteggere la tua privacy
+- **[Privacy su Bitcoin](/bitcoin)** - Guida completa all'utilizzo privato di Bitcoin
+- **[La Guida Definitiva su GrapheneOS](/graphene)** - Il miglior sistema operativo per la privacy mobile
 
 [![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

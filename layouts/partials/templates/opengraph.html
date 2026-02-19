@@ -24,6 +24,42 @@
 {{- end -}}
 {{- end }}
 <meta property="og:image:alt" content="{{ .Title }}" />
+{{- /* Resolve the image URL for og:image:type detection */ -}}
+{{- $ogImgURL := "" -}}
+{{- if .Params.cover.image -}}
+  {{- if (ne .Params.cover.relative true) -}}
+    {{- $ogImgURL = (.Params.cover.image | absURL) -}}
+  {{- else -}}
+    {{- $ogImgURL = ((path.Join .RelPermalink .Params.cover.image) | absURL) -}}
+  {{- end -}}
+{{- else if $.Params.images -}}
+  {{- $ogImgURL = (index $.Params.images 0 | absURL) -}}
+{{- else -}}
+  {{- $images := $.Resources.ByType "image" -}}
+  {{- $featured := $images.GetMatch "*feature*" -}}
+  {{- if not $featured }}{{ $featured = $images.GetMatch "{*cover*,*thumbnail*}" }}{{ end -}}
+  {{- with $featured -}}
+    {{- $ogImgURL = $featured.Permalink -}}
+  {{- else -}}
+    {{- with site.Params.images -}}
+      {{- $ogImgURL = (index . 0 | absURL) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if $ogImgURL }}
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+{{- $ext := path.Ext $ogImgURL | lower -}}
+{{- if eq $ext ".webp" }}
+<meta property="og:image:type" content="image/webp" />
+{{- else if eq $ext ".png" }}
+<meta property="og:image:type" content="image/png" />
+{{- else if or (eq $ext ".jpg") (eq $ext ".jpeg") }}
+<meta property="og:image:type" content="image/jpeg" />
+{{- else if eq $ext ".gif" }}
+<meta property="og:image:type" content="image/gif" />
+{{- end -}}
+{{- end }}
 
 {{- if .IsPage }}
 {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
@@ -33,8 +69,8 @@
 {{- end -}}
 
 {{- with .Params.audio }}<meta property="og:audio" content="{{ . }}" />{{ end }}
-<meta property="og:locale" content="{{ with .Params.locale }}{{ . }}{{ else }}{{ site.LanguageCode }}{{ end }}" />
-{{- with site.Params.title }}<meta property="og:site_name" content="{{ . }}" />{{ end }}
+<meta property="og:locale" content="{{ with .Params.locale }}{{ . }}{{ else }}{{ replace site.LanguageCode "-" "_" }}{{ end }}" />
+<meta property="og:site_name" content="{{ site.Title }}" />
 {{- with .Params.videos }}{{- range . }}
 <meta property="og:video" content="{{ . | absURL }}" />
 {{ end }}{{ end }}

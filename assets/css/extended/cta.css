@@ -1,0 +1,166 @@
+/* ==========================================================================
+   CTA Shortcode Styles
+   Uses PaperMod/WonderMod CSS variables for theme consistency.
+   ========================================================================== */
+
+/* ---------- Base ---------- */
+.cta {
+    position: relative;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: var(--gap);
+    margin: var(--gap) 0;
+    transition: border-color 0.2s ease;
+}
+
+.cta:hover {
+    border-color: var(--tertiary);
+}
+
+.cta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cta-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cta-icon {
+    font-size: 1.4em;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.cta-title {
+    margin: 0;
+    font-size: 1.15em;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.3;
+}
+
+.cta-text {
+    margin: 0;
+    font-size: 0.92em;
+    line-height: 1.6;
+    color: var(--secondary);
+}
+
+.cta-text a {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* ---------- Button ---------- */
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    align-self: flex-start;
+    margin-top: 4px;
+    padding: 8px 18px;
+    font-size: 0.88em;
+    font-weight: 600;
+    color: var(--theme);
+    background: var(--primary);
+    border-radius: calc(var(--radius) - 2px);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    line-height: 1.4;
+}
+
+.cta-button:hover {
+    opacity: 0.85;
+}
+
+.cta-button svg {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.cta-button:hover svg {
+    transform: translateX(3px);
+}
+
+/* ==========================================================================
+   Type: Banner  --  full-width, prominent accent bar
+   ========================================================================== */
+.cta-banner {
+    border-left: 4px solid var(--primary);
+    padding: calc(var(--gap) * 1.2) var(--gap);
+}
+
+.cta-banner .cta-title {
+    font-size: 1.3em;
+}
+
+/* ==========================================================================
+   Type: Inline  --  compact, sits inside running text
+   ========================================================================== */
+.cta-inline {
+    padding: calc(var(--gap) * 0.75) var(--gap);
+    border-left: 3px solid var(--tertiary);
+}
+
+.cta-inline .cta-title {
+    font-size: 1.05em;
+}
+
+.cta-inline .cta-content {
+    gap: 6px;
+}
+
+/* ==========================================================================
+   Type: Bottom  --  end-of-article summary box, slightly more emphasis
+   ========================================================================== */
+.cta-bottom {
+    margin-top: calc(var(--gap) * 2);
+    border-top: 2px solid var(--tertiary);
+    border-left: none;
+    border-radius: 0 0 var(--radius) var(--radius);
+    text-align: center;
+}
+
+.cta-bottom .cta-content {
+    align-items: center;
+}
+
+.cta-bottom .cta-header {
+    justify-content: center;
+}
+
+.cta-bottom .cta-title {
+    font-size: 1.2em;
+}
+
+.cta-bottom .cta-button {
+    align-self: center;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    .cta {
+        padding: calc(var(--gap) * 0.9);
+    }
+
+    .cta-banner .cta-title,
+    .cta-bottom .cta-title {
+        font-size: 1.1em;
+    }
+
+    .cta-button {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cta-bottom .cta-button {
+        width: auto;
+    }
+}

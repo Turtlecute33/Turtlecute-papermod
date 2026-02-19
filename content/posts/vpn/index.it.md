@@ -1,14 +1,24 @@
 ---
-title: "Tutorial per il setup di una VPN self-hosted con filtro AdBlock"
-description: "Guida per creare una VPN self-hostata con wireguard, pi-hole e unbound."
-keywords: ["vpn", "vpn ita", "vpn self hosted", "wireguard", "pihole", "unbound dns", "wireguard ita"]
+title: "VPN Self-Hosted: Wireguard + Pi-Hole + Unbound"
+description: "Crea la tua VPN privata con Wireguard, Pi-Hole e Unbound DNS. Blocca ads e tracker senza fidarti di provider commerciali. Guida completa in italiano."
+summary: "Crea la tua VPN privata con Wireguard, Pi-Hole e Unbound DNS. Blocca ads e tracker senza fidarti di provider commerciali. Guida completa in italiano."
+keywords: ["vpn", "vpn ita", "vpn self hosted", "wireguard", "pihole", "unbound dns", "wireguard ita", "vpn privacy"]
 author: "Turtlecute"
 date: 2024-05-11
 url: /vpn
 images: ["/posts/vpn/vpn.webp"]
+series: ["Privacy Digitale", "Sicurezza"]
 ---
 
 ![Copertina guida VPN](vpn.webp)
+
+> **TL;DR** - In questa guida imparerai:
+> - Come scegliere un hosting provider attento alla privacy
+> - Come installare e configurare Wireguard come server VPN
+> - Come aggiungere Pi-Hole per bloccare ads e tracker a livello DNS
+> - Come configurare Unbound per risolvere i DNS in autonomia senza terze parti
+
+Le VPN commerciali promettono privacy, ma spesso il loro modello di business si basa proprio sulla raccolta dei tuoi dati. L'alternativa? Costruirti la tua VPN personale. Con Wireguard, Pi-Hole e Unbound puoi avere una connessione cifrata, un blocco ads/tracker integrato e una risoluzione DNS completamente autonoma — il tutto sotto il tuo controllo. Ecco come fare.
 
 Questa vuole essere una guida completa per effettuare il setup di una propria VPN utilizzando Wireguard e che filtra link pubblicitari e tracker grazie ad un filtro di AdBlocking fatto con Pi-Hole.
 
@@ -46,6 +56,8 @@ In questa guida vi consiglierò un paio di hosting provider, spesso quelli picco
 
 Esistono tanti altri servizi di VPS con differenti costi e trade-off dal punto di vista di privacy, sicurezza, costi ecc.. Potete tranquillamente fare un paio di ricerche online e non utilizzare obbligatoriamente quelli da me sopra citati.  
 Una volta scelto il servizio di hosting consiglio caldamente di proseguire acquistando una macchina con sopra una distribuzione debian based (debian o ubuntu) e settando una password di accesso complessa.
+
+{{< cta type="inline" title="Proteggi tutta la tua vita digitale" text="Una VPN è solo un pezzo del puzzle. La Guida Privacy Digitale copre tutto: dispositivi, comunicazioni, dati e identità online." url="https://shop.priorato.org" button="Scopri la Guida Privacy Digitale" icon="🛡️" >}}
 
 ## Connessione al server VPS con SSH
 
@@ -233,5 +245,16 @@ Se entrambe le prove vengono passate correttamente sei un vero drago e sei riusc
 ## Conclusioni
 
 Questo é uno dei tanti set-up possibili per crearsi una server VPN. Come ogni tipo di configurazione é possibile eseguire modifiche per adattare il servizio ai propri trade-off. Quello presentato in questa guida é, a mio parere, un buon bilanciamento tra sicurezza, funzionalitá e privacy. Se hai proposte di miglioramento, hai trovato errori puoi aiutarmi e far sentire la tua voce sul [repository github](https://github.com/Turtlecute33/Turtlecute.org).
+
+{{< cta type="bottom" title="Ti serve anche un telefono sicuro?" text="Vendo Pixel con GrapheneOS pre-installato e SIM senza KYC. Il complemento perfetto alla tua VPN self-hosted." url="https://shop.priorato.org" button="Vai allo Shop" icon="📱" >}}
+
+---
+
+## Guide Correlate
+
+- **[Nodo Tor: Setup Completo](/tor)** - Contribuisci alla rete Tor installando il tuo relay
+- **[Come Creare un Threat Model](/threat-model)** - Il primo passo per proteggere la tua privacy
+- **[Privacy su Android](/android)** - Configurazione completa per un telefono de-googled
+- **[La Guida Definitiva su GrapheneOS](/graphene)** - Il miglior sistema operativo per la privacy mobile
 
 [![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

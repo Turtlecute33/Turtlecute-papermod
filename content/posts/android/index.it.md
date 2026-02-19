@@ -1,17 +1,27 @@
             
 ---
-title: "Guida al De-Google e privacy su android"
-description: "Guida completa alla configurazione di un telefono Android de-googled con la massima privacy e sicurezza, pur mantenendo usabilità e comodità del dispositivo."
+title: "De-Google Android: Guida Completa alla Privacy"
+description: "Configura un telefono Android de-googled con massima privacy e sicurezza senza rinunciare all'usabilità. Guida passo-passo con app consigliate."
+summary: "Configura un telefono Android de-googled con massima privacy e sicurezza senza rinunciare all'usabilità. Guida passo-passo con app consigliate."
 keywords: ["android privacy", "privacy ita", "android privacy italiano", "degoogle", "privacy phone", "graphene os", "graphene os italiano", "graphene os ita", "degoogle italiano"]
 author: "Turtlecute"
 date: 2025-03-29
 url: /android
 images: ["/posts/android/1.webp"]
+series: ["Privacy Digitale"]
 ---
 
 ![Guida Android e privacy](1.webp)
 
-La guida è aperta a miglioramenti e consigli, descriverò la configurazione che trovo con il miglior rapporto usabilità/privacy, nel tempo ampierò le varie sezioni introducendo anche varie alternative per chi magari non si trova bene con una determinata applicazione o servizio, Se volete darmi consigli, contribuire alla guida o effettuare donazioni, potete dare un occhiata alla pagina [Donazioni](https://btcpay.priorato.org/i/CXG1ouF8eHjdCV73Th4Ujb) o effettuare una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute-papermod).  
+> **TL;DR** - In questa guida imparerai:
+> - Come installare e configurare un sistema operativo Android de-googled (LineageOS)
+> - Quali app privacy-friendly usare per sostituire i servizi Google
+> - Come isolare le app traccianti con Shelter e proteggere il traffico dati con Tor
+> - Come gestire permessi, VPN e cloud in modo sicuro
+
+Il tuo smartphone sa tutto di te: dove vai, con chi parli, cosa cerchi. Ogni giorno, le app installate sul tuo Android inviano silenziosamente i tuoi dati personali a Google e a decine di aziende terze. Questa guida ti mostra come riprendere il controllo del tuo telefono, eliminando la dipendenza da Google e costruendo un ambiente mobile realmente privato, senza sacrificare la comodità d'uso quotidiana.
+
+La guida è aperta a miglioramenti e consigli, descriverò la configurazione che trovo con il miglior rapporto usabilità/privacy, nel tempo ampierò le varie sezioni introducendo anche varie alternative per chi magari non si trova bene con una determinata applicazione o servizio, Se volete darmi consigli, contribuire alla guida o effettuare donazioni, potete dare un occhiata alla pagina [Donazioni](https://btcpay.priorato.org/i/CXG1ouF8eHjdCV73Th4Ujb) o effettuare una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute-papermod).
 
 Questa guida parla di android in generale, ne ho scritta anche una specifica per GrapheneOS, potete trovarla [qui](https://turtlecute.org/graphene), se siete interessati ad acquistare dispositivi con set-up di privacy su misura contattatemi su [Telegram](https://turtlecute.org/android)
   
@@ -109,6 +119,8 @@ Qui possiamo adottare due diverse tecniche per la protezione dei dati:
 
 Tutte le opzioni sono valide, la decisione dipende principalmente dalla vostra volontà o meno di usare un servizio VPN. In caso vogliate approfondire l'argomento potete dare un occhio anticipatamente alla [sezione apposita.](#cloud)  
 
+{{< cta type="inline" title="Preferisci un setup già pronto?" text="Se non vuoi fare tutto da solo, vendo telefoni con GrapheneOS e configurazione privacy personalizzata sulle tue esigenze." url="https://shop.priorato.org" button="Scopri i Privacy Phone" icon="📱" >}}
+
 ## Applicazioni
 
 Ora che abbiamo gli store e le reti ben configurate passiamo a scaricare alcune app fortemente consigliate:
@@ -194,5 +206,16 @@ Altri ottimi posti per rimanere aggiornati in ambito privacy e degoogle sono var
 > "Dire che la privacy è inutile perché non si ha nulla da nascondere è come dire che la libertà di parola è inutile perché non si ha nulla da dire".
 
 
+
+{{< cta type="bottom" title="Vuoi proteggere anche la tua identità telefonica?" text="Con una SIM senza KYC puoi avere un numero anonimo, senza documenti. Perfetto per completare il tuo setup de-googled." url="https://shop.priorato.org" button="Scopri le SIM no-KYC" icon="🔒" >}}
+
+---
+
+## Guide Correlate
+
+- **[La Guida Definitiva su GrapheneOS](/graphene)** - Il miglior sistema operativo per la privacy mobile, analizzato in ogni dettaglio
+- **[Come Creare un Threat Model](/threat-model)** - Il primo passo per proteggere la tua privacy: definire le minacce
+- **[VPN Self-Hosted con AdBlock](/vpn)** - Crea la tua VPN personale con Wireguard e Pi-Hole per bloccare pubblicità e tracker
+- **[Tutorial Nodo Tor](/tor)** - Contribuisci alla rete Tor e naviga in modo anonimo
 
 [![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

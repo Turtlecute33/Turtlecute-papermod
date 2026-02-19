@@ -1,0 +1,40 @@
+{{- /* ==========================================================================
+   extend_footer.html — Core Web Vitals: resource hints + lazy loading
+   Injected at the end of <body> via WonderMod's extension point.
+   ========================================================================== */}}
+
+{{- /* ---- Resource hints: dns-prefetch + preconnect for external origins ---- */}}
+{{- /* These are placed here (not in <head>) because extend_head.html is owned
+       by another partial. Link elements are valid in <body> per the HTML spec
+       for dns-prefetch and preconnect, and browsers process them regardless
+       of placement. */ -}}
+<link rel="dns-prefetch" href="https://shop.priorato.org">
+<link rel="dns-prefetch" href="https://priorato.org">
+<link rel="dns-prefetch" href="https://github.com">
+<link rel="dns-prefetch" href="https://btcpay.priorato.org">
+
+<link rel="preconnect" href="https://priorato.org" crossorigin>
+<link rel="preconnect" href="https://shop.priorato.org" crossorigin>
+
+{{- /* ---- Lazy loading for below-fold images not handled by render-image ----
+       This targets images injected by shortcodes, raw HTML, or cover images
+       that don't go through the markdown render hook. It skips images already
+       in the viewport (above the fold) to preserve LCP performance.
+       ---- */ -}}
+<script>
+(function() {
+    if (!('loading' in HTMLImageElement.prototype)) return;
+    var imgs = document.querySelectorAll('img:not([loading])');
+    if (!imgs.length) return;
+    // Threshold: images whose top edge is beyond 1.5x viewport height
+    // are considered below the fold and get lazy loading.
+    var foldLine = window.innerHeight * 1.5;
+    for (var i = 0; i < imgs.length; i++) {
+        var rect = imgs[i].getBoundingClientRect();
+        if (rect.top > foldLine) {
+            imgs[i].setAttribute('loading', 'lazy');
+            imgs[i].setAttribute('decoding', 'async');
+        }
+    }
+})();
+</script>
