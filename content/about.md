@@ -1,7 +1,7 @@
 ---
 title: "Chi Sono"
 description: "Turtlecute: educatore Bitcoin, sostenitore della privacy digitale e ricercatore di sicurezza informatica. Guide gratuite su GrapheneOS, Bitcoin, self-hosting e sicurezza digitale."
-keywords: ["turtlecute", "privacy digitale", "bitcoin educatore", "grapheneos", "sicurezza informatica", "self-hosting", "consulenze privacy"]
+keywords: ["turtlecute", "privacy digitale", "bitcoin educatore", "grapheneos", "sicurezza informatica", "self-hosting"]
 author: "Turtlecute"
 url: /about
 images: ["/turtlecute.png"]
@@ -46,13 +46,12 @@ Nel corso degli anni ho approfondito e scritto guide dettagliate su:
 ### Guide Gratuite
 Tutte le guide sono **completamente gratuite**, scritte in italiano e pensate per essere accessibili sia ai principianti che agli utenti avanzati. Il codice sorgente del sito e disponibile su [GitHub](https://github.com/Turtlecute33) per chiunque voglia contribuire, correggere o tradurre i contenuti.
 
-### Servizi e Consulenze
+### Servizi
 Per chi desidera un supporto piu diretto, offro servizi attraverso il mio [shop](https://shop.priorato.org):
 
 - **Dispositivi con GrapheneOS** preconfigurati e pronti all'uso
 - **SIM senza KYC** per comunicazioni piu riservate
 - **Setup di privacy personalizzati** in base al vostro threat model
-- **Consulenze individuali** su sicurezza digitale e privacy
 
 ---
 

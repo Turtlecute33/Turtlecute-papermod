@@ -1165,7 +1165,7 @@ Discord](https://discord.com/invite/grapheneos). GrapheneOS ha anche comunità s
 
 Se questa guida ti é stata utile puoi farmi una donazione cliccando il tasto qua sotto. Come detto ad inizio guida se puoi condividi questo articolo con amici, parenti, social media e gruppi telegram, questa rimane una donazione sempre apprezzatissima <3
 
-Se hai domande puoi contattarmi al mio profilo telegram [@Turtlecute33](https://t.me/turtlecute33) o tramite email a turtlecute@proton.me, offro anche servizi di consulenza per chi interessato. Grazie della lettura!
+Se hai domande puoi contattarmi al mio profilo telegram [@Turtlecute33](https://t.me/turtlecute33) o tramite email a turtlecute@proton.me. Grazie della lettura!
 
 {{< cta type="bottom" title="Non vuoi rischiare errori nel setup?" text="Acquista un Pixel con GrapheneOS pre-installato e configurato su misura per le tue necessità." url="https://shop.priorato.org" button="Vedi i Privacy Phone" icon="🛡️" >}}
 

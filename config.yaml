@@ -55,7 +55,7 @@ languages:
         imageTitle: ProfileMode image
         # imageWidth: 120
         # imageHeight: 120
-        subtitle: "🔒 Privacy | ⚡ Bitcoin | 🛡️ Sicurezza | 💼 Consulenze"
+        subtitle: "🔒 Privacy | ⚡ Bitcoin | 🛡️ Sicurezza"
         buttons:
           - name: Guide
             url: posts
