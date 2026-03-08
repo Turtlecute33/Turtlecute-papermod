@@ -5,6 +5,7 @@ summary: "Tutto su GrapheneOS: installazione, configurazione, profili utente, sa
 keywords: ["Grapheneos","grapheneos ita","graphene os","graphene os italiano","privacy android","degoogle","telefoni anonimi"]
 author: "Turtlecute"
 date: 2026-03-01
+weight: 2
 url: /graphene
 images: ["/posts/graphene/graffy.jpg"]
 series: ["Privacy Digitale"]

@@ -6,6 +6,7 @@ summary: "Configura un telefono Android de-googled con massima privacy e sicurez
 keywords: ["android privacy", "privacy ita", "android privacy italiano", "degoogle", "privacy phone", "graphene os", "graphene os italiano", "graphene os ita", "degoogle italiano"]
 author: "Turtlecute"
 date: 2026-03-04
+weight: 1
 url: /android
 images: ["/posts/android/1.webp"]
 series: ["Privacy Digitale"]
