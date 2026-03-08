@@ -37,10 +37,10 @@
   loading="eager"
   fetchpriority="high"
   decoding="async"
-  {{- if $img }}
+  {{- if $img }}{{- if ne $img.MediaType.SubType "svg" }}
   width="{{ $img.Width }}"
   height="{{ $img.Height }}"
-  {{- end }}
+  {{- end }}{{- end }}
 />
 {{- else -}}
 <img
@@ -49,9 +49,9 @@
   {{- with $title }} title="{{ . }}"{{ end }}
   loading="lazy"
   decoding="async"
-  {{- if $img }}
+  {{- if $img }}{{- if ne $img.MediaType.SubType "svg" }}
   width="{{ $img.Width }}"
   height="{{ $img.Height }}"
-  {{- end }}
+  {{- end }}{{- end }}
 />
 {{- end -}}

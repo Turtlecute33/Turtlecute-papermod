@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" font-family="'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1e2e"/>
+      <stop offset="100%" style="stop-color:#181825"/>
+    </linearGradient>
+    <linearGradient id="layer1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f38ba8"/>
+      <stop offset="100%" style="stop-color:#eba0ac"/>
+    </linearGradient>
+    <linearGradient id="layer2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fab387"/>
+      <stop offset="100%" style="stop-color:#f9e2af"/>
+    </linearGradient>
+    <linearGradient id="layer3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#a6e3a1"/>
+      <stop offset="100%" style="stop-color:#94e2d5"/>
+    </linearGradient>
+    <linearGradient id="layer4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#89b4fa"/>
+      <stop offset="100%" style="stop-color:#74c7ec"/>
+    </linearGradient>
+    <linearGradient id="layer5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#cba6f7"/>
+      <stop offset="100%" style="stop-color:#b4befe"/>
+    </linearGradient>
+    <linearGradient id="layer6" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f5c2e7"/>
+      <stop offset="100%" style="stop-color:#cba6f7"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#bg)" rx="12"/>
+
+  <text x="400" y="42" fill="#cdd6f4" font-size="20" font-weight="700" text-anchor="middle" letter-spacing="1">I LIVELLI DI SICUREZZA DI macOS</text>
+  <line x1="250" y1="52" x2="550" y2="52" stroke="#45475a" stroke-width="1"/>
+
+  <!-- Layer 6 - outermost -->
+  <rect x="60" y="70" width="680" height="380" rx="16" fill="none" stroke="url(#layer6)" stroke-width="2" opacity="0.6"/>
+  <rect x="70" y="78" width="200" height="28" rx="6" fill="#f5c2e7" opacity="0.15"/>
+  <text x="80" y="97" fill="#f5c2e7" font-size="13" font-weight="600">🔒 App Sandbox + Hardened RT</text>
+
+  <!-- Layer 5 -->
+  <rect x="90" y="115" width="620" height="320" rx="14" fill="none" stroke="url(#layer5)" stroke-width="2" opacity="0.6"/>
+  <rect x="100" y="123" width="200" height="28" rx="6" fill="#cba6f7" opacity="0.15"/>
+  <text x="110" y="142" fill="#cba6f7" font-size="13" font-weight="600">🛡️ Firewall (pf + LuLu)</text>
+
+  <!-- Layer 4 -->
+  <rect x="120" y="160" width="560" height="260" rx="12" fill="none" stroke="url(#layer4)" stroke-width="2" opacity="0.6"/>
+  <rect x="130" y="168" width="220" height="28" rx="6" fill="#89b4fa" opacity="0.15"/>
+  <text x="140" y="187" fill="#89b4fa" font-size="13" font-weight="600">🌐 DNS Crittografato + VPN/Tor</text>
+
+  <!-- Layer 3 -->
+  <rect x="150" y="205" width="500" height="200" rx="10" fill="none" stroke="url(#layer3)" stroke-width="2" opacity="0.6"/>
+  <rect x="160" y="213" width="260" height="28" rx="6" fill="#a6e3a1" opacity="0.15"/>
+  <text x="170" y="232" fill="#a6e3a1" font-size="13" font-weight="600">✅ System Integrity Protection (SIP)</text>
+
+  <!-- Layer 2 -->
+  <rect x="180" y="250" width="440" height="140" rx="8" fill="none" stroke="url(#layer2)" stroke-width="2" opacity="0.6"/>
+  <rect x="190" y="258" width="200" height="28" rx="6" fill="#fab387" opacity="0.15"/>
+  <text x="200" y="277" fill="#fab387" font-size="13" font-weight="600">🔐 FileVault + Lockdown Mode</text>
+
+  <!-- Layer 1 - innermost -->
+  <rect x="210" y="295" width="380" height="80" rx="8" fill="url(#layer1)" opacity="0.12" stroke="url(#layer1)" stroke-width="2"/>
+  <text x="400" y="325" fill="#f38ba8" font-size="15" font-weight="700" text-anchor="middle">🍎 Apple Silicon Secure Enclave</text>
+  <text x="400" y="348" fill="#f38ba8" font-size="12" text-anchor="middle" opacity="0.8">Hardware root of trust • Secure Boot • Touch ID</text>
+
+  <!-- Right side labels -->
+  <text x="720" y="92" fill="#585b70" font-size="11" text-anchor="end" font-style="italic">Livello App</text>
+  <text x="720" y="138" fill="#585b70" font-size="11" text-anchor="end" font-style="italic">Livello Rete</text>
+  <text x="720" y="183" fill="#585b70" font-size="11" text-anchor="end" font-style="italic">Livello Trasporto</text>
+  <text x="720" y="228" fill="#585b70" font-size="11" text-anchor="end" font-style="italic">Livello Sistema</text>
+  <text x="720" y="273" fill="#585b70" font-size="11" text-anchor="end" font-style="italic">Livello Disco</text>
+  <text x="720" y="330" fill="#585b70" font-size="11" text-anchor="end" font-style="italic">Livello Hardware</text>
+
+  <!-- Footer -->
+  <text x="400" y="475" fill="#45475a" font-size="11" text-anchor="middle">turtlecute.org — Sicurezza a strati: ogni livello protegge quello sottostante</text>
+</svg>
