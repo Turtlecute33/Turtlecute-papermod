@@ -13,7 +13,6 @@ cover:
   relative: true
 ---
 
-![Immagine di copertina Tor](torino.webp)
 
 > **TL;DR** - In questa guida imparerai:
 > - Cos'è la rete Tor e come funziona il routing a cipolla

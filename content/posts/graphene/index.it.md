@@ -13,7 +13,6 @@ cover:
   relative: true
 ---
 
-![Copertina guida GrapheneOS](graffy.jpg)
 
 > **TL;DR** - In questa guida imparerai:
 > - Perché GrapheneOS è il gold standard della privacy mobile e quali Pixel scegliere

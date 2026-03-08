@@ -15,7 +15,6 @@ cover:
 
 # JOINMARKET
 
-![Copertina guida JoinMarket](jm.webp)
 
 > **TL;DR** - In questa guida imparerai:
 > - Cos'è JoinMarket e come funziona il mixing trustless e decentralizzato

@@ -14,7 +14,6 @@ cover:
   relative: true
 ---
 
-![Copertina guida Bitcoin privacy](bitcoin.jpg)
 
 > **TL;DR** - In questa guida imparerai:
 > - Come installare un nodo Bitcoin per non esporre i tuoi dati finanziari

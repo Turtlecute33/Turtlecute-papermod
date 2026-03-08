@@ -13,7 +13,6 @@ cover:
   relative: true
 ---
 
-![Copertina guida VPN](vpn.webp)
 
 > **TL;DR** - In questa guida imparerai:
 > - Come scegliere un hosting provider attento alla privacy

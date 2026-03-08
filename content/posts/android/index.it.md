@@ -14,7 +14,6 @@ cover:
   relative: true
 ---
 
-![Guida Android e privacy](1.webp)
 
 > **TL;DR** - In questa guida imparerai:
 > - Come installare e configurare un sistema operativo Android de-googled (LineageOS)

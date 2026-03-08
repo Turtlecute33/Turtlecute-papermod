@@ -13,7 +13,6 @@ cover:
   relative: true
 ---
 
-![Illustrazione threat model](minaccia.png)
 
 > **TL;DR** - In questa guida imparerai:
 > - Come definire correttamente una minaccia (non sono solo le "big tech")
