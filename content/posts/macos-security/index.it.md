@@ -29,7 +29,7 @@ Questa guida è pensata per voi tartarughe che volete prendere sul serio la priv
 
 ## Threat Modeling: Da Dove Partire {#threat-modeling style="color: white;"}
 
-Il primo passo — e il più importante — è creare un **modello di minaccia** (threat model). Dovete capire da chi vi state difendendo per sapere come difendervi. Ogni persona ha esigenze diverse, quindi il vostro threat model sarà unico.
+Il primo passo, e il più importante, è creare un **modello di minaccia** (threat model). Dovete capire da chi vi state difendendo per sapere come difendervi. Ogni persona ha esigenze diverse, quindi il vostro threat model sarà unico.
 
 ### Identificare le risorse da proteggere
 
@@ -87,11 +87,11 @@ Un Apple Account è necessario solo per accedere all'App Store e ai servizi Appl
 
 Su Apple Silicon, la virtualizzazione è integrata in macOS tramite il framework Virtualization di Apple. Potete eseguire macOS e Windows 11 ARM usando questi strumenti:
 
-- **UTM** — Gratuito dal [sito web](https://mac.getutm.app). Supporta macOS e Windows 11 ARM
-- **VirtualBuddy** — GUI per virtualizzare macOS 12+ su Apple Silicon. Gratuito al 100%. [GitHub](https://github.com/insidegui/VirtualBuddy)
-- **VMware Fusion** — Ora gratuito sotto Broadcom. Interfaccia pulita, supporta Windows 11 ARM
-- **tart** — Controllo VM da linea di comando, installabile via Homebrew. [tart.run](https://tart.run)
-- **Parallels** (a pagamento) — Opzione commerciale con forte integrazione. [Sito web](https://www.parallels.com)
+- **UTM** - Gratuito dal [sito web](https://mac.getutm.app). Supporta macOS e Windows 11 ARM
+- **VirtualBuddy** - GUI per virtualizzare macOS 12+ su Apple Silicon. Gratuito al 100%. [GitHub](https://github.com/insidegui/VirtualBuddy)
+- **VMware Fusion** - Ora gratuito sotto Broadcom. Interfaccia pulita, supporta Windows 11 ARM
+- **tart** - Controllo VM da linea di comando, installabile via Homebrew. [tart.run](https://tart.run)
+- **Parallels** (a pagamento) - Opzione commerciale con forte integrazione. [Sito web](https://www.parallels.com)
 
 Consiglio caldamente di provare le vostre configurazioni di sicurezza prima in una VM, così potete sperimentare senza rischi.
 
@@ -169,9 +169,9 @@ sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setallowsignedapp off
 
 Il firewall integrato blocca solo le connessioni in entrata. Per controllare anche il **traffico in uscita** (e vedere quali app "telefonano a casa"), consiglio caldamente uno di questi:
 
-- **[Little Snitch](https://www.obdev.at/products/littlesnitch/)** — Il più completo, a pagamento
-- **[LuLu](https://objective-see.org/products/lulu.html)** — Open source e gratuito, di Objective-See
-- **[Radio Silence](https://radiosilenceapp.com/)** — Semplice e leggero
+- **[Little Snitch](https://www.obdev.at/products/littlesnitch/)** - Il più completo, a pagamento
+- **[LuLu](https://objective-see.org/products/lulu.html)** - Open source e gratuito, di Objective-See
+- **[Radio Silence](https://radiosilenceapp.com/)** - Semplice e leggero
 
 Questi firewall possono essere aggirati da processi con privilegi root, ma restano uno strumento preziosissimo. Alcuni malware si autodistruggono quando rilevano la presenza di questi firewall.
 
@@ -218,7 +218,7 @@ launchctl list
 launchctl list | grep -i apple
 ```
 
-I servizi di sistema sono protetti dal **System Integrity Protection (SIP)** — non disabilitate SIP per modificarli. È molto più sicuro lasciarli come sono.
+I servizi di sistema sono protetti dal **System Integrity Protection (SIP)** - non disabilitate SIP per modificarli. È molto più sicuro lasciarli come sono.
 
 Per esaminare cosa fa un servizio specifico, cercate il suo file `.plist` in:
 - `/System/Library/LaunchDaemons/` (daemon di sistema)
@@ -240,7 +240,7 @@ export HOMEBREW_NO_ANALYTICS=1
 
 Aggiungete `export HOMEBREW_NO_ANALYTICS=1` al vostro `~/.zshrc` per renderlo permanente.
 
-{{< cta type="inline" title="🛡️ Costruisci la Tua Fortezza Digitale" text="Avete già iniziato a blindare il vostro Mac — state costruendo qualcosa con le vostre mani, pezzo dopo pezzo. Ma un sistema operativo sicuro è solo un tassello del puzzle. La Guida Privacy Digitale completa il percorso: dalla protezione del telefono alle comunicazioni, dalla navigazione anonima alla gestione delle identità digitali." url="https://shop.priorato.org" button="Scopri la Guida Privacy Digitale" icon="🔒" >}}
+{{< cta type="inline" title="🛡️ Costruisci la Tua Fortezza Digitale" text="Avete già iniziato a blindare il vostro Mac - state costruendo qualcosa con le vostre mani, pezzo dopo pezzo. Ma un sistema operativo sicuro è solo un tassello del puzzle. La Guida Privacy Digitale completa il percorso: dalla protezione del telefono alle comunicazioni, dalla navigazione anonima alla gestione delle identità digitali." url="https://shop.priorato.org" button="Scopri la Guida Privacy Digitale" icon="🔒" >}}
 
 ## DNS: Proteggere le Vostre Query {#dns style="color: white;"}
 
@@ -252,9 +252,9 @@ Le query DNS sono come cartoline postali: chiunque sulla rete può leggerle. Ved
 
 Da macOS 11 in poi, potete installare **profili di configurazione** per DNS crittografato (DoH/DoT). Alcuni provider consigliati:
 
-- **[Quad9](https://www.quad9.net/)** — Blocca domini malevoli, no-profit
-- **[AdGuard DNS](https://adguard-dns.io/)** — Blocca pubblicità e tracker
-- **[NextDNS](https://nextdns.io/)** — Altamente personalizzabile, con blocklists
+- **[Quad9](https://www.quad9.net/)** - Blocca domini malevoli, no-profit
+- **[AdGuard DNS](https://adguard-dns.io/)** - Blocca pubblicità e tracker
+- **[NextDNS](https://nextdns.io/)** - Altamente personalizzabile, con blocklists
 
 ### File hosts
 
@@ -347,7 +347,7 @@ Indipendentemente dal browser scelto, ricordate:
 - La **Navigator API** rivela informazioni sul vostro sistema
 - Il **canvas fingerprinting** può identificarvi univocamente
 - Disabilitate i **cookie di terze parti** (ormai default nella maggior parte dei browser)
-- **WebRTC** può rivelare il vostro indirizzo IP reale — disabilitatelo tramite estensioni o Modalità Lockdown
+- **WebRTC** può rivelare il vostro indirizzo IP reale - disabilitatelo tramite estensioni o Modalità Lockdown
 
 ## Tor: Navigazione Anonima {#tor style="color: white;"}
 
@@ -377,7 +377,7 @@ codesign -dvv /Applications/Tor\ Browser.app
 - Tor cifra il traffico fino al **nodo di uscita**, ma l'uso di Tor è identificabile tramite gli hostname TLS
 - I **pluggable transports** possono offuscare il traffico Tor, mascherandolo come traffico normale
 - Per sicurezza extra, usate Tor **dentro una VM**
-- Tor protegge l'**anonimato** (chi siete), non necessariamente la **privacy** (cosa fate) — se fate login con il vostro account, Tor non vi protegge
+- Tor protegge l'**anonimato** (chi siete), non necessariamente la **privacy** (cosa fate) - se fate login con il vostro account, Tor non vi protegge
 - Tor è vulnerabile all'**analisi del traffico globale** da parte di avversari che controllano grandi porzioni della rete
 
 > **Attenzione:** non confondete anonimato e privacy. Tor vi rende anonimi, ma se inserite dati personali su un sito, l'anonimato svanisce.
@@ -388,9 +388,9 @@ codesign -dvv /Applications/Tor\ Browser.app
 
 Una VPN cifra il traffico tra voi e il server VPN. Alcuni punti fondamentali:
 
-- **Evitate PPTP** — è obsoleto e insicuro
+- **Evitate PPTP** - è obsoleto e insicuro
 - Preferite **WireGuard** o **OpenVPN**
-- Attenzione alla **fuga di traffico** quando la VPN si disconnette — configurate un kill switch (interruttore di emergenza)
+- Attenzione alla **fuga di traffico** quando la VPN si disconnette - configurate un kill switch (interruttore di emergenza)
 - Considerate la **giurisdizione** del provider VPN
 
 Se volete il massimo controllo, consiglio caldamente di **hostare la vostra VPN**. WireGuard + Pi-hole su un VPS è un'ottima combinazione.
@@ -440,7 +440,7 @@ Richiede un Apple Account. Se lo usate, abilitate la **Verifica Chiave di Contat
 
 **!ATTENZIONE!** Se usate il backup iCloud **senza** Advanced Data Protection, Apple conserva le chiavi di crittografia dei vostri messaggi. Abilitatelo immediatamente se usate iMessage.
 
-{{< cta type="inline" title="₿ Proteggi Anche i Tuoi Bitcoin" text="Siete quasi alla fine di questa guida e avete già acquisito competenze che il 99% degli utenti Mac non ha. Manca solo un pezzo: proteggere i vostri Bitcoin con lo stesso livello di attenzione. Acquisti senza KYC, mixing, wallet privacy-oriented — tutto nella Guida Privacy Bitcoin." url="https://shop.priorato.org" button="Vai alla Guida Privacy Bitcoin" icon="🛡️" >}}
+{{< cta type="inline" title="₿ Proteggi Anche i Tuoi Bitcoin" text="Siete quasi alla fine di questa guida e avete già acquisito competenze che il 99% degli utenti Mac non ha. Manca solo un pezzo: proteggere i vostri Bitcoin con lo stesso livello di attenzione. Acquisti senza KYC, mixing, wallet privacy-oriented - tutto nella Guida Privacy Bitcoin." url="https://shop.priorato.org" button="Vai alla Guida Privacy Bitcoin" icon="🛡️" >}}
 
 ## Virus e Malware {#malware style="color: white;"}
 
@@ -572,10 +572,10 @@ Per i più tecnici, **GnuPG** può gestire file di password crittografati.
 
 È fondamentale abilitare l'MFA su tutti i vostri account. In ordine di sicurezza:
 
-1. **WebAuthn/FIDO2** (hardware key come YubiKey) — il più sicuro
-2. **TOTP** (app come Aegis, 2FAS) — molto buono
-3. **HOTP** — buono
-4. **SMS** — meglio di niente, ma vulnerabile al SIM swapping (clonazione della SIM)
+1. **WebAuthn/FIDO2** (hardware key come YubiKey) - il più sicuro
+2. **TOTP** (app come Aegis, 2FAS) - molto buono
+3. **HOTP** - buono
+4. **SMS** - meglio di niente, ma vulnerabile al SIM swapping (clonazione della SIM)
 
 Consiglio caldamente una **YubiKey** per WebAuthn e come chiave GPG/SSH hardware.
 
@@ -651,7 +651,7 @@ macOS ha sshd disabilitato di default (Login Remoto). Se dovete abilitarlo:
 
 ## Sicurezza Fisica {#fisico style="color: white;"}
 
-- **Non lasciate mai il Mac incustodito** — i keylogger hardware esistono (mitigati usando tastiera integrata o Bluetooth)
+- **Non lasciate mai il Mac incustodito** - i keylogger hardware esistono (mitigati usando tastiera integrata o Bluetooth)
 - Strumenti anti-forensics come **[BusKill](https://www.buskill.in/)** e **[swiftGuard](https://github.com/Lennolium/swiftGuard)** possono spegnere automaticamente il sistema quando rilevano eventi USB non autorizzati o separazione fisica
 - Usate un **filtro privacy** sullo schermo quando lavorate in pubblico
 - Considerate lo **smalto per unghie** o sigilli antimanomissione sulle viti del case per rilevare accessi fisici
@@ -734,9 +734,9 @@ Ricordate anche di:
 
 ## Software Correlato {#software style="color: white;"}
 
-- **[Lynis](https://cisofy.com/lynis/)** — Audit di sicurezza cross-platform
-- **[osquery](https://osquery.io/)** — Interrogate il vostro sistema con query SQL
-- **[Pareto Security](https://paretosecurity.com/)** — App nella barra dei menu per controlli base di sicurezza
+- **[Lynis](https://cisofy.com/lynis/)** - Audit di sicurezza cross-platform
+- **[osquery](https://osquery.io/)** - Interrogate il vostro sistema con query SQL
+- **[Pareto Security](https://paretosecurity.com/)** - App nella barra dei menu per controlli base di sicurezza
 
 ---
 
