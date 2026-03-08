@@ -4,10 +4,13 @@ description: "Guida passo-passo a RoboSats: acquista e vendi Bitcoin in modo ano
 summary: "Guida passo-passo a RoboSats: acquista e vendi Bitcoin in modo anonimo via Tor, senza documenti e senza KYC. Tutorial completo in italiano."
 keywords: ["RoboSats", "Bitcoin", "P2P", "no KYC", "guida RoboSats", "Bitcoin anonimo"]
 author: "Turtlecute"
-date: 2024-09-12
+date: 2026-02-17
 url: /robosats
 images: ["/posts/Robosats/img/robosats1.webp"]
 series: ["Privacy Bitcoin"]
+cover:
+  image: "img/robosats1.webp"
+  relative: true
 ---
 
 ![Schermata iniziale RoboSats](img/robosats1.webp)

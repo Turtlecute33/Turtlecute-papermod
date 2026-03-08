@@ -5,10 +5,13 @@ description: "Scopri come usare Bitcoin proteggendo la tua privacy: dal nodo per
 summary: "Scopri come usare Bitcoin proteggendo la tua privacy: dal nodo personale ai wallet, dall'acquisto no-KYC al coinjoin e Lightning Network."
 keywords: ["bitcoin privacy", "privacy ita", "bitcoin privacy italiano", "bitcoin wallet", "nodo bitcoin"]
 author: "Turtlecute"
-date: 2024-05-13
+date: 2026-01-29
 url: /bitcoin
 images: ["/posts/bitcoin/bitcoin.jpg"]
 series: ["Privacy Bitcoin"]
+cover:
+  image: "bitcoin.jpg"
+  relative: true
 ---
 
 ![Copertina guida Bitcoin privacy](bitcoin.jpg)

@@ -4,10 +4,13 @@ description: "Tutto su GrapheneOS: installazione, configurazione, profili utente
 summary: "Tutto su GrapheneOS: installazione, configurazione, profili utente, sandboxed Play Services e risoluzione problemi. La guida italiana più completa."
 keywords: ["Grapheneos","grapheneos ita","graphene os","graphene os italiano","privacy android","degoogle","telefoni anonimi"]
 author: "Turtlecute"
-date: 2025-01-05
+date: 2026-03-01
 url: /graphene
 images: ["/posts/graphene/graffy.jpg"]
 series: ["Privacy Digitale"]
+cover:
+  image: "graffy.jpg"
+  relative: true
 ---
 
 ![Copertina guida GrapheneOS](graffy.jpg)

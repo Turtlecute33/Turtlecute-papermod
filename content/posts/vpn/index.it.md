@@ -4,10 +4,13 @@ description: "Crea la tua VPN privata con Wireguard, Pi-Hole e Unbound DNS. Bloc
 summary: "Crea la tua VPN privata con Wireguard, Pi-Hole e Unbound DNS. Blocca ads e tracker senza fidarti di provider commerciali. Guida completa in italiano."
 keywords: ["vpn", "vpn ita", "vpn self hosted", "wireguard", "pihole", "unbound dns", "wireguard ita", "vpn privacy"]
 author: "Turtlecute"
-date: 2024-05-11
+date: 2026-01-15
 url: /vpn
 images: ["/posts/vpn/vpn.webp"]
 series: ["Privacy Digitale", "Sicurezza"]
+cover:
+  image: "vpn.webp"
+  relative: true
 ---
 
 ![Copertina guida VPN](vpn.webp)

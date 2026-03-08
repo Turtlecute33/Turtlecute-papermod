@@ -4,10 +4,13 @@ description: "Impara a configurare un nodo Tor (middle relay o exit) su VPS o in
 summary: "Impara a configurare un nodo Tor (middle relay o exit) su VPS o in locale. Script automatizzato incluso. Guida completa in italiano."
 keywords: ["Tor", "tor browser", "tor ita", "tor relay", "nodo tor", "tor italiano", "guida tor"]
 author: "Turtlecute"
-date: 2024-05-11
+date: 2026-01-07
 url: /tor
 images: ["/posts/tor/torino.webp"]
 series: ["Sicurezza"]
+cover:
+  image: "torino.webp"
+  relative: true
 ---
 
 ![Immagine di copertina Tor](torino.webp)

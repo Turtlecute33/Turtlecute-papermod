@@ -4,10 +4,13 @@ description: "Impara a usare JoinMarket per fare coinjoin su Bitcoin: installazi
 summary: "Impara a usare JoinMarket per fare coinjoin su Bitcoin: installazione, configurazione, tumbler e maker. Tutorial pratico in italiano."
 keywords: ["Bitcoin", "coinjoin", "joinmarket", "payjoin", "wasabi wallet", "samurai wallet", "joinmarket ita", "jam italiano", "jbitcoin ita"]
 author: "Turtlecute"
-date: 2024-05-15
+date: 2026-02-08
 url: /joinmarket
 images: ["/posts/joinmarket/jm.webp"]
 series: ["Privacy Bitcoin"]
+cover:
+  image: "jm.webp"
+  relative: true
 ---
 
 # JOINMARKET

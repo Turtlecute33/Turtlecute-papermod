@@ -4,10 +4,13 @@ description: "Genera una frase mnemonica Bitcoin di 24 parole usando solo dadi, 
 summary: "Genera una frase mnemonica Bitcoin di 24 parole usando solo dadi, carta e penna. Guida pratica passo-passo per la massima sicurezza."
 keywords: ["seed", "seed bitcoin", "seed con dadi", "dadi bitcoin", "seed bitcoin ita"]
 author: "Turtlecute"
-date: 2024-05-12
+date: 2026-01-22
 url: /seed
 images: ["/posts/seed/seed.png"]
 series: ["Privacy Bitcoin"]
+cover:
+  image: "seed.png"
+  relative: true
 ---
 
 > **TL;DR** - In questa guida imparerai:

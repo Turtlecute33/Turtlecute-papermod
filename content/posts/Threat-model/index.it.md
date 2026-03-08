@@ -4,10 +4,13 @@ description: "Impara a creare un threat model efficace per proteggere la tua pri
 summary: "Impara a creare un threat model efficace per proteggere la tua privacy e sicurezza digitale. Evita gli errori comuni dei principianti."
 keywords: ["modello di minaccia", "privacy", "sicurezza", "protezione dati", "threat modeling"]
 author: "Turtlecute"
-date: 2024-10-28
+date: 2026-02-24
 url: /threat-model
 images: ["/posts/Threat-model/minaccia.png"]
 series: ["Privacy Digitale", "Sicurezza"]
+cover:
+  image: "minaccia.png"
+  relative: true
 ---
 
 ![Illustrazione threat model](minaccia.png)
