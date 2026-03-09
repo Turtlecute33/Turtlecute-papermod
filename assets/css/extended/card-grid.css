@@ -48,7 +48,7 @@
 .posts-grid .post-entry .entry-cover {
   margin: 0;
   border-radius: 0;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 12;
   overflow: hidden;
 }
 
@@ -90,10 +90,16 @@
   .posts-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .posts-grid .post-entry .entry-cover {
+    aspect-ratio: 16 / 11;
+  }
 }
 
 @media (max-width: 600px) {
   .posts-grid {
     grid-template-columns: 1fr;
+  }
+  .posts-grid .post-entry .entry-cover {
+    aspect-ratio: 16 / 10;
   }
 }
