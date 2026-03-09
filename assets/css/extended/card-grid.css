@@ -35,8 +35,8 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-top: 0.5rem;
-  margin-left: -3rem;
-  margin-right: -3rem;
+  margin-left: -6rem;
+  margin-right: -6rem;
 }
 
 .posts-grid .post-entry {
@@ -55,9 +55,8 @@
 }
 
 .posts-grid .post-entry .entry-cover img {
-  width: 120%;
-  height: 120%;
-  margin: -10% 0 0 -10%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
