@@ -4,6 +4,17 @@
   flex-wrap: wrap;
   gap: 0.5rem;
   margin: 1.5rem 0 1rem;
+  position: relative;
+}
+
+.topic-slider {
+  position: absolute;
+  background: var(--primary);
+  border-radius: 2rem;
+  transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1), width 0.35s cubic-bezier(0.4, 0, 0.2, 1), top 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 0;
+  pointer-events: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .topic-btn {
@@ -15,18 +26,23 @@
   font-size: 0.9rem;
   font-family: inherit;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: color 0.3s ease, transform 0.2s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .topic-btn:hover {
-  background: var(--primary);
-  color: var(--theme);
+  transform: translateY(-1px);
+}
+
+.topic-btn:active {
+  transform: scale(0.96);
 }
 
 .topic-btn.active {
-  background: var(--primary);
   color: var(--theme);
   font-weight: 600;
+  border-color: transparent;
 }
 
 /* Wall-of-guides grid layout */
@@ -45,6 +61,17 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.posts-grid .post-entry.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+}
+
+.posts-grid .post-entry.fade-in {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .posts-grid .post-entry .entry-cover {
