@@ -58,9 +58,8 @@
     contain: layout style paint;
 }
 
-article.post-single {
-    contain: layout style;
-}
+/* NOTE: article.post-single intentionally excluded from containment
+   because contain:layout breaks position:fixed on the TOC sidebar */
 
 .footer {
     contain: layout style paint;
