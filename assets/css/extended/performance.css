@@ -102,3 +102,13 @@
         scroll-behavior: smooth;
     }
 }
+
+/* ---------- TOC sidebar: left side, full height ---------- */
+@media screen and (min-width: 1400px) {
+    .toc.side {
+        left: 30px;
+        right: auto;
+        top: 20px;
+        max-height: calc(100% - 40px);
+    }
+}
