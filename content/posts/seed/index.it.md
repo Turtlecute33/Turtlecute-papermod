@@ -8,6 +8,7 @@ date: 2026-01-22
 url: /seed
 images: ["/posts/seed/seed.png"]
 series: ["Privacy Bitcoin"]
+topics: ["bitcoin"]
 cover:
   image: "seed.png"
   relative: true

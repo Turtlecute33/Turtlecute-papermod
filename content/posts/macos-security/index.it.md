@@ -8,6 +8,7 @@ date: 2026-03-08
 url: /macos-security
 images: ["/posts/macos-security/cover.jpg"]
 series: ["Privacy Digitale", "Sicurezza"]
+topics: ["privacy-security"]
 cover:
   image: "cover.jpg"
   relative: true

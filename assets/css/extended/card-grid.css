@@ -1,14 +1,40 @@
-/* Widen container when grid is present */
-.main:has(.posts-grid) {
-  max-width: calc(1080px + var(--gap) * 2);
+/* Topic filter buttons */
+.topic-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0 1rem;
 }
 
-/* Card grid layout for posts list */
+.topic-btn {
+  padding: 0.5rem 1.2rem;
+  border: 1px solid var(--border);
+  border-radius: 2rem;
+  background: transparent;
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.topic-btn:hover {
+  background: var(--primary);
+  color: var(--theme);
+}
+
+.topic-btn.active {
+  background: var(--primary);
+  color: var(--theme);
+  font-weight: 600;
+}
+
+/* Wall-of-guides grid layout */
 .posts-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
-  margin-top: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.8rem;
+  margin-top: 0.5rem;
 }
 
 .posts-grid .post-entry {
@@ -17,32 +43,24 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  padding: 1rem 1.2rem;
 }
 
 .posts-grid .post-entry .entry-cover {
-  margin: 0;
-  border-radius: 0;
-  aspect-ratio: 16 / 10;
-  overflow: hidden;
-}
-
-.posts-grid .post-entry .entry-cover img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  display: none;
 }
 
 .posts-grid .post-entry .entry-header {
-  padding: 0.8rem 1rem 0;
+  padding: 0;
 }
 
 .posts-grid .post-entry .entry-header h2 {
-  font-size: 1.05rem;
-  line-height: 1.3;
+  font-size: 1rem;
+  line-height: 1.35;
 }
 
 .posts-grid .post-entry .entry-content {
-  padding: 0.3rem 1rem 0;
+  padding: 0.3rem 0 0;
   flex-grow: 1;
 }
 
@@ -50,23 +68,17 @@
   font-size: 0.85rem;
   line-height: 1.4;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
 .posts-grid .post-entry .entry-footer {
-  padding: 0.5rem 1rem 0.8rem;
-  font-size: 0.8rem;
+  padding: 0.4rem 0 0;
+  font-size: 0.78rem;
 }
 
-@media (max-width: 700px) {
-  .posts-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .posts-grid {
     grid-template-columns: 1fr;
   }

@@ -9,6 +9,7 @@ date: 2026-01-29
 url: /bitcoin
 images: ["/posts/bitcoin/bitcoin.jpg"]
 series: ["Privacy Bitcoin"]
+topics: ["bitcoin", "privacy-security"]
 cover:
   image: "bitcoin.jpg"
   relative: true

@@ -8,6 +8,7 @@ date: 2026-02-17
 url: /robosats
 images: ["/posts/Robosats/img/robosats1.webp"]
 series: ["Privacy Bitcoin"]
+topics: ["bitcoin"]
 cover:
   image: "img/robosats1.webp"
   relative: true

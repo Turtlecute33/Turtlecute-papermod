@@ -45,29 +45,32 @@
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
 {{- end }}
 
-{{- $paginator := .Paginate $pages }}
-
-{{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
-{{- partial "home_info.html" . }}
-{{- end }}
-
 {{- $term := .Data.Term }}
 
+{{- if not .IsHome }}
+<div class="topic-filters">
+  <button class="topic-btn active" data-topic="all">Tutti</button>
+  <button class="topic-btn" data-topic="privacy-security">Privacy & Security</button>
+  <button class="topic-btn" data-topic="android">Android</button>
+  <button class="topic-btn" data-topic="bitcoin">Bitcoin</button>
+  <button class="topic-btn" data-topic="self-hosting">Self Hosting</button>
+</div>
+{{- end }}
+
 <div class="posts-grid">
-{{- range $index, $page := $paginator.Pages }}
+{{- range $index, $page := $pages }}
 
 {{- $class := "post-entry" }}
 
 {{- $user_preferred := or site.Params.disableSpecial1stPost site.Params.homeInfoParams }}
-{{- if (and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) (not $user_preferred)) }}
+{{- if (and $.IsHome (eq $index 0) (not $user_preferred)) }}
 {{- $class = "first-entry" }}
 {{- else if $term }}
 {{- $class = "post-entry tag-entry" }}
 {{- end }}
 
-<article class="{{ $class }}">
-  {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
-  {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
+{{- $topics := .Params.topics | default (slice) }}
+<article class="{{ $class }}" data-topics="{{ delimit $topics " " }}">
   <header class="entry-header">
     <h2 class="entry-hint-parent">
       {{- .Title }}
@@ -96,27 +99,35 @@
 {{- end }}
 </div>
 
-{{- if gt $paginator.TotalPages 1 }}
-<footer class="page-footer">
-  <nav class="pagination">
-    {{- if $paginator.HasPrev }}
-    <a class="prev" href="{{ $paginator.Prev.URL | absURL }}">
-      «&nbsp;{{ i18n "prev_page" }}&nbsp;
-      {{- if (.Param "ShowPageNums") }}
-      {{- sub $paginator.PageNumber 1 }}/{{ $paginator.TotalPages }}
-      {{- end }}
-    </a>
-    {{- end }}
-    {{- if $paginator.HasNext }}
-    <a class="next" href="{{ $paginator.Next.URL | absURL }}">
-      {{- i18n "next_page" }}&nbsp;
-      {{- if (.Param "ShowPageNums") }}
-      {{- add 1 $paginator.PageNumber }}/{{ $paginator.TotalPages }}
-      {{- end }}&nbsp;»
-    </a>
-    {{- end }}
-  </nav>
-</footer>
+{{- if not .IsHome }}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const buttons = document.querySelectorAll('.topic-btn');
+  const articles = document.querySelectorAll('.posts-grid article');
+
+  buttons.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      buttons.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+
+      var topic = btn.getAttribute('data-topic');
+
+      articles.forEach(function(article) {
+        if (topic === 'all') {
+          article.style.display = '';
+        } else {
+          var topics = article.getAttribute('data-topics');
+          if (topics && topics.split(' ').indexOf(topic) !== -1) {
+            article.style.display = '';
+          } else {
+            article.style.display = 'none';
+          }
+        }
+      });
+    });
+  });
+});
+</script>
 {{- end }}
 
 {{- end }}{{/* end profileMode */}}

@@ -8,6 +8,7 @@ date: 2026-03-08
 url: /email-security
 images: ["/posts/email-security/cover.webp"]
 series: ["Privacy Digitale", "Sicurezza"]
+topics: ["privacy-security"]
 cover:
   image: "cover.webp"
   relative: true

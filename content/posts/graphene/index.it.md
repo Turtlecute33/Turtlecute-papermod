@@ -9,6 +9,7 @@ weight: 2
 url: /graphene
 images: ["/posts/graphene/graffy.jpg"]
 series: ["Privacy Digitale"]
+topics: ["android", "privacy-security"]
 cover:
   image: "graffy.jpg"
   relative: true

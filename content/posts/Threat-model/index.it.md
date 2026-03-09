@@ -8,6 +8,7 @@ date: 2026-02-24
 url: /threat-model
 images: ["/posts/Threat-model/minaccia.png"]
 series: ["Privacy Digitale", "Sicurezza"]
+topics: ["privacy-security"]
 cover:
   image: "minaccia.png"
   relative: true

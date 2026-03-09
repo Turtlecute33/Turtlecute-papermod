@@ -8,6 +8,7 @@ date: 2026-01-07
 url: /tor
 images: ["/posts/tor/torino.webp"]
 series: ["Sicurezza"]
+topics: ["privacy-security", "self-hosting"]
 cover:
   image: "torino.webp"
   relative: true
