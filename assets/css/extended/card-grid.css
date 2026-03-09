@@ -33,8 +33,10 @@
 .posts-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.8rem;
+  gap: 1rem;
   margin-top: 0.5rem;
+  margin-left: -3rem;
+  margin-right: -3rem;
 }
 
 .posts-grid .post-entry {
@@ -48,7 +50,7 @@
 .posts-grid .post-entry .entry-cover {
   margin: 0;
   border-radius: 0;
-  aspect-ratio: 16 / 12;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
 }
 
@@ -63,7 +65,7 @@
 }
 
 .posts-grid .post-entry .entry-header h2 {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.35;
 }
 
@@ -90,16 +92,12 @@
   .posts-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .posts-grid .post-entry .entry-cover {
-    aspect-ratio: 16 / 11;
-  }
 }
 
 @media (max-width: 600px) {
   .posts-grid {
     grid-template-columns: 1fr;
-  }
-  .posts-grid .post-entry .entry-cover {
-    aspect-ratio: 16 / 10;
+    margin-left: 0;
+    margin-right: 0;
   }
 }
