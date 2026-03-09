@@ -43,15 +43,23 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  padding: 1rem 1.2rem;
 }
 
 .posts-grid .post-entry .entry-cover {
-  display: none;
+  margin: 0;
+  border-radius: 0;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.posts-grid .post-entry .entry-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .posts-grid .post-entry .entry-header {
-  padding: 0;
+  padding: 0.8rem 1rem 0;
 }
 
 .posts-grid .post-entry .entry-header h2 {
@@ -60,7 +68,7 @@
 }
 
 .posts-grid .post-entry .entry-content {
-  padding: 0.3rem 0 0;
+  padding: 0.3rem 1rem 0;
   flex-grow: 1;
 }
 
@@ -74,7 +82,7 @@
 }
 
 .posts-grid .post-entry .entry-footer {
-  padding: 0.4rem 0 0;
+  padding: 0.5rem 1rem 0.8rem;
   font-size: 0.78rem;
 }
 

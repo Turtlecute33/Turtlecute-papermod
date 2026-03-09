@@ -10,7 +10,7 @@ weight: 1
 url: /android
 images: ["/posts/android/1.webp"]
 series: ["Privacy Digitale"]
-topics: ["android", "privacy-security"]
+topics: ["android"]
 cover:
   image: "1.webp"
   relative: true

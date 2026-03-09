@@ -8,7 +8,7 @@ date: 2026-02-08
 url: /joinmarket
 images: ["/posts/joinmarket/jm.webp"]
 series: ["Privacy Bitcoin"]
-topics: ["bitcoin", "privacy-security"]
+topics: ["bitcoin"]
 cover:
   image: "jm.webp"
   relative: true

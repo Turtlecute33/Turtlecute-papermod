@@ -8,7 +8,7 @@ date: 2026-01-15
 url: /vpn
 images: ["/posts/vpn/vpn.webp"]
 series: ["Privacy Digitale", "Sicurezza"]
-topics: ["self-hosting", "privacy-security"]
+topics: ["self-hosting"]
 cover:
   image: "vpn.webp"
   relative: true
