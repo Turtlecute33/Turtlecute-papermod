@@ -32,7 +32,7 @@
 /* Wall-of-guides grid layout */
 .posts-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 0.8rem;
   margin-top: 0.5rem;
 }
@@ -84,6 +84,12 @@
 .posts-grid .post-entry .entry-footer {
   padding: 0.5rem 1rem 0.8rem;
   font-size: 0.78rem;
+}
+
+@media (max-width: 900px) {
+  .posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 600px) {
