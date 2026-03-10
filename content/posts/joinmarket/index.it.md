@@ -25,6 +25,8 @@ cover:
 
 Le tue transazioni Bitcoin sono pubbliche e tracciabili. Ogni volta che invii o ricevi satoshi, un analista della blockchain potrebbe collegare i tuoi movimenti alla tua identità. JoinMarket risolve questo problema permettendoti di fare coinjoin in modo totalmente trustless e decentralizzato, senza affidarti a nessun coordinatore centrale. In questa guida imparerai a usarlo dalla A alla Z.
 
+**Nota:** se cercavate Samourai Wallet, sappiate che nel 2024 i suoi sviluppatori sono stati arrestati e il coordinatore è stato sequestrato. Il servizio non è più operativo. JoinMarket, essendo completamente decentralizzato e senza coordinatore centrale, non soffre di questo problema.
+
 Se avete trovato questa pagina cercando online "Join**T**market" avete tutta la mia sincera stima. Siete capitati, però, in una guida che tratta un argomento completamente differente, ma estremamente interessante!
 
 Questa guida ha richiesto tantissimo lavoro, tempo e impegno per essere completata ed é a disposizione in modo completamente gratuito. Se hai trovato i contenuti qui presenti interessanti e utili ti invito ad effettuare una donazione di un qualsiasi importo a sostegno del mio progetto di divulgazione. Questo sito non contiene analytics, pubblicità o elementi traccianti grazie a tutti coloro che supportano la mia divulgazione sostenendomi.
@@ -38,9 +40,8 @@ Essendo tutta la parte teorica di questo tool estremamente ampia, ho deciso di a
 Potete recuperare la puntata a questi link diretti:  
 
 *   [Spotify](https://open.spotify.com/episode/1UaeQxpNq9capLE3KwArbo)
-*   [Google podcast](https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy9iZDVkNWIyMC9wb2RjYXN0L3Jzcw/episode/N2Y1NmRlZDAtZTc4Mi00MDJmLTk3ODktODIyYzgwODBjODYx?sa=X&ved=0CAUQkfYCahcKEwjohMaiv6n8AhUAAAAAHQAAAAAQEw)
+*   [Apple Podcasts](https://podcasts.apple.com/it/podcast/il-priorato-del-bitcoin/id1668567418)
 *   [Amazon music](https://music.amazon.it/podcasts/b1b27a88-c1c9-48de-a301-20f31d29c676/episodes/54dec992-5b03-463a-bb98-f653b72ccb63/il-priorato-del-bitcoin-joinmarket-dalla-teoria-alla-pratica---turtlecute)
-*   [Anchor](https://anchor.fm/turtle-cute5/episodes/Joinmarket-dalla-Teoria-alla-Pratica---Turtlecute-e1t0bep) (qua potrete ascoltarla direttamente da browser).
 *   [Antenna pod](https://antennapod.org/) é un podcast manager gratuito e opensource che non richiede registrazione.  
     Per trovare la puntata scaricate l'app, aggiungete manualmente il mio podcast incollando [questo link](https://anchor.fm/s/bd5d5b20/podcast/rss) nella sezione ¨feed rss¨, cercate poi la puntata dedicata a JoinMarket.
 
@@ -238,7 +239,7 @@ ora possiamo procedere a depositare i nostri primi satoshi all'interno di uno o 
 
 Possiamo ora muovere i nostri satoshi. Uno dei comandi principali di questo software é lo script:  
   
-`pyhton sendpayment.py`  
+`python sendpayment.py`  
   
 che ci permetterá di inviare transazioni ad altri indirizzi con o senza coinjoin. Andiamo ad analizzare il suo funzionamento ed alcuni esempi pratici. Di default la formattazione del comando é:
 
@@ -330,7 +331,7 @@ python tumbler.py *nome del wallet* *indirizzo1 su cui ricevere* *indirizzo2 su 
   
 
 ```
-pyhton tumbler.py TestWallet.jmdat -N 7 2 -c 3 1 bc1qz3f80rtv0ux85d7rc06ldtvmpqyfx6ly48c9pa bc1qf3wljw44utyv7qd0z57zvdkfl20y470mva0nes bc1qw48asjpkwm3k2w8cketqhrre0uwq9f7ypwzmxl
+python tumbler.py TestWallet.jmdat -N 7 2 -c 3 1 bc1qz3f80rtv0ux85d7rc06ldtvmpqyfx6ly48c9pa bc1qf3wljw44utyv7qd0z57zvdkfl20y470mva0nes bc1qw48asjpkwm3k2w8cketqhrre0uwq9f7ypwzmxl
 ```
 
 In questo caso abbiamo lanciato uno script di tumbling che non userà il numero di controparti di default (il parametro -N indica che richiediamo 7 controparti con una varianza massima di 2, quindi un numero di maker random da 5 a 9) e con un numero maggiore di coinjoin per mixdepth (di default questo script effettua un numero random di coinjoin per sezione del wallet che va da 1 a 3, usando il comando -c 3 1 invece sará da 2 A 4).In questo modo spenderemo più sats in fee ma avremo un anonimity set maggiore.  

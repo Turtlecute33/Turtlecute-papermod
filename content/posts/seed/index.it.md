@@ -76,7 +76,7 @@ Questi ultimi 8 bit mancanti devono essere calcolati per formare quello che vien
 
 [Cos'è un checksum](https://en.wikipedia.org/wiki/Checksum)? Un checksum è il modo in cui i computer sanno che hai commesso un errore di battitura quando inserisci dati come il numero della tua carta di credito, del tuo conto bancario o il tuo codice fiscale. Può essere davvero utile che il computer ti avverta se hai commesso un errore di battitura nella tua chiave privata!
 
-Per calcolare il checksum avrai bisogno di un computer Linux o Mac [(la procedura può essere fatta a mano, ma è molto complicata – ecco una guida)](https://armantheparman.com/sha256/). Se hai Windows 10, puoi installare l'app Ubuntu (una versione del terminale di Linux) dal Microsoft Store. Basta cercare "Ubuntu" e installarlo. Utilizzerai il terminale di Ubuntu per eseguire i comandi che seguono. L'app è una sessione temporanea; nessun file viene memorizzato all'interno della stessa. Ciò significa che avrai una sessione pulita ogni volta che la esegui.
+Per calcolare il checksum avrai bisogno di un computer Linux o Mac [(la procedura può essere fatta a mano, ma è molto complicata – ecco una guida)](https://armantheparman.com/sha256/). Se hai Windows 10, puoi installare l'app Ubuntu (una versione del terminale di Linux) dal Microsoft Store. Basta cercare "Ubuntu" e installarlo. Utilizzerai il terminale di Ubuntu per eseguire i comandi che seguono.
 
 Agli utenti Windows consiglio di adottare questa soluzione alternativa. Ne ho provate altre ma ho sempre riscontrato dei problemi. Un'altra soluzione potrebbe essere usare il tool di Massimo Musumeci che però altererebbe l'ordine con cui stiamo facendo le cose in questa guida: [Tool di Massimo](https://github.com/massmux/bip39checksum)
 
@@ -84,7 +84,7 @@ Ora che hai un terminale sul tuo computer Mac, Linux o Windows 10, digita il com
 
 > echo 10101111001110000000111101100011 1101011110100101001000101100111101111 0100011000010100011111100100010100011 1100011101010001100111111100001010001 1000101011101000101001111111010100101 0011110110110110000001101111010011000 0011101011010010000100010000100001001 11 | shasum -a 256 -0
 
-**Spiegazione del codice**: il comando `echo` mostrerà il risultato dell'operazione nel terminale; il comando `shasum -a` comunica al PC di eseguire la funzione di hash SHA256 sui dati da noi inseriti, mentre `-0` indica al computer che i dati che stiamo trattando sono binari.
+**Spiegazione del codice**: il comando `echo` mostrerà il risultato dell'operazione nel terminale; il comando `shasum -a 256` comunica al PC di eseguire la funzione di hash SHA256 sui dati da noi inseriti. Il flag `-0` non è strettamente necessario: il comando calcola l'hash della rappresentazione testuale della stringa binaria che abbiamo inserito.
 
 Eseguendo questo comando, l'hash risultante viene visualizzato nella riga seguente, che inizierà con "b184":
 
@@ -175,6 +175,8 @@ In realtà, prima di buttarla, potresti provare a inserire le parole in un porta
 ## Per le Tue Chiavi Reali
 
 Genera assolutamente le tue chiavi usando un procedimento il più possibile manuale e, nelle parti in cui ti appoggi a un dispositivo elettronico, sfrutta sistemi sicuri, sistemi operativi vergini e valuta di smontare la scheda wireless dal tuo PC. Un'opzione potrebbe essere installare TailsOS su un disco esterno, smontare la scheda wireless dal tuo PC, avviare il sistema operativo e mantenerlo disconnesso da Internet fino alla fine della procedura. Una volta calcolato il seed, spegni il PC e riavvialo con la scheda wireless rimontata. È possibile anche usare dei Raspberry Pi come PC air-gapped.
+
+**ATTENZIONE**: TailsOS è un sistema operativo amnesico, ovvero cancella automaticamente tutti i dati allo spegnimento. Assicuratevi di aver scritto il seed su carta **prima** di spegnere il PC, altrimenti lo perderete per sempre.
 
 {{< cta type="bottom" title="Il seed è pronto, ora ti serve un telefono sicuro" text="Custodisci il tuo seed su un dispositivo affidabile. Vendo Pixel con GrapheneOS pre-installato per la massima sicurezza." url="https://shop.priorato.org" button="Scopri i Privacy Phone" icon="📱" >}}
 

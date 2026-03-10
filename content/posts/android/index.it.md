@@ -27,12 +27,12 @@ Il tuo smartphone sa tutto di te: dove vai, con chi parli, cosa cerchi. Ogni gio
 
 La guida è aperta a miglioramenti e consigli, descriverò la configurazione che trovo con il miglior rapporto usabilità/privacy, nel tempo ampierò le varie sezioni introducendo anche varie alternative per chi magari non si trova bene con una determinata applicazione o servizio, Se volete darmi consigli, contribuire alla guida o effettuare donazioni, potete dare un occhiata alla pagina [Donazioni](https://btcpay.priorato.org/i/CXG1ouF8eHjdCV73Th4Ujb) o effettuare una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute-papermod).
 
-Questa guida parla di android in generale, ne ho scritta anche una specifica per GrapheneOS, potete trovarla [qui](https://turtlecute.org/graphene), se siete interessati ad acquistare dispositivi con set-up di privacy su misura contattatemi su [Telegram](https://turtlecute.org/android)
+Questa guida parla di android in generale, ne ho scritta anche una specifica per GrapheneOS, potete trovarla [qui](https://turtlecute.org/graphene), se siete interessati ad acquistare dispositivi con set-up di privacy su misura contattatemi su [Telegram](https://t.me/turtlecute33)
   
 
 ## Sistema operativo
 
-Esistono vari sistemi operativi Android privacy-oriented (GrapheneOS, CalixOS, etc). In questa guida tratteremo l’approccio usando come base LineageOS, ma è comunque compatibile con ogni altro sistema operativo AOSP. Se possibile consiglio vivamente di usare GrapheneOS in quanto ha funzioni decisamente più avanzate e complete di qualsiasi altro sistema operativo sul mercato.
+Esistono vari sistemi operativi Android privacy-oriented (GrapheneOS, CalyxOS, etc). In questa guida tratteremo l’approccio usando come base LineageOS, ma è comunque compatibile con ogni altro sistema operativo AOSP. Se possibile consiglio vivamente di usare GrapheneOS in quanto ha funzioni decisamente più avanzate e complete di qualsiasi altro sistema operativo sul mercato.
 
 Questa guida è stata pensata e studiata per offrire un ottimo bilanciamento tra sicurezza e privacy nell'utilizzo del proprio telefono, procedure come il rooting e lo sblocco del bootloader riducono notevolmente la sicurezza del dispositivo e sono per questo fortemente sconsigliate.
 
@@ -67,7 +67,7 @@ Gestiremo in seguito i permessi delle applicazioni.
 
 Essendo ora separati dal mondo Google dovremo trovare altri store da cui scaricare le applicazioni, le alternative principali sono:
 
-*   [Obtanium](https://obtainium.imranr.dev/): É un app updater più che uno store, ha un comportamento simile ai packet manager di linux. Ottima sicurezza e privacy, permette di scaricare e aggiornare le app direttamente dalle varie release su github o repository F-droid.
+*   [Obtainium](https://obtainium.imranr.dev/): É un app updater più che uno store, ha un comportamento simile ai packet manager di linux. Ottima sicurezza e privacy, permette di scaricare e aggiornare le app direttamente dalle varie release su github o repository F-droid.
 *   [Droid-ify](https://www.f-droid.org/packages/com.looker.droidify/): fork di F-Droid con una grafica più curata e alcune funzioni aggiuntive. Uno store di applicazioni open-source e molto ben fatto anche se con qualche trade-off di sicurezza.
 *   [Aurora Store](https://files.auroraoss.com/AuroraStore/Stable/): vi permette di usare il vecchio store Google ma attraverso account fittizi e automaticamente generati all'avvio dell'app, estremamente utile in caso vogliate un esperienza simile al play store ma senza app propietarie.
 
@@ -83,7 +83,7 @@ Ora che abbiamo gli store configurati possiamo procedere al download di [Shelter
 
 Shelter è un'applicazione open source che ci permette di creare un work profile, ovvero un secondo profilo nel telefono che funziona contemporaneamente al primo ma in modo isolato e indipendente  
   
-Immaginate un tavolo (il nosto sistema operativo) su cui poggiano due scatole chiuse e sigillate (i nostri due profili), queste due sono completamente indipendenti e separate, ma usano una base comune. Se l'OS del nostro telefono è il primo ad essere sporco e pieno di app traccianti come i Google Play Services, l'utilizzo di Shelter diventa in buona parte inutile. Nel caso in cui non vogliate cambiare ROM, usate almeno questo [Android Debloater](https://github.com/0x192/universal-android-debloater) che vi permette di disabilitare in pochi e semplici tap le principali app tossiche per la privacy incluse nei maggiori sistemi operativi di default (ATTENZIONE disabilitate le app, non disinstallatele, o rischierete di corrompere il sistema se avete il telefono criptato).  
+Immaginate un tavolo (il nosto sistema operativo) su cui poggiano due scatole chiuse e sigillate (i nostri due profili), queste due sono completamente indipendenti e separate, ma usano una base comune. Se l'OS del nostro telefono è il primo ad essere sporco e pieno di app traccianti come i Google Play Services, l'utilizzo di Shelter diventa in buona parte inutile. Nel caso in cui non vogliate cambiare ROM, usate almeno questo [Android Debloater](https://github.com/Universal-Debloater-Alliance/universal-android-debloater-next-generation) che vi permette di disabilitare in pochi e semplici tap le principali app tossiche per la privacy incluse nei maggiori sistemi operativi di default (ATTENZIONE disabilitate le app, non disinstallatele, o rischierete di corrompere il sistema se avete il telefono criptato).  
   
 Una volta aperto Shelter si aprirà un menu di configurazione del profilo di lavoro, una volta attivato accederemo all'interfaccia dell'app, che è divisa in 2 sezioni:  
 
@@ -142,7 +142,7 @@ A questo punto possiamo procedere al download delle applicazioni facendo attenzi
 *   [Crypto Prices](https://f-droid.org/packages/de.cloneapps.crypto_prices): alternativa a CoinMarketCap
 *   [Guerrilla Mail](https://f-droid.org/it/packages/cf.theonewiththebraid.guerrilla_mail/): client per Guerrilla Mail, una temp mail per gli spam
 *   [LibreTorrent](https://www.f-droid.org/packages/org.proninyaroslav.libretorrent/): semplice, comodo e veloce client Torrent per Android
-*   [LessPass](https://f-droid.org/packages/com.lesspass.android/): permette di generare password derivate dalla combinazione di sito + nome utente + una password fissa, l'eccellenza per avere password sicure
+*   [LessPass](https://f-droid.org/packages/com.lesspass.android/): permette di generare password derivate dalla combinazione di sito + nome utente + una password fissa. Nota: il progetto non è più attivamente mantenuto e non permette di ruotare singole password; per la maggior parte degli utenti Bitwarden (sopra) è la scelta migliore
 *   [Molly](https://molly.im/): una versione hardened e ripulita dal codice Google di Signal, portebbe essere una buona idea registrarsi con una SIM comprata senza documenti se legale nel vostro stato
 *   [Nekogram](https://nekogram.app/): client per Telegram che non si appoggia ai servizi Google ed implementa PGP
 *   [PipePipe](https://github.com/InfinityLoop1308/PipePipe): client di PeerTube, tutti i video di YouTube ma senza Google!
@@ -154,7 +154,7 @@ A questo punto possiamo procedere al download delle applicazioni facendo attenzi
 *   [Tor Browser](https://www.torproject.org/download/#downloads-alpha): broswer Tor ufficiale con libreria Tor integrata, utile per navigare online senza rivelare l’indirizzo IP, non garantisce un anonimato al 100% come ogni cosa ma è un ottimo scudo per la privacy, utile per navigare nei siti .onion
 *   [Voice](https://www.f-droid.org/packages/de.ph1b.audiobook/): lettore offline e opensource di audiolibri
 
-Per ulteriori applicazioni, browser e servizi privacy friendly consiglio di dare un occhio a [privacytools](https://www.privacytools.io/), [privacyguides](https://privacyguides.org/providers/) o cercare nelle varie categorie su Droid-ify.
+Per ulteriori applicazioni, browser e servizi privacy friendly consiglio di dare un occhio a [privacytools](https://www.privacytools.io/) (progetto storico, oggi sostanzialmente sostituito da Privacy Guides), [privacyguides](https://privacyguides.org/providers/) o cercare nelle varie categorie su Droid-ify.
 
 ## Client e provider email
 

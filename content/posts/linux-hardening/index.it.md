@@ -39,7 +39,7 @@ Questa guida vi accompagnerà passo dopo passo: dalla scelta della distribuzione
 
 Ricordate che la sicurezza è un processo, non un prodotto. Non esiste il setup perfetto, ma esiste il setup *giusto per voi*. Ogni sezione di questa guida presenta pro e contro, così potete decidere cosa ha senso nel vostro caso specifico.
 
-La guida è aperta a miglioramenti e consigli. Se volete contribuire, segnalare errori o proporre aggiunte, fate una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute.org) e supportate lo sviluppo di queste guide con una [donazione](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR).
+La guida è aperta a miglioramenti e consigli. Se volete contribuire, segnalare errori o proporre aggiunte, fate una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute-papermod) e supportate lo sviluppo di queste guide con una [donazione](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR).
 
 ![I layer di sicurezza che configureremo in questa guida: dalla sicurezza fisica fino al sandboxing delle applicazioni](defense-layers.svg)
 
@@ -691,16 +691,15 @@ Il Secure Boot standard verifica che il bootloader e il kernel siano firmati da 
 
 ![Confronto tra Secure Boot standard con chiavi Microsoft e Secure Boot custom con UKI: la versione custom verifica l'intera catena di boot](secure-boot-chain.svg)
 
-Con **sbctl** potete iscrivere le vostre chiavi personali:
+Su **Arch Linux**, con **sbctl** potete iscrivere le vostre chiavi personali:
 
 1. Entrate nel firmware UEFI e mettete il Secure Boot in "setup mode"
 2. Avviate Linux e installate sbctl
 3. Generate e iscrivete le vostre chiavi:
 
 ```bash
-# Installazione
-sudo dnf install sbctl       # Fedora
-sudo pacman -S sbctl          # Arch
+# Installazione (Arch)
+sudo pacman -S sbctl
 
 # Generazione chiavi
 sudo sbctl create-keys
@@ -712,6 +711,8 @@ sudo sbctl enroll-keys
 sudo sbctl sign -s /boot/vmlinuz-linux
 sudo sbctl sign -s /boot/EFI/BOOT/BOOTX64.EFI
 ```
+
+Su Fedora la procedura richiede percorsi e packaging diversi: verificate la documentazione aggiornata della vostra distribuzione prima di seguire passaggi equivalenti.
 
 **!ATTENZIONE!** Questa procedura può brickare alcune implementazioni UEFI non conformi. Fate ricerche sul vostro hardware specifico prima di procedere. Preparate un metodo di riprogrammazione dell'EEPROM come fallback.
 
@@ -771,9 +772,6 @@ PermitRootLogin no
 PasswordAuthentication no
 PubkeyAuthentication yes
 
-# Protocollo 2 (il default su sistemi moderni)
-Protocol 2
-
 # Limita i tentativi di login
 MaxAuthTries 3
 
@@ -823,7 +821,8 @@ pamu2fcfg > ~/.config/Yubico/u2f_keys
 Su distribuzioni Red Hat, `authselect` semplifica il hardening di PAM:
 
 ```bash
-sudo authselect select with-faillock without-nullok with-pamaccess
+# Sostituite "nome_profilo" con il profilo authselect attualmente in uso
+sudo authselect select nome_profilo with-faillock without-nullok with-pamaccess
 ```
 
 Questo abilita:

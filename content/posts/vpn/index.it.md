@@ -27,7 +27,7 @@ Questa vuole essere una guida completa per effettuare il setup di una propria VP
 
 La guida è aperta a miglioramenti e consigli, descriverò la configurazione che trovo con il miglior rapporto usabilità/privacy, non sono un esperto di reti e la guida qua presente non vi permetterá di essere magicamente anonimi e irrintracciabili.  
   
-Se volete darmi consigli, contribuire alla guida o effettuare traduzioni, potete effettuare una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute.org) e supportare lo sviluppo di queste guide con una [donazione](https://priorato.btcpayserver.it/i/BFg7UG7Zu8eAaRz3EiXgQJ).  
+Se volete darmi consigli, contribuire alla guida o effettuare traduzioni, potete effettuare una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute-papermod) e supportare lo sviluppo di queste guide con una [donazione](https://priorato.btcpayserver.it/i/BFg7UG7Zu8eAaRz3EiXgQJ).  
 
   
 
@@ -68,11 +68,11 @@ Come molti sapranno, per connettersi a server remoti, solitamente si utilizza SS
   
 `ssh [nome utente]@[indirizzo ip]`  
   
-un esempio potrebbe essere: ssh root@192.34.33.256 (root è solitamente il nome utente mentre il numero seguente è l'indirizzo IP del server, solitamente è possibile trovarlo nelle informazioni della macchina da voi acquistata sul sito di hosting). Una volta dato il comando basterà inserire la password precedentemente impostata per fare l'accesso al server.  
+un esempio potrebbe essere: ssh root@192.34.33.25 (root è solitamente il nome utente mentre il numero seguente è l'indirizzo IP del server, solitamente è possibile trovarlo nelle informazioni della macchina da voi acquistata sul sito di hosting). Una volta dato il comando basterà inserire la password precedentemente impostata per fare l'accesso al server.  
   
 Una volta connessi in SSH possiamo dare il comando:  
   
-`sudo apt update && apt upgrade -y`  
+`sudo apt update && sudo apt upgrade -y`  
   
 in modo da aggiornare tutti i pacchetti del nostro sistema operativo.  
 In questa guida andremo a seguire un setup per la sicurezza del nostro server semplice e minimale (in modo che si adatti a tutti gli utenti), se volete usare setup più avanzati vi consiglio di cercare online come effettuare login sul proprio server utilizzando una chiave pubblica ssh.  
@@ -87,31 +87,36 @@ per andare ad installare questo leggerissimo software che permette di limitare l
 
 Ora che abbiamo effettuato tutte le procedure preliminari per rendere più sicura e aggiornata la nostra VPS possiamo procedere al vero setup, andiamo ad installare wireguard con i seguenti comandi:  
 
+Questo script è una soluzione di convenienza mantenuta da terzi: prima di eseguirlo, verificate sempre che il repository sia ancora attivo e coerente con il setup che volete realizzare.
+
 ```
 curl -O https://raw.githubusercontent.com/angristan/wireguard-install/master/wireguard-install.sh
 chmod +x wireguard-install.sh
 ./wireguard-install.sh
 ```
 
-a questo punto andiamo anche ad installare pi-hole (il software che useremo come filtro pubblicitá, tracker e analytics):  
-  
-`curl -sSL https://install.pi-hole.net | bash`  
-  
-durante l'installazione scegliete come interfaccia di rete "wg0", usate l'opzione custom dns (non così importante, alla peggio la andiamo comunque a sovrascrivere dopo), abilitate la 'web interface' e salvatevi la password per il login che vi verrá data di default (ci servirá in seguito).  
-  
-Andiamo ora ad installare unbound, un software per avere un DNS resolver locale veloce (per fare una semplificazione ci servirá per avere il nostro setup finale completo, efficente e veloce).  
-  
-`sudo apt install unbound`  
-  
-ed andiamo a configurarlo con:  
-  
-`nano /etc/unbound/unbound.conf.d/pi-hole.conf`  
-  
-Incollate questa configurazione all'interno del file:  
+a questo punto andiamo anche ad installare pi-hole (il software che useremo come filtro pubblicitá, tracker e analytics):
+
+`curl -sSL https://install.pi-hole.net | bash`
+
+durante l'installazione scegliete come interfaccia di rete "wg0", usate l'opzione custom dns (non così importante, la andiamo comunque a sovrascrivere dopo) e completate il wizard. Al termine dell'installazione, impostiamo la password per accedere all'interfaccia web:
+
+`pihole setpassword`
+
+Salvatevi la password scelta, ci servirá in seguito.
+
+Andiamo ora ad installare unbound, un software per avere un DNS resolver locale veloce (per fare una semplificazione ci servirá per avere il nostro setup finale completo, efficente e veloce).
+
+`sudo apt install unbound`
+
+ed andiamo a configurarlo con:
+
+`nano /etc/unbound/unbound.conf.d/pi-hole.conf`
+
+Incollate questa configurazione all'interno del file:
 
 ```
-
-    server:
+server:
     verbosity: 0
     interface: 127.0.0.1
     port: 5335
@@ -142,71 +147,42 @@ Incollate questa configurazione all'interno del file:
     private-address: 10.0.0.0/8
     private-address: fd00::/8
     private-address: fe80::/10
-										
 ```
 
-andiamo quindi a riavviare unbound:  
-  
-`sudo service unbound restart`  
-  
-a questo punto abbiamo correttamente prepato il dns locale, andiamo a configurare pi-hole per parlare con unbound correttamente:  
-  
-`nano /etc/pihole/setupVars.conf`  
-  
-potete editare o sostituire il vostro file di config con quello sottostante avendo accortezza di inserire i dati che nel box qua sotto ho inerito tra parentesi graffe:  
-  
+andiamo quindi a riavviare unbound:
+
+`sudo service unbound restart`
+
+a questo punto abbiamo correttamente preparato il dns locale. Andiamo a configurare Pi-hole per usare unbound come DNS upstream. In Pi-hole v6 la configurazione si gestisce tramite il file `/etc/pihole/pihole.toml`, l'interfaccia web oppure la CLI. Il modo più semplice è usare la CLI:
 
 ```
-
-WEBPASSWORD={lasciate quella presente nel file di default}
-BLOCKING_ENABLED=true
-WEBUIBOXEDLAYOUT=traditional
-WEBTHEME=default-dark
-PIHOLE_INTERFACE=wg0
-IPV4_ADDRESS={mette l'indirizzo IP della vostra VPS esempio:123.24.223.11} 
-QUERY_LOGGING=true
-INSTALL_WEB_SERVER=true
-INSTALL_WEB_INTERFACE=true
-LIGHTTPD_ENABLED=true
-CACHE_SIZE=0
-DNSMASQ_LISTENING=local
-DNS_FQDN_REQUIRED=true
-DNS_BOGUS_PRIV=true
-DNSSEC=false
-REV_SERVER=false
-PIHOLE_DNS_1=127.0.0.1#5335
-
-										
+pihole --config dns.upstreams '["127.0.0.1#5335"]'
+pihole --config dns.listeningMode local
+pihole --config dns.dnssec false
 ```
 
-a questo punto re-buildiamo pihole con il seguente comando:  
-  
-`pihole -r`  
+Questi comandi dicono a Pi-hole di usare unbound (porta 5335) come unico DNS upstream e di ascoltare solo le interfacce locali.
 
 ## Configurazione PiHole e AdLists
 
-La parte a riga di comando é ormai finita, ce l'hai fatta guerriero! 🎉  
-A livello teorico in questo momento é gia tutto funzionante, andiamo peró prima di utilizzare la VPN ad aggiungere dei filtri per la pubblicità!  
-Aprite un browser qualsiasi e nella barra di ricerca digitate:  
-  
-`http://{indirizzo ip della vpn}/admin`  
-esempio: http://84.177.121.221/admin  
-  
-A questo punto dovreste vedere la pagina di login di Pi-Hole (il nostro sistema di filtro pubblicitá, tracker e analytics). Come password dovete usare quella che ci eravamo salvati precedentemente (e che ci venive generata in fase di installazione). Una volta effettuato l'accesso avrete davanti questa schermata:  
-  
-![Dashboard AdLists Pi-hole](dashboard.webp) Andiamo ora nella sezione "AdLists" ed aggiungiamo delle liste di vari domain da bloccare (o meglio, il link ad alcune di queste liste). Di questo argomento si puó discorrere ore, il concetto di base é che se aggiungiamo decine di di fonti a caso bloccheremo tantissimo...troppo, andando quindi a far smettere di funzionare molti siti web o funzioni di applicazioni su nostri dispositivi. Conviene usare poche liste e tendenzialmente fatte da persone di cui ci fidiamo almeno parzialmente. Vi lascio qua sotto alcune delle principali e più famose, in caso vogliate ampliare la sezione vi lascio l'onere di farlo in autonomia in quanto in base alle configurazioni ci potrebbero essere diversi pro o contro.  
+La parte a riga di comando é ormai finita, ce l'hai fatta guerriero! 🎉
+A livello teorico in questo momento é gia tutto funzionante, andiamo peró prima di utilizzare la VPN ad aggiungere dei filtri per la pubblicità!
+Aprite un browser qualsiasi e nella barra di ricerca digitate:
+
+`http://{indirizzo ip della vpn}/admin`
+esempio: http://84.177.121.221/admin
+
+A questo punto dovreste vedere la pagina di login di Pi-Hole (il nostro sistema di filtro pubblicitá, tracker e analytics). Usate la password che avete impostato con `pihole setpassword`. Una volta effettuato l'accesso, andiamo nella sezione **Domains / Adlists** (nel menu laterale) ed aggiungiamo delle liste di vari domain da bloccare. Di questo argomento si puó discorrere ore, il concetto di base é che se aggiungiamo decine di fonti a caso bloccheremo tantissimo...troppo, andando quindi a far smettere di funzionare molti siti web o funzioni di applicazioni su nostri dispositivi. Conviene usare poche liste e tendenzialmente fatte da persone di cui ci fidiamo almeno parzialmente. Vi lascio qua sotto alcune delle principali e più famose, in caso vogliate ampliare la sezione vi lascio l'onere di farlo in autonomia in quanto in base alle configurazioni ci potrebbero essere diversi pro o contro.
 
 ```
-
 https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
 https://adaway.org/hosts.txt
 https://v.firebog.net/hosts/AdguardDNS.txt
 https://v.firebog.net/hosts/Easyprivacy.txt
 https://winhelp2002.mvps.org/hosts.txt
-										
 ```
 
-Una volta inserite le varie blocklist muoviamoci nella sezione: tools → update gravity ed andiamo ad avviare il processo di attivazione delle varie liste. In caso di problemi con alcuni siti (io per esempio in passato con alcune liste avevo avuto problemi con i link "t.co" di twitter) basterá aggiungere il sito alla sezione "whitelist" in modo da escludero dai siti da bloccare. Ogni volta che effettuate modifiche andate poi a fare update gravity per renderle effettive.
+Una volta inserite le varie blocklist, andate su **Tools → Gravity** e avviate l'aggiornamento per attivare le liste. In caso di problemi con alcuni siti (io per esempio in passato con alcune liste avevo avuto problemi con i link "t.co" di twitter) basterá aggiungere il sito alla sezione **Domains → Whitelist** in modo da escluderlo dai siti da bloccare. Ogni volta che effettuate modifiche andate poi a fare update gravity per renderle effettive.
 
 ## Esportazione delle configurazioni
 
@@ -247,7 +223,7 @@ Se entrambe le prove vengono passate correttamente sei un vero drago e sei riusc
 
 ## Conclusioni
 
-Questo é uno dei tanti set-up possibili per crearsi una server VPN. Come ogni tipo di configurazione é possibile eseguire modifiche per adattare il servizio ai propri trade-off. Quello presentato in questa guida é, a mio parere, un buon bilanciamento tra sicurezza, funzionalitá e privacy. Se hai proposte di miglioramento, hai trovato errori puoi aiutarmi e far sentire la tua voce sul [repository github](https://github.com/Turtlecute33/Turtlecute.org).
+Questo é uno dei tanti set-up possibili per crearsi una server VPN. Come ogni tipo di configurazione é possibile eseguire modifiche per adattare il servizio ai propri trade-off. Quello presentato in questa guida é, a mio parere, un buon bilanciamento tra sicurezza, funzionalitá e privacy. Se hai proposte di miglioramento, hai trovato errori puoi aiutarmi e far sentire la tua voce sul [repository github](https://github.com/Turtlecute33/Turtlecute-papermod).
 
 {{< cta type="bottom" title="Ti serve anche un telefono sicuro?" text="Vendo Pixel con GrapheneOS pre-installato e SIM senza KYC. Il complemento perfetto alla tua VPN self-hosted." url="https://shop.priorato.org" button="Vai allo Shop" icon="📱" >}}
 

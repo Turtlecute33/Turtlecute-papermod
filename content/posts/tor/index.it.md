@@ -50,8 +50,8 @@ preservare la loro privacy online.
 
 Per ulteriori informazioni consiglio caldamente l'ascolto di questa
 puntata:
-[![spotify](spotify.png)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)
-[![Apple podcast](apple.png)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)
+[![spotify](spotify.png)](https://open.spotify.com/episode/2pc9gy07lJkhajX83ZaVDy)
+[![Apple podcast](apple.png)](https://podcasts.apple.com/us/podcast/il-priorato-del-bitcoin/id1668567418)
 
 
 
@@ -199,7 +199,7 @@ ricordate che se avete una vps online con accesso root dovete omettere
 la parola sudo all\'inizio delle righe sottostanti. Potete ora lanciare
 i seguenti comandi:
 ```
-sudo apt-get update & apt-get upgrade -y
+sudo apt-get update && sudo apt-get upgrade -y
 sudo apt install git
 git clone https://github.com/Turtlecute33/Tor-node-script.git
 cd Tor-node-script
@@ -291,8 +291,8 @@ lsb_release -c
         sottostanti ricordandovi di sostituire il tag distribution con
         il nome che vi eravate appuntati poco fa.
 ```
-deb     [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.torproject.org/torproject.org  main
-deb-src [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.torproject.org/torproject.org  main
+deb     [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.torproject.org/torproject.org <distribution> main
+deb-src [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.torproject.org/torproject.org <distribution> main
 ```                                                    
 
     4.  Aggiungi le chiavi PGP e il repository di tor con questo
@@ -308,7 +308,7 @@ apt install tor deb.torproject.org-keyring
 ```                                                          
 
 A questo punto andiamo a modificare il file di configurazione di tor con
-il comando: nano etc/tor/torrc ed in base a se volete fare un middle o
+il comando: nano /etc/tor/torrc ed in base a se volete fare un middle o
 exit relay andate a copiare una delle configurazioni sottostanti.\
 \
 **Attenzione!!** Dopo avere copia incollato la configurazione ci sono
@@ -338,8 +338,6 @@ AccountingMax $bandwidth
 ORPort 443
 ExitRelay 1
 SocksPort 0
-DirPort 80
-DirPortFrontPage /etc/tor/tor-exit-notice.html
 ExitPolicy accept *:22        # SSH
 ExitPolicy accept *:23        # Telnet
 ExitPolicy accept *:43        # WHOIS
@@ -465,7 +463,7 @@ usare il comando:\
 \
 per andare ad analizzare i log, cosa non proprio facile, ma utile per
 identificare il problema: (nel 90%) dei casi é un errore dentro al file
-etc/tor/torrc .\
+/etc/tor/torrc .\
 Ultimo ma non per importanza se volete monitorare il vostro nodo con un
 interfaccia simile ad htop potete installare nyx con il comando:\
 \

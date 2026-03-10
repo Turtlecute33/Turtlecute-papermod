@@ -24,6 +24,8 @@ cover:
 
 Comprare Bitcoin su exchange centralizzati significa consegnare documenti, selfie e dati bancari a piattaforme che possono essere hackerate o obbligate a condividere le tue informazioni. RoboSats offre un'alternativa radicale: scambi peer-to-peer via Tor, identità usa e getta e nessun documento richiesto. Questa guida ti mostra come usarlo in modo sicuro dall'inizio alla fine.
 
+**Nota (2026):** questa guida è stata scritta per RoboSats v0.1.0. Da allora il progetto si è evoluto significativamente: dalla v0.6.0 RoboSats utilizza un **modello federato** con più coordinatori indipendenti i cui ordini vengono aggregati in un unico libro ordini. L'interfaccia è stata rinnovata e sono state aggiunte funzionalità come notifiche via Nostr e ordini con range. I concetti fondamentali e il flusso di acquisto/vendita descritti in questa guida restano validi.
+
 Questa guida ti accompagnerà passo dopo passo nell'utilizzo di RoboSats per acquistare e vendere Bitcoin in modo anonimo e sicuro. Imparerai come generare il tuo account, esplorare i vari ordini, acquistare, vendere e gestire eventuali controversie.
 
 Questa guida è stata tradotta dal sito ufficiale di RoboSats. Se desideri visualizzarla in altre lingue, puoi dare un'occhiata [qui](https://learn.robosats.com/read/en/). Se sei un utente Android, esiste anche un'app di RoboSats scaricabile da [GitHub](https://github.com/RoboSats/robosats/releases) o [F-Droid](https://apt.izzysoft.de/fdroid/index/apk/com.robosats) aggiungendo il repository di IzzyOnDroid.
@@ -112,7 +114,7 @@ Puoi anche toccare qualsiasi ordine per vedere la pagina completa dell'ordine:
 
 ![Dettagli ordine RoboSats](img/robosats_order_details.webp)
 
-Ogni ordine ha un contatore di scadenza. Per impostazione predefinita, in RoboSats v0.1.0 i nuovi ordini rimarranno pubblici nel libro per 24 ore.
+Ogni ordine ha un contatore di scadenza. Per impostazione predefinita, i nuovi ordini rimarranno pubblici nel libro per 24 ore.
 
 {{< cta type="inline" title="Proteggi la tua identità quando compri Bitcoin" text="Con una SIM senza KYC puoi registrarti ai servizi di pagamento senza fornire documenti. Numero anonimo, nessun dato personale." url="https://shop.priorato.org" button="Scopri le SIM no-KYC" icon="🔒" >}}
 
@@ -138,11 +140,11 @@ C'è un limite di tempo di 3 ore per inviare la fattura (da parte dell'acquirent
 
 ![Limite di tempo ordine](img/robosats_time_limit.webp)
 
-Non appena il venditore blocca i satoshi, è sicuro inviare la valuta fiat! Come acquirente, dovrai chiedere al venditore i dettagli per effettuare il pagamento fiat. Condividi solo le informazioni strettamente necessarie su di te per non compromettere la tua privacy. Ricorda, in RoboSats v0.1.0 questa chat non ha memoria, quindi la conversazione andrà persa se aggiorni il browser.
+Non appena il venditore blocca i satoshi, è sicuro inviare la valuta fiat! Come acquirente, dovrai chiedere al venditore i dettagli per effettuare il pagamento fiat. Condividi solo le informazioni strettamente necessarie su di te per non compromettere la tua privacy. Ricorda che la conversazione in chat potrebbe andare persa se aggiorni il browser.
 
 ![Chat RoboSats](img/robosats_chat.webp)
 
-C'è un limite di tempo di 24 ore per completare lo scambio fiat. Se il tempo scade, l'ordine scadrà e verrà aperta automaticamente una controversia. Per evitare la scadenza dell'ordine, usa sempre metodi di pagamento fiat istantanei. Ad esempio, inviare contanti per posta ordinaria è lento e attiverà sempre una controversia in v0.1.0. In futuro saranno possibili tempi di scadenza più lunghi.
+C'è un limite di tempo di 24 ore per completare lo scambio fiat. Se il tempo scade, l'ordine scadrà e verrà aperta automaticamente una controversia. Per evitare la scadenza dell'ordine, usa sempre metodi di pagamento fiat istantanei. Ad esempio, inviare contanti per posta ordinaria è lento e attiverà sempre una controversia.
 
 Non appena hai inviato la fiat, dovresti premere il pulsante "Conferma fiat inviata". Dopodiché, il venditore dovrà confermare di aver ricevuto la fiat. Non appena conferma, lo scambio è terminato e verrai pagato sul tuo portafoglio Lightning. Potresti vedere che sta "inviando satoshi all'acquirente", ma di solito è così veloce che vedrai semplicemente questa schermata. Goditi i tuoi sat!
 
@@ -162,7 +164,7 @@ Possiamo creare l'ordine esattamente come lo desideriamo. Ma ricorda che devi pu
 
 Nella pagina del creatore di ordini è richiesto solo di inserire la valuta, il tipo di ordine (acquisto/vendita) e l'importo. Tuttavia, è buona pratica specificare i metodi di pagamento che accetti. Potrebbe essere anche utile impostare un premio/sconto per far accettare il tuo ordine più velocemente. Ricorda che come venditore puoi incentivare gli acquirenti ad accettare il tuo ordine abbassando il premio. Se ci sono troppi acquirenti, tuttavia, puoi aumentare il premio per ottenere un profitto di trading. In alternativa, puoi impostare un importo fisso di satoshi.
 
-**Limiti**: in RoboSats v0.1.0 un ordine non può essere inferiore a 20.000 satoshi. Non può essere superiore a 4.000.000 di satoshi per evitare fallimenti di routing Lightning. Questo limite sarà aumentato in futuro.
+**Limiti**: un ordine non può essere inferiore a 20.000 satoshi. Non può essere superiore a 4.000.000 di satoshi per evitare fallimenti di routing Lightning.
 
 ![Limiti ordine RoboSats](img/robosats_order_limits.webp)
 
@@ -186,7 +188,7 @@ Non appena il prenditore blocca la cauzione, dovrai bloccare la cauzione del tra
 
 ![Escrow trade Lightning](img/robosats_escrow.webp)
 
-Una volta che hai bloccato la cauzione del trade e l'acquirente ha inviato la fattura di pagamento, è sicuro ricevere la fiat! Condividi con l'acquirente le informazioni minime necessarie per ricevere la fiat. Ricorda, in RoboSats v0.1.0 questa chat non ha memoria, quindi la conversazione andrà persa se aggiorni il browser.
+Una volta che hai bloccato la cauzione del trade e l'acquirente ha inviato la fattura di pagamento, è sicuro ricevere la fiat! Condividi con l'acquirente le informazioni minime necessarie per ricevere la fiat. Ricorda che la conversazione in chat potrebbe andare persa se aggiorni il browser.
 
 ![Invio fiat](img/robosats_send_fiat.webp)
 
@@ -218,7 +220,7 @@ Questo in realtà non è possibile, poiché una controversia verrà aperta autom
 
 ![Apertura controversia](img/robosats_open_dispute.webp)
 
-In RoboSats v0.1.0 il processo di gestione delle controversie non è completamente implementato nel web. Pertanto, la maggior parte dei contatti e delle risoluzioni deve avvenire tramite metodi alternativi. Assicurati di fornire un metodo di contatto allo staff. Dovrai scrivere una dichiarazione completa dei fatti; ricorda che lo staff non può leggere la tua chat privata per giudicare cosa è successo. È utile inviare immagini/screenshot. Per la massima privacy, questi possono essere crittografati tramite chiave PGP e caricati su qualsiasi sistema di condivisione file anonimo.
+In caso di controversia, assicurati di fornire un metodo di contatto allo staff del coordinatore. Dovrai scrivere una dichiarazione completa dei fatti; ricorda che lo staff non può leggere la tua chat privata per giudicare cosa è successo. È utile inviare immagini/screenshot. Per la massima privacy, questi possono essere crittografati tramite chiave PGP e caricati su qualsiasi sistema di condivisione file anonimo.
 
 ![Risoluzione controversia](img/robosats_dispute_resolution.webp)
 

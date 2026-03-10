@@ -62,7 +62,7 @@ Ecco un esempio di tabella che dovreste creare per ogni asset:
 
 ## Hardware: Scegliere il Mac Giusto {#hardware style="color: white;"}
 
-macOS è più sicuro quando gira su **hardware Apple con Apple Silicon** (M1, M2, M3, M4 e successivi). I Mac con processori Intel hanno [vulnerabilità hardware](https://github.com/axi0mX/ipwndfu) che Apple non può correggere con aggiornamenti software. Più recente è il chip, meglio è.
+macOS è più sicuro quando gira su **hardware Apple con Apple Silicon** (M1, M2, M3, M4 e successivi). I Mac con processori Intel hanno [vulnerabilità hardware](https://checkm8.info/blog/apple-t2-chip-vulnerability) che Apple non può correggere con aggiornamenti software. Più recente è il chip, meglio è.
 
 Evitate gli hackintosh e i Mac che non supportano l'ultima versione di macOS: Apple non corregge tutte le vulnerabilità nelle versioni più vecchie.
 
@@ -323,7 +323,7 @@ Basato su Chromium con componenti proprietari di Google:
 
 - **Sandboxing robusto** e aggiornamenti frequenti
 - Bug bounty lucrativo che attrae ricercatori di sicurezza
-- Disabilitate l'ottimizzatore V8 per maggiore sicurezza: `chrome://flags/#disable-javascript-harmony-shipping`
+- Disabilitate le funzionalità JavaScript sperimentali per ridurre la superficie d'attacco: `chrome://flags/#disable-javascript-harmony-shipping`
 - Usate **uBlock Origin Lite** (la versione Manifest V3)
 - Disabilitate il DNS prefetching in `chrome://settings/privacy`
 
@@ -359,8 +359,8 @@ Il [Tor Browser](https://www.torproject.org/) è un Firefox modificato che instr
 Dopo aver scaricato Tor Browser, è fondamentale **verificare la firma GPG** del download:
 
 ```zsh
-# Importare la chiave di firma del Tor Project
-gpg --keyserver hkps://keys.openpgp.org --recv-keys 0xEF6E286DDA85EA2A4BA7DE684E2C6E8793298290
+# Importate la chiave di firma del Tor Project verificando prima fingerprint e istruzioni aggiornate sul sito ufficiale
+gpg --keyserver hkps://keys.openpgp.org --recv-keys ID_DELLA_CHIAVE_PUBBLICATA_DAL_TOR_PROJECT
 
 # Verificare la firma
 gpg --verify TorBrowser-*.asc TorBrowser-*.dmg
@@ -545,6 +545,7 @@ Potete cancellare queste directory e bloccarle per impedire la riscrittura:
 
 ```zsh
 rm -rf ~/Library/LanguageModeling ~/Library/Spelling ~/Library/Suggestions
+mkdir ~/Library/LanguageModeling ~/Library/Spelling ~/Library/Suggestions
 chmod -R 000 ~/Library/LanguageModeling ~/Library/Spelling ~/Library/Suggestions
 ```
 
@@ -661,7 +662,7 @@ macOS ha sshd disabilitato di default (Login Remoto). Se dovete abilitarlo:
 
 ### OpenBSM Audit
 
-macOS include OpenBSM per monitorare l'esecuzione dei processi e l'attività di rete:
+macOS include OpenBSM per monitorare l'esecuzione dei processi e l'attività di rete. **Nota:** Apple ha deprecato OpenBSM a partire da macOS 11 (Big Sur) in favore dell'Endpoint Security framework. Su versioni recenti di macOS potrebbe non funzionare completamente; valutate strumenti basati su Endpoint Security come quelli di [Objective-See](https://objective-see.org/).
 
 ```zsh
 # Seguire i log di audit in tempo reale

@@ -72,7 +72,7 @@ Questi garantiscono che il recupero delle email dal server avvenga in modo cifra
 
 ### OpenPGP: potente ma impraticabile
 
-Pretty Good Privacy (PGP) è il nonno della crittografia email. Creato nel 1997 da Phil Zimmermann, è stato poi standardizzato come OpenPGP.
+Pretty Good Privacy (PGP) è il nonno della crittografia email. Creato nel 1991 da Phil Zimmermann, è stato poi standardizzato come OpenPGP.
 
 Il concetto è solido: crittografia asimmetrica con chiavi pubbliche e private. Il mittente cifra con la chiave pubblica del destinatario, che decifra con la propria chiave privata. Nessun intermediario può leggere il messaggio.
 
@@ -210,7 +210,7 @@ DKIM2 risolve questo richiedendo che **ogni hop firmi il messaggio**, permettend
 
 ### DMARCbis: più rigore, meno scappatoie
 
-La nuova versione di DMARC elimina il tag `pct` (che permetteva di applicare la policy solo a una percentuale delle email) e lo sostituisce con un semplice on/off. Aggiunge anche il tag `np` per gestire i sottodomini inesistenti, una tecnica usata dai criminali per aggirare DMARC creando sottodomini fittizi.
+La nuova evoluzione di DMARC punta a rendere la gestione delle policy più chiara e rigorosa, riducendo alcune ambiguità storiche dello standard attuale. Tra i temi affrontati ci sono una migliore gestione dei sottodomini inesistenti e meccanismi di testing più espliciti, così da limitare alcune tecniche usate per aggirare i controlli.
 
 ### Addio alle email in chiaro
 

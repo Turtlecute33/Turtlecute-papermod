@@ -180,7 +180,6 @@ Parlando invece di wallet mobile esistono 2 buone alternative:
   
 
 *   [BlueWallet](https://bluewallet.io/)
-*   [Simple Bitcoin Wallet](https://sbw.app/)
 
 Entrambi però per un uso che protegga la nostra privacy necessitano di avere un full node proprio o di un conoscente in quanto in mancanza di esso il wallet si connetterà a nodi casuali, cosa che vogliamo assolutamente evitare; in caso vogliate usare uno dei due prima di creare/importare il vostro portafoglio connettetevi al vostro nodo ed abilitate TOR (su SBW attivabile dalle impostazioni e su blue abilitato automaticamente se lo si connette ad un nodo con link TOR).
 
@@ -209,7 +208,7 @@ Come fare quindi per 'ripulire' questi resti? ci sono due modi principali e li a
 In sostanza, un CoinJoin comporta la combinazione di input da diversi utenti in una singola transazione. Prima di spiegare il come (e il perché), diamo un'occhiata alla struttura di una transazione normale. Le transazioni Bitcoin sono costituite da input e output. Quando un utente vuole effettuare una transazione, prende i suoi UTXO come input, specifica gli output e firma gli input. È importante sottolineare che ciascun input viene firmato in modo indipendente, e gli utenti possono impostare output multipli (destinati a diversi indirizzi).  
   
 
-![Grafico esempio analisi transazioni](https://image.binance.vision/editor-uploads/01ebb344caee47eb807b6d3fa83f309e.png)
+![Grafico esempio analisi transazioni](tx-analysis.png)
 
   
   
@@ -222,7 +221,7 @@ L'idea è che più parti si coordinano per creare una transazione, fornendo cias
   
   
 
-![Grafico esempio coinjoin](https://image.binance.vision/editor-uploads/3862b14074034f5ba73600717ff8e119.png)
+![Grafico esempio coinjoin](coinjoin-example.png)
 
   
   
@@ -238,7 +237,7 @@ La transazione funziona come una sorta di scatola nera per mischiare monete. Ric
 
 > Come appare un coinjoin visto da un block explorer (blockstream)
 
-Possiamo sfruttare quindi il coinjoin (già integrato all'interno del wallet consigliato precedentemente) per andare a ripulire tutti i nostri resti. Purtroppo su wasabi l'importo minimo per effettuare un coinjoin è di 0.1 bitcoin, se non arriviamo a questa cifra possiamo usare [HODL HODL](https://hodlhodl.com/), aspettare il nuovo aggiornamento di wasabi wallet che permetterà coinjoin con qualsiasi cifra (in arrivo a breve) oppure provare a ri-guadagnare privacy utilizzando Lightning Network (da ora abbreviato in LN) come spiegato nella prossima sezione.  
+Possiamo sfruttare quindi il coinjoin (già integrato all'interno del wallet consigliato precedentemente) per andare a ripulire tutti i nostri resti. Nelle versioni recenti di Wasabi i limiti minimi per partecipare a un coinjoin sono molto più bassi rispetto al passato e possono variare in base alla configurazione. Se comunque non riuscissimo a usare il coinjoin per il nostro caso specifico, possiamo provare a ri-guadagnare privacy utilizzando Lightning Network (da ora abbreviato in LN) come spiegato nella prossima sezione.  
 
 ## Lightning Network
 
