@@ -82,11 +82,15 @@ Le distribuzioni rolling o semi-rolling (come Fedora, openSUSE Tumbleweed, Arch)
 
 ### Desktop environment: perché GNOME
 
-A mio parere il miglior desktop environment dal punto di vista della sicurezza è **GNOME**, e il motivo è uno: **Wayland**.
+I due desktop environment che consiglio dal punto di vista della sicurezza sono **GNOME** e **KDE Plasma**, e il motivo principale è che entrambi supportano pienamente **Wayland**.
 
 La buona notizia è che ormai la maggior parte delle distribuzioni principali (Fedora, Ubuntu, openSUSE, ecc.) usa Wayland come protocollo grafico di default. Wayland è il successore di X11 e risolve uno dei problemi di sicurezza più gravi del desktop Linux: con il vecchio X11, qualsiasi finestra poteva registrare lo schermo, catturare i tasti premuti e iniettare input in altre finestre, rendendo praticamente inutile qualsiasi tentativo di sandboxing.
 
-Con Wayland le applicazioni sono isolate tra loro a livello grafico. GNOME in particolare implementa un sistema di permessi per i protocolli privilegiati (come la cattura dello schermo): le app devono chiedere il permesso e l'utente deve autorizzarle esplicitamente.
+Con Wayland le applicazioni sono isolate tra loro a livello grafico. Sia GNOME che KDE Plasma implementano un sistema di permessi per i protocolli privilegiati (come la cattura dello schermo): le app devono chiedere il permesso e l'utente deve autorizzarle esplicitamente.
+
+**GNOME** è la scelta più minimale e opinionata: meno opzioni di configurazione ma un'esperienza coerente e ben integrata con le tecnologie di sicurezza. È il default su Fedora Workstation e Ubuntu.
+
+**KDE Plasma** è l'alternativa per chi preferisce un desktop più personalizzabile e ricco di funzionalità. Il supporto Wayland in KDE Plasma è ormai maturo e stabile, ed è il default su Fedora KDE Spin e openSUSE. Se vi piace avere il controllo totale sull'aspetto e il comportamento del vostro desktop, KDE è un'ottima scelta senza compromessi di sicurezza.
 
 **!ATTENZIONE!** Se per qualche motivo state ancora usando un desktop environment con X11 (alcune distro meno aggiornate o configurazioni custom), molte delle protezioni descritte in questa guida (specialmente il sandboxing) saranno significativamente meno efficaci. Verificate di star usando Wayland con il comando `echo $XDG_SESSION_TYPE` (deve restituire `wayland`).
 
