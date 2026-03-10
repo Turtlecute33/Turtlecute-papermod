@@ -60,7 +60,7 @@ Occhi aperti: Linux desktop non è automaticamente più sicuro di Windows o macO
 - **Sandboxing delle applicazioni**: macOS e Windows hanno meccanismi di isolamento delle app molto più maturi. Su Linux desktop tradizionale, un'applicazione ha accesso quasi completo al vostro sistema
 - **Secure Boot**: l'implementazione su Linux è ancora in fase di maturazione rispetto a Windows
 - **Driver e firmware**: il supporto hardware può essere più limitato, e driver non ufficiali possono introdurre vulnerabilità
-- **Superficie d'attacco del desktop**: X11 (il sistema grafico tradizionale) è un colabrodo dal punto di vista della sicurezza — qualsiasi finestra può registrare lo schermo, catturare input e iniettare comandi in altre finestre
+- **Superficie d'attacco del desktop**: X11 (il vecchio protocollo grafico, ormai rimpiazzato da Wayland sulla maggior parte delle distro) era un colabrodo dal punto di vista della sicurezza, dato che qualsiasi finestra poteva registrare lo schermo, catturare input e iniettare comandi in altre finestre
 
 Detto questo, Linux vi dà gli strumenti per risolvere tutti questi problemi. È solo che dovete configurarli voi. Ed è esattamente quello che faremo in questa guida.
 
@@ -72,7 +72,7 @@ La scelta della distribuzione è il fondamento di tutto. Una scelta sbagliata qu
 
 Questo è un punto su cui c'è molta confusione. Molti pensano che le distribuzioni "stabili" (come Debian stable) siano più sicure perché cambiano meno. In realtà è spesso il contrario.
 
-Le distribuzioni fixed release (come Debian) congelano le versioni dei pacchetti e applicano solo patch di sicurezza tramite backport. Il problema? Non tutte le fix di sicurezza ricevono un CVE (un identificativo ufficiale), e quindi non vengono mai portate nella distribuzione. Inoltre, il processo di backporting può esso stesso introdurre bug — Debian stessa ha avuto casi in cui una patch backportata ha creato vulnerabilità (il famoso caso DSA-1571 con OpenSSL).
+Le distribuzioni fixed release (come Debian) congelano le versioni dei pacchetti e applicano solo patch di sicurezza tramite backport. Il problema? Non tutte le fix di sicurezza ricevono un CVE (un identificativo ufficiale), e quindi non vengono mai portate nella distribuzione. Inoltre, il processo di backporting può esso stesso introdurre bug. Debian stessa ha avuto casi in cui una patch backportata ha creato vulnerabilità (il famoso caso DSA-1571 con OpenSSL).
 
 Le distribuzioni rolling o semi-rolling (come Fedora, openSUSE Tumbleweed, Arch) aggiornano i pacchetti alla versione upstream. Questo significa che ricevete le fix di sicurezza come le ha scritte lo sviluppatore originale, senza modifiche intermedie.
 
@@ -84,22 +84,22 @@ Le distribuzioni rolling o semi-rolling (come Fedora, openSUSE Tumbleweed, Arch)
 
 A mio parere il miglior desktop environment dal punto di vista della sicurezza è **GNOME**, e il motivo è uno: **Wayland**.
 
-X11, il sistema grafico tradizionale di Linux, ha un problema fondamentale: permette a qualsiasi finestra di registrare lo schermo, catturare i tasti premuti e iniettare input in altre finestre. Questo rende praticamente inutile qualsiasi tentativo di sandboxing delle applicazioni. Non importa quanto isolate un'app se poi il sistema grafico le permette di spiare tutto.
+La buona notizia è che ormai la maggior parte delle distribuzioni principali (Fedora, Ubuntu, openSUSE, ecc.) usa Wayland come protocollo grafico di default. Wayland è il successore di X11 e risolve uno dei problemi di sicurezza più gravi del desktop Linux: con il vecchio X11, qualsiasi finestra poteva registrare lo schermo, catturare i tasti premuti e iniettare input in altre finestre, rendendo praticamente inutile qualsiasi tentativo di sandboxing.
 
-GNOME con Wayland risolve questo problema implementando un sistema di permessi per i protocolli privilegiati (come la cattura dello schermo). Le applicazioni devono chiedere il permesso e l'utente deve autorizzarle esplicitamente.
+Con Wayland le applicazioni sono isolate tra loro a livello grafico. GNOME in particolare implementa un sistema di permessi per i protocolli privilegiati (come la cattura dello schermo): le app devono chiedere il permesso e l'utente deve autorizzarle esplicitamente.
 
-**!ATTENZIONE!** Se state usando un desktop environment con X11, molte delle protezioni descritte in questa guida (specialmente il sandboxing) saranno significativamente meno efficaci. Consiglio caldamente di passare a GNOME con Wayland o, come minimo, verificare che il vostro DE supporti Wayland nativamente.
+**!ATTENZIONE!** Se per qualche motivo state ancora usando un desktop environment con X11 (alcune distro meno aggiornate o configurazioni custom), molte delle protezioni descritte in questa guida (specialmente il sandboxing) saranno significativamente meno efficaci. Verificate di star usando Wayland con il comando `echo $XDG_SESSION_TYPE` (deve restituire `wayland`).
 
 ### Distribuzioni consigliate
 
 Dopo aver analizzato decine di distribuzioni, ecco quelle che consiglio in base a diversi profili di utente.
 
-#### Fedora Workstation — la scelta bilanciata
+#### Fedora Workstation: la scelta bilanciata
 
 Fedora è una distribuzione semi-rolling: il kernel e i pacchetti chiave vengono aggiornati frequentemente, mentre GNOME segue il ciclo di release ufficiale. Ogni versione è supportata per circa un anno, con nuove release ogni sei mesi.
 
 **Perché Fedora:**
-- Approccio "upstream first" — le patch sono minime e sensate
+- Approccio "upstream first": le patch sono minime e sensate
 - Tra le prime ad adottare tecnologie moderne (Wayland, PipeWire)
 - Il package manager `dnf` supporta rollback e undo delle operazioni
 - SELinux attivo e in modalità enforcing di default
@@ -109,7 +109,7 @@ Fedora è una distribuzione semi-rolling: il kernel e i pacchetti chiave vengono
 - Richiede una reinstallazione (o upgrade) ogni 6-12 mesi per restare supportati
 - Alcuni pacchetti proprietari richiedono repository aggiuntivi (RPM Fusion)
 
-#### Fedora Atomic Desktops — il futuro immutabile
+#### Fedora Atomic Desktops: il futuro immutabile
 
 Le varianti Atomic di Fedora (Silverblue per GNOME, Kinoite per KDE) usano un approccio immutabile: il sistema base è in sola lettura e gli aggiornamenti vengono scaricati come immagini complete prima di essere applicati.
 
@@ -120,7 +120,7 @@ Questo significa che un aggiornamento non può fallire a metà lasciandovi con u
 - Alcuni software non disponibili come Flatpak richiedono workaround
 - La dipendenza da GRUB impedisce l'uso di Unified Kernel Images (limitando il Secure Boot avanzato)
 
-#### SecureBlue — hardening automatico
+#### SecureBlue: hardening automatico
 
 SecureBlue è basato su Fedora Atomic e aggiunge un layer di hardening significativo:
 
@@ -131,13 +131,13 @@ SecureBlue è basato su Fedora Atomic e aggiunge un layer di hardening significa
 
 È la distribuzione che vi consiglio se volete il massimo della sicurezza con il minimo sforzo di configurazione manuale. L'unico trade-off è che dovete fidarvi di un progetto aggiuntivo oltre a Fedora.
 
-#### openSUSE Aeon — rolling e immutabile
+#### openSUSE Aeon: rolling e immutabile
 
 L'alternativa rolling release nel mondo immutabile. Usa Btrfs con snapshot transazionali: gli aggiornamenti vengono applicati a uno snapshot e attivati solo al riavvio, con la possibilità di tornare indietro in qualsiasi momento.
 
 Ha un set di pacchetti base minimale (riduce la superficie d'attacco) e il sistema è montato in sola lettura.
 
-#### Whonix — per l'anonimato
+#### Whonix: per l'anonimato
 
 Se il vostro obiettivo è l'anonimato (non solo la privacy), Whonix è il riferimento. Funziona come due macchine virtuali: una Workstation dove lavorate e un Gateway che instrada tutto il traffico attraverso Tor.
 
@@ -173,7 +173,7 @@ Ok, avete scelto la vostra distribuzione. Ora vediamo come installarla nel modo 
 Durante l'installazione, quando arrivate al partizionamento:
 
 1. Scegliete l'opzione di cifratura del disco (su Fedora si chiama "Encrypt my data")
-2. Impostate una passphrase lunga e complessa — questa è la chiave del vostro regno
+2. Impostate una passphrase lunga e complessa (questa è la chiave del vostro regno)
 3. Se il vostro installer lo supporta, usate l'opzione `--integrity` con cryptsetup per avere cifratura autenticata
 
 Per chi vuole il massimo: la cifratura autenticata verifica che i dati non siano stati manomessi, non solo che siano illeggibili. È un layer di protezione aggiuntivo contro attacchi fisici sofisticati.
@@ -187,7 +187,7 @@ Lo swap è un'area del disco usata come memoria aggiuntiva quando la RAM è pien
 Le opzioni sono due:
 
 - **Swap cifrato**: configuratelo durante il partizionamento insieme a LUKS
-- **ZRAM**: usa la RAM compressa invece del disco. Fedora lo usa di default ed è l'opzione preferibile — più veloce e nessun dato sensibile finisce su disco
+- **ZRAM**: usa la RAM compressa invece del disco. Fedora lo usa di default ed è l'opzione preferibile, più veloce e nessun dato sensibile finisce su disco
 
 ### Partizionamento con opzioni di mount sicure
 
@@ -199,7 +199,7 @@ Per un hardening aggiuntivo, potete configurare opzioni di mount restrittive su 
 | `/boot/efi` | `nodev,noexec,nosuid` | Protegge la partizione EFI |
 | `/var` | `nodev,nosuid` | Limita i permessi sulla partizione dei dati variabili |
 
-> **Attenzione!** Non aggiungete `noexec` a `/home` o `/root` — romperebbe Flatpak e Snap. Allo stesso modo, evitate `noexec` su `/var/tmp` se usate Arch (le build AUR fallirebbero).
+> **Attenzione!** Non aggiungete `noexec` a `/home` o `/root` perché romperebbe Flatpak e Snap. Allo stesso modo, evitate `noexec` su `/var/tmp` se usate Arch (le build AUR fallirebbero).
 
 Queste opzioni non sono infallibili (`noexec` è relativamente facile da aggirare), ma aggiungono un layer di difesa in profondità che può bloccare attacchi automatizzati.
 
@@ -233,7 +233,7 @@ sudo apt update && sudo apt upgrade -y
 sudo pacman -Syu
 ```
 
-Poi assicuratevi di avere il microcode della CPU installato. Il microcode è firmware che corregge bug e vulnerabilità direttamente nel processore — senza di esso, siete vulnerabili a tutta una serie di attacchi hardware (Spectre, Meltdown e compagnia).
+Poi assicuratevi di avere il microcode della CPU installato. Il microcode è firmware che corregge bug e vulnerabilità direttamente nel processore. Senza di esso, siete vulnerabili a tutta una serie di attacchi hardware (Spectre, Meltdown e compagnia).
 
 ```bash
 # Fedora (incluso di default)
@@ -449,7 +449,7 @@ sudo sysctl --system
 
 Diciamo che questi parametri coprono le basi. Per una configurazione più completa, potete fare riferimento al [repository di TommyTran732](https://github.com/TommyTran732/Linux-Setup-Scripts/blob/main/etc/sysctl.d/99-workstation.conf) che mantiene una configurazione sysctl aggiornata per workstation.
 
-{{< cta type="inline" title="Sei già a metà del percorso" text="Hai scelto la distro, cifrato il disco e stai configurando il kernel. Il tuo sistema è già più sicuro del 90% dei desktop là fuori. Ma il PC è solo un pezzo del puzzle — la Guida Privacy Digitale copre tutto il resto: comunicazioni, identità online, dispositivi mobili e abitudini digitali." url="https://shop.priorato.org" button="Completa il Percorso Privacy" icon="🛡️" >}}
+{{< cta type="inline" title="Sei già a metà del percorso" text="Hai scelto la distro, cifrato il disco e stai configurando il kernel. Il tuo sistema è già più sicuro del 90% dei desktop là fuori. Ma il PC è solo un pezzo del puzzle. La Guida Privacy Digitale copre tutto il resto: comunicazioni, identità online, dispositivi mobili e abitudini digitali." url="https://shop.priorato.org" button="Completa il Percorso Privacy" icon="🛡️" >}}
 
 ### Parametri di boot del kernel
 
@@ -501,7 +501,7 @@ rpm-ostree kargs --append="slab_nomerge" --append="init_on_alloc=1" --append="in
 
 ### Blacklist dei moduli kernel
 
-Molti moduli kernel vengono caricati automaticamente ma non sono necessari per il vostro hardware. Ogni modulo caricato è codice in più che gira con i massimi privilegi — una potenziale superficie d'attacco.
+Molti moduli kernel vengono caricati automaticamente ma non sono necessari per il vostro hardware. Ogni modulo caricato è codice in più che gira con i massimi privilegi, una potenziale superficie d'attacco.
 
 Create un file `/etc/modprobe.d/blacklist.conf`. Un buon punto di partenza è la [blacklist di SecureBlue](https://github.com/secureblue/secureblue/blob/live/files/system/etc/modprobe.d/blacklist.conf).
 
@@ -564,14 +564,14 @@ LD_PRELOAD=/usr/lib64/libhardened_malloc.so firefox
 
 Per chi vuole spingersi oltre, esistono kernel con patch di hardening aggiuntive:
 
-- **linux-hardened** (Arch Linux): include patch di sicurezza, disabilita i user namespaces non privilegiati di default (può rompere Podman/LXC/Flatpak — verificate la compatibilità)
+- **linux-hardened** (Arch Linux): include patch di sicurezza, disabilita i user namespaces non privilegiati di default (può rompere Podman/LXC/Flatpak, verificate la compatibilità)
 - **grsecurity**: il gold standard dell'hardening kernel, ma è proprietario e richiede un abbonamento a pagamento
 
 ## Sandboxing delle applicazioni: Flatpak, Firejail e SELinux {#sandboxing style="color: white;"}
 
 Su un desktop Linux tradizionale, ogni applicazione ha accesso a quasi tutto: i vostri file, la rete, le periferiche, le altre applicazioni in esecuzione. Il sandboxing limita questi accessi al minimo necessario.
 
-### Flatpak — l'opzione consigliata
+### Flatpak: l'opzione consigliata
 
 Flatpak è il sistema di distribuzione di app più maturo per il sandboxing su Linux desktop. Ogni app gira in un sandbox con permessi espliciti.
 
@@ -627,7 +627,7 @@ Ecco cosa significano i permessi più pericolosi:
 
 **La strategia è**: revocate tutto prima, poi testate se l'app funziona. Se non funziona, concedete un permesso alla volta fino a trovare il minimo necessario.
 
-#### Flatseal — gestione visuale dei permessi
+#### Flatseal: gestione visuale dei permessi
 
 Per gestire i permessi senza impazzire con la riga di comando, installate Flatseal:
 
@@ -644,7 +644,7 @@ Flatseal vi mostrerà tutti i permessi di ogni app Flatpak con un'interfaccia gr
 
 **!ATTENZIONE!** Non abilitate gli aggiornamenti automatici non presidiati di Flatpak. Quando un'app si aggiorna, nuovi permessi vengono concessi automaticamente senza notifica. Aggiornate manualmente e controllate i changelog.
 
-### Firejail — per le app native
+### Firejail: per le app native
 
 Per le applicazioni installate dai repository della distribuzione (non Flatpak), Firejail può fornire sandboxing basato su namespace e seccomp:
 
@@ -661,7 +661,7 @@ sudo firecfg
 `firecfg` crea dei symlink che fanno passare automaticamente le applicazioni attraverso Firejail quando le lanciate dal menu.
 
 **Limiti di Firejail:**
-- È un binario SUID molto grande — ha una superficie d'attacco significativa (privilegi elevati)
+- È un binario SUID molto grande, con una superficie d'attacco significativa (privilegi elevati)
 - Il sandboxing è bypassabile se lanciate l'app direttamente da `/usr/bin/nome_app` invece che dal menu
 - Il vantaggio principale rispetto a Flatpak: può confinare finestre X11 usando Xpra/Xephyr
 
@@ -878,15 +878,24 @@ sudo ss -tulnp
 
 Se vedete servizi in ascolto che non riconoscete, investigate prima di disabilitarli.
 
-{{< cta type="inline" title="Il tuo PC è una fortezza. E il telefono?" text="Hai appena investito ore a blindare il tuo sistema Linux con sandboxing, MAC e permessi granulari. Ora pensa al dispositivo che porti con te ovunque, che ha accesso a microfono, fotocamera, GPS e contatti. Un Pixel con GrapheneOS applica la stessa filosofia di hardening che hai imparato qui — ma al dispositivo più personale che possiedi." url="https://shop.priorato.org" button="Scopri i Privacy Phone" icon="📱" >}}
+{{< cta type="inline" title="Il tuo PC è una fortezza. E il telefono?" text="Hai appena investito ore a blindare il tuo sistema Linux con sandboxing, MAC e permessi granulari. Ora pensa al dispositivo che porti con te ovunque, che ha accesso a microfono, fotocamera, GPS e contatti. Un Pixel con GrapheneOS applica la stessa filosofia di hardening che hai imparato qui, ma al dispositivo più personale che possiedi." url="https://shop.priorato.org" button="Scopri i Privacy Phone" icon="📱" >}}
 
 ## Wayland vs X11: sicurezza del display server {#wayland style="color: white;"}
 
-Ne abbiamo parlato nella sezione sulla scelta del desktop environment, ma vale la pena approfondire. Se usate GNOME con Wayland (come consigliato), potreste avere ancora XWayland attivo per la compatibilità con le app X11 legacy.
+Come accennato prima, ormai Wayland è il protocollo grafico di default sulla maggior parte delle distribuzioni moderne. Questo è un enorme passo avanti per la sicurezza, perché il vecchio X11 non aveva alcun concetto di isolamento tra le finestre.
 
-XWayland reintroduce parte dei problemi di sicurezza di X11: le applicazioni che girano su XWayland possono potenzialmente catturare input e schermo delle altre app XWayland (anche se non di quelle Wayland native).
+Detto questo, potreste avere ancora **XWayland** attivo sul vostro sistema. XWayland è un layer di compatibilità che permette alle vecchie applicazioni X11 di girare sotto Wayland. Il problema è che reintroduce parte dei difetti di sicurezza di X11: le app che girano su XWayland possono potenzialmente catturare input e schermo delle altre app XWayland (anche se non di quelle Wayland native).
 
-Per disabilitare XWayland su GNOME, create il file `/etc/systemd/user/org.gnome.Shell@wayland.service.d/override.conf`:
+Per verificare se XWayland è attivo:
+
+```bash
+# Se restituisce risultati, XWayland è in uso
+xlsclients 2>/dev/null
+```
+
+Per la maggior parte degli utenti, la situazione attuale è già buona: le app principali (browser, file manager, terminali, editor) supportano tutte Wayland nativo. Le poche app che ancora richiedono XWayland sono generalmente quelle più vecchie o specifiche.
+
+Se volete il massimo della sicurezza e siete sicuri che tutte le vostre app girino su Wayland nativo, potete disabilitare completamente XWayland su GNOME. Create il file `/etc/systemd/user/org.gnome.Shell@wayland.service.d/override.conf`:
 
 ```ini
 [Service]
@@ -894,7 +903,7 @@ ExecStart=
 ExecStart=/usr/bin/gnome-shell --no-x11
 ```
 
-**!ATTENZIONE!** Disabilitando XWayland, le applicazioni che non supportano Wayland nativo smetteranno di funzionare. Verificate prima che tutte le vostre app principali supportino Wayland. Le app Electron (VS Code, Discord, Slack, ecc.) generalmente funzionano con Wayland usando il flag `--ozone-platform=wayland`.
+Le app Electron (VS Code, Discord, Slack, ecc.) generalmente funzionano con Wayland usando il flag `--ozone-platform=wayland`.
 
 ## Logging e auditing: monitorare la sicurezza del sistema {#logging style="color: white;"}
 
