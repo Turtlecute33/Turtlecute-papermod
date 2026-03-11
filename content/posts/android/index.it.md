@@ -8,6 +8,7 @@ author: "Turtlecute"
 date: 2026-03-04
 weight: 1
 url: /android
+aliases: ["/android.html"]
 images: ["/posts/android/1.webp"]
 series: ["Privacy Digitale"]
 topics: ["android"]

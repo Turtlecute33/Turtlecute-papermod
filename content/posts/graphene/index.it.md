@@ -906,7 +906,7 @@ In caso vogliate foto di qualitá più alta potete installare la google cam e di
 GrapheneOS prevede di sostituire completamente l'attuale app Galleria, ma al momento non è disponibile alcuna app
 con licenza accettabile e capacità di editing delle immagini adeguata. Se cercate un'alternativa open-source valida,
 GrapheneOS consiglia [IacobIonut01/Gallery](https://github.com/IacobIonut01/Gallery/blob/main/README.md) e
-[Aves](https://github.com/deckerst/aves/blob/develop/README.md). Personalmente trovo ottima anche tutta la suite di app tra cui anche la galleria di [Fossify](fossify.org), se cercate app stock alternative open source queste sono tutte ottime.
+[Aves](https://github.com/deckerst/aves/blob/develop/README.md). Personalmente trovo ottima anche tutta la suite di app tra cui anche la galleria di [Fossify](https://fossify.org), se cercate app stock alternative open source queste sono tutte ottime.
 
 ### Tastiera
 
