@@ -12,6 +12,21 @@ topics: ["privacy-security"]
 cover:
   image: "minaccia.png"
   relative: true
+faq:
+  - question: "Cos'è un threat model e perché è importante?"
+    answer: "Un threat model (modello di minaccia) è un processo che ti permette di identificare le tue reali vulnerabilità e scegliere le contromisure giuste. Senza di esso, rischi di proteggerti dai rischi sbagliati sprecando tempo e denaro."
+  - question: "Quali sono le principali categorie di minacce alla privacy?"
+    answer: "Le quattro categorie principali sono: fornitori di servizi che spiano gli utenti, sorveglianza di massa tramite tracciamento cross-site, sviluppatori di app malevole e hacker che cercano di accedere ai tuoi dispositivi."
+  - question: "La crittografia end-to-end protegge completamente i miei messaggi?"
+    answer: "La crittografia end-to-end protegge il contenuto dei messaggi, ma non i metadati come con chi comunichi, la frequenza e gli orari. Inoltre, è preferibile usare app native rispetto ai client web, che sono più vulnerabili ad attacchi lato server."
+  - question: "Come posso proteggermi dal tracciamento online?"
+    answer: "Separa le tue identità online, confonditi tra la massa e limita le informazioni che condividi. Usa strumenti come VPN o Tor per nascondere l'IP, Cryptomator per crittografare i file nel cloud e carte prepagate per i pagamenti."
+  - question: "Il software open-source è automaticamente più sicuro e privato?"
+    answer: "No. Il codice open-source può contenere vulnerabilità o essere compromesso da contributori malevoli. Inoltre, può avere proprietà di sicurezza inferiori rispetto a software proprietario, come nel caso di Linux desktop rispetto a macOS."
+  - question: "Perché non dovrei concentrarmi solo sulle grandi aziende tech come minaccia?"
+    answer: "Definire le minacce come 'big tech' porta solo a spostare la fiducia verso aziende più piccole, che possono essere altrettanto problematiche. Il modo corretto è proteggersi dai fornitori di servizi nel loro complesso, adottando soluzioni tecniche come la crittografia."
+  - question: "Cosa significa compartimentazione nella sicurezza digitale?"
+    answer: "La compartimentazione consiste nel separare le attività digitali per limitare i danni in caso di compromissione. Si può ottenere usando computer diversi per compiti diversi, macchine virtuali o sistemi operativi con forte sandboxing come Qubes OS o GrapheneOS."
 ---
 
 

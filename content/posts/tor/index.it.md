@@ -12,6 +12,21 @@ topics: ["self-hosting"]
 cover:
   image: "torino.webp"
   relative: true
+faq:
+  - question: "Cos'è un nodo Tor e a cosa serve?"
+    answer: "Un nodo Tor è un server volontario che instrada il traffico della rete Tor attraverso strati di crittografia. Più nodi esistono, più la rete è veloce, sicura e resistente alla censura."
+  - question: "Qual è la differenza tra middle relay e exit relay?"
+    answer: "Il middle relay inoltra il traffico cifrato tra altri nodi ed è più sicuro da gestire. L'exit relay è l'ultimo nodo del circuito e fa uscire il traffico verso Internet, comportando rischi e responsabilità maggiori."
+  - question: "È meglio installare un nodo Tor in casa o su una VPS?"
+    answer: "Un nodo casalingo offre maggiore controllo e decentralizzazione, ma espone il fatto che si gestisce un nodo Tor. Una VPS offre più banda e facilità di configurazione, ma costa di più e si ha meno controllo sull'hardware."
+  - question: "Quali sono i requisiti minimi per un nodo Tor?"
+    answer: "Per un middle relay servono almeno 1 core, 512 MB di RAM e 2 TB di banda mensile. Per un exit relay servono almeno 1 core, 1 GB di RAM e 2 TB di banda mensile."
+  - question: "Come posso verificare che il mio nodo Tor funzioni correttamente?"
+    answer: "Dopo qualche ora dall'avvio, cerca il nome del tuo relay su metrics.torproject.org. Puoi anche controllare i log con il comando journalctl -xeu tor@default e monitorare le statistiche con nyx."
+  - question: "Quali sistemi operativi sono supportati per installare un nodo Tor?"
+    answer: "Lo script automatizzato supporta Debian e Ubuntu. Per altri sistemi operativi, il sito ufficiale del Tor Project mette a disposizione guide specifiche per ogni OS."
+  - question: "Come si configura la banda del nodo Tor?"
+    answer: "Nel file /etc/tor/torrc si imposta la banda settimanale con il parametro AccountingMax. Ad esempio, con 1 TB mensile si può impostare 250 GB a settimana. Le unità accettate sono MB, GB e TB."
 ---
 
 

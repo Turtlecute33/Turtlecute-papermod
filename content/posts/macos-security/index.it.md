@@ -12,6 +12,21 @@ topics: ["privacy-security"]
 cover:
   image: "cover.jpg"
   relative: true
+faq:
+  - question: "Come proteggere la privacy su Mac?"
+    answer: "Attivate FileVault per la crittografia del disco, abilitate il firewall integrato e la modalità stealth, usate DNS crittografato (DoH/DoT), installate un firewall per il traffico in uscita come LuLu e scegliete un browser orientato alla privacy come Firefox."
+  - question: "FileVault è necessario su Mac con Apple Silicon?"
+    answer: "I Mac Apple Silicon sono crittografati di default, ma FileVault aggiunge un livello ulteriore richiedendo la password all'avvio. Funge anche da password del firmware, impedendo l'avvio da dischi esterni e l'accesso alla Recovery."
+  - question: "Come attivare il firewall su macOS?"
+    answer: "Andate in Impostazioni di Sistema oppure usate il comando sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on da Terminale. Attivate anche la modalità stealth per ignorare ping e probe sulle porte chiuse."
+  - question: "Cos'è la Modalità Lockdown di macOS e a chi serve?"
+    answer: "La Modalità Lockdown disabilita numerose funzionalità per ridurre la superficie di attacco. È pensata per utenti a rischio di attacchi sofisticati come giornalisti e attivisti, ma chiunque può attivarla da Impostazioni di Sistema > Privacy e Sicurezza."
+  - question: "I Mac possono prendere virus e malware?"
+    answer: "Sì, i Mac non sono immuni al malware. macOS include protezioni come XProtect, Gatekeeper e il sandboxing delle app, ma è consigliato scaricare software solo da fonti ufficiali, preferire app open source e verificare i file sospetti con VirusTotal."
+  - question: "Qual è il browser più sicuro per macOS?"
+    answer: "Firefox è considerato il migliore per la privacy grazie al codice open source, alla protezione dal tracciamento integrata e al supporto per l'hardening avanzato con arkenfox/user.js. Safari è una buona alternativa nativa con Intelligent Tracking Prevention e supporto alla Modalità Lockdown."
+  - question: "Come eliminare i metadati e le tracce digitali su macOS?"
+    answer: "Usate xattr -d per rimuovere i metadati dai file scaricati, qlmanage -r cache per pulire la cache di QuickLook, e cancellate le directory di LanguageModeling, Spelling e Suggestions in ~/Library per eliminare i dati di digitazione."
 ---
 
 > **TL;DR** - In questa guida imparerete:

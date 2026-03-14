@@ -12,6 +12,21 @@ topics: ["bitcoin"]
 cover:
   image: "jm.webp"
   relative: true
+faq:
+  - question: "Cos'è JoinMarket e a cosa serve?"
+    answer: "JoinMarket è un software che permette di effettuare CoinJoin su Bitcoin in modo completamente decentralizzato e trustless, senza alcun coordinatore centrale. Serve a migliorare la privacy delle transazioni Bitcoin rendendo difficile il tracciamento onchain."
+  - question: "JoinMarket è sicuro dopo l'arresto degli sviluppatori di Samourai Wallet?"
+    answer: "Sì, JoinMarket è completamente decentralizzato e non dipende da alcun coordinatore centrale. A differenza di Samourai Wallet, non può essere chiuso sequestrando un server."
+  - question: "Qual è la differenza tra maker e taker in JoinMarket?"
+    answer: "Il maker offre la propria liquidità sul mercato interno di JoinMarket e guadagna satoshi come compenso. Il taker è chi richiede il CoinJoin, sceglie le controparti e paga le fee ai maker."
+  - question: "Cos'è il tumbler di JoinMarket e come si usa?"
+    answer: "Il tumbler è uno script che esegue automaticamente una serie di CoinJoin distribuendo i fondi su almeno 3 indirizzi di output. Si lancia con il comando python tumbler.py seguito dal nome del wallet e dagli indirizzi di destinazione."
+  - question: "Cosa sono i mixdepth in JoinMarket?"
+    answer: "I mixdepth sono sezioni separate del wallet JoinMarket (da 0 a 4). Il software non consolida mai UTXO di mixdepth diversi, permettendo di mantenere separati fondi con diversi livelli di privacy."
+  - question: "Cos'è un fidelity bond e perché è importante?"
+    answer: "Un fidelity bond è un deposito di bitcoin bloccato fino a una data di scadenza che aumenta la reputazione del maker sul mercato. Permette di essere scelti più frequentemente come controparte nei CoinJoin, ma i fondi non possono essere mossi fino alla scadenza."
+  - question: "Su quali sistemi operativi posso installare JoinMarket?"
+    answer: "JoinMarket è installabile su diversi sistemi per nodi Bitcoin tra cui Raspiblitz, Umbrel, MyNode e Raspibolt. Su Raspiblitz si attiva dalla sezione SERVICES, mentre su MyNode è già preinstallato."
 ---
 
 # JOINMARKET

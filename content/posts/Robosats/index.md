@@ -12,6 +12,21 @@ topics: ["bitcoin"]
 cover:
   image: "img/robosats1.webp"
   relative: true
+faq:
+  - question: "Cos'è RoboSats e come funziona?"
+    answer: "RoboSats è una piattaforma peer-to-peer per comprare e vendere Bitcoin in modo anonimo tramite Tor, senza richiedere documenti o KYC. Utilizza identità robot usa e getta e pagamenti Lightning Network."
+  - question: "Serve un documento d'identità per usare RoboSats?"
+    answer: "No, RoboSats non richiede alcun documento né verifica dell'identità (KYC). Ogni scambio avviene con un avatar robot generato casualmente."
+  - question: "Come si accede a RoboSats?"
+    answer: "È necessario scaricare e installare Tor Browser, quindi visitare il sito .onion ufficiale di RoboSats. Esiste anche un'app Android scaricabile da GitHub o F-Droid."
+  - question: "Cos'è la cauzione di fedeltà su RoboSats?"
+    answer: "È un piccolo deposito in satoshi (1-3% dell'importo) che viene bloccato temporaneamente nel tuo wallet Lightning per garantire che entrambe le parti completino lo scambio. Viene restituito al termine del trade."
+  - question: "Cosa succede se l'altra parte cerca di truffarmi?"
+    answer: "Se si verifica un problema, viene aperta una controversia (automaticamente alla scadenza o manualmente). Lo staff del coordinatore esamina le prove fornite e decide a chi assegnare i fondi."
+  - question: "Quali sono i limiti di importo per un ordine su RoboSats?"
+    answer: "Un ordine non può essere inferiore a 20.000 satoshi né superiore a 4.000.000 di satoshi, per evitare problemi di routing sulla rete Lightning."
+  - question: "Posso annullare un ordine su RoboSats dopo averlo accettato?"
+    answer: "Sì, tramite annullamento collaborativo, a patto che l'acquirente non abbia ancora confermato l'invio della fiat. Dopo la conferma, l'annullamento richiede l'apertura di una controversia."
 ---
 
 ![Schermata iniziale RoboSats](img/robosats1.webp)

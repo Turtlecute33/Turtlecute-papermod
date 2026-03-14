@@ -13,6 +13,21 @@ topics: ["bitcoin"]
 cover:
   image: "bitcoin.jpg"
   relative: true
+faq:
+  - question: "Perché è importante avere un nodo Bitcoin personale per la privacy?"
+    answer: "Senza un nodo personale, il tuo wallet deve chiedere informazioni a nodi sconosciuti, rivelando i tuoi indirizzi, i saldi e il tuo indirizzo IP. Un full node ti permette di verificare le transazioni in autonomia senza esporre i tuoi dati finanziari."
+  - question: "Come posso acquistare Bitcoin senza KYC?"
+    answer: "Puoi usare piattaforme peer-to-peer come Bisq, il gruppo Telegram Bitcoin Market, oppure servizi come Relai (fino a 900€/giorno senza documenti) e Bitcoin Voucher Bot. Ognuno offre diversi livelli di privacy e facilità d'uso."
+  - question: "Cos'è Wasabi Wallet e perché è consigliato per la privacy?"
+    answer: "Wasabi Wallet è un wallet desktop non custodial che integra automaticamente Tor, protegge dal tracciamento degli indirizzi scaricando interi blocchi invece di richiedere singoli address, e include la funzione CoinJoin per mescolare le transazioni."
+  - question: "Cosa sono gli UTXO e perché sono importanti per la privacy?"
+    answer: "Gli UTXO (Unspent Transaction Output) sono le singole transazioni ricevute conservate nel wallet. Ogni volta che spendi Bitcoin, il resto generato è ricollegabile al tuo indirizzo precedente, compromettendo la privacy se non gestito correttamente."
+  - question: "Come funziona il CoinJoin per proteggere la privacy delle transazioni?"
+    answer: "Il CoinJoin combina gli input di più utenti in un'unica transazione, rendendo impossibile determinare quale output appartiene a quale partecipante. Funziona come una scatola nera che spezza il collegamento tra le vecchie e le nuove UTXO."
+  - question: "Come si può usare Lightning Network per migliorare la privacy?"
+    answer: "Puoi depositare i resti delle transazioni onchain sul tuo wallet Lightning uno alla volta tramite submarine swap, così da sembrare identità diverse sulla blockchain. Poi puoi rimandarli onchain tramite servizi come Boltz, preferibilmente via Tor."
+  - question: "Perché non bisogna mai riutilizzare lo stesso indirizzo Bitcoin?"
+    answer: "Ogni wallet Bitcoin deriva migliaia di indirizzi da un'unica chiave. Usare un indirizzo diverso per ogni transazione fa apparire le operazioni come provenienti da identità separate, impedendo l'analisi on-chain di collegare le transazioni alla stessa persona."
 ---
 
 

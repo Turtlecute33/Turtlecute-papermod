@@ -12,6 +12,21 @@ topics: ["bitcoin"]
 cover:
   image: "seed.png"
   relative: true
+faq:
+  - question: "Perché dovrei generare il seed Bitcoin con i dadi invece di usare il software del wallet?"
+    answer: "Generare il seed manualmente con i dadi ti garantisce che nessun software, malware o backdoor possa conoscere le tue chiavi private. Hai la certezza matematica che l'entropia sia realmente casuale."
+  - question: "Quanti lanci di dado servono per creare un seed di 24 parole?"
+    answer: "Servono 256 lanci di dado per generare i 256 bit di entropia necessari. I lanci vengono organizzati in 23 righe da 11 cifre binarie più una 24ª riga da 3 cifre."
+  - question: "Cos'è il checksum nella 24ª parola del seed?"
+    answer: "Il checksum sono gli ultimi 8 bit calcolati tramite l'hash SHA256 dei tuoi 256 bit di entropia. Serve a verificare che non ci siano errori di trascrizione nel seed."
+  - question: "Posso generare il seed su un computer connesso a Internet?"
+    answer: "No, per la massima sicurezza devi usare un computer air-gapped, cioè completamente isolato da Internet. Non basta disattivare il Wi-Fi: è consigliabile rimuovere fisicamente la scheda wireless."
+  - question: "Cosa succede se sbaglio una cifra durante il calcolo manuale?"
+    answer: "Se commetti un errore, il checksum non corrisponderà e qualsiasi wallet segnalerà immediatamente che il seed non è valido. È consigliabile fare pratica prima di generare la chiave definitiva."
+  - question: "Cos'è la lista di parole BIP 39 e come si usa?"
+    answer: "Il BIP 39 è uno standard che definisce 2048 parole ordinate alfabeticamente. Ogni gruppo di 11 bit del seed viene convertito in un numero decimale (da 0 a 2047) che indica la parola corrispondente nella lista."
+  - question: "Quale sistema operativo è consigliato per generare il seed in sicurezza?"
+    answer: "TailsOS è un'ottima scelta perché è un sistema amnesico che cancella tutti i dati allo spegnimento. Installalo su un disco esterno e usalo su un PC senza scheda wireless. Ricorda di trascrivere il seed su carta prima di spegnere."
 ---
 
 > **TL;DR** - In questa guida imparerai:

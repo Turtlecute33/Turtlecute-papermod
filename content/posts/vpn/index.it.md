@@ -12,6 +12,21 @@ topics: ["self-hosting"]
 cover:
   image: "vpn.webp"
   relative: true
+faq:
+  - question: "Perché creare una VPN self-hosted invece di usare una VPN commerciale?"
+    answer: "Le VPN commerciali spesso guadagnano vendendo i tuoi dati. Con una VPN self-hosted hai il pieno controllo della connessione, puoi aggiungere filtri per ads e tracker e scegliere il paese del server."
+  - question: "Di quali componenti ho bisogno per questo setup?"
+    answer: "Servono tre componenti: Wireguard come server VPN per cifrare il traffico, Pi-Hole per bloccare pubblicità e tracker a livello DNS, e Unbound come DNS resolver locale per non dipendere da terze parti."
+  - question: "Quanto costa mantenere una VPN self-hosted?"
+    answer: "Il costo dipende dal provider VPS scelto. Si va dai 4.50 euro al mese di 1984 Hosting (Islanda) ai 15 euro di Njalla, con opzioni intermedie come VPSbG a 8 euro al mese."
+  - question: "Quale sistema operativo devo installare sul server VPS?"
+    answer: "Si consiglia una distribuzione Debian-based come Debian o Ubuntu. Lo script di installazione di Wireguard e Pi-Hole sono ottimizzati per queste distribuzioni."
+  - question: "Come posso collegare i miei dispositivi alla VPN?"
+    answer: "Installa l'app Wireguard sul dispositivo, genera la configurazione sulla VPS con lo script e scansiona il QR code dal telefono. Su PC Linux, salva il file .conf in /etc/wireguard e usa wg-quick per attivare la connessione."
+  - question: "Come verifico che la VPN e il blocco ads funzionino correttamente?"
+    answer: "Visita vpntesting.com per controllare che il tuo IP corrisponda a quello del server VPN. Poi testa l'adblocker su d3ward.github.io/toolz/adblock.html: un risultato superiore al 70-80% indica che tutto funziona."
+  - question: "Una VPN self-hosted mi rende completamente anonimo?"
+    answer: "No. L'IP in uscita è usato solo da te, quindi è più facile da tracciare rispetto a una VPN condivisa. Inoltre il provider VPS può vedere il tuo IP reale, quindi è importante sceglierlo con attenzione."
 ---
 
 

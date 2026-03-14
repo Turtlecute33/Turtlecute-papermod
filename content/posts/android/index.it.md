@@ -15,6 +15,21 @@ topics: ["android"]
 cover:
   image: "1.webp"
   relative: true
+faq:
+  - question: "Cos'è un telefono de-googled e perché dovrei usarlo?"
+    answer: "Un telefono de-googled è un dispositivo Android da cui sono stati rimossi i servizi Google. Questo impedisce a Google e ad aziende terze di raccogliere silenziosamente i tuoi dati personali come posizione, contatti e ricerche."
+  - question: "Quale sistema operativo Android è il migliore per la privacy?"
+    answer: "GrapheneOS è considerato il più completo e sicuro. LineageOS è un'ottima alternativa compatibile con più dispositivi. Entrambi sono basati su AOSP e privi dei servizi Google."
+  - question: "Come posso installare app senza il Google Play Store?"
+    answer: "Puoi usare Obtainium per scaricare app direttamente da GitHub, Droid-ify come store open source, oppure Aurora Store per accedere al catalogo Play Store tramite account anonimi generati automaticamente."
+  - question: "A cosa serve Shelter e come funziona?"
+    answer: "Shelter crea un profilo di lavoro isolato sul telefono, permettendo di separare le app fidate da quelle traccianti come social e app bancarie. I due profili funzionano in parallelo ma non condividono dati tra loro."
+  - question: "Come posso far passare tutto il traffico del telefono sotto Tor?"
+    answer: "Installa Invizible Pro da F-Droid, attiva la modalità VPN e nelle impostazioni di rete abilita 'VPN sempre attiva' e 'blocca connessioni senza VPN'. In questo modo tutto il traffico sarà instradato attraverso Tor."
+  - question: "Quali permessi delle app dovrei disabilitare per proteggere la privacy?"
+    answer: "Rimuovi tutti i permessi non essenziali, in particolare geolocalizzazione, fotocamera e microfono. Disabilita anche l'accesso a internet per le app che non lo necessitano, come tastiere, calcolatrici e file manager."
+  - question: "Ho bisogno di una VPN se uso già Tor con Invizible Pro?"
+    answer: "Nel profilo principale con Tor non serve una VPN aggiuntiva. Nel profilo di lavoro con app traccianti, una VPN come Mullvad o Proton può proteggere il traffico dal tuo ISP e filtrare pubblicità e tracker."
 ---
 
 

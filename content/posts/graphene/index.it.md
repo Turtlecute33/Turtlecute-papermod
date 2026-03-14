@@ -13,6 +13,21 @@ topics: ["android"]
 cover:
   image: "graffy.jpg"
   relative: true
+faq:
+  - question: "GrapheneOS funziona solo su Google Pixel?"
+    answer: "Sì, al momento GrapheneOS supporta ufficialmente solo i dispositivi Google Pixel perché sono gli unici a soddisfare i requisiti di sicurezza hardware necessari, come il verified boot e il memory tagging."
+  - question: "È sicuro usare un telefono Google per la privacy?"
+    answer: "Sì. I Pixel sono i dispositivi di riferimento per lo sviluppo di Android, ricevono grande attenzione da ricercatori di sicurezza e non esistono prove di backdoor intenzionali. GrapheneOS rimuove i servizi Google e aggiunge protezioni avanzate."
+  - question: "Quale Google Pixel scegliere per GrapheneOS?"
+    answer: "Per la massima sicurezza si consigliano i Pixel di ottava o nona generazione. Il Pixel 8a è l'opzione più economica. I Pixel 9 Pro con 16 GB di RAM sono ideali se si vogliono usare più profili utente."
+  - question: "Le app Android e i Google Play Services funzionano su GrapheneOS?"
+    answer: "GrapheneOS supporta i sandboxed Google Play Services, che permettono di usare le app che richiedono i servizi Google mantenendoli isolati in una sandbox senza privilegi speciali."
+  - question: "Come si installa GrapheneOS?"
+    answer: "GrapheneOS si può installare tramite il web installer ufficiale dal browser, da linea di comando oppure acquistando un dispositivo con il sistema già pre-installato."
+  - question: "Cosa sono i profili utente in GrapheneOS?"
+    answer: "I profili utente permettono di creare ambienti isolati sullo stesso dispositivo, ciascuno con le proprie app e dati crittografati separatamente. Sono utili per compartimentare attività personali, lavorative e sensibili."
+  - question: "GrapheneOS riceve aggiornamenti di sicurezza regolari?"
+    answer: "Sì, GrapheneOS riceve aggiornamenti molto frequenti che vengono scaricati e installati automaticamente in background. È sufficiente riavviare il dispositivo per renderli effettivi."
 ---
 
 
