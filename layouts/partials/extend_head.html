@@ -13,15 +13,15 @@
   "@graph": [
     {
       "@type": "WebSite",
-      "name": {{ site.Title | jsonify }},
-      "url": {{ site.BaseURL | jsonify }},
-      "description": {{ site.Params.description | jsonify }},
-      "inLanguage": {{ site.LanguageCode | jsonify }},
+      "name": {{ site.Title | jsonify | safeJS }},
+      "url": {{ site.BaseURL | jsonify | safeJS }},
+      "description": {{ site.Params.description | jsonify | safeJS }},
+      "inLanguage": {{ site.LanguageCode | jsonify | safeJS }},
       "potentialAction": {
         "@type": "SearchAction",
         "target": {
           "@type": "EntryPoint",
-          "urlTemplate": {{ (printf "%ssearch?q={search_term_string}" site.BaseURL) | jsonify }}
+          "urlTemplate": {{ (printf "%ssearch?q={search_term_string}" site.BaseURL) | jsonify | safeJS }}
         },
         "query-input": "required name=search_term_string"
       }
@@ -29,7 +29,7 @@
     {
       "@type": "Person",
       "name": "Turtlecute",
-      "url": {{ site.BaseURL | jsonify }},
+      "url": {{ site.BaseURL | jsonify | safeJS }},
       "sameAs": [
         "https://github.com/Turtlecute33",
         "https://x.com/turtlecute33",
@@ -69,8 +69,8 @@
     {
       "@type": "SiteNavigationElement",
       "position": {{ add $i 1 }},
-      "name": {{ $nav.name | jsonify }},
-      "url": {{ $nav.url | jsonify }}
+      "name": {{ $nav.name | jsonify | safeJS }},
+      "url": {{ $nav.url | jsonify | safeJS }}
     }{{ if lt (add $i 1) (len $uniqueNav) }},{{ end }}
     {{- end }}
   ]
@@ -100,20 +100,20 @@
   "@graph": [
     {
       "@type": "Article",
-      "headline": {{ .Title | jsonify }},
-      "description": {{ with .Description }}{{ . | jsonify }}{{ else }}{{ .Summary | jsonify }}{{ end }},
-      "datePublished": {{ .PublishDate.Format $iso8601 | jsonify }},
-      "dateModified": {{ .Lastmod.Format $iso8601 | jsonify }},
+      "headline": {{ .Title | jsonify | safeJS }},
+      "description": {{ with .Description }}{{ . | jsonify | safeJS }}{{ else }}{{ .Summary | jsonify | safeJS }}{{ end }},
+      "datePublished": {{ .PublishDate.Format $iso8601 | jsonify | safeJS }},
+      "dateModified": {{ .Lastmod.Format $iso8601 | jsonify | safeJS }},
       "author": {
         "@type": "Person",
-        "name": {{ with .Params.author }}{{ . | jsonify }}{{ else }}"Turtlecute"{{ end }},
-        "url": {{ site.BaseURL | jsonify }}
+        "name": {{ with .Params.author }}{{ . | jsonify | safeJS }}{{ else }}"Turtlecute"{{ end }},
+        "url": {{ site.BaseURL | jsonify | safeJS }}
       },
       {{- if $image }}
-      "image": {{ $image | jsonify }},
+      "image": {{ $image | jsonify | safeJS }},
       {{- end }}
-      "url": {{ .Permalink | jsonify }},
-      "inLanguage": {{ site.LanguageCode | jsonify }}
+      "url": {{ .Permalink | jsonify | safeJS }},
+      "inLanguage": {{ site.LanguageCode | jsonify | safeJS }}
     },
     {
       "@type": "BreadcrumbList",
@@ -133,8 +133,8 @@
         {
           "@type": "ListItem",
           "position": 3,
-          "name": {{ .Title | jsonify }},
-          "item": "{{ .Permalink }}"
+          "name": {{ .Title | jsonify | safeJS }},
+          "item": {{ .Permalink | jsonify | safeJS }}
         }
       ]
     }
@@ -153,10 +153,10 @@
     {{- range $i, $item := .Params.faq }}
     {
       "@type": "Question",
-      "name": {{ $item.question | jsonify }},
+      "name": {{ $item.question | jsonify | safeJS }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": {{ $item.answer | jsonify }}
+        "text": {{ $item.answer | jsonify | safeJS }}
       }
     }{{ if lt (add $i 1) (len $.Params.faq) }},{{ end }}
     {{- end }}
