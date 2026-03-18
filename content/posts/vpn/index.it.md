@@ -18,7 +18,7 @@ faq:
   - question: "Di quali componenti ho bisogno per questo setup?"
     answer: "Servono tre componenti: Wireguard come server VPN per cifrare il traffico, Pi-Hole per bloccare pubblicità e tracker a livello DNS, e Unbound come DNS resolver locale per non dipendere da terze parti."
   - question: "Quanto costa mantenere una VPN self-hosted?"
-    answer: "Il costo dipende dal provider VPS scelto. Si va dai 4.50 euro al mese di 1984 Hosting (Islanda) ai 15 euro di Njalla, con opzioni intermedie come VPSbG a 8 euro al mese."
+    answer: "Il costo dipende dal provider VPS scelto e cambia spesso. In genere un setup entry-level parte da pochi euro al mese, ma conviene sempre controllare listino, banda inclusa e policy attuali prima di acquistare."
   - question: "Quale sistema operativo devo installare sul server VPS?"
     answer: "Si consiglia una distribuzione Debian-based come Debian o Ubuntu. Lo script di installazione di Wireguard e Pi-Hole sono ottimizzati per queste distribuzioni."
   - question: "Come posso collegare i miei dispositivi alla VPN?"
@@ -68,9 +68,11 @@ Con hosting provider s'intende l'azienda che vi fornirà il server su cui fare i
 
 In questa guida vi consiglierò un paio di hosting provider, spesso quelli piccoli o con politiche di privacy interessanti sono più costosi delle grosse hosting company. È importante guardare anche che servizi ci vengono offerti per scegliere il server più adatto alle nostre necessità (potenza, capacità e velocità di banda, ecc).  
 
-*   [VPSbG](https://www.vpsbg.eu/aff/1e5d9e) a mio parere il miglior rapporto tra potenza, banda, privacy, usabilità e metodi di pagamento accettati. Non il più economico ma quello che offre la miglior esperienza d'uso. Server in bulgaria ed offrono 1 core con CPU AMD epyc, 1 GB di ram e 2TB di banda mensile per 8 euro al mese.
-* [1984 Hosting](https://1984.hosting/) é un sito che offre vari servizi (domini, vps, dns, ecc), ha sede legale in Islanda (molto interessante per l'aspetto di Privacy informatica) e offre server con 1 core, 1 GB di ram e 1TB di banda a 100Mb/s per circa 4.50 euro oppure lo stesso server con un po' più di ram e il doppio di banda a 9 euro al mese. Penso che questo vps provider sia molto interessante, accetta pagamenti in bitcoin e il servizio clienti nelle mie esperienze passate è sempre stato abbastanza efficiente (24/48h per avere supporto).
-* [Njalla](https://njal.la/) è un vecchissimo ma ancora attivo servizio di hosting, vpn, domini con sede legale a Nevis (Caraibi) e la maggior parte dei server situata in Svezia. Come prezzi è leggermente più cara di 1984 ma offre server leggermente più potenti e con un po' più di banda: 1 Core, 1.5 GB RAM, 15 GB Disk, 1.5 TB Traffic per circa 15 euro (anche qua pagabili in bitcoin). È possibile usare questo servizio anche navigando attraverso il suo dominio tor.
+*   [VPSbG](https://www.vpsbg.eu/aff/1e5d9e): provider storico che spesso offre un buon equilibrio tra banda, semplicità e pagamenti.
+*   [1984 Hosting](https://1984.hosting/): interessante se date peso alla giurisdizione islandese e a un catalogo di servizi piuttosto ampio.
+*   [Njalla](https://njal.la/): opzione nota in ambito privacy, utile se vi interessa pagare in bitcoin e ridurre al minimo i dati condivisi.
+
+**Importante:** prezzi, CPU, traffico incluso e policy possono cambiare spesso. Prima di comprare verificate sempre i listini e controllate che il provider consenta davvero il tipo di traffico che volete generare.
 
 Esistono tanti altri servizi di VPS con differenti costi e trade-off dal punto di vista di privacy, sicurezza, costi ecc.. Potete tranquillamente fare un paio di ricerche online e non utilizzare obbligatoriamente quelli da me sopra citati.  
 Una volta scelto il servizio di hosting consiglio caldamente di proseguire acquistando una macchina con sopra una distribuzione debian based (debian o ubuntu) e settando una password di accesso complessa.
@@ -166,17 +168,17 @@ server:
 
 andiamo quindi a riavviare unbound:
 
-`sudo service unbound restart`
+`sudo systemctl restart unbound`
 
-a questo punto abbiamo correttamente preparato il dns locale. Andiamo a configurare Pi-hole per usare unbound come DNS upstream. In Pi-hole v6 la configurazione si gestisce tramite il file `/etc/pihole/pihole.toml`, l'interfaccia web oppure la CLI. Il modo più semplice è usare la CLI:
+a questo punto abbiamo correttamente preparato il dns locale. Andiamo a configurare Pi-hole per usare unbound come DNS upstream. In Pi-hole v6 la configurazione si gestisce tramite il file `/etc/pihole/pihole.toml`, l'interfaccia web oppure la CLI. Il modo più semplice è usare la CLI di FTL:
 
 ```
-pihole --config dns.upstreams '["127.0.0.1#5335"]'
-pihole --config dns.listeningMode local
-pihole --config dns.dnssec false
+sudo pihole-FTL --config dns.upstreams '["127.0.0.1#5335"]'
+sudo pihole-FTL --config dns.listeningMode 'local'
+sudo pihole-FTL --config dns.dnssec 'false'
 ```
 
-Questi comandi dicono a Pi-hole di usare unbound (porta 5335) come unico DNS upstream e di ascoltare solo le interfacce locali.
+Questi comandi dicono a Pi-hole di usare unbound (porta 5335) come unico DNS upstream e di ascoltare solo sulle interfacce locali. Se preferite potete impostare lo stesso valore anche dalla web UI, ma in Pi-hole v6 la vecchia sintassi `pihole --config` non è più quella corretta.
 
 ## Configurazione PiHole e AdLists
 

@@ -17,9 +17,9 @@ faq:
   - question: "Perché è importante avere un nodo Bitcoin personale per la privacy?"
     answer: "Senza un nodo personale, il tuo wallet deve chiedere informazioni a nodi sconosciuti, rivelando i tuoi indirizzi, i saldi e il tuo indirizzo IP. Un full node ti permette di verificare le transazioni in autonomia senza esporre i tuoi dati finanziari."
   - question: "Come posso acquistare Bitcoin senza KYC?"
-    answer: "Puoi usare piattaforme peer-to-peer come Bisq, il gruppo Telegram Bitcoin Market, oppure servizi come Relai (fino a 900€/giorno senza documenti) e Bitcoin Voucher Bot. Ognuno offre diversi livelli di privacy e facilità d'uso."
+    answer: "Nel 2026 le opzioni davvero no-KYC restano soprattutto peer-to-peer: Bisq, RoboSats, community locali e alcuni voucher/bot. I servizi centralizzati cambiano spesso policy e limiti, quindi vanno verificati uno per uno prima di considerarli 'privacy-friendly'."
   - question: "Cos'è Wasabi Wallet e perché è consigliato per la privacy?"
-    answer: "Wasabi Wallet è un wallet desktop non custodial che integra automaticamente Tor, protegge dal tracciamento degli indirizzi scaricando interi blocchi invece di richiedere singoli address, e include la funzione CoinJoin per mescolare le transazioni."
+    answer: "Wasabi Wallet è un wallet desktop non custodial che integra automaticamente Tor, usa tecniche di client-side filtering per ridurre il tracciamento del wallet e include la funzione CoinJoin."
   - question: "Cosa sono gli UTXO e perché sono importanti per la privacy?"
     answer: "Gli UTXO (Unspent Transaction Output) sono le singole transazioni ricevute conservate nel wallet. Ogni volta che spendi Bitcoin, il resto generato è ricollegabile al tuo indirizzo precedente, compromettendo la privacy se non gestito correttamente."
   - question: "Come funziona il CoinJoin per proteggere la privacy delle transazioni?"
@@ -77,6 +77,8 @@ Per raggiungere l'indipendenza finanziaria completa e partecipare al network è 
 Esistono vari modi per acquistare Bitcoin proteggendo la vostra privacy, ognuno con i propri pro e contro,  
 ovviamente eviteremo exchange centralizzati e servizi KYC, lasciare i propri documenti ad enti terzi non è mai una buona idea (vorrebbe dire esporre totalmente i nostri dati ad un ente terzo il quale potrà eventualmente vendere i nostri dati al miglior offerente o essere hackerato).  
   
+**Nota 2026:** questo è uno dei capitoli che cambia più velocemente. Policy, limiti, bonifici accettati e requisiti KYC possono cambiare in pochi mesi. Le soluzioni P2P restano le più stabili lato privacy; i servizi centralizzati vanno invece ricontrollati prima di usarli.
+
 ecco i quattro servizi che preferisco per l'acquisto di Bitcoin:  
 
 *   [Bisq](https://bisq.network/) è un software open-source che permette l'acquisto,vendita e scambio di bitcoin ed altre criptovalute in modo Peer to Peer, si connette automaticamente attraverso tor ed implementa vari sistemi di sicurezza e protezione degli acquisti.  
@@ -118,22 +120,23 @@ ecco i quattro servizi che preferisco per l'acquisto di Bitcoin:
     *   Non molto liquido
     *   Riponete un minimo di trust alla piattaforma telegram
   
-*   [Relai](https://relai.me/tartaruga) è un servizio svizzero che permette l'acquisto e vendita di bitcoin a mercato fino a 900€ al giorno senza KYC (leggi svizzere). Se usate il codice 'tartaruga' avrete lo 0.5% di sconto sulle FEE.  
+*   [RoboSats](https://learn.robosats.com/read/en/) è una piattaforma P2P tor-only focalizzata su scambi piccoli e medi tramite Lightning. Nel 2026 è una delle opzioni più interessanti per comprare senza KYC mantenendo un buon equilibrio tra privacy e semplicità.  
       
     
     **PRO**
     
-    *   Di utilizzo super facile
-    *   FEE molto basse (1%)
-    *   Totalmente non custodial
-    *   Permette di fare PAC
+    *   Tor-only e no-KYC
+    *   Ottima per piccoli trade e DCA manuale
+    *   Identità usa e getta e escrow via Lightning
+    *   Interfaccia molto più semplice rispetto a Bisq
     
       
     
     **CONTRO**
     
-    *   Anche se non forniamo documenti possono tracciare comunque il mittente del bonifico
-    *   Piattaforma centralizzata
+    *   Dipende dalla liquidità disponibile nella vostra valuta e metodo di pagamento
+    *   Richiede familiarità con wallet Lightning e hold invoice
+    *   Non è ideale per importi molto grandi
     
       
     
@@ -162,7 +165,7 @@ ecco i quattro servizi che preferisco per l'acquisto di Bitcoin:
     
 
   
-Mi sento di consigliare tutti e 4 i servizi sopra citati, sono di ottima qualità, dovete solo trovare quale di questi si adatta meglio alle vostre esigenze di privacy e facilita d'uso.
+Mi sento di consigliare soprattutto le opzioni P2P sopra citate. Se cercate massima privacy, partite da Bisq o RoboSats; se invece puntate soprattutto alla semplicità, i voucher o le community locali possono essere più immediati, ma richiedono più fiducia nella controparte.
 
 {{< cta type="inline" title="Vuoi una guida completa sulla privacy Bitcoin?" text="Ho scritto una guida approfondita che ti accompagna passo passo nella protezione della tua privacy finanziaria con Bitcoin." url="https://shop.priorato.org" button="Scopri la Guida Privacy Bitcoin" icon="₿" >}}
 
@@ -180,23 +183,22 @@ che a loro volta si dividono in:
 
 Possiamo notare come il wallet che il più possibile si adatti alle nostre esigenze debba essere obbligatoriamente **non custodial** e desktop, possibilmente usato in combinazione con un hardware wallet.  
   
-Il programma che meglio si adatta alle nostre esigenze privacy oriented è sicuramente [Wasabi wallet](https://wasabiwallet.io/) ([Onion link](http://wasabiukrxmkdgve5kynjztuovbg43uxcbcxn6y2okcrsg7gb6jdmbad.onion)), scaricatelo assolutamente dal link onion (tor) per rimanere il più possibile anonimi. Se siete utenti un pochino più esperti e sapete collegare un wallet al vostro nodo potete usare anche molti altri wallet famosi come sparrow, electrum, ecc...  
+Il programma che meglio si adatta alle nostre esigenze privacy oriented è sicuramente [Wasabi wallet](https://wasabiwallet.io/) ([Onion link](http://wasabiukrxmkdgve5kynjztuovbg43uxcbcxn6y2okcrsg7gb6jdmbad.onion)). Se siete utenti un pochino più esperti e sapete collegare un wallet al vostro nodo potete usare anche molti altri wallet famosi come Sparrow, Electrum, ecc.  
   
 Le principali features privacy di wasabi sono:  
   
 
-*   Protezione contro il tracciamento degli indirizzi (un singolo wallet ha un numero enorme di indirizzi al suo interno, quando ci colleghiamo esso chiede al nodo a cui si connette la quantità di bitcoin presenti su ogni indirizzo, con Wasabi non andremo a comunicare la lista degli address ma andremo a scaricare interamente i blocchi contenenti le nostre transazioni, così da mitigare il tracciamento dei nostri indirizzi da parte del nodo a cui ci connettiamo).
+*   Protezione contro il tracciamento degli indirizzi: Wasabi usa filtri client-side e altre tecniche per non dover interrogare un server esterno rivelando banalmente tutti i vostri address.
   
 *   Connessione automatica sempre e solo attraverso TOR che è direttamente incluso all'interno del software stesso.
   
 *   Indirizzi usa e getta automatici e descrizione degli indirizzi (come spiegheremo nella prossima sezione, per avere una buona privacy è assolutamente obbligatorio usare gli indirizzi sempre e solo una volta, Wasabi wallet automaticamente quando andremo nella sezione 'Ricevi' ci mostrerà un indirizzo nuovo e mai usato con anche una piccola sezione chiamata 'Label' in cui potremo dare una sorta di etichetta all' indirizzo in mondo da ricordarci per cosa abbiamo usato o a chi abbiamo inviato quella transazione).
 
-Parlando invece di wallet mobile esistono 2 buone alternative:  
-  
+Parlando invece di wallet mobile, una buona alternativa onchain è:  
 
 *   [BlueWallet](https://bluewallet.io/)
 
-Entrambi però per un uso che protegga la nostra privacy necessitano di avere un full node proprio o di un conoscente in quanto in mancanza di esso il wallet si connetterà a nodi casuali, cosa che vogliamo assolutamente evitare; in caso vogliate usare uno dei due prima di creare/importare il vostro portafoglio connettetevi al vostro nodo ed abilitate TOR (su SBW attivabile dalle impostazioni e su blue abilitato automaticamente se lo si connette ad un nodo con link TOR).
+Per un uso che protegga davvero la vostra privacy conviene collegarlo a un full node vostro o di una persona fidata; in mancanza di esso il wallet si connetterà a infrastrutture di terzi, cosa che vogliamo assolutamente evitare. In caso vogliate usarlo, collegatevi al vostro nodo e usate Tor dove possibile.
 
 ## Le transazioni
 
@@ -261,7 +263,7 @@ In questo paragrafo non andremo direttamente a spiegare cosa è e come funziona 
 L'ideale sarebbe avere un nodo LN, in caso questo non sia possibile potremo usare un wallet compatibile con LN, ecco una piccola selezione di quelli che ritengo migliori:
 
 *   [Phoenix](https://phoenix.acinq.co/) probabilmente il miglior wallet pronto all'uso per quanto riguarda la privacy, il grosso 'contro' è l'alto costo che si trattiene l'azienda che lo ha creato come fee di utilizzo [fee di phoenix](https://phoenix.acinq.co/faq#what-are-the-fees)).
-*   [Breez](https://breez.technology/) Sarebbe uno dei migliori, 0 fee, solo quelle di rete, ottimi servizi integrati, non supporta tor ma possiamo usarlo con orbot o vpn ma ha un grosso difetto: effettua i backup del wallet solo su google drive o su un server personale se ne possedete uno, non ci sono alternative funzionanti, a mio parere un grosso difetto.
+*   [Breez](https://breez.technology/) resta un'ottima opzione per UX e servizi integrati. Il trade-off è che il backup passa comunque dal cloud del dispositivo (Google Drive o iCloud) o da setup equivalenti, anche se cifrato: capite bene questo punto prima di usarlo come wallet principale.
 
 Per guadagnare un minimo di privacy sui nostri resti accumulati nei nostri indirizzi possiamo depositarli sul nostro wallet LN con delle transazioni onchain  
   

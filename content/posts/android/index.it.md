@@ -19,9 +19,9 @@ faq:
   - question: "Cos'è un telefono de-googled e perché dovrei usarlo?"
     answer: "Un telefono de-googled è un dispositivo Android da cui sono stati rimossi i servizi Google. Questo impedisce a Google e ad aziende terze di raccogliere silenziosamente i tuoi dati personali come posizione, contatti e ricerche."
   - question: "Quale sistema operativo Android è il migliore per la privacy?"
-    answer: "GrapheneOS è considerato il più completo e sicuro. LineageOS è un'ottima alternativa compatibile con più dispositivi. Entrambi sono basati su AOSP e privi dei servizi Google."
+    answer: "GrapheneOS resta la scelta migliore sui Pixel supportati. Se il tuo dispositivo non è compatibile, una ROM come LineageOS può essere utile per ridurre la dipendenza da Google, ma non offre lo stesso livello di hardening, verified boot e sicurezza hardware."
   - question: "Come posso installare app senza il Google Play Store?"
-    answer: "Puoi usare Obtainium per scaricare app direttamente da GitHub, Droid-ify come store open source, oppure Aurora Store per accedere al catalogo Play Store tramite account anonimi generati automaticamente."
+    answer: "Puoi usare Obtainium per seguire direttamente le release ufficiali delle app, Droid-ify per il software open source e, su GrapheneOS, il Play Store sandboxed quando serve davvero. Aurora Store oggi è più fragile e va considerato solo come soluzione di ripiego."
   - question: "A cosa serve Shelter e come funziona?"
     answer: "Shelter crea un profilo di lavoro isolato sul telefono, permettendo di separare le app fidate da quelle traccianti come social e app bancarie. I due profili funzionano in parallelo ma non condividono dati tra loro."
   - question: "Come posso far passare tutto il traffico del telefono sotto Tor?"
@@ -34,7 +34,7 @@ faq:
 
 
 > **TL;DR** - In questa guida imparerai:
-> - Come installare e configurare un sistema operativo Android de-googled (LineageOS)
+> - Come scegliere tra GrapheneOS, Android stock ben configurato e ROM alternative
 > - Quali app privacy-friendly usare per sostituire i servizi Google
 > - Come isolare le app traccianti con Shelter e proteggere il traffico dati con Tor
 > - Come gestire permessi, VPN e cloud in modo sicuro
@@ -48,7 +48,9 @@ Questa guida parla di android in generale, ne ho scritta anche una specifica per
 
 ## Sistema operativo
 
-Esistono vari sistemi operativi Android privacy-oriented (GrapheneOS, CalyxOS, etc). In questa guida tratteremo l’approccio usando come base LineageOS, ma è comunque compatibile con ogni altro sistema operativo AOSP. Se possibile consiglio vivamente di usare GrapheneOS in quanto ha funzioni decisamente più avanzate e complete di qualsiasi altro sistema operativo sul mercato.
+Nel 2026 la gerarchia pratica, se vi interessa davvero il rapporto privacy/sicurezza, è questa: **GrapheneOS su Pixel supportato** > **Android stock recente e ben configurato** > **ROM alternative con bootloader sbloccato**. LineageOS, CalyxOS e progetti simili possono essere utili per compatibilità, controllo e riduzione dei servizi Google, ma non vanno considerati equivalenti a GrapheneOS sul piano dell'hardening o delle garanzie di sicurezza hardware.
+
+Se possibile consiglio quindi di usare GrapheneOS. Se il vostro dispositivo non è supportato, LineageOS può comunque avere senso, ma dovete accettare trade-off più marcati su verified boot, patch tempestive e protezioni contro gli attacchi fisici.
 
 Questa guida è stata pensata e studiata per offrire un ottimo bilanciamento tra sicurezza e privacy nell'utilizzo del proprio telefono, procedure come il rooting e lo sblocco del bootloader riducono notevolmente la sicurezza del dispositivo e sono per questo fortemente sconsigliate.
 
@@ -59,7 +61,7 @@ Per semplificare i passi per l’installazione di Lineage facciamo un brevissimo
 3.  Flashare [Lineage OS](https://lineageos.org/)
 4.  Se possibile sul vostro dispositivo ri-bloccare il bootloader
 
-Attenzione, la versione base senza Google apps è di gran lunga preferibile (e fortemente consigliata), ma utilizzando microG senza aggiungere nessun account Google potremo almeno utilizzare i servizi base di Android senza andare incontro a crash e malfunzionamenti di app dipendenti da essi, valutate quale soluzione si adatta meglio alle vostre esigenze. 
+Attenzione: la versione base senza Google apps è preferibile per la privacy, ma nel 2026 conviene valutare con lucidità i trade-off. `microG` migliora la compatibilità, ma resta un compromesso. Su GrapheneOS, se vi servono davvero le app che dipendono da Google, è generalmente più solido usare i **sandboxed Google Play Services** nel profilo in cui vi servono, invece di inseguire soluzioni parziali ovunque.
   
 
 A questo punto ci troveremo con un sistema operativo fresco e appena installato!
@@ -85,7 +87,8 @@ Essendo ora separati dal mondo Google dovremo trovare altri store da cui scarica
 
 *   [Obtainium](https://obtainium.imranr.dev/): É un app updater più che uno store, ha un comportamento simile ai packet manager di linux. Ottima sicurezza e privacy, permette di scaricare e aggiornare le app direttamente dalle varie release su github o repository F-droid.
 *   [Droid-ify](https://www.f-droid.org/packages/com.looker.droidify/): fork di F-Droid con una grafica più curata e alcune funzioni aggiuntive. Uno store di applicazioni open-source e molto ben fatto anche se con qualche trade-off di sicurezza.
-*   [Aurora Store](https://files.auroraoss.com/AuroraStore/Stable/): vi permette di usare il vecchio store Google ma attraverso account fittizi e automaticamente generati all'avvio dell'app, estremamente utile in caso vogliate un esperienza simile al play store ma senza app propietarie.
+*   Su **GrapheneOS**, quando vi servono app proprietarie o dipendenti da Google, il metodo più robusto resta il **Play Store sandboxed** installato dal GrapheneOS App Store.
+*   [Aurora Store](https://files.auroraoss.com/AuroraStore/Stable/): puó ancora essere utile come soluzione di emergenza, ma oggi è meno affidabile rispetto al passato e gli account condivisi anonimi falliscono spesso o vengono limitati.
 
   
 
@@ -93,7 +96,7 @@ Essendo ora separati dal mondo Google dovremo trovare altri store da cui scarica
 
 ![Schermata dell'app Shelter](shelter.webp)
 
-⚠️ Questo passaggio é opzionale, serve principalmente se siete interessati a creare diversi "contenitori" sul vostro telefono isolati tra di loro. Utilizzare Shelter ha ventaggi e svantaggi e fa fatto solo in caso siate interessati alle funzioni che offre. Se pensate di voler isolare alcune app (per esempio messaggistica privata sotto Tor) da altre (Per esempio app invasive lato privacy come quelle bancarie) procedete, se non necessario saltate questa sezione.
+⚠️ Questo passaggio é opzionale, serve principalmente se siete interessati a creare diversi "contenitori" sul vostro telefono isolati tra di loro. Utilizzare Shelter ha vantaggi e svantaggi e va fatto solo se vi servono davvero i profili di lavoro. Su Android 15+ esiste anche **Private Space**, che per molti casi d'uso è più semplice; su GrapheneOS i **profili utente secondari** restano invece la soluzione più forte per compartimentalizzare.
 
 Ora che abbiamo gli store configurati possiamo procedere al download di [Shelter](https://f-droid.org/packages/net.typeblog.shelter/). 
 
@@ -110,7 +113,7 @@ I 2 profili sono perfettamente separati e vedremo le app installate in quello pr
   
 
 *   Dall'app Shelter clonare un'app da un profilo ad un altro (o dai settings usare la funzione installa APK).
-*   Scaricare le app da uno store installato in quel profilo (installate Droid-ify sul profilo principale e pulito mentre Aurora in quello sporco e con le app traccianti).
+*   Scaricare le app da uno store installato in quel profilo (ad esempio Droid-ify/Obtainium nel profilo pulito e, se vi serve software proprietario, Play Store o Aurora nel profilo più "sporco").
 *   Installare APK scaricati da internet (se possibile utilizzate sempre uno store di app, rende più facile e sicuro scaricare e aggiornare i vari software).
 
 I due sistemi saranno isolati, cosa abbastanza scomoda per la gestione dei contatti, galleria, file, ecc.. in quanto ognuno avrà i suoi. Nelle impostazioni di Shelter è possibile attivare una funzione che permette di far parzialmente parlare i due sistemi per la condivisione dei file. Nonostante questo la gestione del tutto rimarrà un po' scomoda fino a quando non ci farete l'abitudine.
@@ -160,14 +163,14 @@ A questo punto possiamo procedere al download delle applicazioni facendo attenzi
 *   [LibreTorrent](https://www.f-droid.org/packages/org.proninyaroslav.libretorrent/): semplice, comodo e veloce client Torrent per Android
 *   [LessPass](https://f-droid.org/packages/com.lesspass.android/): permette di generare password derivate dalla combinazione di sito + nome utente + una password fissa. Nota: il progetto non è più attivamente mantenuto e non permette di ruotare singole password; per la maggior parte degli utenti Bitwarden (sopra) è la scelta migliore
 *   [Molly](https://molly.im/): una versione hardened e ripulita dal codice Google di Signal, portebbe essere una buona idea registrarsi con una SIM comprata senza documenti se legale nel vostro stato
-*   [Nekogram](https://nekogram.app/): client per Telegram che non si appoggia ai servizi Google ed implementa PGP
+*   [Nekogram](https://nekogram.app/): client Telegram comodo e senza dipendenza dai Play Services, ma ricorda che **Telegram non offre E2EE di default** nelle chat normali. Per conversazioni sensibili meglio Signal/Molly o SimpleX
 *   [PipePipe](https://github.com/InfinityLoop1308/PipePipe): client di PeerTube, tutti i video di YouTube ma senza Google!
 *   [Nextcloud](https://f-droid.org/en/packages/com.nextcloud.client/): client per usare e syncare nextcloud, a mio parere il miglior software per farsi un server multimediale in casa
 *   [OpenKeychain](https://www.f-droid.org/packages/org.sufficientlysecure.keychain/): app per gestire le nostre chiavi PGP o per integrarle nelle applicazioni di messaggistica/e-mail
 *   [Simple Bitcoin Wallet](https://www.f-droid.org/packages/com.btcontract.wallet/): wallet open source leggero, veloce e dalla ottima UI per gestire i vostri Bitcoin onchain
 *   [SimpleLogin](https://www.f-droid.org/packages/io.simplelogin.android.fdroid/): una sorta di proxy e-mail anti-spam, crea delle e-mail esca con cui registrarvi ai siti che automaticamente girano le e-mail ad altri indirizzi da voi scelti, in questo modo non dovrete dare la vostra e-mail a siti esterni. Inoltre potete eliminare o sospendere le e-mail esca quando volete in modo da interrompere la ricezione delle e-mail sul vostro account principale
 *   [Simple Crypto Widget](https://f-droid.org/packages/com.brentpanther.bitcoinwidget/): per avere i prezzi aggiornati della vosta criptoval...COFF COFF di Bitcoin sulla vostra home page
-*   [Tor Browser](https://www.torproject.org/download/#downloads-alpha): broswer Tor ufficiale con libreria Tor integrata, utile per navigare online senza rivelare l’indirizzo IP, non garantisce un anonimato al 100% come ogni cosa ma è un ottimo scudo per la privacy, utile per navigare nei siti .onion
+*   [Tor Browser](https://www.torproject.org/download/): browser Tor ufficiale con libreria Tor integrata, utile per navigare online senza rivelare l’indirizzo IP. Non garantisce anonimato perfetto, ma è uno degli strumenti più utili per navigare e usare i siti .onion
 *   [Voice](https://www.f-droid.org/packages/de.ph1b.audiobook/): lettore offline e opensource di audiolibri
 
 Per ulteriori applicazioni, browser e servizi privacy friendly consiglio di dare un occhio a [privacytools](https://www.privacytools.io/) (progetto storico, oggi sostanzialmente sostituito da Privacy Guides), [privacyguides](https://privacyguides.org/providers/) o cercare nelle varie categorie su Droid-ify.
@@ -196,9 +199,7 @@ In caso vogliate essere ulteriormente certi del blocco di internet a queste app,
 
 ## Cloud
 
-La migliore soluzione cloud sarebbe il self hosting con Nextcloud (a mio parere la miglior scelta). In caso ciò non sia possibile, la soluzione a mio parere più semplice e veloce è [Mega.nz](https://mega.nz/) (20 GB gratis e 5 GB di bandwidth ed accetta pagamento in bitcoin per i pro plans). 
-
-Mega non offre particolari funzioni avanzate di privacy ma la user experience é ottima, servizi come proton drive possono essere interessanti anche se al momento un po' acerbi.
+La migliore soluzione cloud sarebbe il self hosting con Nextcloud (a mio parere la miglior scelta). In caso ciò non sia possibile, oggi **Proton Drive** è diventato molto più maturo rispetto a qualche anno fa ed è la soluzione hosted che consiglierei più spesso. [Mega.nz](https://mega.nz/) può ancora avere senso se cercate comodità e spazio gratuito, ma non la considererei la prima scelta per un setup davvero privacy-oriented.
 
 Se vogliamo invece una sicurezza aggiuntiva possiamo usare un cloud in combinazione con [Cryptomator](https://cryptomator.org/) (programma che cripta i file prima dell’upload in cloud).  
   

@@ -39,7 +39,7 @@ faq:
 
 Comprare Bitcoin su exchange centralizzati significa consegnare documenti, selfie e dati bancari a piattaforme che possono essere hackerate o obbligate a condividere le tue informazioni. RoboSats offre un'alternativa radicale: scambi peer-to-peer via Tor, identità usa e getta e nessun documento richiesto. Questa guida ti mostra come usarlo in modo sicuro dall'inizio alla fine.
 
-**Nota (2026):** questa guida è stata scritta per RoboSats v0.1.0. Da allora il progetto si è evoluto significativamente: dalla v0.6.0 RoboSats utilizza un **modello federato** con più coordinatori indipendenti i cui ordini vengono aggregati in un unico libro ordini. L'interfaccia è stata rinnovata e sono state aggiunte funzionalità come notifiche via Nostr e ordini con range. I concetti fondamentali e il flusso di acquisto/vendita descritti in questa guida restano validi.
+**Nota (2026):** questa guida è stata scritta per RoboSats v0.1.0. Da allora il progetto si è evoluto significativamente: dalla v0.6.0 RoboSats utilizza un **modello federato** con più coordinatori indipendenti i cui ordini vengono aggregati in un unico libro ordini. L'interfaccia è stata rinnovata, la messaggistica/notifiche si è spostata verso **Nostr** e nelle release più recenti sono arrivate anche funzioni come range orders e recensioni dei coordinatori. I concetti fondamentali e il flusso di acquisto/vendita descritti in questa guida restano validi, ma l'interfaccia che vedrete potrebbe essere diversa dagli screenshot.
 
 Questa guida ti accompagnerà passo dopo passo nell'utilizzo di RoboSats per acquistare e vendere Bitcoin in modo anonimo e sicuro. Imparerai come generare il tuo account, esplorare i vari ordini, acquistare, vendere e gestire eventuali controversie.
 
@@ -165,7 +165,7 @@ Non appena hai inviato la fiat, dovresti premere il pulsante "Conferma fiat invi
 
 ![Trade completato](img/robosats_trade_complete.webp)
 
-Valutare la piattaforma e lasciare suggerimenti per miglioramenti nel nostro gruppo Telegram o su GitHub Issues è molto apprezzato!
+Valutare la piattaforma e lasciare suggerimenti per miglioramenti su GitHub o nei canali ufficiali di RoboSats è molto apprezzato!
 
 ## Guida 2: Creare un Ordine come Venditore {#guida-2-creare-un-ordine-come-venditore}
 
@@ -187,7 +187,7 @@ Devi copiare o scansionare la fattura con il tuo portafoglio Lightning per blocc
 
 ![Cauzione creatore](img/robosats_maker_bond.webp)
 
-Il tuo ordine sarà pubblico per 24 ore. Puoi controllare il tempo rimanente alla scadenza nella scheda "Ordine". Può essere cancellato in qualsiasi momento senza penalità prima che venga accettato da un altro robot. Tieni aperta la scheda del contratto per essere notificato con un suono. Potrebbe essere meglio farlo su un computer desktop e alzare il volume, così non ti perderai quando il tuo ordine viene accettato. Potrebbe volerci tempo! Forse te ne dimenticherai anche! Puoi anche abilitare le notifiche Telegram premendo "Abilita Notifiche Telegram" e poi premendo "Start" nella chat. Riceverai un messaggio di benvenuto come conferma delle notifiche abilitate. Un altro messaggio verrà inviato una volta che un prenditore per il tuo ordine viene trovato.
+Il tuo ordine sarà pubblico per 24 ore. Puoi controllare il tempo rimanente alla scadenza nella scheda "Ordine". Può essere cancellato in qualsiasi momento senza penalità prima che venga accettato da un altro robot. Tieni aperta la scheda del contratto per essere notificato con un suono. Potrebbe essere meglio farlo su un computer desktop e alzare il volume, così non ti perderai quando il tuo ordine viene accettato. Potrebbe volerci tempo! Forse te ne dimenticherai anche! Nelle versioni moderne puoi anche abilitare le notifiche del coordinatore tramite **Nostr**, così da ricevere avvisi quando il trade cambia stato senza lasciare la scheda aperta tutto il tempo.
 
 **Nota**: se dimentichi il tuo ordine e un robot lo accetta e blocca la sua cauzione di fedeltà, rischi di perdere la tua cauzione di fedeltà non adempiendo ai passaggi contrattuali successivi.
 

@@ -33,7 +33,7 @@ faq:
 > **TL;DR** - In questa guida imparerai:
 > - Cos'è la rete Tor e come funziona il routing a cipolla
 > - Come valutare i rischi tra nodo casalingo e VPS a noleggio
-> - Come installare un nodo Tor (middle o exit relay) con script automatizzato o da sorgente
+> - Come installare un nodo Tor (middle o exit relay) con script automatizzato o tramite pacchetti ufficiali del Tor Project
 > - Come verificare il corretto funzionamento del tuo relay
 
 La rete Tor è uno dei pilastri fondamentali della privacy online, usata da giornalisti, attivisti e chiunque voglia proteggersi dalla sorveglianza. Ma Tor funziona solo grazie ai volontari che mettono a disposizione i propri nodi. Più nodi esistono, più la rete è veloce, sicura e resistente alla censura. Questa guida ti mostra come contribuire attivamente alla rete Tor installando il tuo nodo relay in pochi passi.
@@ -79,7 +79,7 @@ il tuo contributo rendendolo più sicuro e resistente ad attacchi.\
 Ci saranno 2 modi per seguire questa guida:
 
 -   Con script automatizzato creato da me (consigliato)
--   Compilando tutto da sorgente (più complicato)
+-   Con installazione manuale dai pacchetti ufficiali del Tor Project
 
 Prima di procedere però con l\'installazione vera e propria, nella
 prossima sezione analizziamo i rischi e benefici di installare un nodo
@@ -268,7 +268,7 @@ che le cose scritte nel file etc/tor/torrc siano corrette. Potete ora
 saltare direttamente alla sezione sui [controlli post
 installazione](#email).
 
-## Setup del nodo da sorgente {#app style="color: greenyellow;"}
+## Setup manuale dal repository ufficiale {#app style="color: greenyellow;"}
 
 Se intraprendete questa strada perdonatemi ma non potrò assistervi in
 quanto i possibili errori che potete fare nel percorso sono tanti e
@@ -278,6 +278,8 @@ sistemi operativi basati su debian, se volete usare un altro tipo di OS
 sul [sito del TorProject](https://community.torproject.org/relay/setup/)
 ci sono guide per ogni sistema.\
 \
+**Nota:** non stiamo compilando Tor da sorgente locale. Il percorso qui sotto usa i **pacchetti ufficiali** del Tor Project, che nel 2026 restano la scelta più sensata per avere aggiornamenti e manutenzione ordinata su Debian/Ubuntu.
+
 Prerequisiti:
 
 -   Avere un pc debian based pronto all\'uso e con shell aperta

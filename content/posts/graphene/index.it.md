@@ -19,7 +19,7 @@ faq:
   - question: "È sicuro usare un telefono Google per la privacy?"
     answer: "Sì. I Pixel sono i dispositivi di riferimento per lo sviluppo di Android, ricevono grande attenzione da ricercatori di sicurezza e non esistono prove di backdoor intenzionali. GrapheneOS rimuove i servizi Google e aggiunge protezioni avanzate."
   - question: "Quale Google Pixel scegliere per GrapheneOS?"
-    answer: "Per la massima sicurezza si consigliano i Pixel di ottava o nona generazione. Il Pixel 8a è l'opzione più economica. I Pixel 9 Pro con 16 GB di RAM sono ideali se si vogliono usare più profili utente."
+    answer: "Per la massima sicurezza si consigliano i Pixel più recenti supportati. Nel 2026 punterei prima a Pixel 9/10 e relative varianti Pro; il Pixel 9a è la scelta budget più sensata. I modelli Pro con 16 GB di RAM sono ideali se si vogliono usare molti profili utente."
   - question: "Le app Android e i Google Play Services funzionano su GrapheneOS?"
     answer: "GrapheneOS supporta i sandboxed Google Play Services, che permettono di usare le app che richiedono i servizi Google mantenendoli isolati in una sandbox senza privilegi speciali."
   - question: "Come si installa GrapheneOS?"
@@ -166,19 +166,20 @@ ottenere la migliore privacy e sicurezza possibile con i migliori strumenti disp
 
 ### Quale Pixel scegliere?
 
-Per la massima sicurezza, è fortemente consigliato utilizzare un Pixel di ottava o nona generazione. Questi dispositivi
+Per la massima sicurezza, è fortemente consigliato utilizzare uno dei Pixel supportati più recenti. Nel 2026 questo
+significa guardare prima alla nona o decima generazione, mentre l'ottava resta sensata soprattutto se la possedete già.
+Questi dispositivi
 sono
 considerati significativamente più sicuri grazie alle funzionalità hardware che GrapheneOS può sfruttare, come il
-memory tagging. La nona generazione include un modulo radio cellulare ulteriormente migliorato e più efficiente,
+memory tagging. Le generazioni più recenti includono anche modem e componenti radio migliorati,
 quindi se prevedete di utilizzarlo con una SIM, potrete beneficiare di una maggiore sicurezza e durata della batteria.
-I Pixel 9 Pro offrono 16 GB di RAM, particolarmente utili se intendete utilizzare GrapheneOS con più profili utente (i
+I modelli Pro con 16 GB di RAM sono particolarmente utili se intendete utilizzare GrapheneOS con più profili utente (i
 vantaggi di questa funzione saranno spiegati più avanti).
 
-La nona generazione è attualmente in vantaggio anche in
-termini di kernel Linux rafforzato, ma l'ottava generazione dovrebbe essere presto aggiornata, rendendo entrambe le
-generazioni molto simili in termini di sicurezza. Tenendo questo in mente, un Pixel 8a rappresenta il dispositivo
-economico ideale, con qualche compromesso sulle prestazioni. In ogni caso, entrambe le generazioni riceveranno 7 anni
-di supporto completo.
+Se cercate il miglior rapporto qualità/prezzo oggi, il Pixel 9a è probabilmente il punto d'ingresso più sensato.
+Se avete già un Pixel 8/8a potete comunque usarlo serenamente: resta un'ottima base. In ogni caso, controllate sempre
+la [tabella ufficiale sulla durata del supporto](https://grapheneos.org/faq#device-lifetime) prima di comprare un
+dispositivo usato.
 
 > È possibile consultare una tabella sulla durata del supporto per ciascun dispositivo al seguente link:
 > <https://grapheneos.org/faq#device-lifetime>
@@ -226,6 +227,11 @@ crittografico che consente di verificare che la versione di GrapheneOS installat
 
 | Dispositivo | Impronta Digitale della Chiave di Avvio Verificato |
 | ---------------- | ------------------------------------------------------------------ |
+| Pixel 10 Pro Fold | `55a2d44103e56d5ec65496399c417987ba77730e6488fc60ba058d09fc3caee3` |
+| Pixel 10 Pro XL | `141d7fc32af7958a416f2661b37cf6f27bfb376fb5ce616aeaa27a82c7a04f74` |
+| Pixel 10 Pro | `4e8ee8f717754052198ca6d2d3aaa232e2461b4293c0d6f297e519cc778de093` |
+| Pixel 10 | `3f7415ea26f5df5b14ea6d153256071a7a1af9ce7b0970b7311cc463c7ea02c7` |
+| Pixel 9a | `0508de44ee00bfb49ece32c418af1896391abde0f05b64f41bc9a2dfb589445b` |
 | Pixel 9 Pro Fold | `af4d2c6e62be0fec54f0271b9776ff061dd8392d9f51cf6ab1551d346679e24c` |
 | Pixel 9 Pro XL | `55d3c2323db91bb91f20d38d015e85112d038f6b6b5738fe352c1a80dba57023` |
 | Pixel 9 Pro | `f729cab861da1b83fdfab402fc9480758f2ae78ee0b61c1f2137dd1ab7076e86` |
@@ -243,7 +249,8 @@ crittografico che consente di verificare che la versione di GrapheneOS installat
 | Pixel 6 | `f0a890375d1405e62ebfd87e8d3f475f948ef031bbf9ddd516d5f600a23677e8` |
 
 Gli hash variano a seconda del modello di dispositivo, e la lista sopra è stata copiata dalla [pagina del
-web installer](https://grapheneos.org/install/web#verified-boot-key-hash). Anche se improbabile, è possibile che
+web installer](https://grapheneos.org/install/web#verified-boot-key-hash), che resta comunque la fonte canonica se
+venissero aggiunti nuovi modelli. Anche se improbabile, è possibile che
 l'infrastruttura server di GrapheneOS venga compromessa e che gli attaccanti abbiano sostituito sia i file del
 sistema operativo usati durante l'installazione sia l'elenco degli hash delle chiavi. Potete confrontare gli hash
 mostrati sul vostro dispositivo con la tabella sopra per assicurarvi di aver installato una versione
@@ -956,10 +963,9 @@ certificato da Google. Questo colpisce principalmente app bancarie/finanziarie, 
 posizione come Ingress, oltre a alcuni casi strani come l'app McDonald's, Authy e l'app Uber per conducenti.
 Implementando questa funzione, queste app scelgono di vietare l'uso di sistemi operativi alternativi e modificati.
 
-Ciò impedisce anche i pagamenti NFC tramite Google Pay. Una soluzione semplice a questa limitazione è utilizzare un
-Pixel o Galaxy Smart Watch associato a GrapheneOS. Fortunatamente, ci sono altri servizi, come quelli forniti da
-banche europee, che offrono il tap-to-pay funzionante su GrapheneOS. Per gli Stati Uniti, si spera che Curve Pay sarà
-presto disponibile.
+Ciò impedisce anche i pagamenti NFC tramite Google Pay. In pratica, la situazione cambia molto da banca a banca:
+alcune app bancarie europee e alcuni wallet proprietari funzionano, altre no. Considerate i pagamenti contactless su
+GrapheneOS come una funzione da verificare caso per caso, non come una garanzia generale.
 
 Anche se GrapheneOS fornisce lo stesso modello di sicurezza standard di Android stock, Google certifica i sistemi
 operativi non in base alla sicurezza, ma al fatto che siano stati concessi in licenza. Esistono modi per aggirare
@@ -987,10 +993,9 @@ in-app e i controlli delle licenze di app/contenuti. Può installare, aggiornare
 purché autorizzato come sorgente di app e con consenso per ogni azione.
 
 Per utilizzare il livello di compatibilità, installate 'Google Play services' dal GrapheneOS App Store. Questo
-installerà anche il Play Store, che è una dipendenza dei Play Services (non disabilitate l'app store, altrimenti i
-servizi smetteranno di funzionare). L'uso del Play Store richiede l'accesso a un account Google, ma non è necessario
-accedere se state installando i Play Services solo per motivi di compatibilità delle app. Inoltre, alcune app, come
-Signal, devono essere installate _dopo_ i Google Play Services sandboxed per funzionare correttamente.
+installerà anche il Play Store, che è una dipendenza dei Play Services. Sui setup più vecchi, precedenti ad Android 15,
+può comparire anche **Google Services Framework**: se c'è, non rimuovetelo. L'uso del Play Store richiede l'accesso a
+un account Google solo se volete installare app dal Play Store o usare funzioni dipendenti dall'account.
 
 Dopo aver installato i Play Services, riceverete una notifica _"Permesso opzionale mancante"_ dal livello di
 compatibilità. Toccandola, vi verrà chiesto se volete consentire ai Google Play Services di funzionare sempre in
@@ -999,10 +1004,9 @@ della batteria. Accettando, l'uso in background verrà impostato su 'Non ottimiz
 limiterà fortemente l'uso in background in base a quanto viene utilizzato, mentre disabilitarlo impedirà quasi
 totalmente l'uso in background. Scegliete in base all'importanza delle notifiche push tramite FCM per voi.
 
-Se volete evitare
-Google il più possibile, è meglio installarli in un profilo che non intendete utilizzare come principale. Ad esempio,
-se pensate di utilizzare il dispositivo con un solo profilo, sarebbe meglio installare i Play Services nello spazio
-privato del profilo Proprietario. É comunque possibile installare in maniera selettiva i play service dentro i vari prrofili utente, di lavoro o spazi privati.
+Se volete evitare Google il più possibile, potete installarli solo nel profilo in cui vi servono davvero. La scelta
+più semplice resta spesso l'Owner profile; se invece volete compartimentalizzare le app che dipendono da Google,
+installate Play Services in un profilo utente o di lavoro separato e lasciate pulito il resto del dispositivo.
 
 ### Android Auto
 
@@ -1057,8 +1061,9 @@ In Obtainium è possibile cercare pacchetti di app da varie fonti come GitHub e 
 ### Accrescent
 
 [Accrescent](https://accrescent.app/) è uno store di app con un approccio orientato alla sicurezza, guidato da un
-contributore del progetto GrapheneOS. È disponibile nel GrapheneOS App Store, anche se Accrescent è ancora nelle prime
-fasi di sviluppo e contiene attualmente solo una piccola selezione di applicazioni. Il progetto GrapheneOS intende
+contributore del progetto GrapheneOS. È disponibile nel GrapheneOS App Store e, pur avendo ancora un catalogo
+limitato, è una delle direzioni più interessanti per ottenere app con metadati e distribuzione più robusti rispetto a
+F-Droid. Il progetto GrapheneOS intende
 delegare ad Accrescent l'hosting sicuro di un'ampia gamma di applicazioni di terze parti, sia closed-source che
 open-source, mentre il repository di app del sistema operativo sarà limitato alle applicazioni di prima parte e,
 possibilmente, a un piccolo numero di fork utili di terze parti leggermente modificati e rinforzati.
@@ -1114,7 +1119,9 @@ compatibilità o evitarlo è completamente vostra.
 ### Riflessione sui vari store
 Personalmente trovo obtanium un ottima app che peró purtroppo pecca sul fatto che non permette agli utenti di "scoprire" nuove app ma solo di scaricare app specifiche. 
 
-Parlando di droidify, aurora e google secondo me sono tutte scelte generalmente valide in base ai trade-off dell'utente. Il vantaggio di droidify é di non richiedere account ed essere distribuito su vari repositpory aggiungibili anche custom. Aurora é un ottima via di mezzo tra privacy e sicurezza anche se il modo più stabile e sicuro di usarlo é collegandoci un account google creato con dati falsi (l'app é opensource e quindi non richiede di installare nulla collegato al nulla sul nostro dispositivo).
+Parlando di Droidify, Aurora e Google Play, oggi farei questa sintesi: **Droidify/F-Droid** hanno senso per software
+open source se accettate i trade-off di sicurezza; **Google Play** resta la fonte più robusta per le app proprietarie;
+**Aurora** la terrei come opzione secondaria o di emergenza, non come scelta principale.
 
 Il play store di google é la soluzione più sicura ma con i maggiori trade-offs di privacy richiesti (permessi, dipendenze, account e dati personali). Se cercate altissima sicurezza questo rimane il metodo più restistente ad attacchi esdterni. A mio parere tutti gli store soddisfano richieste di mercato divcerse.
 

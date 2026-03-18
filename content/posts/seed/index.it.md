@@ -91,11 +91,11 @@ Questi ultimi 8 bit mancanti devono essere calcolati per formare quello che vien
 
 [Cos'è un checksum](https://en.wikipedia.org/wiki/Checksum)? Un checksum è il modo in cui i computer sanno che hai commesso un errore di battitura quando inserisci dati come il numero della tua carta di credito, del tuo conto bancario o il tuo codice fiscale. Può essere davvero utile che il computer ti avverta se hai commesso un errore di battitura nella tua chiave privata!
 
-Per calcolare il checksum avrai bisogno di un computer Linux o Mac [(la procedura può essere fatta a mano, ma è molto complicata – ecco una guida)](https://armantheparman.com/sha256/). Se hai Windows 10, puoi installare l'app Ubuntu (una versione del terminale di Linux) dal Microsoft Store. Basta cercare "Ubuntu" e installarlo. Utilizzerai il terminale di Ubuntu per eseguire i comandi che seguono.
+Per calcolare il checksum avrai bisogno di un computer Linux o Mac [(la procedura può essere fatta a mano, ma è molto complicata – ecco una guida)](https://armantheparman.com/sha256/). Se usi Windows, oggi la soluzione più pratica è installare **WSL** dal Microsoft Store o dalle funzionalità di sistema e poi aggiungere Ubuntu. Utilizzerai quel terminale Linux per eseguire i comandi che seguono.
 
 Agli utenti Windows consiglio di adottare questa soluzione alternativa. Ne ho provate altre ma ho sempre riscontrato dei problemi. Un'altra soluzione potrebbe essere usare il tool di Massimo Musumeci che però altererebbe l'ordine con cui stiamo facendo le cose in questa guida: [Tool di Massimo](https://github.com/massmux/bip39checksum)
 
-Ora che hai un terminale sul tuo computer Mac, Linux o Windows 10, digita il comando seguente. Sostituisci le mie cifre binarie con le tue cifre binarie casuali (nota che dovrebbe essere tutta una riga molto lunga, anche se il modo in cui viene visualizzato qui potrebbe sembrare diverso):
+Ora che hai un terminale sul tuo computer Mac, Linux o Windows con WSL, digita il comando seguente. Sostituisci le mie cifre binarie con le tue cifre binarie casuali (nota che dovrebbe essere tutta una riga molto lunga, anche se il modo in cui viene visualizzato qui potrebbe sembrare diverso):
 
 > echo 10101111001110000000111101100011 1101011110100101001000101100111101111 0100011000010100011111100100010100011 1100011101010001100111111100001010001 1000101011101000101001111111010100101 0011110110110110000001101111010011000 0011101011010010000100010000100001001 11 | shasum -a 256 -0
 
