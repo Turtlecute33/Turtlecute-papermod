@@ -78,6 +78,10 @@
     opacity: 0.85;
 }
 
+.cta-button:active {
+    transform: scale(0.97);
+}
+
 .cta-button svg {
     flex-shrink: 0;
     transition: transform 0.2s ease;

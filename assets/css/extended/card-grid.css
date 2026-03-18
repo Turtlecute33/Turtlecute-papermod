@@ -11,10 +11,10 @@
   position: absolute;
   background: var(--primary);
   border-radius: 2rem;
-  transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1), width 0.35s cubic-bezier(0.4, 0, 0.2, 1), top 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1), width 0.25s cubic-bezier(0.4, 0, 0.2, 1), top 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 0;
   pointer-events: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(30, 30, 30, 0.12);
 }
 
 .topic-btn {
@@ -26,7 +26,7 @@
   font-size: 0.9rem;
   font-family: inherit;
   cursor: pointer;
-  transition: color 0.3s ease, transform 0.2s ease;
+  transition: color 0.2s ease, transform 0.15s ease;
   position: relative;
   z-index: 1;
 }
@@ -53,6 +53,7 @@
   margin-top: 0.5rem;
   margin-left: -6rem;
   margin-right: -6rem;
+  overflow: hidden;
 }
 
 .posts-grid .post-entry {
@@ -61,17 +62,19 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
 }
 
 .posts-grid .post-entry.fade-out {
   opacity: 0;
   transform: scale(0.95);
+  transition: opacity 0.2s ease-in, transform 0.2s ease-in;
 }
 
 .posts-grid .post-entry.fade-in {
   opacity: 1;
   transform: scale(1);
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
 }
 
 .posts-grid .post-entry .entry-cover {
