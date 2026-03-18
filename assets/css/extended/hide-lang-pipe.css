@@ -1,0 +1,3 @@
+.lang-switch li:first-child {
+    display: none;
+}
