@@ -14,7 +14,7 @@
   transition: left 0.25s cubic-bezier(0.4, 0, 0.2, 1), width 0.25s cubic-bezier(0.4, 0, 0.2, 1), top 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 0;
   pointer-events: none;
-  box-shadow: 0 2px 8px rgba(30, 30, 30, 0.12);
+  box-shadow: none;
 }
 
 .topic-btn {
