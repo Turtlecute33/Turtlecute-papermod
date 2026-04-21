@@ -1,6 +1,7 @@
 User-agent: *
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
 Disallow: /search/
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 {{- else }}
 Disallow: /
 {{- end }}
