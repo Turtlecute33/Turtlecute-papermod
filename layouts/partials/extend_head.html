@@ -82,6 +82,10 @@
 {{/* JSON-LD: Article + BreadcrumbList — post pages only */}}
 {{ if and .IsPage (eq .Section "posts") -}}
 {{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
+{{- $modified := .Lastmod -}}
+{{- with .Params.lastmod -}}
+  {{- $modified = time.AsTime . -}}
+{{- end -}}
 {{- $image := "" -}}
 {{- if .Params.cover.image -}}
   {{- if ne .Params.cover.relative true -}}
@@ -103,7 +107,7 @@
       "headline": {{ .Title | jsonify | safeJS }},
       "description": {{ with .Description }}{{ . | jsonify | safeJS }}{{ else }}{{ .Summary | jsonify | safeJS }}{{ end }},
       "datePublished": {{ .PublishDate.Format $iso8601 | jsonify | safeJS }},
-      "dateModified": {{ .Lastmod.Format $iso8601 | jsonify | safeJS }},
+      "dateModified": {{ $modified.Format $iso8601 | jsonify | safeJS }},
       "author": {
         "@type": "Person",
         "name": {{ with .Params.author }}{{ . | jsonify | safeJS }}{{ else }}"Turtlecute"{{ end }},
@@ -159,6 +163,60 @@
         "text": {{ $item.answer | jsonify | safeJS }}
       }
     }{{ if lt (add $i 1) (len $.Params.faq) }},{{ end }}
+    {{- end }}
+  ]
+}
+</script>
+{{- end }}
+
+{{/* JSON-LD: HowTo — posts with howto frontmatter */}}
+{{ if and .IsPage .Params.howto -}}
+{{- $howto := .Params.howto -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": {{ with $howto.name }}{{ . | jsonify | safeJS }}{{ else }}{{ .Title | jsonify | safeJS }}{{ end }},
+  "description": {{ with $howto.description }}{{ . | jsonify | safeJS }}{{ else }}{{ with .Description }}{{ . | jsonify | safeJS }}{{ else }}{{ .Summary | plainify | jsonify | safeJS }}{{ end }}{{ end }},
+  "inLanguage": {{ site.LanguageCode | jsonify | safeJS }},
+  "mainEntityOfPage": {{ .Permalink | jsonify | safeJS }},
+  {{- with $howto.totalTime }}
+  "totalTime": {{ . | jsonify | safeJS }},
+  {{- end }}
+  {{- with $howto.supply }}
+  "supply": [
+    {{- range $i, $item := . }}
+    {
+      "@type": "HowToSupply",
+      "name": {{ $item | jsonify | safeJS }}
+    }{{ if lt (add $i 1) (len $howto.supply) }},{{ end }}
+    {{- end }}
+  ],
+  {{- end }}
+  {{- with $howto.tool }}
+  "tool": [
+    {{- range $i, $item := . }}
+    {
+      "@type": "HowToTool",
+      "name": {{ $item | jsonify | safeJS }}
+    }{{ if lt (add $i 1) (len $howto.tool) }},{{ end }}
+    {{- end }}
+  ],
+  {{- end }}
+  "step": [
+    {{- range $i, $step := $howto.steps }}
+    {
+      "@type": "HowToStep",
+      "position": {{ add $i 1 }},
+      "name": {{ $step.name | jsonify | safeJS }},
+      "text": {{ $step.text | jsonify | safeJS }}
+      {{- with $step.url }},
+      "url": {{ . | absURL | jsonify | safeJS }}
+      {{- end }}
+      {{- with $step.image }},
+      "image": {{ . | absURL | jsonify | safeJS }}
+      {{- end }}
+    }{{ if lt (add $i 1) (len $howto.steps) }},{{ end }}
     {{- end }}
   ]
 }

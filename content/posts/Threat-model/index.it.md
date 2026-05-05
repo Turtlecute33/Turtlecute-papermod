@@ -5,6 +5,7 @@ summary: "Impara a creare un threat model efficace per proteggere la tua privacy
 keywords: ["modello di minaccia", "privacy", "sicurezza", "protezione dati", "threat modeling"]
 author: "Turtlecute"
 date: 2026-02-24
+lastmod: 2026-05-05
 url: /threat-model
 images: ["/posts/Threat-model/minaccia.png"]
 series: ["Privacy Digitale", "Sicurezza"]
@@ -27,6 +28,32 @@ faq:
     answer: "Definire le minacce come 'big tech' porta solo a spostare la fiducia verso aziende più piccole, che possono essere altrettanto problematiche. Il modo corretto è proteggersi dai fornitori di servizi nel loro complesso, adottando soluzioni tecniche come la crittografia."
   - question: "Cosa significa compartimentazione nella sicurezza digitale?"
     answer: "La compartimentazione consiste nel separare le attività digitali per limitare i danni in caso di compromissione. Si può ottenere usando computer diversi per compiti diversi, macchine virtuali o sistemi operativi con forte sandboxing come Qubes OS o GrapheneOS."
+howto:
+  name: "Come creare un threat model personale"
+  description: "Procedura per identificare asset, minacce, avversari, capacità e contromisure realistiche per privacy e sicurezza digitale."
+  totalTime: "PT45M"
+  supply:
+    - "Lista di account, dispositivi e dati importanti"
+    - "Carta o documento digitale"
+  tool:
+    - "Password manager"
+    - "Checklist di sicurezza"
+  steps:
+    - name: "Definire cosa proteggere"
+      text: "Elenca dati, dispositivi, account, identità e comunicazioni da proteggere."
+      url: "/threat-model#definizione-di-una-minaccia"
+    - name: "Identificare fornitori e tracciamento"
+      text: "Valuta quali servizi possono raccogliere dati e quali attività collegano identità diverse."
+      url: "/threat-model#privacy-dai-fornitori-di-servizi"
+    - name: "Ridurre esposizione pubblica"
+      text: "Limita informazioni pubbliche, separa identità e riduci collegamenti tra account."
+      url: "/threat-model#limitare-le-informazioni-pubbliche"
+    - name: "Proteggersi da malware e accessi"
+      text: "Scegli contromisure proporzionate contro malware, phishing, furto di dispositivi e compromissioni."
+      url: "/threat-model#protezione-da-malware-e-hacker"
+    - name: "Evitare cattive pratiche"
+      text: "Non comprare strumenti a caso: ogni misura deve mitigare una minaccia reale."
+      url: "/threat-model#cattive-pratiche"
 ---
 
 
@@ -35,6 +62,10 @@ faq:
 > - Le 4 categorie principali di minacce: fornitori di servizi, sorveglianza di massa, malware e hacker
 > - Come proteggerti con crittografia end-to-end, separazione delle identità e compartimentazione
 > - Le cattive pratiche da evitare quando costruisci il tuo modello di minaccia
+
+## Sintesi
+
+Un threat model è il processo con cui identifichi cosa vuoi proteggere, da chi, con quali capacità dell'avversario e con quali contromisure realistiche. Senza un modello di minaccia rischi di comprare strumenti inutili, ignorare rischi concreti o rendere la tua vita digitale piu scomoda senza aumentare davvero la sicurezza.
 
 Installare una VPN o passare a Signal non serve a nulla se non sai da chi ti stai proteggendo. Troppi principianti spendono tempo e denaro in strumenti di privacy senza aver prima definito il proprio modello di minaccia, finendo per proteggersi dai rischi sbagliati. Creare un threat model è il primo passo fondamentale: ti permette di capire quali sono le tue reali vulnerabilità e scegliere le contromisure giuste.
 

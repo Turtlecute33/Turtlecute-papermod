@@ -5,6 +5,7 @@ summary: "Scopri come funziona la sicurezza delle email: da STARTTLS a PGP, da S
 keywords: ["sicurezza email", "email security", "crittografia email", "PGP email", "DKIM SPF DMARC", "email privacy", "posta elettronica sicura", "email crittografata", "email sicura italiano", "proteggere email", "email end to end", "proton mail"]
 author: "Turtlecute"
 date: 2026-03-08
+lastmod: 2026-05-05
 url: /email-security
 images: ["/posts/email-security/cover.webp"]
 series: ["Privacy Digitale", "Sicurezza"]
@@ -25,6 +26,35 @@ faq:
     answer: "Attivate il 2FA con chiave hardware, disabilitate HTML e immagini remote nel client, sostituite l'email come metodo di recupero account con codici offline, e considerate un provider con crittografia end-to-end come Proton Mail."
   - question: "Perché l'email è il punto debole della sicurezza online?"
     answer: "L'email è il metodo predefinito di recupero password e 2FA per quasi tutti gli account. Se un attaccante accede alla vostra casella di posta, può resettare le password di tutti i servizi collegati."
+howto:
+  name: "Come proteggere un account email"
+  description: "Procedura per ridurre i rischi dell'email con provider affidabile, MFA, client sicuro, recuperi account separati e autenticazione dominio."
+  totalTime: "PT1H"
+  supply:
+    - "Account email"
+    - "Password manager"
+    - "Chiave hardware FIDO2"
+  tool:
+    - "Client email"
+    - "SPF"
+    - "DKIM"
+    - "DMARC"
+  steps:
+    - name: "Capire il livello di crittografia"
+      text: "Distingui tra TLS in transito, crittografia a riposo e vera crittografia end-to-end."
+      url: "/email-security#crittografia-delle-email"
+    - name: "Proteggere l'accesso"
+      text: "Usa password unica, password manager e 2FA con chiave hardware invece di SMS."
+      url: "/email-security#lemail-come-punto-debole"
+    - name: "Configurare il client"
+      text: "Disattiva immagini remote e HTML non necessario, e riduci plugin o client di terze parti."
+      url: "/email-security#client-di-terze-parti-e-superficie-dattacco"
+    - name: "Autenticare il dominio"
+      text: "Configura SPF, DKIM e DMARC se gestisci un dominio email personale o professionale."
+      url: "/email-security#autenticazione-delle-email"
+    - name: "Separare recuperi e account critici"
+      text: "Evita che una sola casella email possa resettare tutti gli account importanti."
+      url: "/email-security#passkey-e-il-futuro-dellautenticazione"
 ---
 
 > **TL;DR** - In questa guida imparerai:
@@ -32,6 +62,10 @@ faq:
 > - Cosa sono SPF, DKIM e DMARC e come proteggono dalla contraffazione
 > - Perché l'email è il punto debole della sicurezza di tutti i vostri account
 > - Cosa ci riserva il futuro: crittografia end-to-end, DKIM2 e addio alle email in chiaro
+
+## Sintesi
+
+L'email non è sicura di default: protegge male i metadati, spesso usa crittografia solo hop-by-hop e resta il punto di recupero password di quasi tutti gli account. Per ridurre il rischio servono 2FA hardware, provider affidabile, immagini remote disattivate, recuperi account separati e autenticazione dominio con SPF, DKIM e DMARC.
 
 La posta elettronica è il pilastro invisibile della vostra vita digitale. Ogni account che create, ogni password che resettate, ogni comunicazione importante... passa quasi sempre dall'email. Ma vi siete mai chiesti quanto sia effettivamente sicura?
 

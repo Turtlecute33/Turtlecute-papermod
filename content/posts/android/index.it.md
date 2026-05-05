@@ -6,6 +6,7 @@ summary: "Configura un telefono Android de-googled con massima privacy e sicurez
 keywords: ["android privacy", "privacy ita", "android privacy italiano", "degoogle", "privacy phone", "graphene os", "graphene os italiano", "graphene os ita", "degoogle italiano"]
 author: "Turtlecute"
 date: 2026-03-04
+lastmod: 2026-05-05
 weight: 1
 url: /android
 aliases: ["/android.html"]
@@ -30,6 +31,35 @@ faq:
     answer: "Rimuovi tutti i permessi non essenziali, in particolare geolocalizzazione, fotocamera e microfono. Disabilita anche l'accesso a internet per le app che non lo necessitano, come tastiere, calcolatrici e file manager."
   - question: "Ho bisogno di una VPN se uso già Tor con Invizible Pro?"
     answer: "Nel profilo principale con Tor non serve una VPN aggiuntiva. Nel profilo di lavoro con app traccianti, una VPN come Mullvad o Proton può proteggere il traffico dal tuo ISP e filtrare pubblicità e tracker."
+howto:
+  name: "Come configurare Android per privacy e de-googling"
+  description: "Procedura per scegliere il sistema operativo, installare app privacy-friendly, isolare profili, gestire permessi e proteggere il traffico Android."
+  totalTime: "PT2H"
+  supply:
+    - "Telefono Android aggiornato"
+    - "Backup dei dati"
+  tool:
+    - "GrapheneOS"
+    - "Shelter"
+    - "Obtainium"
+    - "Droid-ify"
+    - "Invizible Pro"
+  steps:
+    - name: "Scegliere il sistema operativo"
+      text: "Preferisci GrapheneOS su Pixel supportato, oppure valuta Android stock aggiornato o ROM alternative con trade-off chiari."
+      url: "/android#sistema-operativo"
+    - name: "Configurare il sistema"
+      text: "Riduci servizi non necessari, aggiorna il telefono e limita impostazioni invasive."
+      url: "/android#modifica-e-setup-del-sistema"
+    - name: "Scegliere store e app"
+      text: "Installa app da fonti verificabili come Obtainium, Droid-ify o Play Store sandboxed quando serve."
+      url: "/android#store-per-il-download-delle-app"
+    - name: "Isolare app traccianti"
+      text: "Usa Shelter o profili utente per separare app bancarie, social e servizi piu invasivi."
+      url: "/android#shelter"
+    - name: "Gestire permessi e rete"
+      text: "Rimuovi permessi non essenziali e proteggi il traffico con Tor o VPN in base al profilo."
+      url: "/android#gestione-dei-permessi-delle-app"
 ---
 
 
@@ -38,6 +68,10 @@ faq:
 > - Quali app privacy-friendly usare per sostituire i servizi Google
 > - Come isolare le app traccianti con Shelter e proteggere il traffico dati con Tor
 > - Come gestire permessi, VPN e cloud in modo sicuro
+
+## Sintesi
+
+Per rendere Android piu privato conviene usare GrapheneOS su Pixel supportato quando possibile, installare meno app, limitare permessi e accesso a internet, separare le app traccianti in profili isolati e scegliere store verificabili. Il de-googling migliora la privacy, ma non sostituisce aggiornamenti, verified boot e buone abitudini operative.
 
 Il tuo smartphone sa tutto di te: dove vai, con chi parli, cosa cerchi. Ogni giorno, le app installate sul tuo Android inviano silenziosamente i tuoi dati personali a Google e a decine di aziende terze. Questa guida ti mostra come riprendere il controllo del tuo telefono, eliminando la dipendenza da Google e costruendo un ambiente mobile realmente privato, senza sacrificare la comodità d'uso quotidiana.
 

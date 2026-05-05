@@ -6,6 +6,7 @@ summary: "Scopri come usare Bitcoin proteggendo la tua privacy: dal nodo persona
 keywords: ["bitcoin privacy", "privacy ita", "bitcoin privacy italiano", "bitcoin wallet", "nodo bitcoin"]
 author: "Turtlecute"
 date: 2026-01-29
+lastmod: 2026-05-05
 url: /bitcoin
 images: ["/posts/bitcoin/bitcoin.jpg"]
 series: ["Privacy Bitcoin"]
@@ -28,6 +29,35 @@ faq:
     answer: "Puoi depositare i resti delle transazioni onchain sul tuo wallet Lightning uno alla volta tramite submarine swap, così da sembrare identità diverse sulla blockchain. Poi puoi rimandarli onchain tramite servizi come Boltz, preferibilmente via Tor."
   - question: "Perché non bisogna mai riutilizzare lo stesso indirizzo Bitcoin?"
     answer: "Ogni wallet Bitcoin deriva migliaia di indirizzi da un'unica chiave. Usare un indirizzo diverso per ogni transazione fa apparire le operazioni come provenienti da identità separate, impedendo l'analisi on-chain di collegare le transazioni alla stessa persona."
+howto:
+  name: "Come usare Bitcoin in modo piu privato"
+  description: "Procedura per proteggere privacy finanziaria con nodo personale, acquisto no-KYC, wallet adeguati, gestione UTXO, CoinJoin e Lightning."
+  totalTime: "PT3H"
+  supply:
+    - "Wallet Bitcoin"
+    - "Nodo Bitcoin o accesso a nodo fidato"
+    - "Backup del seed"
+  tool:
+    - "Nodo Bitcoin"
+    - "Wallet privacy-oriented"
+    - "CoinJoin"
+    - "Lightning Network"
+  steps:
+    - name: "Usare un nodo personale"
+      text: "Verifica transazioni e saldi dal tuo nodo per non esporre indirizzi e IP a nodi di terzi."
+      url: "/bitcoin#fare-un-nodo-bitcoin"
+    - name: "Acquistare senza KYC quando possibile"
+      text: "Valuta opzioni peer-to-peer e controlla sempre policy, limiti e rischi del metodo scelto."
+      url: "/bitcoin#acquistare-bitcoin"
+    - name: "Scegliere wallet adatti"
+      text: "Usa wallet non custodial con Tor, coin control e buone pratiche di backup."
+      url: "/bitcoin#i-wallet-bitcoin"
+    - name: "Gestire UTXO e indirizzi"
+      text: "Non riutilizzare indirizzi e separa UTXO con origini o livelli di privacy diversi."
+      url: "/bitcoin#le-transazioni"
+    - name: "Valutare CoinJoin e Lightning"
+      text: "Usa CoinJoin e Lightning solo comprendendo fee, limiti, threat model e rischi operativi."
+      url: "/bitcoin#coinjoin"
 ---
 
 
@@ -36,6 +66,10 @@ faq:
 > - Dove acquistare Bitcoin senza KYC in modo peer-to-peer
 > - Come usare wallet privacy-oriented come Wasabi Wallet
 > - Come ripulire i tuoi UTXO con CoinJoin e Lightning Network
+
+## Sintesi
+
+Per usare Bitcoin in modo piu privato devi evitare KYC quando possibile, non riutilizzare indirizzi, usare un nodo personale, separare gli UTXO, fare attenzione al resto delle transazioni e valutare strumenti come CoinJoin, Lightning e Tor. Bitcoin non è anonimo: la blockchain è pubblica e permanente.
 
 Ogni transazione Bitcoin che fai potrebbe rivelare il tuo saldo, la tua posizione e la tua identità a chiunque analizzi la blockchain. Senza le giuste precauzioni, usare Bitcoin non è molto diverso dall'usare un conto corrente trasparente. Questa guida ti accompagna dalle basi fino alle tecniche avanzate per usare Bitcoin proteggendo realmente la tua privacy finanziaria.
 

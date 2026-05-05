@@ -5,6 +5,7 @@ summary: "Guida dettagliata per blindare il vostro Mac: dalla configurazione ini
 keywords: ["macos sicurezza", "macos privacy", "sicurezza mac", "privacy mac", "macos security", "macos privacy guide", "sicurezza apple", "hardening macos", "firewall mac", "filevault", "macos sicurezza ita", "privacy mac italiano"]
 author: "Turtlecute"
 date: 2026-03-08
+lastmod: 2026-05-05
 url: /macos-security
 images: ["/posts/macos-security/cover.jpg"]
 series: ["Privacy Digitale", "Sicurezza"]
@@ -27,6 +28,38 @@ faq:
     answer: "Firefox è considerato il migliore per la privacy grazie al codice open source, alla protezione dal tracciamento integrata e al supporto per l'hardening avanzato con arkenfox/user.js. Safari è una buona alternativa nativa con Intelligent Tracking Prevention e supporto alla Modalità Lockdown."
   - question: "Come eliminare i metadati e le tracce digitali su macOS?"
     answer: "Usate xattr -d per rimuovere i metadati dai file scaricati, qlmanage -r cache per pulire la cache di QuickLook, e cancellate le directory di LanguageModeling, Spelling e Suggestions in ~/Library per eliminare i dati di digitazione."
+howto:
+  name: "Come proteggere privacy e sicurezza su macOS"
+  description: "Procedura per definire un threat model, configurare FileVault, firewall, DNS, browser, autenticazione, backup e monitoraggio su macOS."
+  totalTime: "PT2H"
+  supply:
+    - "Mac aggiornato"
+    - "Account utente standard"
+    - "Disco o destinazione per backup"
+  tool:
+    - "Impostazioni di Sistema"
+    - "Terminale"
+    - "FileVault"
+    - "LuLu"
+  steps:
+    - name: "Definire il threat model"
+      text: "Identifica asset, avversari, capacità e mitigazioni prima di applicare configurazioni avanzate."
+      url: "/macos-security#threat-modeling"
+    - name: "Configurare account e FileVault"
+      text: "Usa un account standard per il lavoro quotidiano e abilita FileVault per proteggere il disco."
+      url: "/macos-security#account"
+    - name: "Ridurre la superficie di rete"
+      text: "Attiva firewall, modalità stealth, DNS crittografato e un firewall per connessioni in uscita."
+      url: "/macos-security#firewall"
+    - name: "Blindare browser e comunicazioni"
+      text: "Scegli browser orientati alla privacy, configura Tor quando serve e usa messaggistica con crittografia end-to-end."
+      url: "/macos-security#browser"
+    - name: "Gestire password, backup e metadati"
+      text: "Usa password uniche, MFA, backup cifrati e procedure per rimuovere metadati dai file."
+      url: "/macos-security#password"
+    - name: "Monitorare il sistema"
+      text: "Controlla processi, rete, log e strumenti di auditing per rilevare comportamenti anomali."
+      url: "/macos-security#monitoraggio"
 ---
 
 > **TL;DR** - In questa guida imparerete:
@@ -34,6 +67,10 @@ faq:
 > - Come proteggere il traffico di rete con firewall, DNS crittografato, VPN e Tor
 > - Come blindare il browser, gestire password e crittografare i vostri dati con FileVault e GPG
 > - Come monitorare il sistema, eliminare metadati e difendervi da malware e tracciamento
+
+## Sintesi
+
+Per proteggere privacy e sicurezza su macOS conviene partire dal threat model, poi attivare FileVault, aggiornamenti automatici, firewall, DNS crittografato, browser hardened, password manager, backup cifrati e regole di installazione software. Le misure piu estreme, come Lockdown Mode o isolamento via VM, servono solo per profili di rischio elevati.
 
 Il vostro Mac non è una fortezza impenetrabile appena uscito dalla scatola. macOS è un sistema operativo robusto, certo, ma senza le giuste configurazioni lascia aperte più porte di quante pensiate... e ogni porta aperta è un invito per chi vuole ficcare il naso nei vostri affari.
 

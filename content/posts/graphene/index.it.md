@@ -5,6 +5,7 @@ summary: "Tutto su GrapheneOS: installazione, configurazione, profili utente, sa
 keywords: ["Grapheneos","grapheneos ita","graphene os","graphene os italiano","privacy android","degoogle","telefoni anonimi"]
 author: "Turtlecute"
 date: 2026-03-01
+lastmod: 2026-05-05
 weight: 2
 url: /graphene
 images: ["/posts/graphene/graffy.jpg"]
@@ -28,6 +29,36 @@ faq:
     answer: "I profili utente permettono di creare ambienti isolati sullo stesso dispositivo, ciascuno con le proprie app e dati crittografati separatamente. Sono utili per compartimentare attività personali, lavorative e sensibili."
   - question: "GrapheneOS riceve aggiornamenti di sicurezza regolari?"
     answer: "Sì, GrapheneOS riceve aggiornamenti molto frequenti che vengono scaricati e installati automaticamente in background. È sufficiente riavviare il dispositivo per renderli effettivi."
+howto:
+  name: "Come scegliere, installare e configurare GrapheneOS"
+  description: "Procedura pratica per scegliere un Pixel compatibile, installare GrapheneOS, verificare l'avvio sicuro e configurare profili, app e impostazioni privacy."
+  totalTime: "PT2H"
+  supply:
+    - "Google Pixel supportato da GrapheneOS"
+    - "Cavo USB-C affidabile"
+    - "Connessione internet stabile"
+  tool:
+    - "Browser compatibile con WebUSB"
+    - "Web installer ufficiale GrapheneOS"
+  steps:
+    - name: "Scegliere un Pixel supportato"
+      text: "Controlla la tabella ufficiale dei dispositivi supportati e preferisci modelli recenti con lunga finestra di aggiornamenti."
+      url: "/graphene#quale-pixel-scegliere"
+    - name: "Installare GrapheneOS"
+      text: "Usa il web installer ufficiale o la procedura da linea di comando, seguendo le istruzioni del progetto GrapheneOS."
+      url: "/graphene#installazione"
+    - name: "Verificare l'avvio sicuro"
+      text: "Controlla l'hash della chiave di avvio verificato e usa Auditor per attestare che il sistema installato sia integro."
+      url: "/graphene#protezione-contro-manomissioni"
+    - name: "Configurare le impostazioni di sicurezza"
+      text: "Imposta blocco schermo, riavvio automatico, restrizioni USB, superficie wireless e permessi delle app in base al tuo threat model."
+      url: "/graphene#hardening-attraverso-le-impostazioni"
+    - name: "Separare le attività con profili utente"
+      text: "Crea profili separati per lavoro, vita personale, app con Google Play Services e attività sensibili."
+      url: "/graphene#profili-utente-secondari"
+    - name: "Installare e verificare le app"
+      text: "Preferisci fonti affidabili, aggiorna le app regolarmente e usa App Verifier o store con firme controllabili quando possibile."
+      url: "/graphene#applicazioni"
 ---
 
 
@@ -36,6 +67,19 @@ faq:
 > - Come installare e configurare GrapheneOS da zero
 > - Come sfruttare profili utente, sandboxed Play Services e le funzioni di sicurezza avanzate
 > - Troubleshooting: risolvere i problemi più comuni con app e servizi
+
+## Cos'è GrapheneOS e a chi serve?
+
+GrapheneOS è un sistema operativo Android open source orientato a privacy e sicurezza. È pensato per chi vuole ridurre la raccolta dati, aumentare l'isolamento delle app e mantenere compatibilità con molte app Android tramite Google Play Services installabili in sandbox, senza privilegi di sistema.
+
+| Domanda | Risposta breve |
+|---|---|
+| Su quali telefoni funziona? | Solo su Google Pixel supportati ufficialmente. |
+| Serve rinunciare alle app Google? | No: i Google Play Services possono essere installati come app sandboxate. |
+| È adatto a principianti? | Sì, se si accetta di seguire una configurazione guidata e imparare i profili utente. |
+| È anonimo di default? | No. Migliora privacy e sicurezza, ma il risultato dipende dal threat model e dalle app usate. |
+
+**Fonti principali:** documentazione ufficiale GrapheneOS, FAQ del progetto, Android Open Source Project e test pratici su dispositivi Pixel supportati.
 
 Il tuo smartphone è il dispositivo più intimo che possiedi: conosce i tuoi spostamenti, le tue conversazioni, le tue abitudini. I sistemi operativi stock di Android e iOS condividono costantemente questi dati con Google e Apple. GrapheneOS è l'unica alternativa che offre sicurezza di livello enterprise senza compromettere la tua privacy. Questa guida ti accompagna dalla scelta del dispositivo fino alla configurazione avanzata.
 

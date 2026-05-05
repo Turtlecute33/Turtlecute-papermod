@@ -60,6 +60,10 @@
 {{- if .IsPage }}
 {{/* BlogPosting — skip for post pages, extend_head.html handles those */}}
 {{- if not (eq .Section "posts") }}
+{{- $modified := .Lastmod -}}
+{{- with .Params.lastmod -}}
+  {{- $modified = time.AsTime . -}}
+{{- end -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -86,7 +90,7 @@
     {{- end}}
   {{- end -}}
   "datePublished": {{ .PublishDate | jsonify | safeJS }},
-  "dateModified": {{ .Lastmod | jsonify | safeJS }},
+  "dateModified": {{ $modified | jsonify | safeJS }},
   {{- with (.Params.author | default site.Params.author) }}
   "author":
     {{- if (or (eq (printf "%T" .) "[]string") (eq (printf "%T" .) "[]interface {}")) -}}

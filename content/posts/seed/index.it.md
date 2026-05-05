@@ -5,6 +5,7 @@ summary: "Genera una frase mnemonica Bitcoin di 24 parole usando solo dadi, cart
 keywords: ["seed", "seed bitcoin", "seed con dadi", "dadi bitcoin", "seed bitcoin ita"]
 author: "Turtlecute"
 date: 2026-01-22
+lastmod: 2026-05-05
 url: /seed
 images: ["/posts/seed/seed.png"]
 series: ["Privacy Bitcoin"]
@@ -27,6 +28,31 @@ faq:
     answer: "Il BIP 39 è uno standard che definisce 2048 parole ordinate alfabeticamente. Ogni gruppo di 11 bit del seed viene convertito in un numero decimale (da 0 a 2047) che indica la parola corrispondente nella lista."
   - question: "Quale sistema operativo è consigliato per generare il seed in sicurezza?"
     answer: "TailsOS è un'ottima scelta perché è un sistema amnesico che cancella tutti i dati allo spegnimento. Installalo su un disco esterno e usalo su un PC senza scheda wireless. Ricorda di trascrivere il seed su carta prima di spegnere."
+howto:
+  name: "Come generare un seed Bitcoin di 24 parole con i dadi"
+  description: "Procedura manuale per creare entropia, calcolare checksum e convertire i bit in una frase mnemonica BIP39."
+  totalTime: "PT2H"
+  supply:
+    - "Dadi"
+    - "Carta"
+    - "Matita"
+    - "Lista parole BIP39"
+  tool:
+    - "Computer air-gapped"
+    - "Calcolatore SHA256 offline"
+  steps:
+    - name: "Generare 256 bit di entropia"
+      text: "Lancia i dadi e trasforma ogni risultato in bit fino a ottenere 23 righe da 11 bit e una riga finale da 3 bit."
+      url: "/seed#passo-1-crea-numeri-binari-con-entropia"
+    - name: "Calcolare il checksum"
+      text: "Calcola SHA256 dei 256 bit di entropia e usa i primi 8 bit dell'hash per completare la ventiquattresima parola."
+      url: "/seed#passo-2-calcolare-il-checksum"
+    - name: "Convertire i gruppi binari"
+      text: "Converti ogni gruppo di 11 bit in un numero decimale compreso tra 0 e 2047."
+      url: "/seed#passo-3-conversione-da-binario-a-decimale"
+    - name: "Trovare le parole BIP39"
+      text: "Cerca ogni numero nella lista parole BIP39 e trascrivi la frase mnemonica completa su supporto fisico."
+      url: "/seed#passo-4-cerca-il-bip-39"
 ---
 
 > **TL;DR** - In questa guida imparerai:
@@ -34,6 +60,10 @@ faq:
 > - Come calcolare il checksum per completare la 24a parola del seed
 > - Come convertire i numeri binari in parole BIP39 a mano
 > - Le precauzioni di sicurezza per generare chiavi su un computer air-gapped
+
+## Sintesi
+
+Per generare un seed Bitcoin con i dadi devi creare 256 bit di entropia reale, calcolare il checksum SHA256, dividere il risultato in gruppi da 11 bit e convertire ogni gruppo nella parola corrispondente della lista BIP39. La procedura va fatta offline, idealmente su un computer air-gapped.
 
 Quando crei un wallet Bitcoin, il software genera il tuo seed in modo automatico. Ma ti sei mai chiesto: quanto è davvero casuale quel processo? E se il software fosse compromesso? Generare il seed manualmente con i dadi ti dà la certezza matematica che nessun software, malware o backdoor possa mai conoscere le tue chiavi private. In questa guida imparerai a farlo passo dopo passo.
 

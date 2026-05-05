@@ -5,6 +5,7 @@ summary: "Guida completa al Linux hardening in italiano: scelta della distro sic
 keywords: ["linux hardening", "linux sicurezza", "hardening linux italiano", "linux security", "sicurezza linux guida", "linux distro privacy", "fedora hardening", "secureblue", "linux firewall", "cifratura disco linux", "LUKS cifratura", "flatpak sicurezza", "kernel hardening", "secure boot linux", "linux desktop sicuro", "hardening kernel linux", "wayland sicurezza"]
 author: "Turtlecute"
 date: 2026-03-10
+lastmod: 2026-05-05
 url: /linux-hardening
 images: ["/posts/linux-hardening/cover.jpg"]
 series: ["Privacy Digitale", "Sicurezza"]
@@ -25,6 +26,38 @@ faq:
     answer: "Flatpak isola le applicazioni con namespace e permessi granulari, ed è la soluzione consigliata per la maggior parte degli utenti. Firejail è utile per le app non disponibili come Flatpak, ma è un binario SUID con una superficie d'attacco più ampia. Usate Flatpak dove possibile."
   - question: "Come faccio a verificare che il mio Linux sia hardened?"
     answer: "Usate Lynis (sudo lynis audit system) per un audit completo. Verificate manualmente che il firewall sia attivo, SELinux/AppArmor sia in enforcing, i parametri kernel siano applicati (cat /proc/cmdline) e che non ci siano servizi non necessari in ascolto (ss -tulnp)."
+howto:
+  name: "Come fare hardening di un sistema Linux desktop"
+  description: "Procedura per scegliere una distribuzione sicura, cifrare il disco, configurare rete, kernel, sandboxing, Secure Boot, servizi e verifiche di sicurezza."
+  totalTime: "PT3H"
+  supply:
+    - "Computer compatibile con Linux"
+    - "Distribuzione Linux aggiornata"
+    - "Backup dei dati"
+  tool:
+    - "LUKS"
+    - "Firewall"
+    - "Flatpak"
+    - "Lynis"
+  steps:
+    - name: "Scegliere la distribuzione"
+      text: "Preferisci distribuzioni aggiornate, con SELinux o AppArmor, buoni rollback e supporto Wayland."
+      url: "/linux-hardening#scelta-distro"
+    - name: "Installare con cifratura disco"
+      text: "Abilita LUKS, configura swap sicuro e scegli username e hostname non identificanti."
+      url: "/linux-hardening#installazione"
+    - name: "Configurare rete e firewall"
+      text: "Imposta firewall, DNS sicuro, randomizzazione MAC e sincronizzazione oraria affidabile."
+      url: "/linux-hardening#rete"
+    - name: "Applicare hardening kernel"
+      text: "Configura sysctl, parametri di boot, moduli kernel e mitigazioni di memoria."
+      url: "/linux-hardening#kernel"
+    - name: "Isolare le applicazioni"
+      text: "Preferisci Flatpak, configura permessi granulari e valuta Firejail o MAC solo dove necessario."
+      url: "/linux-hardening#sandboxing"
+    - name: "Verificare il setup"
+      text: "Controlla firewall, servizi, parametri kernel, sandbox e audit con tool dedicati."
+      url: "/linux-hardening#verifica"
 ---
 
 > **TL;DR** - In questa guida imparerai:
@@ -32,6 +65,10 @@ faq:
 > - Come configurare cifratura disco, firewall e hardening del kernel fin dall'installazione
 > - Come isolare le applicazioni con Flatpak, Firejail e sandboxing avanzato
 > - Come verificare che il tuo sistema sia effettivamente protetto con test pratici
+
+## Sintesi
+
+Il Linux hardening consiste nel ridurre superficie d'attacco e impatto di una compromissione: distro aggiornata, cifratura disco, firewall, DNS sicuro, kernel hardening, sandboxing delle app, Secure Boot, controllo dei servizi e audit periodici. Linux non è sicuro automaticamente: diventa più robusto quando queste misure sono configurate in modo coerente.
 
 Il mondo Linux è spesso dipinto come un paradiso di sicurezza: basta installare una distro qualsiasi e magicamente sei al sicuro da tutto. La realtà è un po' diversa. Un sistema Linux desktop, senza le giuste configurazioni, può essere sorprendentemente vulnerabile. La buona notizia? Con le conoscenze giuste e un po' di pazienza potete trasformare il vostro setup in una vera fortezza.
 

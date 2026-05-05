@@ -5,6 +5,7 @@ summary: "Impara a usare JoinMarket per fare coinjoin su Bitcoin: installazione,
 keywords: ["Bitcoin", "coinjoin", "joinmarket", "payjoin", "wasabi wallet", "samurai wallet", "joinmarket ita", "jam italiano", "jbitcoin ita"]
 author: "Turtlecute"
 date: 2026-02-08
+lastmod: 2026-05-05
 url: /joinmarket
 images: ["/posts/joinmarket/jm.webp"]
 series: ["Privacy Bitcoin"]
@@ -27,6 +28,33 @@ faq:
     answer: "Un fidelity bond è un deposito di bitcoin bloccato fino a una data di scadenza che aumenta la reputazione del maker sul mercato. Permette di essere scelti più frequentemente come controparte nei CoinJoin, ma i fondi non possono essere mossi fino alla scadenza."
   - question: "Su quali sistemi operativi posso installare JoinMarket?"
     answer: "JoinMarket è installabile su diversi sistemi per nodi Bitcoin tra cui Raspiblitz, Umbrel, MyNode e Raspibolt. Su Raspiblitz si attiva dalla sezione SERVICES, mentre su MyNode è già preinstallato."
+howto:
+  name: "Come usare JoinMarket per fare CoinJoin su Bitcoin"
+  description: "Procedura per installare JoinMarket, configurare il wallet, eseguire CoinJoin singoli, fare da maker e usare il tumbler."
+  totalTime: "PT2H"
+  supply:
+    - "Nodo Bitcoin"
+    - "Bitcoin da mixare"
+    - "Indirizzi di destinazione"
+  tool:
+    - "JoinMarket"
+    - "Terminale"
+  steps:
+    - name: "Installare JoinMarket"
+      text: "Installa JoinMarket sul tuo nodo o sistema supportato e accedi all'ambiente dedicato."
+      url: "/joinmarket#installazione"
+    - name: "Configurare il wallet"
+      text: "Crea o importa il wallet JoinMarket e controlla il file di configurazione prima di muovere fondi."
+      url: "/joinmarket#file-di-configurazione"
+    - name: "Preparare l'ambiente di lavoro"
+      text: "Verifica connessione al nodo Bitcoin, mixdepth, indirizzi e impostazioni operative."
+      url: "/joinmarket#setup-dellambiente-di-lavoro"
+    - name: "Inviare bitcoin con CoinJoin"
+      text: "Esegui un CoinJoin singolo scegliendo importo, fee, controparti e indirizzo di destinazione."
+      url: "/joinmarket#inviare-bitcoin-con-coinjoin-singolo"
+    - name: "Usare maker o tumbler"
+      text: "Offri liquidità come maker oppure usa il tumbler per distribuire i fondi su piu output con maggiore privacy."
+      url: "/joinmarket#tumbler"
 ---
 
 # JOINMARKET
@@ -37,6 +65,10 @@ faq:
 > - Come installare e configurare JoinMarket sul tuo nodo Bitcoin
 > - Come inviare bitcoin con coinjoin, fare da maker e guadagnare satoshi
 > - Come usare il tumbler per ottenere il massimo livello di privacy sui tuoi UTXO
+
+## Sintesi
+
+JoinMarket è un wallet e protocollo CoinJoin per Bitcoin senza coordinatore centrale. I taker pagano per creare CoinJoin, i maker offrono liquidità e ricevono fee. È utile per migliorare la privacy onchain, ma richiede gestione attenta di UTXO, mixdepth, fee, indirizzi di destinazione e threat model.
 
 Le tue transazioni Bitcoin sono pubbliche e tracciabili. Ogni volta che invii o ricevi satoshi, un analista della blockchain potrebbe collegare i tuoi movimenti alla tua identità. JoinMarket risolve questo problema permettendoti di fare coinjoin in modo totalmente trustless e decentralizzato, senza affidarti a nessun coordinatore centrale. In questa guida imparerai a usarlo dalla A alla Z.
 

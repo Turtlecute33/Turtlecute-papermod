@@ -5,6 +5,7 @@ summary: "Guida passo-passo a RoboSats: acquista e vendi Bitcoin in modo anonimo
 keywords: ["RoboSats", "Bitcoin", "P2P", "no KYC", "guida RoboSats", "Bitcoin anonimo"]
 author: "Turtlecute"
 date: 2026-02-17
+lastmod: 2026-05-05
 url: /robosats
 images: ["/posts/Robosats/img/robosats1.webp"]
 series: ["Privacy Bitcoin"]
@@ -27,6 +28,32 @@ faq:
     answer: "Un ordine non può essere inferiore a 20.000 satoshi né superiore a 4.000.000 di satoshi, per evitare problemi di routing sulla rete Lightning."
   - question: "Posso annullare un ordine su RoboSats dopo averlo accettato?"
     answer: "Sì, tramite annullamento collaborativo, a patto che l'acquirente non abbia ancora confermato l'invio della fiat. Dopo la conferma, l'annullamento richiede l'apertura di una controversia."
+howto:
+  name: "Come comprare Bitcoin P2P con RoboSats"
+  description: "Procedura per accedere a RoboSats via Tor, creare un robot, accettare o pubblicare ordini e completare uno scambio P2P senza KYC."
+  totalTime: "PT45M"
+  supply:
+    - "Wallet Lightning"
+    - "Metodo di pagamento fiat concordato"
+  tool:
+    - "Tor Browser"
+    - "RoboSats"
+  steps:
+    - name: "Accedere a RoboSats con Tor"
+      text: "Apri Tor Browser e visita l'indirizzo ufficiale di RoboSats o usa l'app Android verificata."
+      url: "/robosats#introduzione"
+    - name: "Generare un avatar robot"
+      text: "Crea un'identità usa e getta e conserva il token necessario per recuperare il robot durante il trade."
+      url: "/robosats#generazione-dellavatar"
+    - name: "Esplorare il libro ordini"
+      text: "Filtra gli ordini per valuta, metodo di pagamento, importo, premio e coordinatore."
+      url: "/robosats#esplorazione-del-libro-degli-ordini"
+    - name: "Accettare o creare un ordine"
+      text: "Segui il flusso per comprare come acquirente oppure pubblica un ordine come venditore."
+      url: "/robosats#guida-1-accettare-un-ordine-come-acquirente"
+    - name: "Completare pagamento e rilascio"
+      text: "Invia la fiat, conferma il pagamento, ricevi i satoshi via Lightning e conserva prove utili in caso di controversia."
+      url: "/robosats#controversie"
 ---
 
 ![Schermata iniziale RoboSats](img/robosats1.webp)
@@ -36,6 +63,10 @@ faq:
 > - Come creare un'identità robot usa e getta per ogni scambio
 > - Come acquistare Bitcoin come compratore e come creare ordini di vendita
 > - Come gestire controversie e annullamenti in sicurezza
+
+## Sintesi
+
+RoboSats permette di comprare e vendere Bitcoin peer-to-peer tramite Tor senza KYC. Ogni scambio usa un robot temporaneo, una cauzione Lightning e un coordinatore che gestisce eventuali controversie. È utile per ridurre l'esposizione dei dati personali, ma richiede attenzione a importi, metodi di pagamento e prove del trade.
 
 Comprare Bitcoin su exchange centralizzati significa consegnare documenti, selfie e dati bancari a piattaforme che possono essere hackerate o obbligate a condividere le tue informazioni. RoboSats offre un'alternativa radicale: scambi peer-to-peer via Tor, identità usa e getta e nessun documento richiesto. Questa guida ti mostra come usarlo in modo sicuro dall'inizio alla fine.
 

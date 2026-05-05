@@ -5,6 +5,7 @@ summary: "Impara a configurare un nodo Tor (middle relay o exit) su VPS o in loc
 keywords: ["Tor", "tor browser", "tor ita", "tor relay", "nodo tor", "tor italiano", "guida tor"]
 author: "Turtlecute"
 date: 2026-01-07
+lastmod: 2026-05-05
 url: /tor
 images: ["/posts/tor/torino.webp"]
 series: ["Sicurezza"]
@@ -27,6 +28,30 @@ faq:
     answer: "Lo script automatizzato supporta Debian e Ubuntu. Per altri sistemi operativi, il sito ufficiale del Tor Project mette a disposizione guide specifiche per ogni OS."
   - question: "Come si configura la banda del nodo Tor?"
     answer: "Nel file /etc/tor/torrc si imposta la banda settimanale con il parametro AccountingMax. Ad esempio, con 1 TB mensile si può impostare 250 GB a settimana. Le unità accettate sono MB, GB e TB."
+howto:
+  name: "Come configurare un nodo Tor relay"
+  description: "Procedura per valutare i rischi, scegliere VPS o rete domestica, installare Tor e verificare che il relay sia visibile sulla rete."
+  totalTime: "PT1H"
+  supply:
+    - "Server VPS o macchina locale"
+    - "Connessione con banda stabile"
+  tool:
+    - "SSH"
+    - "Tor"
+    - "Nyx"
+  steps:
+    - name: "Valutare rischi e posizione del nodo"
+      text: "Decidi se usare una VPS o una rete domestica e scegli tra middle relay ed exit relay in base al tuo threat model."
+      url: "/tor#set"
+    - name: "Installare Tor"
+      text: "Usa lo script automatizzato della guida oppure installa Tor dai repository ufficiali del Tor Project."
+      url: "/tor#shelter"
+    - name: "Configurare torrc"
+      text: "Imposta nickname, contatto, porte, banda e ruolo del relay nel file di configurazione."
+      url: "/tor#app"
+    - name: "Verificare il funzionamento"
+      text: "Controlla i log di sistema, monitora il relay con Nyx e cerca il nodo su Tor Metrics dopo qualche ora."
+      url: "/tor#email"
 ---
 
 
@@ -35,6 +60,10 @@ faq:
 > - Come valutare i rischi tra nodo casalingo e VPS a noleggio
 > - Come installare un nodo Tor (middle o exit relay) con script automatizzato o tramite pacchetti ufficiali del Tor Project
 > - Come verificare il corretto funzionamento del tuo relay
+
+## Sintesi
+
+Un nodo Tor è un server volontario che inoltra traffico nella rete Tor. Per contribuire in modo prudente conviene iniziare con un middle relay su VPS o macchina dedicata, configurare limiti di banda realistici, mantenere il sistema aggiornato e verificare il relay tramite log, Nyx e Tor Metrics.
 
 La rete Tor è uno dei pilastri fondamentali della privacy online, usata da giornalisti, attivisti e chiunque voglia proteggersi dalla sorveglianza. Ma Tor funziona solo grazie ai volontari che mettono a disposizione i propri nodi. Più nodi esistono, più la rete è veloce, sicura e resistente alla censura. Questa guida ti mostra come contribuire attivamente alla rete Tor installando il tuo nodo relay in pochi passi.
 

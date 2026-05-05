@@ -5,6 +5,7 @@ summary: "Crea la tua VPN privata con Wireguard, Pi-Hole e Unbound DNS. Blocca a
 keywords: ["vpn", "vpn ita", "vpn self hosted", "wireguard", "pihole", "unbound dns", "wireguard ita", "vpn privacy"]
 author: "Turtlecute"
 date: 2026-01-15
+lastmod: 2026-05-05
 url: /vpn
 images: ["/posts/vpn/vpn.webp"]
 series: ["Privacy Digitale", "Sicurezza"]
@@ -27,6 +28,34 @@ faq:
     answer: "Visita vpntesting.com per controllare che il tuo IP corrisponda a quello del server VPN. Poi testa l'adblocker su d3ward.github.io/toolz/adblock.html: un risultato superiore al 70-80% indica che tutto funziona."
   - question: "Una VPN self-hosted mi rende completamente anonimo?"
     answer: "No. L'IP in uscita è usato solo da te, quindi è più facile da tracciare rispetto a una VPN condivisa. Inoltre il provider VPS può vedere il tuo IP reale, quindi è importante sceglierlo con attenzione."
+howto:
+  name: "Come creare una VPN self-hosted con Wireguard, Pi-Hole e Unbound"
+  description: "Procedura per scegliere una VPS, installare Wireguard, aggiungere blocco DNS con Pi-Hole e usare Unbound come resolver locale."
+  totalTime: "PT1H30M"
+  supply:
+    - "Server VPS Debian o Ubuntu"
+    - "Dominio o indirizzo IP pubblico"
+  tool:
+    - "SSH"
+    - "Wireguard"
+    - "Pi-Hole"
+    - "Unbound"
+  steps:
+    - name: "Scegliere il provider VPS"
+      text: "Valuta giurisdizione, costi, banda inclusa, metodi di pagamento e policy del provider prima di acquistare il server."
+      url: "/vpn#scelta-dellhosting-provider"
+    - name: "Connettersi al server con SSH"
+      text: "Accedi alla VPS via SSH, aggiorna il sistema e prepara l'ambiente di installazione."
+      url: "/vpn#connessione-al-server-vps-con-ssh"
+    - name: "Installare Wireguard"
+      text: "Configura Wireguard come server VPN e genera i profili client per i dispositivi che useranno il tunnel."
+      url: "/vpn#setup-della-vpn"
+    - name: "Configurare Pi-Hole e Unbound"
+      text: "Installa Pi-Hole per filtrare ads e tracker, poi configura Unbound come resolver DNS locale."
+      url: "/vpn#configurazione-pihole-e-adlists"
+    - name: "Esportare e testare le configurazioni"
+      text: "Importa i profili Wireguard sui client e verifica IP pubblico, leak DNS e blocco pubblicità."
+      url: "/vpn#test-di-funzionamento"
 ---
 
 
@@ -35,6 +64,10 @@ faq:
 > - Come installare e configurare Wireguard come server VPN
 > - Come aggiungere Pi-Hole per bloccare ads e tracker a livello DNS
 > - Come configurare Unbound per risolvere i DNS in autonomia senza terze parti
+
+## Sintesi
+
+Una VPN self-hosted con Wireguard, Pi-Hole e Unbound cifra il traffico tra i tuoi dispositivi e una VPS, blocca molte richieste verso ads e tracker a livello DNS e risolve i domini senza dipendere da un resolver commerciale. Non rende anonimi: sposta la fiducia dal provider VPN al provider VPS.
 
 Le VPN commerciali promettono privacy, ma spesso il loro modello di business si basa proprio sulla raccolta dei tuoi dati. L'alternativa? Costruirti la tua VPN personale. Con Wireguard, Pi-Hole e Unbound puoi avere una connessione cifrata, un blocco ads/tracker integrato e una risoluzione DNS completamente autonoma — il tutto sotto il tuo controllo. Ecco come fare.
 
