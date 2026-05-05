@@ -1,6 +1,6 @@
 ---
 title: "Chi Sono"
-description: "Turtlecute: educatore Bitcoin, sostenitore della privacy digitale e ricercatore di sicurezza informatica. Guide gratuite su GrapheneOS, Bitcoin, self-hosting e sicurezza digitale."
+description: "Turtlecute: educatore Bitcoin e ricercatore di sicurezza informatica. Guide gratuite su GrapheneOS, Bitcoin, self-hosting e privacy digitale."
 keywords: ["turtlecute", "privacy digitale", "bitcoin educatore", "grapheneos", "sicurezza informatica", "self-hosting"]
 author: "Turtlecute"
 url: /about

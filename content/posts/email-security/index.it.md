@@ -1,5 +1,5 @@
 ---
-title: "Sicurezza Email: Guida Completa a Crittografia e Autenticazione"
+title: "Sicurezza Email: Crittografia, SPF, DKIM e DMARC"
 description: "Scopri come funziona la sicurezza delle email: da STARTTLS a PGP, da SPF e DKIM a DMARC. Guida italiana completa con consigli pratici per proteggere la posta elettronica."
 summary: "Scopri come funziona la sicurezza delle email: da STARTTLS a PGP, da SPF e DKIM a DMARC. Guida italiana completa con consigli pratici per proteggere la posta elettronica."
 keywords: ["sicurezza email", "email security", "crittografia email", "PGP email", "DKIM SPF DMARC", "email privacy", "posta elettronica sicura", "email crittografata", "email sicura italiano", "proteggere email", "email end to end", "proton mail"]

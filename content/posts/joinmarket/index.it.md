@@ -1,5 +1,5 @@
 ---
-title: "JoinMarket: Guida Completa ai CoinJoin su Bitcoin"
+title: "JoinMarket CoinJoin Bitcoin: Guida Completa"
 description: "Impara a usare JoinMarket per fare coinjoin su Bitcoin: installazione, configurazione, tumbler e maker. Tutorial pratico in italiano."
 summary: "Impara a usare JoinMarket per fare coinjoin su Bitcoin: installazione, configurazione, tumbler e maker. Tutorial pratico in italiano."
 keywords: ["Bitcoin", "coinjoin", "joinmarket", "payjoin", "wasabi wallet", "samurai wallet", "joinmarket ita", "jam italiano", "jbitcoin ita"]
@@ -56,9 +56,6 @@ howto:
       text: "Offri liquidità come maker oppure usa il tumbler per distribuire i fondi su piu output con maggiore privacy."
       url: "/joinmarket#tumbler"
 ---
-
-# JOINMARKET
-
 
 > **TL;DR** - In questa guida imparerai:
 > - Cos'è JoinMarket e come funziona il mixing trustless e decentralizzato

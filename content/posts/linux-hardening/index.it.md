@@ -1,5 +1,5 @@
 ---
-title: "Linux Hardening: Guida Completa dalla Scelta della Distro alla Sicurezza Totale"
+title: "Linux Hardening: Guida Completa alla Sicurezza"
 description: "Guida completa al Linux hardening in italiano: scelta della distro sicura, cifratura disco LUKS, firewall, kernel hardening, sandboxing Flatpak e Secure Boot."
 summary: "Guida completa al Linux hardening in italiano: scelta della distro sicura, cifratura disco LUKS, firewall, kernel hardening, sandboxing Flatpak e Secure Boot."
 keywords: ["linux hardening", "linux sicurezza", "hardening linux italiano", "linux security", "sicurezza linux guida", "linux distro privacy", "fedora hardening", "secureblue", "linux firewall", "cifratura disco linux", "LUKS cifratura", "flatpak sicurezza", "kernel hardening", "secure boot linux", "linux desktop sicuro", "hardening kernel linux", "wayland sicurezza"]
