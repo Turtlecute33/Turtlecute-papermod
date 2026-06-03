@@ -4,6 +4,7 @@ baseURL: "https://turtlecute.org"
 title: Turtlecute.org
 defaultContentLanguage: it
 languageCode: it-IT
+timeZone: Europe/Rome
 copyright: "© [Non sono comunista, non ci sono copyright](LICENSE)"
 theme: [WonderMod]
 
