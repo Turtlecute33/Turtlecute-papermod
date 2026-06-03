@@ -61,9 +61,6 @@ howto:
       url: "/claude-code#verifica-finale-tutto-sotto-controllo"
 ---
 
-![Claude Code: guida completa da zero ad avanzato per il terminale](cover.webp)
-*Claude Code vive nel terminale: un assistente agentico che legge, scrive ed esegue codice, ma solo con i permessi che decidi tu.*
-
 > **TL;DR**: In questa guida imparerai:
 > - Come installare, autenticare e muovere i primi passi con **Claude Code**
 > - Come scrivere un file **CLAUDE.md** efficace per dare contesto e regole al tuo progetto
