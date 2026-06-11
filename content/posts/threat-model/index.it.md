@@ -7,7 +7,7 @@ author: "Turtlecute"
 date: 2026-02-24
 lastmod: 2026-05-05
 url: /threat-model
-images: ["/posts/Threat-model/minaccia.png"]
+images: ["/posts/threat-model/minaccia.png"]
 series: ["Privacy Digitale", "Sicurezza"]
 topics: ["privacy-security"]
 cover:

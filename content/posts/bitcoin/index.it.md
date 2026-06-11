@@ -8,11 +8,11 @@ author: "Turtlecute"
 date: 2026-01-29
 lastmod: 2026-05-05
 url: /bitcoin
-images: ["/posts/bitcoin/bitcoin.jpg"]
+images: ["/posts/bitcoin/cover.webp"]
 series: ["Privacy Bitcoin"]
 topics: ["bitcoin"]
 cover:
-  image: "bitcoin.jpg"
+  image: "cover.webp"
   relative: true
 faq:
   - question: "Perché è importante avere un nodo Bitcoin personale per la privacy?"

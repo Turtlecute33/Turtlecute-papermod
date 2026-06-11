@@ -7,11 +7,11 @@ author: "Turtlecute"
 date: 2026-03-08
 lastmod: 2026-05-05
 url: /macos-security
-images: ["/posts/macos-security/cover.jpg"]
+images: ["/posts/macos-security/cover.webp"]
 series: ["Privacy Digitale", "Sicurezza"]
 topics: ["privacy-security"]
 cover:
-  image: "cover.jpg"
+  image: "cover.webp"
   relative: true
 faq:
   - question: "Come proteggere la privacy su Mac?"

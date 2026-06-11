@@ -8,11 +8,11 @@ date: 2026-03-01
 lastmod: 2026-05-05
 weight: 2
 url: /graphene
-images: ["/posts/graphene/graffy.jpg"]
+images: ["/posts/graphene/graffy.webp"]
 series: ["Privacy Digitale"]
 topics: ["android"]
 cover:
-  image: "graffy.jpg"
+  image: "graffy.webp"
   relative: true
 faq:
   - question: "GrapheneOS funziona solo su Google Pixel?"

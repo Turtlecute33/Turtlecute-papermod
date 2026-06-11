@@ -7,7 +7,7 @@ author: "Turtlecute"
 date: 2026-02-17
 lastmod: 2026-05-05
 url: /robosats
-images: ["/posts/Robosats/img/robosats1.webp"]
+images: ["/posts/robosats/img/robosats1.webp"]
 series: ["Privacy Bitcoin"]
 topics: ["bitcoin"]
 cover:

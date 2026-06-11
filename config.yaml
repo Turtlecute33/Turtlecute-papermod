@@ -5,7 +5,6 @@ title: Turtlecute.org
 defaultContentLanguage: it
 languageCode: it-IT
 timeZone: Europe/Rome
-copyright: "© [Non sono comunista, non ci sono copyright](LICENSE)"
 theme: [WonderMod]
 
 enableInlineShortcodes: true
@@ -52,7 +51,7 @@ languages:
       profileMode:
         enabled: true
         title: Turtlecute
-        imageUrl: "https://priorato.org/img/coin.gif"
+        imageUrl: "/coin.gif"
         imageTitle: ProfileMode image
         # imageWidth: 120
         # imageHeight: 120
@@ -88,6 +87,13 @@ params:
   ShowToc: true
   # comments: false
   images: ["/turtlecute.png"]
+
+  schema:
+    sameAs:
+      - "https://github.com/Turtlecute33"
+      - "https://x.com/turtlecute33"
+      - "https://t.me/turtlecute33"
+      - "https://instagram.com/turtlecute33"
 
   profileMode:
     enabled: false

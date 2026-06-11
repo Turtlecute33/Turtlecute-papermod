@@ -7,11 +7,11 @@ author: "Turtlecute"
 date: 2026-03-10
 lastmod: 2026-05-05
 url: /linux-hardening
-images: ["/posts/linux-hardening/cover.jpg"]
+images: ["/posts/linux-hardening/cover.webp"]
 series: ["Privacy Digitale", "Sicurezza"]
 topics: ["privacy-security"]
 cover:
-  image: "cover.jpg"
+  image: "cover.webp"
   relative: true
 faq:
   - question: "Qual è la distribuzione Linux più sicura?"
