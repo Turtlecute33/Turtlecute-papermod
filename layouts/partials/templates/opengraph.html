@@ -70,6 +70,15 @@
 <meta property="article:section" content="{{ .Section }}" />
 {{ with .PublishDate }}<meta property="article:published_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />{{ end }}
 {{ with $modified }}<meta property="article:modified_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />{{ end }}
+{{- with (.Params.author | default site.Params.author) }}
+{{- if reflect.IsSlice . }}{{- range . }}
+<meta property="article:author" content="{{ . }}" />
+{{- end }}{{- else }}
+<meta property="article:author" content="{{ . }}" />
+{{- end }}{{- end }}
+{{- range .Params.tags }}
+<meta property="article:tag" content="{{ . }}" />
+{{- end }}
 {{- end -}}
 
 {{- with .Params.audio }}<meta property="og:audio" content="{{ . }}" />{{ end }}

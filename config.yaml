@@ -68,8 +68,9 @@ outputs:
     - JSON
 
 params:
-  env: production 
+  env: production
   description: "Guide su bitcoin, sicurezza e privacy in lingua italiana"
+  homepageTitle: "Turtlecute | Guide su Bitcoin, Privacy e Sicurezza"
   author: Turtlecute
   # author: ["Me", "You"] # multiple authors
   defaultTheme: dark

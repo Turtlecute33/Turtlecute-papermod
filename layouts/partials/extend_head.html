@@ -29,12 +29,13 @@
     {
       "@type": "Person",
       "name": "Turtlecute",
-      "url": {{ site.BaseURL | jsonify | safeJS }},
-      "sameAs": [
-        "https://github.com/Turtlecute33",
-        "https://x.com/turtlecute33",
-        "https://t.me/turtlecute33"
-      ]
+      "url": {{ (printf "%sabout/" site.BaseURL) | jsonify | safeJS }},
+      "jobTitle": "Educatore Bitcoin e ricercatore di sicurezza informatica",
+      "description": "Educatore Bitcoin, sostenitore della privacy digitale e ricercatore di sicurezza informatica.",
+      "knowsAbout": ["Bitcoin", "Privacy digitale", "Sicurezza informatica", "GrapheneOS", "Self-hosting", "Tor"]
+      {{- with site.Params.schema.sameAs }},
+      "sameAs": {{ . | jsonify | safeJS }}
+      {{- end }}
     }
   ]
 }
@@ -111,7 +112,7 @@
       "author": {
         "@type": "Person",
         "name": {{ with .Params.author }}{{ . | jsonify | safeJS }}{{ else }}"Turtlecute"{{ end }},
-        "url": {{ site.BaseURL | jsonify | safeJS }}
+        "url": {{ (printf "%sabout/" site.BaseURL) | jsonify | safeJS }}
       },
       {{- if $image }}
       "image": {{ $image | jsonify | safeJS }},
