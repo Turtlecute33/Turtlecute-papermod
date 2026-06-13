@@ -73,7 +73,7 @@ Le tue transazioni Bitcoin sono pubbliche e tracciabili. Ogni volta che invii o 
 
 Se avete trovato questa pagina cercando online "Join**T**market" avete tutta la mia sincera stima. Siete capitati, però, in una guida che tratta un argomento completamente differente, ma estremamente interessante!
 
-Questa guida ha richiesto tantissimo lavoro, tempo e impegno per essere completata ed é a disposizione in modo completamente gratuito. Se hai trovato i contenuti qui presenti interessanti e utili ti invito ad effettuare una donazione di un qualsiasi importo a sostegno del mio progetto di divulgazione. Questo sito non contiene analytics, pubblicità o elementi traccianti grazie a tutti coloro che supportano la mia divulgazione sostenendomi.
+Questa guida ha richiesto tantissimo lavoro, tempo e impegno per essere completata ed é a disposizione in modo completamente gratuito. Se hai trovato i contenuti qui presenti interessanti e utili, il modo migliore per sostenere il mio progetto di divulgazione è condividerli. Questo sito non contiene analytics, pubblicità o elementi traccianti: vive grazie a chi lo fa conoscere.
   
 
 ## Definizione teorica Joinmarket
@@ -408,5 +408,3 @@ Buon mixing tartarughe!
 - **[Come Utilizzare RoboSats](/robosats)** - Acquista Bitcoin P2P senza KYC per poi mixarli con JoinMarket
 - **[Generare un Seed Bitcoin con i Dadi](/seed)** - Crea le chiavi del tuo wallet JoinMarket in modo veramente sicuro
 - **[Tutorial Nodo Tor](/tor)** - JoinMarket usa Tor: scopri come contribuire alla rete
-
-[![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

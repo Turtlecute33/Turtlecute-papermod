@@ -96,7 +96,7 @@ Questo articolo è un tentativo di raccogliere informazioni e conoscenze sulla s
 progetto GrapheneOS, un grazie a [PatrickD](https://x.com/patrickd_de) per aver scritto un articolo su graphene os da
 cui questa guida é ispirata.
 
-La scrittura di questa guida é stata lunga e ha portato via tantissimo tempo, la più grande donazione che potete fare é condividerla su **gruppi** e **canali telegram**, **twitter** e social network vari in modo che più gente possibile la veda. Un **grazie di cuore** a chiunque lo fará. Un bottone donazioni é presente a fine guida ma é del tutto secondario in quanto questi contenuti non sono a fini di lucro. Grazie per il supporto, questo sito non richiede nessun vostro dato, non ha analytics, non vi chiede email o registrazioni, condividete la parola per mantenere vivo questo progetto.
+La scrittura di questa guida é stata lunga e ha portato via tantissimo tempo, la più grande donazione che potete fare é condividerla su **gruppi** e **canali telegram**, **twitter** e social network vari in modo che più gente possibile la veda. Un **grazie di cuore** a chiunque lo fará. Questi contenuti non sono a fini di lucro: questo sito non richiede nessun vostro dato, non ha analytics, non vi chiede email o registrazioni. Condividete la parola per mantenere vivo questo progetto.
 
 ## Scelta del Dispositivo
 
@@ -1231,9 +1231,9 @@ Discord](https://discord.com/invite/grapheneos). GrapheneOS ha anche comunità s
 [Twitter/X](https://x.com/i/communities/1530455827949273094), [Telegram](https://t.me/GrapheneOS) e
 [Matrix](https://matrix.to/#/%23community:grapheneos.org).
 
-## Donazioni
+## Sostieni il Progetto
 
-Se questa guida ti é stata utile puoi farmi una donazione cliccando il tasto qua sotto. Come detto ad inizio guida se puoi condividi questo articolo con amici, parenti, social media e gruppi telegram, questa rimane una donazione sempre apprezzatissima <3
+Se questa guida ti é stata utile, il modo migliore per ringraziarmi é condividere questo articolo con amici, parenti, social media e gruppi telegram: resta il gesto più apprezzato di tutti <3 Se vuoi un supporto più diretto, dai un'occhiata ai servizi nello shop qua sotto.
 
 Se hai domande puoi contattarmi al mio profilo telegram [@Turtlecute33](https://t.me/turtlecute33) o tramite email a turtlecute@proton.me. Grazie della lettura!
 
@@ -1247,6 +1247,3 @@ Se hai domande puoi contattarmi al mio profilo telegram [@Turtlecute33](https://
 - **[Come Creare un Threat Model](/threat-model)** - Definisci le tue minacce prima di scegliere gli strumenti di difesa
 - **[VPN Self-Hosted con AdBlock](/vpn)** - Proteggi il traffico del tuo GrapheneOS con una VPN personale
 - **[Tutorial Nodo Tor](/tor)** - Naviga in modo anonimo e contribuisci alla rete Tor
-
-[![Vai alla
-pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

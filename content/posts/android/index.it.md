@@ -75,7 +75,7 @@ Per rendere Android piu privato conviene usare GrapheneOS su Pixel supportato qu
 
 Il tuo smartphone sa tutto di te: dove vai, con chi parli, cosa cerchi. Ogni giorno, le app installate sul tuo Android inviano silenziosamente i tuoi dati personali a Google e a decine di aziende terze. Questa guida ti mostra come riprendere il controllo del tuo telefono, eliminando la dipendenza da Google e costruendo un ambiente mobile realmente privato, senza sacrificare la comodità d'uso quotidiana.
 
-La guida è aperta a miglioramenti e consigli, descriverò la configurazione che trovo con il miglior rapporto usabilità/privacy, nel tempo ampierò le varie sezioni introducendo anche varie alternative per chi magari non si trova bene con una determinata applicazione o servizio, Se volete darmi consigli, contribuire alla guida o effettuare donazioni, potete dare un occhiata alla pagina [Donazioni](https://btcpay.priorato.org/i/CXG1ouF8eHjdCV73Th4Ujb) o effettuare una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute-papermod).
+La guida è aperta a miglioramenti e consigli, descriverò la configurazione che trovo con il miglior rapporto usabilità/privacy, nel tempo ampierò le varie sezioni introducendo anche varie alternative per chi magari non si trova bene con una determinata applicazione o servizio, Se volete darmi consigli o contribuire alla guida, potete effettuare una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute-papermod).
 
 Questa guida parla di android in generale, ne ho scritta anche una specifica per GrapheneOS, potete trovarla [qui](https://turtlecute.org/graphene), se siete interessati ad acquistare dispositivi con set-up di privacy su misura contattatemi su [Telegram](https://t.me/turtlecute33)
   
@@ -272,5 +272,3 @@ Altri ottimi posti per rimanere aggiornati in ambito privacy e degoogle sono var
 - **[Come Creare un Threat Model](/threat-model)** - Il primo passo per proteggere la tua privacy: definire le minacce
 - **[VPN Self-Hosted con AdBlock](/vpn)** - Crea la tua VPN personale con Wireguard e Pi-Hole per bloccare pubblicità e tracker
 - **[Tutorial Nodo Tor](/tor)** - Contribuisci alla rete Tor e naviga in modo anonimo
-
-[![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

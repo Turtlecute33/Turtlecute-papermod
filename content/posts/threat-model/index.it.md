@@ -192,7 +192,7 @@ Ricorda, la chiave è essere informati, critici e proattivi nelle tue scelte tec
 
 Grazie per aver letto questa guida! Se l'hai trovata utile, condividila con amici e colleghi interessati alla sicurezza informatica.
 
-Se desideri supportare il mio lavoro, puoi fare una donazione utilizzando il pulsante qui sotto.
+Se desideri supportare il mio lavoro, dai un'occhiata ai servizi nello shop qui sotto.
 
 {{< cta type="bottom" title="Proteggi privacy digitale e finanziaria insieme" text="Con il bundle scontato ottieni sia la Guida Privacy Digitale che la Guida Privacy Bitcoin ad un prezzo ridotto." url="https://shop.priorato.org" button="Scopri il Bundle Scontato" icon="🎯" >}}
 
@@ -204,5 +204,3 @@ Se desideri supportare il mio lavoro, puoi fare una donazione utilizzando il pul
 - **[GrapheneOS: Guida Completa al Miglior OS Privacy](/graphene)** - Il sistema operativo mobile con il miglior livello di sicurezza
 - **[VPN Self-Hosted con AdBlock](/vpn)** - Proteggi il tuo traffico di rete con una VPN personale
 - **[Usare Bitcoin in Modo Privato](/bitcoin)** - Estendi il tuo modello di minaccia alla privacy finanziaria
-
-[![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

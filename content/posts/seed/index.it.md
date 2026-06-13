@@ -233,5 +233,3 @@ Genera assolutamente le tue chiavi usando un procedimento il più possibile manu
 - **[JoinMarket: Guida Completa ai CoinJoin](/joinmarket)** - Proteggi la privacy dei tuoi UTXO con il mixing decentralizzato
 - **[Come Utilizzare RoboSats](/robosats)** - Acquista Bitcoin senza KYC per riceverli sul wallet generato con il tuo seed
 - **[Come Creare un Threat Model](/threat-model)** - Valuta le minacce prima di decidere come custodire le tue chiavi
-
-[![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

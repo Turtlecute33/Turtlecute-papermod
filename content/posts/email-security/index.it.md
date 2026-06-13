@@ -285,5 +285,3 @@ Grazie mille per la lettura! Se questa guida vi è stata utile, condividetela co
 - **[VPN Self-Hosted con Wireguard](/vpn)** - Costruite la vostra VPN personale con ad-blocking integrato
 - **[La Guida Definitiva su GrapheneOS](/graphene)** - Il sistema operativo mobile più sicuro al mondo
 - **[Privacy su Bitcoin](/bitcoin)** - Come usare Bitcoin senza compromettere la vostra privacy
-
-[![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

@@ -76,7 +76,7 @@ Questa guida vi accompagnerà passo dopo passo: dalla scelta della distribuzione
 
 Ricordate che la sicurezza è un processo, non un prodotto. Non esiste il setup perfetto, ma esiste il setup *giusto per voi*. Ogni sezione di questa guida presenta pro e contro, così potete decidere cosa ha senso nel vostro caso specifico.
 
-La guida è aperta a miglioramenti e consigli. Se volete contribuire, segnalare errori o proporre aggiunte, fate una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute-papermod) e supportate lo sviluppo di queste guide con una [donazione](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR).
+La guida è aperta a miglioramenti e consigli. Se volete contribuire, segnalare errori o proporre aggiunte, fate una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute-papermod).
 
 ![I layer di sicurezza che configureremo in questa guida: dalla sicurezza fisica fino al sandboxing delle applicazioni](defense-layers.svg)
 
@@ -1113,5 +1113,3 @@ Grazie mille per la lettura! Se questa guida vi è stata utile, condividetela co
 - **[Come Creare un Threat Model](/threat-model)** - Il primo passo per capire cosa proteggere e da chi
 - **[Guida Completa alla Sicurezza su macOS](/macos-security)** - Hardening per chi usa anche macOS
 - **[La Guida Definitiva su GrapheneOS](/graphene)** - Il sistema operativo mobile più sicuro al mondo
-
-[![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

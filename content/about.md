@@ -64,7 +64,7 @@ Questo sito rispecchia i valori che promuove:
 - **Nessuna registrazione richiesta** -- Non chiedo email, account o dati personali.
 - **Codice aperto** -- Il sito e open source, chiunque puo verificare, contribuire o forkare il progetto.
 
-Il progetto si sostiene grazie alle [donazioni in Bitcoin](https://btcpay.priorato.org) e ai servizi offerti nello [shop](https://shop.priorato.org). Questo modello mi permette di mantenere i contenuti indipendenti e senza conflitti di interesse.
+Il progetto si sostiene grazie ai servizi offerti nello [shop](https://shop.priorato.org). Questo modello mi permette di mantenere i contenuti indipendenti e senza conflitti di interesse.
 
 ---
 
@@ -84,9 +84,8 @@ Puoi trovarmi e contattarmi qui:
 
 ## Supporta il Progetto
 
-Se le guide ti sono state utili e vuoi aiutarmi a continuare questo lavoro, puoi farlo in due modi:
+Se le guide ti sono state utili e vuoi aiutarmi a continuare questo lavoro, il modo migliore e:
 
-- **[Donazione in Bitcoin](https://btcpay.priorato.org)** -- anche piccole donazioni fanno la differenza e mi permettono di dedicare piu tempo alla creazione di nuovi contenuti.
 - **[Shop](https://shop.priorato.org)** -- acquistando un servizio supporti direttamente il progetto e ottieni un setup di privacy professionale.
 
 Grazie a chiunque scelga di contribuire. Questo sito esiste grazie a voi.

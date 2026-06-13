@@ -537,8 +537,8 @@ Se viene mostrato correttamente avete ufficialmente un nodo tor attivo!
 Avete finito! Il vostro nodo é attivo e siete riusciti nella vostra
 leggendaria impresa!\
 Grazie mille per la lettura! Se questa guida ti é piaciuta condividila
-sui vari social network e con amici, se ti ha proprio conquistato puoi
-invece fare una donazione nel bottone qua sotto.
+sui vari social network e con amici, e se vuoi un supporto più diretto
+dai un'occhiata ai servizi nello shop qua sotto.
 
 
 se hai fatto un nodo tor sei una brava tartaruga 🐢
@@ -553,5 +553,3 @@ se hai fatto un nodo tor sei una brava tartaruga 🐢
 - **[Come Creare un Threat Model](/threat-model)** - Il primo passo per proteggere la tua privacy
 - **[Privacy su Bitcoin](/bitcoin)** - Guida completa all'utilizzo privato di Bitcoin
 - **[La Guida Definitiva su GrapheneOS](/graphene)** - Il miglior sistema operativo per la privacy mobile
-
-[![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

@@ -288,5 +288,3 @@ Se questa guida ti è piaciuta, condividila con i tuoi amici e sui social networ
 - **[JoinMarket: Guida Completa ai CoinJoin](/joinmarket)** - Dopo aver acquistato su RoboSats, mixa i tuoi bitcoin con JoinMarket
 - **[Generare un Seed Bitcoin con i Dadi](/seed)** - Crea le chiavi private del wallet dove ricevere i tuoi satoshi in modo sicuro
 - **[Tutorial Nodo Tor](/tor)** - RoboSats funziona su Tor: scopri come supportare la rete
-
-[![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

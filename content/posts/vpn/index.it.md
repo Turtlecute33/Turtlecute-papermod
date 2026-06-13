@@ -75,7 +75,7 @@ Questa vuole essere una guida completa per effettuare il setup di una propria VP
 
 La guida è aperta a miglioramenti e consigli, descriverò la configurazione che trovo con il miglior rapporto usabilità/privacy, non sono un esperto di reti e la guida qua presente non vi permetterá di essere magicamente anonimi e irrintracciabili.  
   
-Se volete darmi consigli, contribuire alla guida o effettuare traduzioni, potete effettuare una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute-papermod) e supportare lo sviluppo di queste guide con una [donazione](https://priorato.btcpayserver.it/i/BFg7UG7Zu8eAaRz3EiXgQJ).  
+Se volete darmi consigli, contribuire alla guida o effettuare traduzioni, potete effettuare una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute-papermod).  
 
   
 
@@ -285,5 +285,3 @@ Questo é uno dei tanti set-up possibili per crearsi una server VPN. Come ogni t
 - **[Come Creare un Threat Model](/threat-model)** - Il primo passo per proteggere la tua privacy
 - **[Privacy su Android](/android)** - Configurazione completa per un telefono de-googled
 - **[La Guida Definitiva su GrapheneOS](/graphene)** - Il miglior sistema operativo per la privacy mobile
-
-[![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

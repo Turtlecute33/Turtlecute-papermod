@@ -75,7 +75,7 @@ Ogni transazione Bitcoin che fai potrebbe rivelare il tuo saldo, la tua posizion
 
 Partiamo quindi con una breve introduzione a Bitcoin, se siete utenti avanzati potete saltare questa prefazione andando direttamente al primo punto della guida.  
 
-Se vi piace il mio lavoro e/o lo trovate utile vi prego di valutare una [donazione](https://priorato.btcpayserver.it/i/299LtYQKdQpsgWcSUgnWhD) per sostenere questo progetto che mi occupa, anche se con mio grande piacere, una buona fetta del mio tempo, buona lettura!
+Questo progetto mi occupa, anche se con mio grande piacere, una buona fetta del mio tempo, buona lettura!
 
   
 ## Prefazione
@@ -322,5 +322,3 @@ Spero che la guida vi sia piaciuta e che vi abbia aiutato!
 - **[Come Utilizzare RoboSats](/robosats)** - Acquista e vendi Bitcoin P2P senza KYC in modo anonimo
 - **[Generare un Seed Bitcoin con i Dadi](/seed)** - Crea le tue chiavi private in modo veramente casuale e sicuro
 - **[Come Creare un Threat Model](/threat-model)** - Definisci il tuo modello di minaccia prima di proteggere i tuoi bitcoin
-
-[![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)

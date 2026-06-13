@@ -75,7 +75,7 @@ Gli assistenti AI per programmatori sono ovunque, ma la maggior parte si limita 
 
 Questa vuole essere una guida completa, da principianti fino ad un utilizzo avanzato, tutta in un unico posto. La guida è aperta a miglioramenti e consigli: descriverò la configurazione che a mio parere offre il miglior rapporto tra produttività e sicurezza. Non sono un dipendente di Anthropic e gli strumenti AI evolvono in fretta, quindi davanti a comandi e prezzi date sempre un'occhiata alla documentazione ufficiale.
 
-Se volete darmi consigli, contribuire alla guida o effettuare traduzioni, potete effettuare una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute-papermod) e supportare lo sviluppo di queste guide con una [donazione](https://priorato.btcpayserver.it/i/BFg7UG7Zu8eAaRz3EiXgQJ).
+Se volete darmi consigli, contribuire alla guida o effettuare traduzioni, potete effettuare una pull request su [GitHub](https://github.com/Turtlecute33/Turtlecute-papermod).
 
 ## Cos'è Claude Code (e perché è diverso) {#cos-e-claude-code style="color: white;"}
 
@@ -613,5 +613,3 @@ Grazie mille per la lettura! Se questa guida vi è stata utile, condividetela co
 - **[Linux Hardening](/linux-hardening)**: Blinda il sistema operativo su cui fai girare i tuoi tool di sviluppo
 - **[Sicurezza su macOS](/macos-security)**: Metti in sicurezza il tuo Mac da sviluppatore
 - **[Sicurezza Email](/email-security)**: Proteggi la casella che usi per i login e il recupero degli account
-
-[![Vai alla pagina](https://btcpay.priorato.org/img/paybutton/pay.svg)](https://btcpay.priorato.org/api/v1/invoices?storeId=2B1STLH5REvhHZBRQuyJNieRTexpeuJ4Usjn4ziEfEfd&currency=EUR)
