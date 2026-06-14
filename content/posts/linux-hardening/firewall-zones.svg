@@ -7,7 +7,7 @@
   </defs>
   <rect width="700" height="350" fill="url(#bg7)" rx="16"/>
 
-  <text x="350" y="35" text-anchor="middle" fill="#e0e0e0" font-size="18" font-weight="bold">Firewall: zona "drop" — blocca tutto in ingresso</text>
+  <text x="350" y="35" text-anchor="middle" fill="#e0e0e0" font-size="18" font-weight="bold">Firewall: zona "drop", blocca tutto in ingresso</text>
 
   <!-- Internet cloud -->
   <ellipse cx="120" cy="175" rx="80" ry="55" fill="#ef4444" fill-opacity="0.08" stroke="#ef4444" stroke-width="1.5"/>
@@ -25,9 +25,9 @@
   <text x="270" y="215" fill="#ef4444" font-size="18" font-weight="bold">✕</text>
 
   <!-- Labels for blocked -->
-  <text x="250" y="130" fill="#fca5a5" font-size="9">Port scan</text>
-  <text x="250" y="165" fill="#fca5a5" font-size="9">SSH brute force</text>
-  <text x="250" y="200" fill="#fca5a5" font-size="9">Exploit remoto</text>
+  <text x="205" y="130" fill="#fca5a5" font-size="9">Port scan</text>
+  <text x="205" y="165" fill="#fca5a5" font-size="9">SSH brute force</text>
+  <text x="205" y="200" fill="#fca5a5" font-size="9">Exploit remoto</text>
 
   <!-- Firewall wall -->
   <rect x="295" y="70" width="20" height="230" rx="3" fill="#f97316" fill-opacity="0.4" stroke="#f97316" stroke-width="2"/>
@@ -65,5 +65,5 @@
   <text x="350" y="240" fill="#22c55e" font-size="8">traffico in uscita OK</text>
 
   <!-- Note -->
-  <text x="350" y="345" text-anchor="middle" fill="#64748b" font-size="11" font-style="italic">Tutto il traffico in uscita è permesso — tutto l'ingresso non richiesto viene scartato</text>
+  <text x="350" y="345" text-anchor="middle" fill="#64748b" font-size="11" font-style="italic">Tutto il traffico in uscita è permesso; l'ingresso non richiesto viene scartato</text>
 </svg>

@@ -2,7 +2,7 @@
 title: "Linux Hardening: Guida Completa alla Sicurezza"
 description: "Guida completa al Linux hardening in italiano: scelta della distro sicura, cifratura disco LUKS, firewall, kernel hardening, sandboxing Flatpak e Secure Boot."
 summary: "Guida completa al Linux hardening in italiano: scelta della distro sicura, cifratura disco LUKS, firewall, kernel hardening, sandboxing Flatpak e Secure Boot."
-keywords: ["linux hardening", "linux sicurezza", "hardening linux italiano", "linux security", "sicurezza linux guida", "linux distro privacy", "fedora hardening", "secureblue", "linux firewall", "cifratura disco linux", "LUKS cifratura", "flatpak sicurezza", "kernel hardening", "secure boot linux", "linux desktop sicuro", "hardening kernel linux", "wayland sicurezza"]
+keywords: ["linux hardening", "linux sicurezza", "hardening linux italiano", "linux security", "sicurezza linux guida", "linux distro privacy", "fedora hardening", "secureblue", "debian sicurezza", "qubes os", "qubes os sicurezza", "linux firewall", "cifratura disco linux", "LUKS cifratura", "flatpak sicurezza", "kernel hardening", "secure boot linux", "linux desktop sicuro", "hardening kernel linux", "wayland sicurezza"]
 author: "Turtlecute"
 date: 2026-03-10
 lastmod: 2026-05-05
@@ -15,7 +15,7 @@ cover:
   relative: true
 faq:
   - question: "Qual è la distribuzione Linux più sicura?"
-    answer: "Non esiste una risposta universale. Fedora Workstation e le sue varianti Atomic offrono un ottimo equilibrio tra sicurezza, aggiornamenti e usabilità. SecureBlue è un'opzione ancora più hardened basata su Fedora Atomic. Per l'anonimato, Whonix resta il riferimento."
+    answer: "Non esiste una risposta universale. Fedora Workstation e le sue varianti Atomic offrono un ottimo equilibrio tra sicurezza, aggiornamenti e usabilità. SecureBlue è un'opzione ancora più hardened basata su Fedora Atomic. Debian è la base più solida e a bassa manutenzione se preferite la stabilità. Per l'isolamento estremo tramite compartimentazione c'è Qubes OS, mentre per l'anonimato Whonix resta il riferimento."
   - question: "Linux è più sicuro di Windows o macOS?"
     answer: "Linux offre più controllo e trasparenza, ma non è automaticamente più sicuro. Senza hardening, un sistema Linux desktop può essere meno protetto di un Windows 11 o macOS aggiornato. La sicurezza dipende dalla configurazione e dalle abitudini dell'utente."
   - question: "Devo usare una rolling release per sicurezza?"
@@ -150,6 +150,23 @@ Fedora è una distribuzione semi-rolling: il kernel e i pacchetti chiave vengono
 - Richiede una reinstallazione (o upgrade) ogni 6-12 mesi per restare supportati
 - Alcuni pacchetti proprietari richiedono repository aggiuntivi (RPM Fusion)
 
+#### Debian: la base solida sempre pronta all'uso
+
+Se Fedora è l'equilibrio, Debian è la solidità. È il sistema "noioso" nel senso migliore del termine: lo installate, funziona, e continua a funzionare per anni con manutenzione minima. È la base sicura e sempre pronta all'uso da consigliare a chi vuole un desktop affidabile senza doverci mettere mano di continuo.
+
+**Perché Debian:**
+- Stabilità leggendaria: i pacchetti vengono testati a fondo prima di entrare in stable, le sorprese sono rare
+- Il Security Team di Debian è tra i più reattivi nel rilasciare aggiornamenti per le vulnerabilità tracciate
+- Manutenzione ridotta al minimo: niente reinstallazioni frequenti, niente aggiornamenti che rompono il sistema dall'oggi al domani
+- AppArmor attivo di default e una delle community più grandi e documentate del mondo Linux
+- È la base di moltissimi altri progetti (Ubuntu, Whonix, Tails), quindi profili di sicurezza e guide abbondano
+
+**Contro:**
+- Come spiegato nella sezione [rolling vs fixed](#scelta-distro), il modello a pacchetti congelati significa che alcune fix di sicurezza senza CVE non arrivano mai in stable
+- I pacchetti sono più vecchi: se vi serve l'ultima versione di un software dovrete affidarvi ai backport o ai Flatpak
+
+Per smussare il ritardo sulle fix upstream, installate le applicazioni più esposte (browser su tutti) via Flatpak: così restano aggiornate indipendentemente dal ciclo di Debian, mentre il sistema base vi dà la stabilità che cercate.
+
 #### Fedora Atomic Desktops: il futuro immutabile
 
 Le varianti Atomic di Fedora (Silverblue per GNOME, Kinoite per KDE) usano un approccio immutabile: il sistema base è in sola lettura e gli aggiornamenti vengono scaricati come immagini complete prima di essere applicati.
@@ -177,6 +194,23 @@ SecureBlue è basato su Fedora Atomic e aggiunge un layer di hardening significa
 L'alternativa rolling release nel mondo immutabile. Usa Btrfs con snapshot transazionali: gli aggiornamenti vengono applicati a uno snapshot e attivati solo al riavvio, con la possibilità di tornare indietro in qualsiasi momento.
 
 Ha un set di pacchetti base minimale (riduce la superficie d'attacco) e il sistema è montato in sola lettura.
+
+#### Qubes OS: sicurezza per compartimentazione
+
+Qubes OS parte da un presupposto diverso da tutte le altre: invece di indurire un singolo sistema, isola ogni attività in macchine virtuali separate (chiamate "qube") grazie all'hypervisor Xen. Il browser per la banca, il lavoro, le attività personali e i download non fidati girano in compartimenti distinti che non possono vedersi tra loro.
+
+Se un qube viene compromesso, il danno resta confinato lì dentro: il malware non può raggiungere gli altri compartimenti né il sistema sottostante. I qube usa e getta (disposable) si distruggono alla chiusura, ideali per aprire un allegato sospetto senza rischi. È la base sicura "pronta all'uso" per chi mette l'isolamento davanti a tutto: arriva già con template configurati e l'integrazione Whonix per instradare interi qube attraverso Tor.
+
+**Perché Qubes:**
+- Compartimentazione per design: l'isolamento non è un'aggiunta, è il cuore del sistema
+- Template pronti all'uso (Fedora, Debian) che aggiornate una volta sola per tutti i qube derivati
+- Integrazione nativa con Whonix per il traffico via Tor
+- È il sistema raccomandato a chi ha le esigenze di sicurezza più estreme
+
+**Contro:**
+- Requisiti hardware importanti: servono molta RAM (16 GB il minimo ragionevole) e una CPU con virtualizzazione
+- Curva di apprendimento ripida: il modello a qube richiede un cambio di mentalità
+- Il supporto hardware (specialmente GPU e periferiche particolari) può dare problemi
 
 #### Whonix: per l'anonimato
 

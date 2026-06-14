@@ -12,7 +12,7 @@
   <!-- Physical disk -->
   <rect x="40" y="60" width="620" height="60" rx="12" fill="#ef4444" fill-opacity="0.1" stroke="#ef4444" stroke-width="2"/>
   <text x="60" y="85" fill="#ef4444" font-size="14" font-weight="600">Disco fisico (SSD/HDD)</text>
-  <text x="60" y="105" fill="#fca5a5" font-size="11">Dati cifrati — illeggibili senza la passphrase</text>
+  <text x="60" y="105" fill="#fca5a5" font-size="11">Dati cifrati, illeggibili senza la passphrase</text>
   <rect x="430" y="70" width="210" height="35" rx="6" fill="#1a1a2e" stroke="#475569" stroke-width="1">
   </rect>
   <text x="535" y="92" text-anchor="middle" fill="#64748b" font-size="10" font-family="monospace">4f 7a 2b e1 9c 3d a8 f0 ...</text>
@@ -34,7 +34,7 @@
   <!-- Decrypted -->
   <rect x="40" y="270" width="620" height="55" rx="12" fill="#22c55e" fill-opacity="0.1" stroke="#22c55e" stroke-width="2"/>
   <text x="60" y="295" fill="#22c55e" font-size="14" font-weight="600">Volume decifrato (dm-crypt)</text>
-  <text x="60" y="313" fill="#86efac" font-size="11">Filesystem leggibile — /home, /var, swap... i tuoi dati</text>
+  <text x="60" y="313" fill="#86efac" font-size="11">Filesystem leggibile: /home, /var, swap... i tuoi dati</text>
   <rect x="480" y="280" width="160" height="32" rx="5" fill="#22c55e" fill-opacity="0.15" stroke="#22c55e" stroke-width="1"/>
   <text x="560" y="300" text-anchor="middle" fill="#86efac" font-size="10" font-family="monospace">/dev/mapper/root</text>
 
