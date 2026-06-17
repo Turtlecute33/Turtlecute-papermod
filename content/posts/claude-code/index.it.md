@@ -44,8 +44,8 @@ howto:
     - "Terminale"
     - "Git"
   steps:
-    - name: "Installare Node.js e Claude Code"
-      text: "Installa Node.js, poi installa Claude Code con npm install -g @anthropic-ai/claude-code oppure tramite l'installer nativo."
+    - name: "Installare Claude Code"
+      text: "Installa Claude Code con l'installer nativo (curl -fsSL https://claude.ai/install.sh | bash), che non richiede Node.js, oppure via npm install -g @anthropic-ai/claude-code se preferisci usare Node."
       url: "/claude-code#installazione-il-percorso-piu-semplice"
     - name: "Autenticarsi"
       text: "Avvia claude e accedi con il tuo account Claude Pro/Max oppure inserisci la chiave API di Anthropic."
@@ -72,6 +72,8 @@ howto:
 **Claude Code** è l'assistente di programmazione agentico di Anthropic che vive nel terminale: legge i file del tuo progetto, scrive codice, esegue comandi e usa git in autonomia, chiedendo però il permesso prima di ogni azione delicata. Questa guida ti accompagna dall'installazione fino ai workflow avanzati, con un occhio di riguardo alla sicurezza e al file `CLAUDE.md`.
 
 Gli assistenti AI per programmatori sono ovunque, ma la maggior parte si limita a suggerire qualche riga di codice dentro l'editor. Claude Code gioca un altro campionato: è **agentico**, cioè può portare a termine task interi da solo. Questo lo rende potentissimo... e potenzialmente pericoloso se lo configuri male. In questa guida vedremo come usarlo dal primo comando fino ai trucchi avanzati, senza mai abbassare la guardia sulla sicurezza.
+
+Mettiamo subito in chiaro la mia posizione, perché è il filo che lega tutta la guida: **l'AI è un ottimo assistente, ma non fa magie al posto vostro se non avete la minima idea di cosa state facendo.** Lo dico perché è facilissimo, oggi, chiedere a un'AI di tirar su un server, un'app o un setup self-hosted e ottenere qualcosa che *sembra* funzionare. Il problema è che quel "sembra funzionare" nasconde spesso buchi seri di sicurezza, privacy e architettura che solo chi sa leggere il codice riesce a vedere. Claude Code è straordinario proprio in mano a chi capisce cosa sta producendo: lì la sua versatilità, la velocità e perfino i suoi usi difensivi (pensate a una review di sicurezza su un server) ripagano ampiamente i compromessi. Usato alla cieca, invece, è un moltiplicatore di errori. Tenetelo a mente da qui alla fine.
 
 Questa vuole essere una guida completa, da principianti fino ad un utilizzo avanzato, tutta in un unico posto. La guida è aperta a miglioramenti e consigli: descriverò la configurazione che a mio parere offre il miglior rapporto tra produttività e sicurezza. Non sono un dipendente di Anthropic e gli strumenti AI evolvono in fretta, quindi davanti a comandi e prezzi date sempre un'occhiata alla documentazione ufficiale.
 
@@ -111,7 +113,7 @@ Vediamo come metterlo in funzione. Claude Code gira su **macOS, Linux e Windows*
 
 ### Via facile: installer nativo
 
-Il modo più rapido è l'installer ufficiale, che non richiede di gestire Node manualmente.
+Il modo più rapido è l'installer ufficiale: scarica un binario nativo e **non richiede affatto Node.js**. È la via che consiglio alla maggior parte delle persone.
 
 Su **macOS, Linux o WSL**:
 
@@ -121,9 +123,9 @@ curl -fsSL https://claude.ai/install.sh | bash
 
 **Attenzione!** Eseguire uno script scaricato da internet con `curl | bash` significa fidarsi ciecamente di quel server. In questo caso è il dominio ufficiale di Anthropic, ma è buona abitudine (sempre, non solo qui) scaricare prima lo script, leggerlo, e poi eseguirlo. Vale per qualsiasi `curl | bash` che incontrate in giro.
 
-### Via media: tramite npm
+### Via alternativa: tramite npm
 
-Se preferite gestire le cose con Node.js (utile se sviluppate già in ambito JavaScript), installate prima [Node.js](https://nodejs.org/) (versione 18 o superiore), poi:
+Solo se preferite gestire le cose con Node.js (utile se sviluppate già in ambito JavaScript) serve installare prima [Node.js](https://nodejs.org/) (versione 18 o superiore), poi:
 
 ```bash
 npm install -g @anthropic-ai/claude-code
@@ -172,6 +174,8 @@ I comandi che iniziano con `/` (slash) invece controllano Claude Code stesso. Ec
 | `/init` | Analizza il progetto e genera un file `CLAUDE.md` iniziale |
 | `/clear` | Pulisce la cronologia della conversazione (azzera il contesto) |
 | `/compact` | Riassume la conversazione per liberare spazio senza perdere il filo |
+| `/context` | Mostra quanto contesto stai consumando (utile per capire quando fare `/clear`) |
+| `/rewind` | Riporta codice e conversazione a un checkpoint precedente, se Claude ha sbagliato |
 | `/permissions` | Apre la gestione dei permessi |
 | `/memory` | Apre e modifica i file di memoria (CLAUDE.md) |
 | `/model` | Cambia il modello Claude in uso |
@@ -366,14 +370,14 @@ Per chi tiene alla privacy (e qui siamo tra tartarughe, quindi diamo per scontat
 ```json
 {
   "env": {
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
     "DISABLE_TELEMETRY": "1",
-    "DISABLE_ERROR_REPORTING": "1",
-    "DISABLE_NON_ESSENTIAL_MODEL_CALLS": "1"
+    "DISABLE_ERROR_REPORTING": "1"
   }
 }
 ```
 
-Tenete presente che il funzionamento di base richiede comunque di inviare il vostro codice e le richieste ai server di Anthropic (è così che funziona): questo non lo eviterete. Ma i dati accessori sì. A mio parere, su un progetto sensibile, queste righe sono il minimo sindacale.
+La prima variabile, `CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC`, è quella "ombrello": disattiva in un colpo solo tutto il traffico non essenziale (telemetria, segnalazione errori e chiamate accessorie). Le altre due sono più granulari e le lascio per chiarezza. Tenete presente che il funzionamento di base richiede comunque di inviare il vostro codice e le richieste ai server di Anthropic (è così che funziona): questo non lo eviterete. Ma i dati accessori sì. A mio parere, su un progetto sensibile, queste righe sono il minimo sindacale.
 
 ### 4. Isolare l'ambiente (sandbox)
 
@@ -389,7 +393,7 @@ L'isolamento è ciò che rende accettabile concedere più autonomia: dentro una 
 
 Gli **hook** sono la difesa più elegante. Sono script vostri che Claude Code esegue automaticamente in determinati momenti, ad esempio **prima** di usare uno strumento (`PreToolUse`) o **dopo** (`PostToolUse`). Un hook può ispezionare l'azione e **bloccarla** se viola le vostre regole.
 
-A differenza delle istruzioni in `CLAUDE.md` (che Claude *dovrebbe* seguire ma potrebbe interpretare male) e delle regole `deny` (basate su pattern), un hook è codice vostro che gira sempre: una garanzia deterministica. Esempio di hook che blocca qualsiasi comando contenente `rm -rf`, da mettere in `settings.json`:
+A differenza delle istruzioni in `CLAUDE.md` (che Claude *dovrebbe* seguire ma potrebbe interpretare male) e delle regole `deny` (basate su pattern), un hook è codice vostro che gira sempre: una garanzia deterministica. Claude Code passa allo script i dettagli dell'azione come **JSON sullo standard input** (stdin), e lo script decide se lasciar passare o bloccare. Ecco un hook che blocca qualsiasi comando Bash contenente `rm -rf`, da mettere in `settings.json`:
 
 ```json
 {
@@ -400,7 +404,7 @@ A differenza delle istruzioni in `CLAUDE.md` (che Claude *dovrebbe* seguire ma p
         "hooks": [
           {
             "type": "command",
-            "command": "if echo \"$CLAUDE_TOOL_INPUT\" | grep -q 'rm -rf'; then echo 'Comando bloccato dall hook di sicurezza' >&2; exit 2; fi"
+            "command": "if grep -q 'rm -rf'; then echo 'Comando bloccato dall hook di sicurezza' >&2; exit 2; fi"
           }
         ]
       }
@@ -409,7 +413,7 @@ A differenza delle istruzioni in `CLAUDE.md` (che Claude *dovrebbe* seguire ma p
 }
 ```
 
-Quando l'hook restituisce un codice di uscita 2, Claude Code blocca l'azione. Gli hook si possono usare per mille cose: formattare il codice dopo ogni modifica, lanciare i test automaticamente, registrare un log di tutto quello che Claude fa. Sono il livello di controllo che trasforma Claude Code da "strumento di cui fidarsi" a "strumento sotto il vostro controllo".
+Qui `grep` legge il JSON dell'azione da stdin: se trova `rm -rf`, scrive un messaggio sull'errore standard ed esce con codice 2. Quando un hook `PreToolUse` restituisce un codice di uscita 2, Claude Code blocca l'azione (in alternativa si può restituire un JSON con `"permissionDecision": "deny"` per un controllo più fine). Gli hook si possono usare per mille cose: formattare il codice dopo ogni modifica, lanciare i test automaticamente, registrare un log di tutto quello che Claude fa. Sono il livello di controllo che trasforma Claude Code da "strumento di cui fidarsi" a "strumento sotto il vostro controllo".
 
 ### Riepilogo: i livelli di difesa
 
@@ -442,7 +446,9 @@ La domanda importante quindi non è "i miei dati escono?" (sì, escono), ma "**c
 *   **Uso via API commerciale:** di norma i dati passati tramite API non vengono usati per il training di default, ma valgono comunque dei periodi di retention.
 *   **Account aziendali (Team/Enterprise):** spesso offrono opzioni più rigide, fino alla **Zero Data Retention** (i dati non vengono conservati dopo l'elaborazione).
 
-Il consiglio da tartaruga è semplice: **andate nelle impostazioni dell'account, leggete la privacy policy attuale e disattivate l'uso dei vostri dati per l'addestramento** se l'opzione esiste. Non datelo per scontato. Ricordate che questo è un classico esempio di [threat model](/threat-model): se scrivete codice hobbistico open source il rischio è basso, se gestite il gestionale di un'azienda è tutta un'altra storia.
+Il consiglio da tartaruga è semplice e ha due gambe. Primo: **limitate gli opt-in**. Andate nelle impostazioni dell'account, leggete la privacy policy attuale e disattivate l'uso dei vostri dati per l'addestramento se l'opzione esiste. Non datelo per scontato. Secondo, e forse più importante: **fate attenzione a quali file e dati date in pasto all'AI.** La difesa più efficace non è una casella nelle impostazioni, è decidere cosa entra nel contesto in primo luogo.
+
+E qui la regola mentale da incidersi nella corazza è una sola: **tutto ciò che date in pasto a un'AI, prima o poi, in un modo o nell'altro, potrebbe diventare pubblico.** Non perché Anthropic sia cattiva, ma perché esistono i data leak, i bug, i cambi di policy, gli errori umani. Trattate ogni cosa che mandate ai server come se un domani potesse finire online. Ricordate che questo è un classico esempio di [threat model](/threat-model): se scrivete codice hobbistico open source il rischio è basso, se gestite il gestionale di un'azienda è tutta un'altra storia.
 
 ### Prompt injection: il rischio più sottovalutato
 
@@ -486,9 +492,11 @@ E per i più puristi tra voi, quelli che storcono il naso all'idea che anche sol
 Esistono modelli open che potete eseguire offline con strumenti dedicati, e alcuni assistenti da terminale sanno collegarsi a questi modelli locali al posto del cloud. Come sempre, vi presento pro e contro onestamente:
 
 *   **Pro:** privacy totale, il codice non lascia mai il vostro computer; nessun costo a consumo; funziona offline.
-*   **Contro:** la qualità è ancora distante dai modelli cloud più grandi come Claude; serve hardware potente (parecchia RAM e una buona GPU); la configurazione è più macchinosa.
+*   **Contro:** la qualità è ancora distante dai modelli cloud più grandi come Claude; serve hardware serio; la configurazione è più macchinosa.
 
-Per la maggior parte di voi, il giusto compromesso è usare Claude Code con le difese e gli accorgimenti sulla privacy che abbiamo visto. Ma è bello sapere che, se il vostro threat model lo richiede, la strada del 100% locale esiste. La scelta, come sempre tra tartarughe, è vostra e informata.
+Sull'hardware voglio essere onesto e non illudervi: per far girare un modello locale abbastanza grande da essere davvero utile a programmare serve una **GPU di fascia molto alta**, con tanta VRAM. Parliamo di schede tipo RTX 3090, 4090 o 5090 (o equivalenti): sotto quel livello, o vi accontentate di modelli piccoli e molto meno capaci, o la lentezza vi farà passare la voglia. Se non avete quel tipo di scheda, il locale oggi è più un esercizio di principio che uno strumento di lavoro.
+
+Per la maggior parte di voi, il giusto compromesso è usare Claude Code con le difese e gli accorgimenti sulla privacy che abbiamo visto: a mio parere l'uplift che ti dà un modello cloud di punta vale i compromessi, a patto di gestirli con criterio. Ma è bello sapere che, se il vostro threat model lo richiede e avete il ferro giusto, la strada del 100% locale esiste. La scelta, come sempre tra tartarughe, è vostra e informata.
 
 ## Livello avanzato: subagenti, MCP e skill {#livello-avanzato style="color: white;"}
 
@@ -572,6 +580,7 @@ Notate come le regole di sicurezza siano scritte in maiuscolo e in modo perentor
 
 Prima di salutarci, ecco le trappole in cui cascano in tanti. Occhi aperti:
 
+*   **Delegare ciò che non sapete giudicare.** È la trappola madre. Se chiedete all'AI di costruire qualcosa che non sapreste valutare da soli (un'architettura, una configurazione di sicurezza, un deploy), non siete in grado di accorgervi quando sbaglia. L'output "sembra funzionare" e voi vi fidate: è così che nascono i setup pieni di buchi. Usate l'AI per accelerare ciò che capite, per imparare ciò che non capite ancora, ma non per sostituire del tutto il vostro giudizio su cose critiche.
 *   **Usare la modalità YOLO per pigrizia.** Disattivare i permessi perché "le conferme rompono" è il modo più rapido per farsi male. Configurate invece le regole `allow` per i comandi sicuri: ottenete fluidità senza rinunciare al controllo.
 *   **Un CLAUDE.md chilometrico.** Più non è meglio. Un file enorme confonde Claude e brucia token. Tenetelo essenziale.
 *   **Fidarsi di MCP a caso.** Già detto, ma lo ripeto perché è importante: ogni server MCP è codice di terzi sulla vostra macchina.
@@ -593,9 +602,9 @@ Se questi quattro controlli passano, siete pronti. Bravissimi: avete trasformato
 
 Siamo partiti dall'installazione e siamo arrivati a hook, subagenti e MCP, passando per il pezzo più importante: la sicurezza. Se siete arrivati fin qui, adesso sapete usare **Claude Code** non come una scatola magica di cui fidarsi alla cieca, ma come uno strumento che controllate voi, dal primo comando all'ultima riga di configurazione.
 
-Il messaggio che voglio lasciarvi è questo: l'AI agentica è potentissima, e proprio per questo va trattata con la mentalità della tartaruga: curiosità sì, ma corazza sempre addosso. Permessi al minimo, segreti blindati, git come rete di sicurezza e un occhio critico su ogni strumento di terze parti. Fate così, e Claude Code diventerà un alleato straordinario invece che un rischio.
+Il messaggio che voglio lasciarvi è duplice. Primo: l'AI agentica è potentissima, e proprio per questo va trattata con la mentalità della tartaruga: curiosità sì, ma corazza sempre addosso. Permessi al minimo, segreti blindati, git come rete di sicurezza e un occhio critico su ogni strumento di terze parti. Secondo, ed è il punto da cui siamo partiti: **Claude Code amplifica chi siete, non vi sostituisce.** A chi sa cosa sta facendo regala una marcia in più che vale ogni compromesso; a chi delega alla cieca consegna codice che sembra funzionare e invece fa acqua. Restate al posto di guida, e diventerà un alleato straordinario invece che un rischio.
 
-Grazie mille per la lettura! Se questa guida vi è stata utile, condividetela con chi sta iniziando ad usare Claude Code: gli risparmierete un bel po' di grattacapi. Siete delle vere tartarughe corazzate, sei un vero drago! 🐢
+Grazie mille per la lettura! Se questa guida vi è stata utile, condividetela con chi sta iniziando ad usare Claude Code: gli risparmierete un bel po' di grattacapi. Siete delle vere tartarughe corazzate! 🐢
 
 {{< cta type="bottom"
     title="Vuoi una privacy a prova di tartaruga, non solo nel terminale?"
