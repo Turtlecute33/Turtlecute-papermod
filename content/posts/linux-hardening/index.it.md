@@ -5,7 +5,7 @@ summary: "Guida completa al Linux hardening in italiano: scelta della distro sic
 keywords: ["linux hardening", "linux sicurezza", "hardening linux italiano", "linux security", "sicurezza linux guida", "linux distro privacy", "fedora hardening", "secureblue", "debian sicurezza", "qubes os", "qubes os sicurezza", "linux firewall", "cifratura disco linux", "LUKS cifratura", "flatpak sicurezza", "kernel hardening", "secure boot linux", "linux desktop sicuro", "hardening kernel linux", "wayland sicurezza"]
 author: "Turtlecute"
 date: 2026-03-10
-lastmod: 2026-05-05
+lastmod: 2026-06-28
 url: /linux-hardening
 images: ["/posts/linux-hardening/cover.webp"]
 series: ["Privacy Digitale", "Sicurezza"]
@@ -266,7 +266,7 @@ Le opzioni sono due:
 
 ### Partizionamento con opzioni di mount sicure
 
-Per un hardening aggiuntivo, potete configurare opzioni di mount restrittive su alcune partizioni:
+Questa è una rifinitura opzionale, non un requisito: se siete all'inizio potete saltarla senza sensi di colpa. L'idea è semplice: dite al sistema che certe cartelle non devono mai contenere programmi eseguibili o dispositivi, così se un attaccante riuscisse a scrivere un file malevolo lì dentro non riuscirebbe comunque a lanciarlo. Per chi vuole questo layer in più, ecco le opzioni di mount restrittive da applicare su alcune partizioni:
 
 | Partizione | Opzioni | Effetto |
 |-----------|---------|---------|
@@ -381,6 +381,8 @@ Poi riavviate NetworkManager:
 sudo systemctl restart NetworkManager
 ```
 
+Onestà sui compromessi: la randomizzazione del MAC è ottima per la privacy nelle reti pubbliche, ma in qualche scenario può creare grattacapi. Alcuni portali captive (la pagina di login del WiFi di hotel e aeroporti) si confondono se il MAC cambia di continuo; alcune reti aziendali o universitarie autorizzano i dispositivi proprio in base al MAC e potrebbero non farvi entrare; e a casa, se il router assegna l'IP basandosi sul MAC, ve lo vedrete cambiare a ogni connessione. Se incontrate uno di questi problemi su una rete specifica, dalle impostazioni di quella singola rete in NetworkManager potete fissare un MAC stabile solo lì, lasciando la randomizzazione attiva ovunque altro.
+
 ### Firewall
 
 Un firewall è assolutamente obbligatorio. La configurazione che consiglio è restrittiva: blocca tutto il traffico in ingresso tranne quello esplicitamente autorizzato.
@@ -423,7 +425,9 @@ sudo ufw enable
 
 Il DNS tradizionale è in chiaro e non autenticato: chiunque nel percorso tra voi e il server DNS può vedere le vostre query e potenzialmente modificare le risposte. DNSSEC aggiunge una firma crittografica alle risposte DNS.
 
-Se usate `systemd-resolved`:
+Come attivarlo dipende da chi gestisce il DNS sulla vostra distro. La maggior parte dei desktop moderni (Fedora, Ubuntu e Arch configurato con systemd) usa `systemd-resolved`, e in quel caso bastano poche righe. Per controllare se è il vostro caso: `systemctl status systemd-resolved`.
+
+**Con systemd-resolved** (Fedora, Ubuntu, Arch):
 
 ```bash
 # Editate /etc/systemd/resolved.conf
@@ -434,7 +438,9 @@ DNSSEC=yes
 sudo systemctl restart systemd-resolved
 ```
 
-Assicuratevi di usare un DNS provider che supporti DNSSEC. Per un layer aggiuntivo di privacy, considerate di usare DNS-over-TLS o DNS-over-HTTPS.
+**Senza systemd-resolved** (capita su Debian e su alcune installazioni KDE, dove a gestire la rete è il solo NetworkManager): la strada più pulita è affidare la validazione DNSSEC a un resolver locale come `unbound`, che controlla le firme al posto vostro. È un filo di lavoro in più, ma il risultato di sicurezza è lo stesso.
+
+In ogni caso, assicuratevi di usare un DNS provider che supporti DNSSEC. Per un layer aggiuntivo di privacy, considerate poi DNS-over-TLS o DNS-over-HTTPS.
 
 ### Sincronizzazione oraria sicura
 
@@ -477,7 +483,9 @@ Il kernel è il cuore del sistema operativo. Indurirlo significa ridurre drastic
 
 ### Parametri sysctl
 
-I parametri sysctl controllano il comportamento del kernel a runtime. Create un file `/etc/sysctl.d/99-hardening.conf` con le seguenti configurazioni essenziali:
+I parametri sysctl sono delle manopole che regolano il comportamento del kernel mentre il sistema è in funzione: pensateli come le impostazioni di sicurezza del motore del vostro sistema operativo. C'è una buona notizia per chi non vuole impazzire con le differenze tra distribuzioni: questi parametri sono identici ovunque (Fedora, Debian, Arch, openSUSE), perché il kernel è lo stesso e cambia solo il package manager. I comandi di questa sezione valgono quindi per tutte le distro.
+
+Create un file `/etc/sysctl.d/99-hardening.conf` con le configurazioni qui sotto. Le ho divise per categoria così capite a colpo d'occhio cosa fa ciascun gruppo:
 
 ```ini
 # Protezione rete
@@ -522,13 +530,25 @@ Applicate con:
 sudo sysctl --system
 ```
 
+Un paio di avvisi onesti, così non vi spaventate se qualcosa cambia comportamento:
+
+- `net.ipv4.icmp_echo_ignore_all = 1` rende il vostro PC invisibile al comando `ping`. Ottimo per non farsi notare su una rete pubblica, ma se per esempio monitorate i dispositivi di casa proprio col ping, smetteranno di rispondere. In quel caso rimettete `0`.
+- `kernel.kptr_restrict = 2` e `kernel.dmesg_restrict = 1` nascondono informazioni interne del kernel. In rarissimi casi qualche tool di debug si lamenta, ma per un uso desktop normale non ve ne accorgerete.
+- `kernel.unprivileged_bpf_disabled = 1` può dare fastidio a chi sviluppa software che usa eBPF. Se non sapete cosa sia, non vi riguarda e potete lasciarlo così.
+
 Diciamo che questi parametri coprono le basi. Per una configurazione più completa, potete fare riferimento al [repository di TommyTran732](https://github.com/TommyTran732/Linux-Setup-Scripts/blob/main/etc/sysctl.d/99-workstation.conf) che mantiene una configurazione sysctl aggiornata per workstation.
 
 {{< cta type="inline" title="Sei già a metà del percorso" text="Hai scelto la distro, cifrato il disco e stai configurando il kernel. Il tuo sistema è già più sicuro del 90% dei desktop là fuori. Ma il PC è solo un pezzo del puzzle. La Guida Privacy Digitale copre tutto il resto: comunicazioni, identità online, dispositivi mobili e abitudini digitali." url="https://shop.priorato.org" button="Completa il Percorso Privacy" icon="🛡️" >}}
 
 ### Parametri di boot del kernel
 
-Questi parametri vanno aggiunti alla configurazione del bootloader (GRUB o systemd-boot). Su sistemi con rpm-ostree (Fedora Atomic), usate `rpm-ostree kargs` invece di editare GRUB.
+Saliamo di un gradino. Mentre i sysctl si applicano a sistema già avviato, questi parametri vengono letti dal bootloader nel momento dell'accensione e attivano mitigazioni hardware più profonde. È la parte più avanzata della guida: i benefici sono reali, ma alcuni di questi parametri costano in prestazioni, quindi leggete le note prima di copiarli alla cieca. Se siete alle prime armi e volete andare sul sicuro, potete tranquillamente saltare questa sezione e tornarci più avanti: cifratura, firewall e sysctl coprono già la grande maggioranza dei rischi reali.
+
+Dove si mettono questi parametri dipende dal bootloader che usate, non tanto dalla distribuzione in sé:
+
+- **GRUB** (Fedora classica, Debian, Ubuntu, openSUSE e Arch installato con GRUB): si editano in `/etc/default/grub`
+- **systemd-boot** (Arch e altre configurazioni moderne): si editano nel file della voce di boot dentro `/boot/loader/entries/`
+- **rpm-ostree** (Fedora Atomic, Silverblue, Kinoite): si usa il comando `rpm-ostree kargs`, senza mai toccare GRUB a mano
 
 #### Mitigazioni CPU
 
@@ -635,6 +655,10 @@ Oppure per applicazione singola:
 LD_PRELOAD=/usr/lib64/libhardened_malloc.so firefox
 ```
 
+Il compromesso da conoscere: hardened_malloc fa lavorare il sistema in modo più rigoroso, e questo ha due conseguenze. La prima è un piccolo costo in prestazioni e memoria, di solito impercettibile su un desktop. La seconda, più importante, è che alcune applicazioni che gestiscono la memoria in modo poco pulito possono crashare quando le forzate con hardened_malloc globale: capita spesso con i giochi, con alcune app Electron e con certi software proprietari. Per questo il mio consiglio è di non attivarlo subito a tappeto via `/etc/ld.so.preload`, ma di provarlo prima sulle singole applicazioni più esposte (il browser su tutte) con `LD_PRELOAD`, ed estenderlo a tutto il sistema solo se resta stabile.
+
+Una nota sulle distro: su Debian/Ubuntu e openSUSE non esiste un pacchetto ufficiale comodo, quindi dovrete compilarlo dai sorgenti del [repository ufficiale](https://github.com/GrapheneOS/hardened_malloc). Se vi sembra troppo lavoro, è un'ottima ragione in più per guardare a SecureBlue, che lo porta già configurato e testato.
+
 ### Kernel alternativi
 
 Per chi vuole spingersi oltre, esistono kernel con patch di hardening aggiuntive:
@@ -656,7 +680,7 @@ Il problema? Molte app Flatpak richiedono permessi troppo ampi di default. Ecco 
 
 #### Restrizione globale dei permessi
 
-Applicate prima una policy restrittiva a tutte le app, poi concedete permessi specifici dove necessario:
+Qui ci sono due strade: una da riga di comando, potente ma drastica, e una grafica più gentile (Flatseal, che vedremo tra poco). Se siete alle prime armi vi consiglio di saltare il blocco qui sotto e gestire i permessi con Flatseal: ottenete gran parte del beneficio senza il rischio di ritrovarvi metà delle app che non si avviano più. Per chi invece vuole il massimo controllo, ecco come applicare prima una policy restrittiva a tutte le app e poi concedere i permessi specifici dove servono:
 
 ```bash
 sudo flatpak override --system \
@@ -758,6 +782,8 @@ Tutto l'hardening software del mondo non serve a nulla se qualcuno può accedere
 
 ### Secure Boot con chiavi personalizzate
 
+Mettiamo le mani avanti: questa è la sezione più avanzata e più dipendente dalla distribuzione di tutta la guida, ed è anche l'unica in cui un errore può, nel peggiore dei casi, impedire l'avvio del computer. Non è un passaggio obbligatorio per avere un sistema sicuro: la cifratura del disco e gli altri layer pesano molto di più. Affrontatela solo se siete a vostro agio col firmware UEFI e avete capito bene cosa state facendo.
+
 Il Secure Boot standard verifica che il bootloader e il kernel siano firmati da chiavi fidate (di solito Microsoft). Il problema? Le chiavi Microsoft hanno una superficie d'attacco enorme perché firmano driver e bootloader di terze parti.
 
 ![Confronto tra Secure Boot standard con chiavi Microsoft e Secure Boot custom con UKI: la versione custom verifica l'intera catena di boot](secure-boot-chain.svg)
@@ -828,6 +854,8 @@ org/gnome/desktop/media-handling/automount-open' | sudo tee /etc/dconf/db/local.
 
 sudo dconf update
 ```
+
+Su **KDE Plasma** non serve dconf: la stessa impostazione si trova in Impostazioni di sistema, sotto "Dispositivi rimovibili", dove potete disattivare il montaggio automatico all'inserimento.
 
 ## Hardening SSH, autenticazione e accesso {#autenticazione style="color: white;"}
 
